@@ -5,8 +5,8 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1 className='text-3xl font-bold underline'>Hello World</h1>
+      <div className='flex justify-center items-center h-screen w-screen bg-blue-500'>
+        <h1 className='text-6xl font-bold'>Kikimora</h1>
       </div>
     </>
   )
