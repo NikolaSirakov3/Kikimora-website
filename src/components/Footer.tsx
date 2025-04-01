@@ -8,7 +8,7 @@ export function Footer() {
       {/* Left side - Social Media Icons */}
       <div className="flex items-center gap-6">
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/kikimora.io/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-[#29ABE2] transition-colors"
@@ -16,7 +16,7 @@ export function Footer() {
           <Instagram className="h-5 w-5" />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/kikimora-io/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-[#29ABE2] transition-colors"
@@ -24,7 +24,7 @@ export function Footer() {
           <Linkedin className="h-5 w-5" />
         </a>
         <a
-          href="https://facebook.com"
+          href="https://www.facebook.com/people/Kikimoraio/100065283930889/?_rdr"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-[#29ABE2] transition-colors"
