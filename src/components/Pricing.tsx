@@ -51,9 +51,6 @@ export function Pricing() {
                     <span className="text-white font-montserrat text-lg w-40">
                       Consulting Hours
                     </span>
-                    <div className="flex-1 h-0.5 bg-[#159ECE]/30 mx-4 relative">
-                      <div className="absolute w-3 h-3 bg-[#159ECE] rounded-full top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"></div>
-                    </div>
                     <span className="text-[#3EDDCA] font-montserrat text-2xl font-bold w-20 text-right">
                       FREE
                     </span>
