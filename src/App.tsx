@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Benefits } from "@/components/Benefits";
 import { Developers } from "@/components/Developers";
+import { Clients } from "@/components/Clients";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                   <Hero />
                   <Benefits />
                   <Developers />
+                  <Clients />
                 </>
               }
             />
