@@ -2,24 +2,16 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
+      <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow w-full">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="flex justify-center items-center h-screen w-screen bg-blue-500">
-                  <div className="flex flex-col justify-center items-center">
-                    <h1 className="text-6xl font-normal">Kikimora</h1>
-                  </div>
-                </div>
-              }
-            />
+            <Route path="/" element={<Hero />} />
             <Route path="/about" element={<div>About Page</div>} />
             <Route path="/developers" element={<div>Developers Page</div>} />
             <Route path="/blog" element={<div>Blog Page</div>} />
