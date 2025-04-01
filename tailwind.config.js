@@ -4,6 +4,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        conthrax: ["ConthraxSb", "sans-serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -51,11 +55,7 @@ export default {
           5: "hsl(var(--chart-5))",
         },
       },
-      fontFamily: {
-        conthrax: ["ConthraxSb", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
-      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
