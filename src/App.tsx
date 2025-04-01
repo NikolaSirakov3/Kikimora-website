@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Benefits } from "@/components/Benefits";
+import { Developers } from "@/components/Developers";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <>
                   <Hero />
                   <Benefits />
+                  <Developers />
                 </>
               }
             />
