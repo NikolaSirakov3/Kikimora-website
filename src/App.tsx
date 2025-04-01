@@ -10,6 +10,7 @@ import { SecurityEfficiency } from "@/components/SecurityEfficiency";
 import { Pricing } from "@/components/Pricing";
 import { Newsletter } from "@/components/Newsletter";
 import { Testimonials } from "@/components/Testimonials";
+import { RequestDemo } from "@/components/RequestDemo";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
                   <Pricing />
                   <Newsletter />
                   <Testimonials />
+                  <RequestDemo />
                 </>
               }
             />
