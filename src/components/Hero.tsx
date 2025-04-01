@@ -6,7 +6,7 @@ export function Hero() {
     <div className="bg-[#001E38]">
       {/* First Section */}
       <section className="h-screen">
-        <div className="h-full flex items-center">
+        <div className="h-3/4 flex items-center">
           {/* Left side - Content */}
           <div className="flex flex-col gap-6 w-1/2 pl-[10%]">
             <h1 className="text-5xl text-white font-conthrax leading-tight">
@@ -43,7 +43,7 @@ export function Hero() {
       </section>
 
       {/* Second Section */}
-      <section className="h-screen -mt-96">
+      <section className="h-screen -mt-[480px]">
         <div className="h-full flex items-center">
           {/* Left side - Dashboard Image */}
           <div className="w-1/2 flex justify-center">
