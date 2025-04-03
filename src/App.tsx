@@ -11,6 +11,8 @@ import { Pricing } from "@/components/Pricing";
 import { Newsletter } from "@/components/Newsletter";
 import { Testimonials } from "@/components/Testimonials";
 import { RequestDemo } from "@/components/RequestDemo";
+import { Blog } from "@/components/Blog";
+import { GetInTouch } from "@/components/GetInTouch";
 
 function App() {
   return (
@@ -29,9 +31,11 @@ function App() {
                   <Clients />
                   <SecurityEfficiency />
                   <Pricing />
-                  <Newsletter />
                   <Testimonials />
                   <RequestDemo />
+                  <Blog />
+                  <GetInTouch />
+                  <Newsletter />
                 </>
               }
             />
