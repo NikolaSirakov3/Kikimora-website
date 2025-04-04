@@ -2,17 +2,18 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
-import { Benefits } from "@/components/Benefits";
-import { Developers } from "@/components/Developers";
-import { Clients } from "@/components/Clients";
-import { SecurityEfficiency } from "@/components/SecurityEfficiency";
-import { Pricing } from "@/components/Pricing";
-import { Newsletter } from "@/components/Newsletter";
-import { Testimonials } from "@/components/Testimonials";
-import { RequestDemo } from "@/components/RequestDemo";
-import { Blog } from "@/components/Blog";
-import { GetInTouch } from "@/components/GetInTouch";
+import { Hero } from "@/components/home/Hero";
+import { Benefits } from "@/components/home/Benefits";
+import { Developers } from "@/components/home/Developers";
+import { Clients } from "@/components/home/Clients";
+import { SecurityEfficiency } from "@/components/home/SecurityEfficiency";
+import { Pricing } from "@/components/home/Pricing";
+import { Newsletter } from "@/components/home/Newsletter";
+import { Testimonials } from "@/components/home/Testimonials";
+import { RequestDemo } from "@/components/home/RequestDemo";
+import { Blog } from "@/components/home/Blog";
+import { GetInTouch } from "@/components/home/GetInTouch";
+import { About } from "@/pages/About";
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
                 </>
               }
             />
-            <Route path="/about" element={<div>About Page</div>} />
+            <Route path="/about" element={<About />} />
             <Route path="/developers" element={<div>Developers Page</div>} />
             <Route path="/blog" element={<div>Blog Page</div>} />
             <Route path="/docs" element={<div>Documentation Page</div>} />
