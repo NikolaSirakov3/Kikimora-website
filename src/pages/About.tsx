@@ -10,6 +10,7 @@ import { InvestmentCTA } from "@/components/about/InvestmentCTA";
 import { InvestorTestimonials } from "@/components/about/InvestorTestimonials";
 import { News } from "@/components/about/News";
 import { SocialFollow } from "@/components/about/SocialFollow";
+import { GetInTouch } from "@/components/shared/GetInTouch";
 
 export function About() {
   return (
@@ -25,6 +26,7 @@ export function About() {
       <InvestorTestimonials />
       <News />
       <SocialFollow />
+      <GetInTouch />
       {/* Other About page components will be added here */}
     </div>
   );
