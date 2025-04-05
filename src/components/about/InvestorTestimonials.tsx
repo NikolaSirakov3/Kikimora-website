@@ -37,7 +37,7 @@ export function InvestorTestimonials() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-[#002A4E] to-[#001E38] rounded-3xl p-8 flex flex-col"
+                className="bg-gradient-to-br from-[#003A6E] to-[#002A4E] rounded-3xl p-8 flex flex-col"
               >
                 {/* Quote */}
                 <div className="flex-1">
