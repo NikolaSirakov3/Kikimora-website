@@ -18,9 +18,9 @@ import { About } from "@/pages/About";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col overflow-x-hidden">
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow overflow-x-hidden">
           <Routes>
             <Route
               path="/"
