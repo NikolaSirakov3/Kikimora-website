@@ -6,6 +6,7 @@ import { Journey } from "@/components/about/Journey";
 import { Partners } from "@/components/about/Partners";
 import { People } from "@/components/about/People";
 import { Investors } from "@/components/about/Investors";
+import { InvestmentCTA } from "@/components/about/InvestmentCTA";
 
 export function About() {
   return (
@@ -16,8 +17,8 @@ export function About() {
       <Journey />
       <Partners />
       <People />
-      <AboutHero />
       <Investors />
+      <InvestmentCTA />
       {/* Other About page components will be added here */}
     </div>
   );
