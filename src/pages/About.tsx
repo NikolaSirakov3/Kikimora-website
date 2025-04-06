@@ -14,7 +14,7 @@ import { GetInTouch } from "@/components/shared/GetInTouch";
 
 export function About() {
   return (
-    <div className="w-full">
+    <div className="w-[99.1vw]">
       <AboutHero />
       <Team />
       <AboutTeam />
