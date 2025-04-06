@@ -68,10 +68,7 @@ export function Blog() {
       <div className="w-full px-[5%] flex flex-col items-center">
         <div className="max-w-[1400px] w-full">
           <h2 className="text-5xl text-white font-conthrax text-center mb-4">
-            Stay updated
-          </h2>
-          <h2 className="text-5xl text-white font-conthrax text-center mb-4">
-            with the latest in
+            Stay updated with the latest in
           </h2>
           <h2 className="text-5xl text-white font-conthrax text-center mb-8">
             secure development
