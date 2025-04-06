@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/home/Hero";
 import { Benefits } from "@/components/home/Benefits";
 import { Developers } from "@/pages/Developers";
+import { DevelopersCaseStudy } from "@/components/home/DevelopersCaseStudy";
 import { Clients } from "@/components/home/Clients";
 import { SecurityEfficiency } from "@/components/home/SecurityEfficiency";
 import { Pricing } from "@/components/home/Pricing";
@@ -28,7 +29,7 @@ function App() {
                 <>
                   <Hero />
                   <Benefits />
-                  <Developers />
+                  <DevelopersCaseStudy />
                   <Clients />
                   <SecurityEfficiency />
                   <Pricing />

@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 
-export function Developers() {
+export function DevelopersCaseStudy() {
   return (
     <div className="bg-[#001E38] py-16">
       <div className="w-full px-[5%] flex flex-col items-center">
