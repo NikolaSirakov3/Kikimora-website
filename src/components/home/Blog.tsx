@@ -8,7 +8,7 @@ interface BlogPostProps {
   isLarge?: boolean;
 }
 
-function BlogPost({ image, date, title, description, isLarge }: BlogPostProps) {
+function BlogPost({ date, title, description, isLarge }: BlogPostProps) {
   if (isLarge) {
     return (
       <div className="bg-[#002A4E] rounded-3xl overflow-hidden h-full">

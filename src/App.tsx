@@ -12,7 +12,7 @@ import { Pricing } from "@/components/home/Pricing";
 import { Newsletter } from "@/components/home/Newsletter";
 import { Testimonials } from "@/components/home/Testimonials";
 import { RequestDemo } from "@/components/home/RequestDemo";
-import { Blog } from "@/components/home/Blog";
+import { Blog } from "@/pages/Blog";
 import { GetInTouch } from "@/components/home/GetInTouch";
 import { About } from "@/pages/About";
 
@@ -43,7 +43,7 @@ function App() {
             />
             <Route path="/about" element={<About />} />
             <Route path="/developers" element={<Developers />} />
-            <Route path="/blog" element={<div>Blog Page</div>} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/docs" element={<div>Documentation Page</div>} />
             <Route path="/privacy" element={<div>Privacy Policy Page</div>} />
             <Route path="/terms" element={<div>Terms & Conditions Page</div>} />
