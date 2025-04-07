@@ -1,5 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
+import { Link } from "react-router-dom";
 
 interface BlogPost {
   id: number;
@@ -72,7 +73,10 @@ export function BlogHero() {
         {/* Blog Grid */}
         <div className="flex flex-col gap-8">
           {/* Featured Post (Full width) */}
-          <div className="w-full bg-gradient-to-b from-[#002A4E] to-[#001E38] rounded-2xl overflow-hidden">
+          <Link
+            to={`/blog/${blogPosts[0].id}`}
+            className="w-full bg-gradient-to-b from-[#002A4E] to-[#001E38] rounded-2xl overflow-hidden transition-transform hover:scale-[1.01]"
+          >
             <div className="aspect-[16/5.4] relative">
               <div className="absolute inset-0 bg-gradient-to-b from-[#002A4E] to-[#001E38] flex items-center justify-center">
                 <span className="text-white/20 font-montserrat">
@@ -91,14 +95,15 @@ export function BlogHero() {
                 {blogPosts[0].description}
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Two Column Grid for Regular Posts */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {blogPosts.slice(1, 5).map((post) => (
-              <div
+              <Link
                 key={post.id}
-                className="bg-gradient-to-b from-[#002A4E] to-[#001E38] rounded-2xl overflow-hidden"
+                to={`/blog/${post.id}`}
+                className="bg-gradient-to-b from-[#002A4E] to-[#001E38] rounded-2xl overflow-hidden transition-transform hover:scale-[1.01]"
               >
                 <div className="aspect-[16/9] relative">
                   <div className="absolute inset-0 bg-gradient-to-b from-[#002A4E] to-[#001E38] flex items-center justify-center">
@@ -118,7 +123,7 @@ export function BlogHero() {
                     {post.description}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
