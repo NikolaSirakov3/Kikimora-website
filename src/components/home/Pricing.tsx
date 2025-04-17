@@ -1,12 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 
 type PaymentPeriod = "yearly" | "monthly";
 
+const IT_ASSETS_POINTS = [10, 30, 62, 126, 254, 510, 1022];
+const WAS_POINTS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 export function Pricing() {
   const [paymentPeriod, setPaymentPeriod] = useState<PaymentPeriod>("yearly");
-  const yearlyPrice = 565;
-  const monthlyPrice = 47.83;
+  const [itAssetsValue, setItAssetsValue] = useState(512);
+  const [wasValue, setWasValue] = useState(0);
+
+  const baseMonthlyPrice = useMemo(() => {
+    if (itAssetsValue === 1022) return 2102.2;
+    if (itAssetsValue === 510) return 1119.2;
+    if (itAssetsValue === 254) return 627.7;
+    if (itAssetsValue === 126) return 381.9;
+    if (itAssetsValue === 62) return 259;
+    if (itAssetsValue === 30) return 197.6;
+    return 159.2; // Default base price for other IT Assets values
+  }, [itAssetsValue]);
+
+  const wasPriceIncrement = 30;
+
+  const monthlyPrice = useMemo(() => {
+    return baseMonthlyPrice + wasValue * wasPriceIncrement;
+  }, [baseMonthlyPrice, wasValue]);
+
+  const yearlyPrice = useMemo(() => {
+    return monthlyPrice * 12; // Full yearly price without discount
+  }, [monthlyPrice]);
+
+  const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(e.target.value);
+    // Find the closest point in IT_ASSETS_POINTS
+    const closest = IT_ASSETS_POINTS.reduce((prev, curr) => {
+      return Math.abs(curr - value) < Math.abs(prev - value) ? curr : prev;
+    });
+    setItAssetsValue(closest);
+  };
+
+  const handleWasChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(e.target.value);
+    // Find the closest point in WAS_POINTS
+    const closest = WAS_POINTS.reduce((prev, curr) => {
+      return Math.abs(curr - value) < Math.abs(prev - value) ? curr : prev;
+    });
+    setWasValue(closest);
+  };
 
   return (
     <div className="bg-[#001E38] py-20">
@@ -26,29 +67,93 @@ export function Pricing() {
 
                 {/* Pricing items */}
                 <div className="space-y-8">
-                  {/* IP Addresses */}
+                  {/* IT Assets */}
                   <div className="flex items-center gap-4">
                     <span className="text-white font-montserrat text-lg w-40">
-                      IP Addresses
+                      IT Assets
                     </span>
                     <div className="flex-1 h-0.5 bg-[#159ECE]/30 mx-4 relative">
-                      <div className="absolute w-3 h-3 bg-[#159ECE] rounded-full top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"></div>
+                      {IT_ASSETS_POINTS.map((point) => (
+                        <div
+                          key={point}
+                          className="absolute h-3 w-[1px] bg-[#159ECE]/50 top-1/2 transform -translate-y-1/2"
+                          style={{
+                            left: `${
+                              ((point - IT_ASSETS_POINTS[0]) /
+                                (IT_ASSETS_POINTS[IT_ASSETS_POINTS.length - 1] -
+                                  IT_ASSETS_POINTS[0])) *
+                              100
+                            }%`,
+                          }}
+                        />
+                      ))}
+                      <div
+                        className="absolute w-3 h-3 bg-[#159ECE] rounded-full top-1/2 transform -translate-y-1/2 cursor-pointer animate-pulse"
+                        style={{
+                          left: `${
+                            ((itAssetsValue - IT_ASSETS_POINTS[0]) /
+                              (IT_ASSETS_POINTS[IT_ASSETS_POINTS.length - 1] -
+                                IT_ASSETS_POINTS[0])) *
+                            100
+                          }%`,
+                        }}
+                      />
+                      <input
+                        type="range"
+                        min={IT_ASSETS_POINTS[0]}
+                        max={IT_ASSETS_POINTS[IT_ASSETS_POINTS.length - 1]}
+                        value={itAssetsValue}
+                        onChange={handleSliderChange}
+                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                      />
                     </div>
                     <span className="text-[#159ECE] font-montserrat text-2xl font-bold w-20 text-right">
-                      512
+                      {itAssetsValue}
                     </span>
                   </div>
 
-                  {/* Web Applications */}
+                  {/* Qualys WAS Assets */}
                   <div className="flex items-center gap-4">
                     <span className="text-white font-montserrat text-lg w-40">
-                      Web Applications
+                      Qualys WAS Assets
                     </span>
                     <div className="flex-1 h-0.5 bg-[#159ECE]/30 mx-4 relative">
-                      <div className="absolute w-3 h-3 bg-[#159ECE] rounded-full top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"></div>
+                      {WAS_POINTS.map((point) => (
+                        <div
+                          key={point}
+                          className="absolute h-3 w-[1px] bg-[#159ECE]/50 top-1/2 transform -translate-y-1/2"
+                          style={{
+                            left: `${
+                              ((point - WAS_POINTS[0]) /
+                                (WAS_POINTS[WAS_POINTS.length - 1] -
+                                  WAS_POINTS[0])) *
+                              100
+                            }%`,
+                          }}
+                        />
+                      ))}
+                      <div
+                        className="absolute w-3 h-3 bg-[#159ECE] rounded-full top-1/2 transform -translate-y-1/2 cursor-pointer animate-pulse"
+                        style={{
+                          left: `${
+                            ((wasValue - WAS_POINTS[0]) /
+                              (WAS_POINTS[WAS_POINTS.length - 1] -
+                                WAS_POINTS[0])) *
+                            100
+                          }%`,
+                        }}
+                      />
+                      <input
+                        type="range"
+                        min={WAS_POINTS[0]}
+                        max={WAS_POINTS[WAS_POINTS.length - 1]}
+                        value={wasValue}
+                        onChange={handleWasChange}
+                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                      />
                     </div>
                     <span className="text-[#159ECE] font-montserrat text-2xl font-bold w-20 text-right">
-                      25
+                      {wasValue}
                     </span>
                   </div>
 
@@ -58,7 +163,7 @@ export function Pricing() {
                       Consulting Hours
                     </span>
                     <span className="text-[#3EDDCA] font-montserrat text-2xl font-bold w-32 text-right whitespace-nowrap">
-                      {paymentPeriod === "yearly" ? "FREE" : "1 HOUR"}
+                      80€/HOUR
                     </span>
                   </div>
                 </div>
@@ -101,8 +206,8 @@ export function Pricing() {
                       <span className="text-white/60 font-conthrax text-3xl">
                         {paymentPeriod === "yearly" ? (
                           <>
-                            <span className="mr-2">$</span>
-                            <span>{yearlyPrice}</span>
+                            <span className="mr-2">€</span>
+                            <span>{yearlyPrice.toFixed(2)}</span>
                           </>
                         ) : (
                           "12 months"
@@ -120,7 +225,10 @@ export function Pricing() {
                         : "Monthly Price:"}
                     </span>
                     <span className="text-[#3EDDCA] font-montserrat text-3xl">
-                      $ {paymentPeriod === "yearly" ? "509.5" : monthlyPrice}
+                      €{" "}
+                      {paymentPeriod === "yearly"
+                        ? yearlyPrice.toFixed(2)
+                        : monthlyPrice.toFixed(2)}
                     </span>
                   </div>
                   {paymentPeriod === "yearly" && (
