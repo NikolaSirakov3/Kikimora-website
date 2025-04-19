@@ -1,6 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import { Resend } from "resend";
+
+const resend = new Resend("re_4yQzv6Uz_FKEzv4TbmCYo4tWXqejqA5F7");
 
 export function Newsletter() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsSubmitting(true);
+    setError(null);
+    setSuccess(false);
+
+    try {
+      await resend.emails.send({
+        from: "onboarding@resend.dev",
+        to: "nikolasirakov1@gmail.com",
+        subject: "New Newsletter Subscription",
+        text: `New subscriber email: ${email}`,
+      });
+
+      setSuccess(true);
+      setEmail("");
+    } catch (err) {
+      setError("Failed to subscribe. Please try again later.");
+      console.error("Error sending email:", err);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="bg-[#001E38] border-t border-white/10">
       <div className="w-full px-[5%] py-6">
@@ -67,16 +101,29 @@ export function Newsletter() {
                 "Subscribe for our newsletter to\nbe always updated for the latest news"
               }
             </span>
-            <div className="flex gap-2">
+            <form onSubmit={handleSubmit} className="flex gap-2">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white font-montserrat text-sm placeholder:text-white/40 focus:outline-none focus:border-[#00E5BE]"
+                required
               />
-              <button className="bg-[#00E5BE] text-[#001E38] font-montserrat text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#00E5BE]/90">
-                Send
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-[#00E5BE] text-[#001E38] font-montserrat text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#00E5BE]/90 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Sending..." : "Send"}
               </button>
-            </div>
+            </form>
+            {error && <span className="text-red-400 text-sm">{error}</span>}
+            {success && (
+              <span className="text-[#00E5BE] text-sm">
+                Successfully subscribed!
+              </span>
+            )}
           </div>
         </div>
       </div>
