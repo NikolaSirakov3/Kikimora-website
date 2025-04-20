@@ -1,11 +1,94 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { useCallback } from "react";
+import { loadSlim } from "tsparticles-slim";
+import Particles from "react-tsparticles";
+import type { Engine } from "tsparticles-engine";
 
 export function Hero() {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadSlim(engine);
+  }, []);
+
   return (
-    <div className="bg-[#001E38]">
+    <div className="bg-[#001E38] relative">
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          fullScreen: {
+            enable: true,
+            zIndex: 0,
+          },
+          particles: {
+            number: {
+              value: 50,
+              density: {
+                enable: true,
+                value_area: 800,
+              },
+            },
+            color: {
+              value: "#3EDDCA",
+            },
+            shape: {
+              type: "circle",
+            },
+            opacity: {
+              value: 0.5,
+              random: true,
+            },
+            size: {
+              value: 3,
+              random: true,
+            },
+            move: {
+              enable: true,
+              speed: 1,
+              direction: "none",
+              random: true,
+              straight: false,
+              outModes: {
+                default: "out",
+              },
+            },
+            links: {
+              enable: true,
+              distance: 150,
+              color: "#3EDDCA",
+              opacity: 0.4,
+              width: 1,
+            },
+          },
+          interactivity: {
+            events: {
+              onHover: {
+                enable: true,
+                mode: "grab",
+              },
+              onClick: {
+                enable: true,
+                mode: "push",
+              },
+            },
+            modes: {
+              grab: {
+                distance: 140,
+                links: {
+                  opacity: 1,
+                },
+              },
+              push: {
+                quantity: 4,
+              },
+            },
+          },
+          detectRetina: true,
+        }}
+        className="absolute inset-0"
+      />
       {/* First Section */}
-      <section className="h-screen">
+      <section className="h-screen relative z-10">
         <div className="h-3/4 flex items-center">
           {/* Left side - Content */}
           <div className="flex flex-col gap-6 w-1/2 pl-[10%]">
@@ -47,7 +130,7 @@ export function Hero() {
         <div className="h-full flex items-center">
           {/* Left side - Dashboard Image */}
           <div className="w-1/2 flex justify-center">
-            <div className="w-[600px] h-[400px] bg-[#8C50C8] rounded-lg">
+            <div className="w-[600px] h-[400px] bg-[#8C50C8] rounded-lg z-10">
               {/* Placeholder for the dashboard image */}
             </div>
           </div>
