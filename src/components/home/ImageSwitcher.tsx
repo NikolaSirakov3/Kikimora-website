@@ -43,18 +43,24 @@ export function ImageSwitcher() {
           ))}
         </div>
 
-        {/* Image display with fixed dimensions and white border */}
-        <div className="w-[1000px] h-[600px] relative rounded-2xl border-2 border-white/20 overflow-hidden">
-          {imageOptions.map((option) => (
-            <img
-              key={option.id}
-              src={option.src}
-              alt={`Menu ${option.id}`}
-              className={`w-full h-full object-cover transition-opacity duration-300 absolute top-0 left-0 ${
-                selectedImage === option.id ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          ))}
+        {/* Image display with gradient border effect */}
+        <div className="w-[1040px] h-[640px] relative rounded-2xl p-[1px] bg-gradient-to-b from-white/10 via-white/10 to-transparent">
+          <div className="w-full h-full p-5 rounded-2xl bg-[#001E38]">
+            <div className="w-[1000px] h-[600px] relative overflow-hidden rounded-xl">
+              {imageOptions.map((option) => (
+                <img
+                  key={option.id}
+                  src={option.src}
+                  alt={`Menu ${option.id}`}
+                  className={`w-full h-full object-cover transition-opacity duration-300 absolute top-0 left-0 rounded ${
+                    selectedImage === option.id ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+              {/* Gradient overlay */}
+              <div className="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-[#001E38] via-[#001E38]/60 to-transparent pointer-events-none" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
