@@ -16,6 +16,7 @@ import { Blog } from "@/pages/Blog";
 import { BlogPost } from "@/pages/BlogPost";
 import { GetInTouch } from "@/components/home/GetInTouch";
 import { About } from "@/pages/About";
+import { ImageSwitcher } from "@/components/home/ImageSwitcher";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               element={
                 <>
                   <Hero />
+                  <ImageSwitcher />
                   <Benefits />
                   <DevelopersCaseStudy />
                   <Clients />
