@@ -120,7 +120,7 @@ export function Testimonials() {
             onMouseMove={handleMouseMove}
           >
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="snap-start">
+              <div key={index} className="snap-start z-10">
                 <TestimonialCard {...testimonial} />
               </div>
             ))}

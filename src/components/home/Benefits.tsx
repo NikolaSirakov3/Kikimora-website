@@ -21,7 +21,7 @@ export function Benefits() {
         </p>
 
         {/* Benefits Grid */}
-        <div className="grid grid-cols-2 gap-8 w-full max-w-[1200px]">
+        <div className="grid grid-cols-2 gap-8 w-full max-w-[1200px] z-10">
           {/* Enhanced efficiency */}
           <div className="bg-[#002A4E] rounded-lg p-8">
             <div className="flex justify-between items-start">

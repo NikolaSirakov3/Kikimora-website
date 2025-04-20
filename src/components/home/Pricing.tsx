@@ -52,7 +52,7 @@ export function Pricing() {
   return (
     <div className="bg-[#001E38] py-20">
       <div className="w-full px-[5%] flex flex-col items-center">
-        <div className="max-w-[1400px] w-full">
+        <div className="max-w-[1400px] w-full z-10">
           {/* Pricing Card */}
           <div className="bg-gradient-to-r from-[#60348c] via-[#2A1D4C] to-[#492d65] rounded-3xl p-12 min-h-[600px]">
             <div className="flex justify-between h-full">

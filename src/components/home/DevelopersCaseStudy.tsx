@@ -5,7 +5,7 @@ export function DevelopersCaseStudy() {
   return (
     <div className="bg-[#001E38] py-16">
       <div className="w-full px-[5%] flex flex-col items-center">
-        <div className="w-full max-w-[1400px] bg-[#2A1D4C] rounded-3xl p-10 flex justify-between">
+        <div className="w-full max-w-[1400px] bg-[#2A1D4C] rounded-3xl p-10 flex justify-between z-10">
           {/* Left side content */}
           <div className="max-w-[600px]">
             <h2 className="text-5xl text-white font-conthrax mb-3">

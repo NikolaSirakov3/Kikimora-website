@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#00539B]">
+    <footer className="w-full bg-[#00539B] z-10">
       <div className="h-16 max-w-[1920px] mx-auto px-[10%] flex items-center justify-between">
         {/* Left side - Social Media Icons */}
         <div className="flex items-center gap-6">
