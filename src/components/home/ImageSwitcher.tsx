@@ -31,8 +31,10 @@ export function ImageSwitcher() {
                 borderTop: "none",
                 borderLeft: "none",
                 borderRight: "none",
+                textDecoration: "none",
+                outline: "none",
               }}
-              className={`text-base bg-transparent pb-2 outline-none font-montserrat ${
+              className={`text-base bg-transparent pb-2 font-montserrat hover:no-underline focus:outline-none focus:ring-0 ${
                 selectedImage === option.id
                   ? "text-white font-semibold"
                   : "text-white/60"
