@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { AutoEmail } from "@/components/AutoEmail";
 import { Hero } from "@/components/home/Hero";
 import { Benefits } from "@/components/home/Benefits";
 import { Developers } from "@/pages/Developers";
@@ -23,7 +22,6 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col overflow-x-hidden">
         <Navbar />
-        <AutoEmail />
         <main className="flex-grow overflow-x-hidden">
           <Routes>
             <Route
