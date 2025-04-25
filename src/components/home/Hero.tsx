@@ -32,7 +32,7 @@ export function Hero() {
               value: "#3EDDCA",
             },
             shape: {
-              type: "circle",
+              type: "star",
             },
             opacity: {
               value: 0.5,
@@ -43,7 +43,7 @@ export function Hero() {
               random: true,
             },
             move: {
-              enable: true,
+              enable: false,
               speed: 1,
               direction: "none",
               random: true,
@@ -63,11 +63,11 @@ export function Hero() {
           interactivity: {
             events: {
               onHover: {
-                enable: true,
+                enable: false,
                 mode: "grab",
               },
               onClick: {
-                enable: true,
+                enable: false,
                 mode: "push",
               },
             },
