@@ -17,6 +17,8 @@ import { BlogPost } from "@/pages/BlogPost";
 import { GetInTouch } from "@/components/home/GetInTouch";
 import { About } from "@/pages/About";
 import { ImageSwitcher } from "@/components/home/ImageSwitcher";
+import { MSSP } from "@/pages/MSSP";
+import { TryKikimora } from "@/pages/TryKikimora";
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
             <Route path="/docs" element={<div>Documentation Page</div>} />
             <Route path="/privacy" element={<div>Privacy Policy Page</div>} />
             <Route path="/terms" element={<div>Terms & Conditions Page</div>} />
+            <Route path="/mssp" element={<MSSP />} />
+            <Route path="/trykikimora" element={<TryKikimora />} />
           </Routes>
         </main>
         <Footer />
