@@ -107,15 +107,18 @@ const NewNavbar: React.FC = () => {
             {navItems.map((item) => (
               <div key={item.label} className="relative">
                 <button
-                  onClick={() =>
+                  onMouseEnter={() =>
                     item.dropdown && handleDropdownToggle(item.label)
                   }
-                  className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium flex items-center bg-transparent group border-none outline-none focus:outline-none"
+                  onMouseLeave={() =>
+                    item.dropdown && handleDropdownToggle(item.label)
+                  }
+                  className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none flex items-center justify-between w-full gap-2"
                 >
                   {item.label}
                   {item.dropdown && (
                     <svg
-                      className={`ml-1 h-4 w-4 transition-transform duration-300 group-hover:text-[#29ABE2] group-hover:rotate-180 ${
+                      className={`h-4 w-4 transition-transform duration-300 group-hover:text-[#29ABE2] group-hover:rotate-180 ${
                         activeDropdown === item.label ? "rotate-180" : ""
                       }`}
                       fill="none"
@@ -134,7 +137,7 @@ const NewNavbar: React.FC = () => {
 
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.label && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white/10 backdrop-blur-md rounded-md shadow-lg py-1 z-50">
+                  <div className="absolute left-0 mt-2 w-48 bg-[#002A4E] rounded-md shadow-lg py-1 z-50">
                     {item.dropdown.map((subItem) => (
                       <Link
                         key={subItem.label}
@@ -209,10 +212,13 @@ const NewNavbar: React.FC = () => {
           {navItems.map((item) => (
             <div key={item.label}>
               <button
-                onClick={() =>
+                onMouseEnter={() =>
                   item.dropdown && handleDropdownToggle(item.label)
                 }
-                className="w-full text-left text-white hover:text-[#29ABE2] block px-3 py-2 text-base font-medium flex items-center justify-between bg-transparent group border-none outline-none focus:outline-none"
+                onMouseLeave={() =>
+                  item.dropdown && handleDropdownToggle(item.label)
+                }
+                className="w-full text-left text-white hover:text-[#29ABE2] block px-3 py-2 text-base font-medium flex items-center justify-between bg-transparent group border-none outline-none focus:outline-none gap-2"
               >
                 {item.label}
                 {item.dropdown && (
@@ -234,7 +240,7 @@ const NewNavbar: React.FC = () => {
                 )}
               </button>
               {item.dropdown && activeDropdown === item.label && (
-                <div className="pl-4">
+                <div className="pl-4 bg-[#002A4E] rounded-md shadow-lg">
                   {item.dropdown.map((subItem) => (
                     <Link
                       key={subItem.label}
