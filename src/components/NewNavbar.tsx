@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 interface NavItem {
@@ -58,15 +58,43 @@ const navItems: NavItem[] = [
 const NewNavbar: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== "undefined") {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY === 0) {
+          // at the top of the page
+          setIsVisible(true);
+        } else {
+          // anywhere else on the page
+          setIsVisible(false);
+        }
+
+        setLastScrollY(currentScrollY);
+      }
+    };
+
+    window.addEventListener("scroll", controlNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
 
   const handleDropdownToggle = (label: string) => {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
   return (
-    <nav className="bg-transparent fixed w-full top-0 z-50">
+    <nav
+      className={`bg-transparent fixed w-full top-0 z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 backdrop-blur-sm">
+        <div className="flex justify-between h-16 backdrop-blur-sm sticky top-0">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="text-2xl font-bold text-white">
@@ -132,7 +160,7 @@ const NewNavbar: React.FC = () => {
             </Link>
             <Link
               to="/start-free"
-              className="text-white hover:text-[#29ABE2] px-4 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none"
+              className="text-white hover:text-white px-4 py-2 text-sm font-medium bg-[#31c9b7] rounded-full border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
             >
               Start Free
             </Link>
@@ -229,7 +257,7 @@ const NewNavbar: React.FC = () => {
             </Link>
             <Link
               to="/start-free"
-              className="block px-3 py-2 text-base font-medium text-white hover:text-[#29ABE2] bg-transparent border-none outline-none focus:outline-none"
+              className="block px-3 py-2 text-base font-medium text-white hover:text-white bg-[#3EDDCA] rounded-full border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
             >
               Start Free
             </Link>
