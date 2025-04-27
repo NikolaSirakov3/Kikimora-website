@@ -87,7 +87,7 @@ const NewNavbar: React.FC = () => {
                   {item.label}
                   {item.dropdown && (
                     <svg
-                      className={`ml-1 h-4 w-4 transition-transform duration-200 group-hover:text-[#29ABE2] ${
+                      className={`ml-1 h-4 w-4 transition-transform duration-300 group-hover:text-[#29ABE2] group-hover:rotate-180 ${
                         activeDropdown === item.label ? "rotate-180" : ""
                       }`}
                       fill="none"
@@ -189,7 +189,7 @@ const NewNavbar: React.FC = () => {
                 {item.label}
                 {item.dropdown && (
                   <svg
-                    className={`h-4 w-4 transition-transform duration-200 group-hover:text-[#29ABE2] ${
+                    className={`h-4 w-4 transition-transform duration-300 group-hover:text-[#29ABE2] group-hover:rotate-180 ${
                       activeDropdown === item.label ? "rotate-180" : ""
                     }`}
                     fill="none"
