@@ -22,16 +22,16 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    label: "Solutions",
-    href: "/solutions",
+    label: "Use cases",
+    href: "/use-cases",
     dropdown: [
       { label: "Use Cases", href: "/solutions/use-cases" },
       { label: "Industries", href: "/solutions/industries" },
     ],
   },
   {
-    label: "Resources",
-    href: "/resources",
+    label: "Industries",
+    href: "/industries",
     dropdown: [
       { label: "Developer", href: "/resources/developer" },
       { label: "Security", href: "/resources/security" },
@@ -52,7 +52,7 @@ const navItems: NavItem[] = [
       { label: "Customer Stories", href: "/customer-stories" },
     ],
   },
-  { label: "Contact", href: "/contact" },
+  { label: "Pricing", href: "/pricing" },
 ];
 
 const NewNavbar: React.FC = () => {
@@ -156,7 +156,7 @@ const NewNavbar: React.FC = () => {
               to="/login"
               className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none"
             >
-              Login
+              Book a Demo
             </Link>
             <Link
               to="/start-free"
