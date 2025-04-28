@@ -218,7 +218,7 @@ export function AnimatedIntro() {
               className={
                 activeTab === "PROMPT_INJECTION"
                   ? "bg-[#1E1E1E] text-white px-4 py-2 rounded-md"
-                  : "text-[#4A5568] px-4 py-2 transition-colors"
+                  : "bg-transparent text-white px-4 py-2"
               }
             >
               PROMPT INJECTION
@@ -228,7 +228,7 @@ export function AnimatedIntro() {
               className={
                 activeTab === "OFF_TOPIC"
                   ? "bg-[#1E1E1E] text-white px-4 py-2 rounded-md"
-                  : "text-[#4A5568] px-4 py-2 transition-colors"
+                  : "bg-transparent text-white px-4 py-2"
               }
             >
               OFF-TOPIC
@@ -238,7 +238,7 @@ export function AnimatedIntro() {
               className={
                 activeTab === "HALLUCINATION"
                   ? "bg-[#1E1E1E] text-white px-4 py-2 rounded-md"
-                  : "text-[#4A5568] px-4 py-2 transition-colors"
+                  : "bg-transparent text-white px-4 py-2"
               }
             >
               HALLUCINATION
