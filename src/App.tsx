@@ -19,6 +19,7 @@ import { About } from "@/pages/About";
 import { ImageSwitcher } from "@/components/home/ImageSwitcher";
 import { MSSP } from "@/pages/MSSP";
 import { TryKikimora } from "@/pages/TryKikimora";
+import { AnimatedIntro } from "@/components/home/AnimatedIntro";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               path="/"
               element={
                 <>
+                  <AnimatedIntro />
                   <Hero />
                   <ImageSwitcher />
                   <Benefits />
