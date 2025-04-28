@@ -32,8 +32,8 @@ function App() {
               path="/"
               element={
                 <>
-                  <AnimatedIntro />
                   <Hero />
+                  <AnimatedIntro />
                   <ImageSwitcher />
                   <Benefits />
                   <DevelopersCaseStudy />
