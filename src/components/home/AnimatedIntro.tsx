@@ -23,7 +23,10 @@ function AnimatedLogo() {
   });
 
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 -top-6">
+    <div
+      className="absolute left-1/2 -translate-x-1/2"
+      style={{ top: "-24px" }}
+    >
       {/* Outer glow effect */}
       <div className="relative w-16 h-16 flex items-center justify-center">
         <animated.div
@@ -111,11 +114,10 @@ function WarningMessage() {
 export function AnimatedIntro() {
   return (
     <div className="bg-[#0A192F] h-[80vh] w-full z-20">
-      <div className="relative max-w-[500px] mx-auto">
-        <AnimatedLogo />
-
-        {/* Tabs */}
-        <div className="bg-black px-4 pt-12 pb-8 rounded-lg">
+      <div className="relative max-w-[500px] mx-auto pt-16">
+        {/* Black container with tabs only */}
+        <div className="relative bg-black px-4 pt-12 pb-4 rounded-lg mb-3">
+          <AnimatedLogo />
           <div className="flex gap-2 text-sm">
             <div className="bg-[#1E1E1E] text-white px-4 py-2 rounded-md">
               PROMPT INJECTION
@@ -123,12 +125,15 @@ export function AnimatedIntro() {
             <div className="text-[#4A5568] px-4 py-2">OFF-TOPIC</div>
             <div className="text-[#4A5568] px-4 py-2">HALLUCINATION</div>
           </div>
+        </div>
 
+        {/* Content outside black container */}
+        <div className="space-y-2">
           {/* Chatbot Label */}
-          <div className="flex justify-center mb-8 mt-6">
-            <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-6 py-3">
-              <span className="text-white">💬</span>
-              <span className="text-white font-medium">CAR SALES CHATBOT</span>
+          <div className="bg-white rounded-lg px-4 py-2.5 flex items-center justify-center">
+            <div className="inline-flex items-center gap-2">
+              <span className="text-black">💬</span>
+              <span className="text-black font-medium">CAR SALES CHATBOT</span>
             </div>
           </div>
 
