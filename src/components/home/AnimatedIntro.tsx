@@ -9,16 +9,16 @@ interface ChatMessageProps {
 
 function AnimatedLogo() {
   const pulseSpring = useSpring({
-    from: { transform: "scale(1)", opacity: 0.6 },
+    from: { transform: "scale(1)", opacity: 0.7 },
     to: [
-      { transform: "scale(1.15)", opacity: 1 },
-      { transform: "scale(1)", opacity: 0.6 },
+      { transform: "scale(1.12)", opacity: 1 },
+      { transform: "scale(1)", opacity: 0.7 },
     ],
     loop: true,
     config: {
-      mass: 1,
-      tension: 180,
-      friction: 12,
+      mass: 2,
+      tension: 140,
+      friction: 20,
     },
   });
 
@@ -28,10 +28,10 @@ function AnimatedLogo() {
       <div className="relative w-16 h-16 flex items-center justify-center">
         <animated.div
           style={pulseSpring}
-          className="absolute w-full h-full rounded-full bg-gradient-to-r from-[#3EDDCA]/30 to-[#3EDDCA]/10"
+          className="absolute w-full h-full rounded-full bg-gradient-to-r from-emerald-400/30 via-purple-400/20 to-cyan-400/30"
         />
-        <div className="absolute w-14 h-14 rounded-full bg-gradient-to-br from-[#3EDDCA]/20 to-[#3EDDCA]/5" />
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 via-emerald-500 to-cyan-500 flex items-center justify-center relative z-10 shadow-lg shadow-cyan-500/20">
+        <div className="absolute w-14 h-14 rounded-full bg-gradient-to-br from-emerald-400/20 via-purple-400/10 to-cyan-400/20" />
+        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 via-purple-500 to-cyan-400 flex items-center justify-center relative z-10 shadow-lg shadow-purple-500/30">
           <span className="text-white text-2xl drop-shadow-lg">Ø</span>
         </div>
       </div>
