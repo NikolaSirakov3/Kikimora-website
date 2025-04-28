@@ -91,7 +91,7 @@ export function Hero() {
       <section className="h-screen relative z-10">
         <div className="h-3/4 flex items-center">
           {/* Left side - Content */}
-          <div className="flex flex-col gap-6 w-1/2 pl-[10%]">
+          <div className="flex flex-col gap-6 w-1/2 pl-[10%] mt-10">
             <h1 className="text-5xl text-white font-conthrax leading-tight">
               Elevating your security posture
             </h1>
@@ -117,7 +117,7 @@ export function Hero() {
           </div>
 
           {/* Right side - Image */}
-          <div className="w-1/2 flex justify-center">
+          <div className="w-1/2 flex justify-center mt-10">
             <div className="w-[500px] h-[500px] bg-[#8C50C8] rounded-lg">
               {/* Placeholder for the shield image */}
             </div>
