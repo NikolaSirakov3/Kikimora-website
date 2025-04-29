@@ -3,15 +3,15 @@ import { FaShieldHalved } from "react-icons/fa6";
 
 export function EUFunding() {
   return (
-    <div className="w-full bg-[#001324] py-8">
-      <div className="max-w-[1400px] mx-auto px-4 flex items-center">
+    <div className="w-full bg-[#122e46] py-8">
+      <div className="max-w-[1400px] mx-auto px-4 flex items-center justify-between">
         {/* Shield Logo */}
-        <div className="mr-8">
+        <div className="flex-shrink-0">
           <FaShieldHalved className="w-24 h-24 text-white" />
         </div>
 
         {/* Navigation Buttons */}
-        <nav className="flex flex-col gap-2 mr-8">
+        <nav className="flex flex-col gap-2 flex-shrink-0">
           <a href="/" className="text-white hover:text-gray-300">
             Home
           </a>
@@ -33,7 +33,7 @@ export function EUFunding() {
         </nav>
 
         {/* EU Flag */}
-        <div className="mr-8">
+        <div className="flex-shrink-0">
           <img
             src="/eu-flag.png"
             alt="European Union Flag"
@@ -42,7 +42,7 @@ export function EUFunding() {
         </div>
 
         {/* Innovation and Funds Logos */}
-        <div className="flex flex-col gap-4 mr-8">
+        <div className="flex flex-col gap-4 flex-shrink-0">
           <img
             src="/innovation.png"
             alt="Innovation and Competitiveness Logo"
@@ -56,7 +56,7 @@ export function EUFunding() {
         </div>
 
         {/* Funding Text */}
-        <div className="max-w-xs">
+        <div className="max-w-xs flex-shrink-0">
           <p className="text-white text-sm">
             Kikimora.io has been supported by "Vitosha Venture Partners Fund I",
             a private equity fund, co-financed by the European Structural and
