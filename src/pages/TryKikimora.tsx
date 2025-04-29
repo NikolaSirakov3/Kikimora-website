@@ -1,4 +1,5 @@
 import React from "react";
+import { EUFunding } from "@/components/shared/EUFunding";
 
 export function TryKikimora() {
   return (
@@ -189,6 +190,8 @@ export function TryKikimora() {
           </button>
         </div>
       </div>
+
+      <EUFunding />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { EUFunding } from "@/components/shared/EUFunding";
 
 export function MSSP() {
   return (
@@ -120,6 +121,8 @@ export function MSSP() {
           </button>
         </div>
       </div>
+
+      <EUFunding />
     </div>
   );
 }
