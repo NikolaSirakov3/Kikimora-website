@@ -2,56 +2,292 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FreeTrialModal } from "./ui/FreeTrialModal";
 
+interface DropdownItem {
+  label: string;
+  href: string;
+  description?: string;
+  icon?: React.ReactNode;
+  soon?: boolean;
+}
+
+interface DropdownSection {
+  items: DropdownItem[];
+}
+
 interface NavItem {
   label: string;
   href: string;
-  dropdown?: {
-    label: string;
-    href: string;
-  }[];
+  dropdown?: DropdownSection;
 }
 
 const navItems: NavItem[] = [
   {
     label: "Product",
     href: "/product",
-    dropdown: [
-      { label: "Code", href: "/product/code" },
-      { label: "Cloud", href: "/product/cloud" },
-      { label: "Defend", href: "/product/defend" },
-      { label: "Features", href: "/product/features" },
-    ],
+    dropdown: {
+      items: [
+        {
+          label: "Dependencies",
+          href: "/product/dependencies",
+          description: "Prevent open-source risks (SCA)",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path d="M4 4h16v16H4V4z" stroke="currentColor" strokeWidth="2" />
+            </svg>
+          ),
+        },
+        {
+          label: "IaC",
+          href: "/product/iac",
+          description: "Scan IaC for misconfigurations",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 4L4 8v8l8 4 8-4V8l-8-4z"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+        {
+          label: "API Scanning",
+          href: "/product/api-scanning",
+          description: "Test your APIs for vulns",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+        {
+          label: "AI Autofix",
+          href: "/product/ai-autofix",
+          description: "Save time with Alexa AI",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path d="M12 4v16m8-8H4" stroke="currentColor" strokeWidth="2" />
+            </svg>
+          ),
+        },
+        {
+          label: "Secrets",
+          href: "/product/secrets",
+          description: "Search for exposed secrets",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 15v3m0 0h3m-3 0H9m3-3V9m0 0h3m-3 0H9"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+        {
+          label: "License Risk & SBOMs",
+          href: "/product/license-risk",
+          description: "Avoid risk be compliant",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" />
+            </svg>
+          ),
+        },
+        {
+          label: "Virtual Machines",
+          href: "/product/virtual-machines",
+          description: "No agents, no overhead",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+        {
+          label: "CI/CD Security",
+          href: "/product/cicd-security",
+          description: "Scan before merge and deployment",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+      ],
+    },
   },
   {
     label: "Use cases",
     href: "/use-cases",
-    dropdown: [
-      { label: "Use Cases", href: "/solutions/use-cases" },
-      { label: "Industries", href: "/solutions/industries" },
-    ],
+    dropdown: {
+      items: [
+        {
+          label: "Use Cases",
+          href: "/solutions/use-cases",
+          description: "Explore common security use cases",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+        {
+          label: "Industries",
+          href: "/solutions/industries",
+          description: "Security solutions by industry",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2M5 21H3"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+      ],
+    },
   },
   {
     label: "Industries",
     href: "/industries",
-    dropdown: [
-      { label: "Developer", href: "/resources/developer" },
-      { label: "Security", href: "/resources/security" },
-      { label: "Open Source", href: "/resources/open-source" },
-      { label: "Integrations", href: "/resources/integrations" },
-    ],
+    dropdown: {
+      items: [
+        {
+          label: "Developer",
+          href: "/resources/developer",
+          description: "Resources for developers",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+        {
+          label: "Security",
+          href: "/resources/security",
+          description: "Security best practices",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 15v3m0 0h3m-3 0H9m3-3V9m0 0h3m-3 0H9"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+        {
+          label: "Open Source",
+          href: "/resources/open-source",
+          description: "Open source security",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path d="M12 4v16m8-8H4" stroke="currentColor" strokeWidth="2" />
+            </svg>
+          ),
+        },
+        {
+          label: "Integrations",
+          href: "/resources/integrations",
+          description: "Connect with your tools",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+      ],
+    },
   },
   {
     label: "About",
     href: "/about",
-    dropdown: [
-      { label: "About", href: "/about" },
-      { label: "Careers", href: "/careers" },
-      { label: "Press Kit", href: "/press-kit" },
-      { label: "Calendar", href: "/calendar" },
-      { label: "Open Source", href: "/open-source" },
-      { label: "Blog", href: "/blog" },
-      { label: "Customer Stories", href: "/customer-stories" },
-    ],
+    dropdown: {
+      items: [
+        {
+          label: "About",
+          href: "/about",
+          description: "Learn about our mission",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+        {
+          label: "Careers",
+          href: "/careers",
+          description: "Join our team",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+        {
+          label: "Press Kit",
+          href: "/press-kit",
+          description: "Media resources",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+        {
+          label: "Blog",
+          href: "/blog",
+          description: "Latest news and updates",
+          icon: (
+            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+            </svg>
+          ),
+        },
+      ],
+    },
   },
   { label: "Pricing", href: "/pricing" },
 ];
@@ -137,16 +373,35 @@ const NewNavbar: React.FC = () => {
                   )}
                 </button>
 
-                {/* Dropdown Menu */}
+                {/* Updated Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.label && (
-                  <div className="absolute left-0 mt-2 w-48 bg-[#002A4E] rounded-md shadow-lg py-1 z-50">
-                    {item.dropdown.map((subItem) => (
+                  <div className="absolute left-0 mt-2 w-[720px] bg-[#002A4E] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-3 gap-6">
+                    {item.dropdown.items.map((subItem) => (
                       <Link
                         key={subItem.label}
                         to={subItem.href}
-                        className="block px-4 py-2 text-sm text-white hover:bg-white/20"
+                        className="flex flex-col gap-2 p-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
                       >
-                        {subItem.label}
+                        <div className="flex items-start gap-3">
+                          <div className="text-[#29ABE2] mt-1">
+                            {subItem.icon}
+                          </div>
+                          <div className="flex flex-col">
+                            <div className="flex items-center gap-2">
+                              <span className="text-white font-medium">
+                                {subItem.label}
+                              </span>
+                              {subItem.soon && (
+                                <span className="text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2]">
+                                  soon
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-sm text-gray-400">
+                              {subItem.description}
+                            </span>
+                          </div>
+                        </div>
                       </Link>
                     ))}
                   </div>
@@ -214,10 +469,7 @@ const NewNavbar: React.FC = () => {
           {navItems.map((item) => (
             <div key={item.label}>
               <button
-                onMouseEnter={() =>
-                  item.dropdown && handleDropdownToggle(item.label)
-                }
-                onMouseLeave={() =>
+                onClick={() =>
                   item.dropdown && handleDropdownToggle(item.label)
                 }
                 className="w-full text-left text-white hover:text-[#29ABE2] block px-3 py-2 text-base font-medium flex items-center justify-between bg-transparent group border-none outline-none focus:outline-none gap-2"
@@ -242,14 +494,29 @@ const NewNavbar: React.FC = () => {
                 )}
               </button>
               {item.dropdown && activeDropdown === item.label && (
-                <div className="pl-4 bg-[#002A4E] rounded-md shadow-lg">
-                  {item.dropdown.map((subItem) => (
+                <div className="pl-4 space-y-2">
+                  {item.dropdown.items.map((subItem) => (
                     <Link
                       key={subItem.label}
                       to={subItem.href}
-                      className="block px-3 py-2 text-base font-medium text-white hover:text-white/80"
+                      className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     >
-                      {subItem.label}
+                      <div className="text-[#29ABE2] mt-1">{subItem.icon}</div>
+                      <div className="flex flex-col">
+                        <div className="flex items-center gap-2">
+                          <span className="text-white font-medium">
+                            {subItem.label}
+                          </span>
+                          {subItem.soon && (
+                            <span className="text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2]">
+                              soon
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-sm text-gray-400">
+                          {subItem.description}
+                        </span>
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -261,11 +528,11 @@ const NewNavbar: React.FC = () => {
               to="/login"
               className="block px-3 py-2 text-base font-medium text-white hover:text-[#29ABE2] bg-transparent border-none outline-none focus:outline-none"
             >
-              Login
+              Book a Demo
             </Link>
             <button
               onClick={() => setIsTrialModalOpen(true)}
-              className="block px-3 py-2 text-base font-medium text-white hover:text-white bg-[#3EDDCA] rounded-full border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
+              className="w-full text-left px-3 py-2 text-base font-medium text-white hover:text-white bg-[#3EDDCA] rounded-full border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
             >
               Start Free
             </button>
