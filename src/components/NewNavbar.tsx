@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FreeTrialModal } from "./ui/FreeTrialModal";
 
 interface NavItem {
   label: string;
@@ -60,6 +61,7 @@ const NewNavbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -161,12 +163,12 @@ const NewNavbar: React.FC = () => {
             >
               Book a Demo
             </Link>
-            <Link
-              to="/start-free"
+            <button
+              onClick={() => setIsTrialModalOpen(true)}
               className="text-white hover:text-white px-4 py-2 text-sm font-medium bg-[#31c9b7] rounded-full border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
             >
               Start Free
-            </Link>
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -261,15 +263,21 @@ const NewNavbar: React.FC = () => {
             >
               Login
             </Link>
-            <Link
-              to="/start-free"
+            <button
+              onClick={() => setIsTrialModalOpen(true)}
               className="block px-3 py-2 text-base font-medium text-white hover:text-white bg-[#3EDDCA] rounded-full border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
             >
               Start Free
-            </Link>
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Free Trial Modal */}
+      <FreeTrialModal
+        isOpen={isTrialModalOpen}
+        onClose={() => setIsTrialModalOpen(false)}
+      />
     </nav>
   );
 };
