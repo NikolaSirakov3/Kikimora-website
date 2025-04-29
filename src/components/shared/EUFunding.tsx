@@ -1,27 +1,48 @@
 import React from "react";
+import { FaShieldHalved } from "react-icons/fa6";
 
 export function EUFunding() {
   return (
     <div className="w-full bg-[#001324] py-8">
-      <div className="max-w-[1400px] mx-auto px-4 flex items-center justify-between">
-        {/* Left side - Text */}
-        <div className="flex-1 pr-8">
-          <p className="text-white text-sm">
-            Kikimora.io has been supported by "Vitosha Venture Partners Fund I",
-            a private equity fund, co-financed by the European Structural and
-            Investment Funds under the operational program "Innovation and
-            Competitiveness 2014-2020", managed by the Fund Manager of Financial
-            Instruments in Bulgaria.
-          </p>
+      <div className="max-w-[1400px] mx-auto px-4 flex items-center">
+        {/* Shield Logo */}
+        <div className="mr-8">
+          <FaShieldHalved className="w-24 h-24 text-white" />
         </div>
 
-        {/* Right side - Logos */}
-        <div className="flex items-center gap-8">
+        {/* Navigation Buttons */}
+        <nav className="flex flex-col gap-2 mr-8">
+          <a href="/" className="text-white hover:text-gray-300">
+            Home
+          </a>
+          <a href="/product" className="text-white hover:text-gray-300">
+            Product
+          </a>
+          <a href="/developers" className="text-white hover:text-gray-300">
+            Developers
+          </a>
+          <a href="/support" className="text-white hover:text-gray-300">
+            Support
+          </a>
+          <a href="/blog" className="text-white hover:text-gray-300">
+            Blog
+          </a>
+          <a href="/contacts" className="text-white hover:text-gray-300">
+            Contacts
+          </a>
+        </nav>
+
+        {/* EU Flag */}
+        <div className="mr-8">
           <img
             src="/eu-flag.png"
             alt="European Union Flag"
-            className="h-16 object-contain"
+            className="h-32 object-contain"
           />
+        </div>
+
+        {/* Innovation and Funds Logos */}
+        <div className="flex flex-col gap-4 mr-8">
           <img
             src="/innovation.png"
             alt="Innovation and Competitiveness Logo"
@@ -32,6 +53,17 @@ export function EUFunding() {
             alt="Fund of Funds Logo"
             className="h-16 object-contain"
           />
+        </div>
+
+        {/* Funding Text */}
+        <div className="max-w-xs">
+          <p className="text-white text-sm">
+            Kikimora.io has been supported by "Vitosha Venture Partners Fund I",
+            a private equity fund, co-financed by the European Structural and
+            Investment Funds under the operational program "Innovation and
+            Competitiveness 2014-2020", managed by the Fund Manager of Financial
+            Instruments in Bulgaria.
+          </p>
         </div>
       </div>
     </div>
