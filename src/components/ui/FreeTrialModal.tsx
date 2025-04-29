@@ -40,7 +40,7 @@ export function FreeTrialModal({ isOpen, onClose }: FreeTrialModalProps) {
 
   return (
     <div
-      className="h-[95vh] inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000]"
+      className="h-[95vh] inset-0 bg-black bg-opacity-80 flex justify-center items-center z-[1000]"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
       <div className="bg-white p-8 rounded-lg w-full max-w-4xl grid grid-cols-2 gap-8 relative">
