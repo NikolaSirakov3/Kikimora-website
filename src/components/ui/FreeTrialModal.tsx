@@ -54,7 +54,7 @@ export function FreeTrialModal({ isOpen, onClose }: FreeTrialModalProps) {
         {/* Left Section */}
         <div>
           <img
-            src="/path-to-your-dashboard-image.png"
+            src="/Kikimora.png"
             alt="Dashboard preview"
             className="w-full h-auto"
           />
