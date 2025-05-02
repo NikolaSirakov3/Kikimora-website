@@ -335,8 +335,12 @@ const NewNavbar: React.FC = () => {
         <div className="flex justify-between h-16 backdrop-blur-sm sticky top-0">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="text-2xl font-bold text-white">
-              Kikimora
+            <Link to="/" className="flex items-center">
+              <img
+                src="/logos/color_and_white.png"
+                alt="Kikimora Logo"
+                className="h-16 w-auto"
+              />
             </Link>
           </div>
 
