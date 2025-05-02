@@ -1,5 +1,4 @@
 import React from "react";
-import { FaShieldHalved } from "react-icons/fa6";
 
 export function EUFunding() {
   return (
@@ -7,7 +6,11 @@ export function EUFunding() {
       <div className="max-w-[1400px] mx-auto px-4 flex items-center justify-between">
         {/* Shield Logo */}
         <div className="flex-shrink-0">
-          <FaShieldHalved className="w-24 h-24 text-white" />
+          <img
+            src="/logos/colorAndBlack.png"
+            alt="EU Funding Logo"
+            className="w-48 h-48 object-contain"
+          />
         </div>
 
         {/* Navigation Buttons */}
