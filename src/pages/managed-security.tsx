@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/managed-security/HeroSection";
 import { PartnersSection } from "@/components/managed-security/PartnersSection";
 import { SecurityFeatures } from "@/components/managed-security/SecurityFeatures";
 import { TestimonialSection } from "@/components/managed-security/TestimonialSection";
-import { SecureOrganization } from "@/components/managed-security/SecureOrganization";
+import { SecureOrganization } from "../components/managed-security/SecureOrganization";
 
 export default function ManagedSecurity() {
   return (
