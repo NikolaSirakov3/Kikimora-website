@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/managed-security/HeroSection";
 import { PartnersSection } from "@/components/managed-security/PartnersSection";
 import { SecurityFeatures } from "@/components/managed-security/SecurityFeatures";
+import { TestimonialSection } from "@/components/managed-security/TestimonialSection";
 
 export default function ManagedSecurity() {
   return (
@@ -15,6 +16,7 @@ export default function ManagedSecurity() {
       />
       <PartnersSection />
       <SecurityFeatures />
+      <TestimonialSection />
     </main>
   );
 }
