@@ -6,6 +6,7 @@ import { SecureOrganization } from "../components/managed-security/SecureOrganiz
 import { PricingSection } from "../components/managed-security/PricingSection";
 import { GovernanceSection } from "../components/managed-security/GovernanceSection";
 import { SecurityOverview } from "../components/managed-security/SecurityOverview";
+import { ConsultationForm } from "../components/managed-security/ConsultationForm";
 
 export default function ManagedSecurity() {
   return (
@@ -25,6 +26,7 @@ export default function ManagedSecurity() {
       <PricingSection />
       <GovernanceSection />
       <SecurityOverview />
+      <ConsultationForm />
     </main>
   );
 }
