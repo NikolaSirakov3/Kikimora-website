@@ -5,6 +5,7 @@ import { TestimonialSection } from "@/components/managed-security/TestimonialSec
 import { SecureOrganization } from "../components/managed-security/SecureOrganization";
 import { PricingSection } from "../components/managed-security/PricingSection";
 import { GovernanceSection } from "../components/managed-security/GovernanceSection";
+import { SecurityOverview } from "../components/managed-security/SecurityOverview";
 
 export default function ManagedSecurity() {
   return (
@@ -23,6 +24,7 @@ export default function ManagedSecurity() {
       <SecureOrganization />
       <PricingSection />
       <GovernanceSection />
+      <SecurityOverview />
     </main>
   );
 }
