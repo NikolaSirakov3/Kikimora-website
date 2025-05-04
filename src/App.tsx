@@ -20,6 +20,7 @@ import { ImageSwitcher } from "@/components/home/ImageSwitcher";
 import { MSSP } from "@/pages/MSSP";
 import { TryKikimora } from "@/pages/TryKikimora";
 import { AnimatedIntro } from "@/components/home/AnimatedIntro";
+import ManagedSecurity from "@/pages/managed-security";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
             <Route path="/terms" element={<div>Terms & Conditions Page</div>} />
             <Route path="/mssp" element={<MSSP />} />
             <Route path="/trykikimora" element={<TryKikimora />} />
+            <Route path="/managed-security" element={<ManagedSecurity />} />
           </Routes>
         </main>
         <Footer />
