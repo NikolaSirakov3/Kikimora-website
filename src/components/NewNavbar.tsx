@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FreeTrialModal } from "./ui/FreeTrialModal";
+
+interface NewNavbarProps {
+  isAnnouncementVisible: boolean;
+}
 
 interface DropdownItem {
   label: string;
@@ -292,36 +296,10 @@ const navItems: NavItem[] = [
   { label: "Pricing", href: "/pricing" },
 ];
 
-const NewNavbar: React.FC = () => {
+const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
-
-  useEffect(() => {
-    const controlNavbar = () => {
-      if (typeof window !== "undefined") {
-        const currentScrollY = window.scrollY;
-
-        if (currentScrollY === 0) {
-          // at the top of the page
-          setIsVisible(true);
-        } else {
-          // anywhere else on the page
-          setIsVisible(false);
-        }
-
-        setLastScrollY(currentScrollY);
-      }
-    };
-
-    window.addEventListener("scroll", controlNavbar);
-
-    return () => {
-      window.removeEventListener("scroll", controlNavbar);
-    };
-  }, [lastScrollY]);
 
   const handleDropdownToggle = (label: string) => {
     setActiveDropdown(activeDropdown === label ? null : label);
@@ -329,10 +307,13 @@ const NewNavbar: React.FC = () => {
 
   return (
     <nav
-      className={`bg-transparent fixed w-full top-0 z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+      className={`bg-black fixed w-full z-40 transition-all duration-300 ${
+        isAnnouncementVisible ? "top-[40px]" : "top-0"
+      }`}
+      style={{ transition: "top 0.3s ease-in-out" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 backdrop-blur-sm sticky top-0">
+        <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center">

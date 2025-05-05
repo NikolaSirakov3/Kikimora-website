@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NewNavbar from "@/components/NewNavbar";
+import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/home/Hero";
 import { Benefits } from "@/components/home/Benefits";
@@ -23,11 +24,14 @@ import { AnimatedIntro } from "@/components/home/AnimatedIntro";
 import ManagedSecurity from "@/pages/managed-security";
 
 function App() {
+  const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
+
   return (
     <Router>
       <div className="min-h-screen flex flex-col overflow-x-hidden">
-        <NewNavbar />
-        <main className="flex-grow overflow-x-hidden">
+        <AnnouncementBar onVisibilityChange={setIsAnnouncementVisible} />
+        <NewNavbar isAnnouncementVisible={isAnnouncementVisible} />
+        <main className="flex-grow overflow-x-hidden mt-[56px]">
           <Routes>
             <Route
               path="/"
