@@ -251,7 +251,21 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
 
                 {/* Updated Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.label && (
-                  <div className="absolute left-0 mt-2 w-[720px] bg-[#002A4E] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-3 gap-6">
+                  <div
+                    className={`absolute left-0 mt-2 ${
+                      item.dropdown.items.length <= 2
+                        ? "w-[480px]"
+                        : item.dropdown.items.length === 4
+                          ? "w-[720px]"
+                          : "w-[720px]"
+                    } bg-[#002A4E] rounded-lg shadow-lg py-6 px-8 z-50 grid ${
+                      item.dropdown.items.length <= 2
+                        ? "grid-cols-2"
+                        : item.dropdown.items.length === 4
+                          ? "grid-cols-2"
+                          : "grid-cols-3"
+                    } gap-6`}
+                  >
                     {item.dropdown.items.map((subItem) => (
                       <Link
                         key={subItem.label}
