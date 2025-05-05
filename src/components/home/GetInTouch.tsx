@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function GetInTouch() {
   const today = new Date();
   const month = today.toLocaleString("default", { month: "short" });
   const year = today.getFullYear();
   const currentDay = today.getDate();
+  const [selectedDate, setSelectedDate] = useState<number | null>(currentDay);
 
   // Get the first day of the month (0 = Sunday, 1 = Monday, etc.)
   const firstDayOfMonth = new Date(
@@ -21,6 +22,10 @@ export function GetInTouch() {
     today.getMonth() + 1,
     0
   ).getDate();
+
+  const handleDateClick = (day: number) => {
+    setSelectedDate(day);
+  };
 
   return (
     <div className="bg-[#001E38]">
@@ -101,18 +106,27 @@ export function GetInTouch() {
                         <div key={`empty-${i}`} className="py-1" />
                       ))}
                       {/* Calendar days */}
-                      {Array.from({ length: daysInMonth }, (_, i) => (
-                        <div
-                          key={i}
-                          className={`py-1 rounded-full cursor-pointer ${
-                            i + 1 === currentDay
-                              ? "bg-blue-500 text-white"
-                              : "hover:bg-gray-100"
-                          }`}
-                        >
-                          {i + 1}
-                        </div>
-                      ))}
+                      {Array.from({ length: daysInMonth }, (_, i) => {
+                        const day = i + 1;
+                        const isSelected = day === selectedDate;
+                        const isToday = day === currentDay;
+
+                        return (
+                          <div
+                            key={i}
+                            onClick={() => handleDateClick(day)}
+                            className={`py-1 rounded-full cursor-pointer transition-colors ${
+                              isSelected
+                                ? "bg-[#00E5BE] text-[#001E38]"
+                                : isToday
+                                  ? "bg-blue-500 text-white"
+                                  : "hover:bg-gray-100"
+                            }`}
+                          >
+                            {day}
+                          </div>
+                        );
+                      })}
                     </div>
 
                     {/* Time Slots */}
