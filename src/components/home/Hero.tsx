@@ -32,14 +32,19 @@ export function Hero() {
               value: "#3EDDCA",
             },
             shape: {
-              type: "star",
+              type: "image",
+              image: {
+                src: "/logos/color_and_black.svg",
+                width: 20,
+                height: 20,
+              },
             },
             opacity: {
               value: 0.5,
               random: true,
             },
             size: {
-              value: 3,
+              value: 10,
               random: true,
             },
             move: {
