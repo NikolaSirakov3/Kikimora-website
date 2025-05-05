@@ -28,7 +28,7 @@ export function AnnouncementBar({ onVisibilityChange }: AnnouncementBarProps) {
   return (
     <div
       data-announcement
-      className={`w-full bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] text-white fixed top-0 z-50 transition-transform duration-300 ${
+      className={`w-full bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] text-white fixed top-0 z-50 transition-transform duration-50 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >

@@ -307,8 +307,8 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
 
   return (
     <nav
-      className={`bg-black fixed w-full z-40 transition-all duration-300 ${
-        isAnnouncementVisible ? "top-[40px]" : "top-0"
+      className={`bg-black fixed w-full z-40 transition-all duration-10 ${
+        isAnnouncementVisible ? "top-[35px]" : "top-0"
       }`}
       style={{ transition: "top 0.3s ease-in-out" }}
     >
