@@ -31,16 +31,17 @@ function AnimatedLogo() {
       className="absolute left-1/2 -translate-x-1/2"
       style={{ top: "-24px" }}
     >
-      {/* Outer glow effect */}
-      <div className="relative w-16 h-16 flex items-center justify-center">
+      <div className="relative w-20 h-20 flex items-center justify-center">
         <animated.div
           style={pulseSpring}
-          className="absolute w-full h-full rounded-full bg-gradient-to-r from-emerald-400/30 via-purple-400/20 to-cyan-400/30"
+          className="absolute w-full h-full rounded-full bg-black/10"
         />
-        <div className="absolute w-14 h-14 rounded-full bg-gradient-to-br from-emerald-400/20 via-purple-400/10 to-cyan-400/20" />
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 via-purple-500 to-cyan-400 flex items-center justify-center relative z-10 shadow-lg shadow-purple-500/30">
-          <span className="text-white text-2xl drop-shadow-lg">Ø</span>
-        </div>
+        <img
+          src="/logos/black_1.png"
+          alt="Kikimora Logo"
+          className="w-16 h-16 object-contain relative z-10 mb-8"
+          style={{ pointerEvents: "none" }}
+        />
       </div>
     </div>
   );
