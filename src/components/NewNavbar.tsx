@@ -1,6 +1,25 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FreeTrialModal } from "./ui/FreeTrialModal";
+import {
+  FiBox, // For Dependencies
+  FiServer, // For IaC
+  FiCode, // For API Scanning and Developer
+  FiZap, // For AI Autofix
+  FiKey, // For Secrets
+  FiCheckCircle, // For License Risk
+  FiMonitor, // For Virtual Machines
+  FiGitBranch, // For CI/CD Security
+  FiLayers, // For Use Cases
+  FiBriefcase, // For Industries
+  FiShield, // For Security
+  FiGithub, // For Open Source
+  FiLink, // For Integrations
+  FiInfo, // For About
+  FiUsers, // For Careers
+  FiFileText, // For Press Kit
+  FiBookOpen, // For Blog
+} from "react-icons/fi";
 
 interface NewNavbarProps {
   isAnnouncementVisible: boolean;
@@ -34,101 +53,49 @@ const navItems: NavItem[] = [
           label: "Dependencies",
           href: "/product/dependencies",
           description: "Prevent open-source risks (SCA)",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path d="M4 4h16v16H4V4z" stroke="currentColor" strokeWidth="2" />
-            </svg>
-          ),
+          icon: <FiBox className="w-6 h-6" />,
         },
         {
           label: "IaC",
           href: "/product/iac",
           description: "Scan IaC for misconfigurations",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M12 4L4 8v8l8 4 8-4V8l-8-4z"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiServer className="w-6 h-6" />,
         },
         {
           label: "API Scanning",
           href: "/product/api-scanning",
           description: "Test your APIs for vulns",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M4 6h16M4 12h16M4 18h16"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiCode className="w-6 h-6" />,
         },
         {
           label: "AI Autofix",
           href: "/product/ai-autofix",
           description: "Save time with Alexa AI",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path d="M12 4v16m8-8H4" stroke="currentColor" strokeWidth="2" />
-            </svg>
-          ),
+          icon: <FiZap className="w-6 h-6" />,
         },
         {
           label: "Secrets",
           href: "/product/secrets",
           description: "Search for exposed secrets",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M12 15v3m0 0h3m-3 0H9m3-3V9m0 0h3m-3 0H9"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiKey className="w-6 h-6" />,
         },
         {
           label: "License Risk & SBOMs",
           href: "/product/license-risk",
           description: "Avoid risk be compliant",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="2" />
-            </svg>
-          ),
+          icon: <FiCheckCircle className="w-6 h-6" />,
         },
         {
           label: "Virtual Machines",
           href: "/product/virtual-machines",
           description: "No agents, no overhead",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiMonitor className="w-6 h-6" />,
         },
         {
           label: "CI/CD Security",
           href: "/product/cicd-security",
           description: "Scan before merge and deployment",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M13 10V3L4 14h7v7l9-11h-7z"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiGitBranch className="w-6 h-6" />,
         },
       ],
     },
@@ -142,29 +109,13 @@ const navItems: NavItem[] = [
           label: "Use Cases",
           href: "/solutions/use-cases",
           description: "Explore common security use cases",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiLayers className="w-6 h-6" />,
         },
         {
           label: "Industries",
           href: "/solutions/industries",
           description: "Security solutions by industry",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2M5 21H3"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiBriefcase className="w-6 h-6" />,
         },
       ],
     },
@@ -178,53 +129,25 @@ const navItems: NavItem[] = [
           label: "Developer",
           href: "/resources/developer",
           description: "Resources for developers",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiCode className="w-6 h-6" />,
         },
         {
           label: "Security",
           href: "/resources/security",
           description: "Security best practices",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M12 15v3m0 0h3m-3 0H9m3-3V9m0 0h3m-3 0H9"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiShield className="w-6 h-6" />,
         },
         {
           label: "Open Source",
           href: "/resources/open-source",
           description: "Open source security",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path d="M12 4v16m8-8H4" stroke="currentColor" strokeWidth="2" />
-            </svg>
-          ),
+          icon: <FiGithub className="w-6 h-6" />,
         },
         {
           label: "Integrations",
           href: "/resources/integrations",
           description: "Connect with your tools",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M4 6h16M4 12h16M4 18h16"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiLink className="w-6 h-6" />,
         },
       ],
     },
@@ -238,57 +161,25 @@ const navItems: NavItem[] = [
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiInfo className="w-6 h-6" />,
         },
         {
           label: "Careers",
           href: "/careers",
           description: "Join our team",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiUsers className="w-6 h-6" />,
         },
         {
           label: "Press Kit",
           href: "/press-kit",
           description: "Media resources",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiFileText className="w-6 h-6" />,
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: (
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-            </svg>
-          ),
+          icon: <FiBookOpen className="w-6 h-6" />,
         },
       ],
     },
