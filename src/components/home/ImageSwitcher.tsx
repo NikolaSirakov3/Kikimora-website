@@ -48,13 +48,13 @@ export function ImageSwitcher() {
         {/* Image display with gradient border effect */}
         <div className="w-[1040px] h-[640px] relative rounded-2xl p-[1px] bg-gradient-to-b from-white/10 via-white/10 to-transparent">
           <div className="w-full h-full p-5 rounded-2xl bg-[#001E38]">
-            <div className="w-[1000px] h-[600px] relative overflow-hidden rounded-xl">
+            <div className="w-[1000px] h-[600px] relative overflow-hidden">
               {imageOptions.map((option) => (
                 <img
                   key={option.id}
                   src={option.src}
                   alt={`Menu ${option.id}`}
-                  className={`w-full h-full object-cover transition-opacity duration-300 absolute top-0 left-0 rounded ${
+                  className={`w-full h-full object-cover transition-opacity duration-300 absolute top-0 left-0 rounded-t-xl ${
                     selectedImage === option.id ? "opacity-100" : "opacity-0"
                   }`}
                 />
