@@ -108,11 +108,12 @@ export function Testimonials() {
           {/* Testimonials carousel */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory cursor-grab active:cursor-grabbing"
+            className="flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory cursor-grab active:cursor-grabbing mx-auto"
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
               WebkitOverflowScrolling: "touch",
+              width: "calc(3 * 400px + 2 * 20px)", // 3 cards * 400px width + 2 gaps * 20px
             }}
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
