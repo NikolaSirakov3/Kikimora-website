@@ -1,9 +1,6 @@
 export function ConsultationForm() {
   return (
-    <section className="relative py-20 px-4 md:px-8 lg:px-16">
-      {/* Background with skewed edges */}
-      <div className="absolute inset-0 bg-[#006D77] transform -skew-y-3 origin-top-right"></div>
-
+    <section className="relative py-6 px-4 md:px-8 lg:px-16 bg-[#164f55]">
       <div className="relative max-w-7xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white my-12">
           Not sure which bundle fits your needs? Schedule a free consultation
