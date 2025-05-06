@@ -21,6 +21,7 @@ import { ImageSwitcher } from "@/components/home/ImageSwitcher";
 import { MSSP } from "@/pages/MSSP";
 import { TryKikimora } from "@/pages/TryKikimora";
 import ManagedSecurity from "@/pages/managed-security";
+import { CaseStudy } from "@/pages/case-study";
 
 function App() {
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
@@ -61,6 +62,7 @@ function App() {
             <Route path="/mssp" element={<MSSP />} />
             <Route path="/trykikimora" element={<TryKikimora />} />
             <Route path="/managed-security" element={<ManagedSecurity />} />
+            <Route path="/case-study" element={<CaseStudy />} />
           </Routes>
         </main>
         <Footer />
