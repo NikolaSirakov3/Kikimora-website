@@ -131,7 +131,7 @@ export function Hero() {
         </section>
 
         {/* Second Section */}
-        <section className="h-screen -mt-[480px]">
+        <section className="h-screen -mt-[480px] ml-24">
           <div className="h-full flex items-center">
             {/* Left side - Dashboard Image */}
             <div className="w-1/2 flex justify-center">
@@ -141,7 +141,7 @@ export function Hero() {
             </div>
 
             {/* Right side - Content */}
-            <div className="flex flex-col gap-6 w-1/2 pr-[10%]">
+            <div className="flex flex-col gap-6 w-1/2 pr-[5%] pl-20">
               <h2 className="text-5xl text-white font-conthrax leading-tight">
                 The platform for efficient teams.
               </h2>
