@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Pricing } from "./Pricing";
 
 export function RequestDemo() {
   return (
@@ -7,14 +8,14 @@ export function RequestDemo() {
       {/* Full-width section with gradient background */}
       <div className="w-screen relative -ml-[50vw] left-1/2">
         <div className="bg-gradient-to-r from-[#2A1D4C] via-[#1B4E5F] to-[#003D37] py-20">
-          <div className="px-[5%] mx-auto max-w-[1400px] flex justify-between items-center">
+          <div className="px-[5%] mx-auto max-w-[1400px] flex justify-between items-center gap-x-24">
             {/* Left side - Content */}
             <div className="max-w-[800px]">
               <div className="flex flex-col mb-8 leading-none">
-                <span className="text-5xl text-white font-conthrax">
+                <span className="text-3xl text-white font-conthrax">
                   Secure your code now,
                 </span>
-                <span className="text-5xl text-white font-conthrax mt-2">
+                <span className="text-3xl text-white font-conthrax mt-2">
                   request a free demo
                 </span>
               </div>
@@ -24,8 +25,8 @@ export function RequestDemo() {
             </div>
 
             {/* Right side - Illustration */}
-            <div className="w-[400px] h-[300px] bg-[#00539B] rounded-2xl ">
-              {/* Placeholder for isometric illustration */}
+            <div className="max-w-[420px] w-full flex justify-end">
+              <Pricing />
             </div>
           </div>
         </div>

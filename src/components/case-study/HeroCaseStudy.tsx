@@ -53,7 +53,7 @@ function HeroCaseStudy() {
             </button>
           </div>
           <img
-            src="/Kikimora.png"
+            src="/shield1.png"
             alt="Kikimora logo"
             className="w-96 md:w-[28rem] max-w-full drop-shadow-xl ml-20"
           />
