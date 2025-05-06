@@ -16,7 +16,7 @@ export function BlogPost() {
             December 15, 2023
           </p>
           <p className="text-white/60 text-lg font-montserrat mb-12">
-            Kikimora has successfully secured €595K in funding for the
+            Kikimora has successfully secured €596K in funding for the
             development of our innovative vulnerability management software.
             This resources will be invested in product development, marketing
             and strategic partnerships.
