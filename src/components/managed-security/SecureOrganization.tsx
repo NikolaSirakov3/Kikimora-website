@@ -32,8 +32,8 @@ export function SecureOrganization() {
 
           <ul className="space-y-4 mt-8">
             {securityFeatures.map((feature, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <span className="text-blue-400 mt-1">■</span>
+              <li key={index} className="flex items-center gap-3">
+                <span className="text-blue-400 -mt-1">■</span>
                 <span className="text-gray-300">{feature.text}</span>
               </li>
             ))}
