@@ -220,82 +220,89 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <div key={item.label} className="relative">
-                <button
+                <div
                   onMouseEnter={() =>
                     item.dropdown && handleDropdownToggle(item.label)
                   }
                   onMouseLeave={() =>
                     item.dropdown && handleDropdownToggle(item.label)
                   }
-                  className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none flex items-center justify-between w-full gap-2"
+                  className="relative"
                 >
-                  {item.label}
-                  {item.dropdown && (
-                    <svg
-                      className={`h-4 w-4 transition-transform duration-300 group-hover:text-[#29ABE2] group-hover:rotate-180 ${
-                        activeDropdown === item.label ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  )}
-                </button>
-
-                {/* Updated Dropdown Menu */}
-                {item.dropdown && activeDropdown === item.label && (
-                  <div
-                    className={`absolute left-0 mt-2 ${
-                      item.dropdown.items.length <= 2
-                        ? "w-[480px]"
-                        : item.dropdown.items.length === 4
-                          ? "w-[720px]"
-                          : "w-[720px]"
-                    } bg-[#002A4E] rounded-lg shadow-lg py-6 px-8 z-50 grid ${
-                      item.dropdown.items.length <= 2
-                        ? "grid-cols-2"
-                        : item.dropdown.items.length === 4
-                          ? "grid-cols-2"
-                          : "grid-cols-3"
-                    } gap-6`}
-                  >
-                    {item.dropdown.items.map((subItem) => (
-                      <Link
-                        key={subItem.label}
-                        to={subItem.href}
-                        className="flex flex-col gap-2 p-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                  <button className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none flex items-center justify-between w-full gap-2">
+                    {item.label}
+                    {item.dropdown && (
+                      <svg
+                        className={`h-4 w-4 transition-transform duration-300 group-hover:text-[#29ABE2] group-hover:rotate-180 ${
+                          activeDropdown === item.label ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        <div className="flex items-start gap-3">
-                          <div className="text-[#29ABE2] mt-1">
-                            {subItem.icon}
-                          </div>
-                          <div className="flex flex-col">
-                            <div className="flex items-center gap-2">
-                              <span className="text-white font-medium">
-                                {subItem.label}
-                              </span>
-                              {subItem.soon && (
-                                <span className="text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2]">
-                                  soon
-                                </span>
-                              )}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    )}
+                  </button>
+
+                  {/* Updated Dropdown Menu */}
+                  {item.dropdown && activeDropdown === item.label && (
+                    <div
+                      className={`absolute left-0 ${
+                        item.dropdown.items.length <= 2
+                          ? "w-[480px]"
+                          : item.dropdown.items.length === 4
+                            ? "w-[720px]"
+                            : "w-[720px]"
+                      } bg-[#003A6E] rounded-lg shadow-lg py-6 px-8 z-50 grid ${
+                        item.dropdown.items.length <= 2
+                          ? "grid-cols-2"
+                          : item.dropdown.items.length === 4
+                            ? "grid-cols-2"
+                            : "grid-cols-3"
+                      } gap-6 border border-white/40 backdrop-blur-sm`}
+                      style={{
+                        marginTop: "-0.5rem",
+                        paddingTop: "1rem",
+                        paddingBottom: "1rem",
+                      }}
+                    >
+                      {item.dropdown.items.map((subItem) => (
+                        <Link
+                          key={subItem.label}
+                          to={subItem.href}
+                          className="flex flex-col gap-2 p-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="text-[#29ABE2] mt-1">
+                              {subItem.icon}
                             </div>
-                            <span className="text-sm text-gray-400">
-                              {subItem.description}
-                            </span>
+                            <div className="flex flex-col">
+                              <div className="flex items-center gap-2">
+                                <span className="text-white font-medium">
+                                  {subItem.label}
+                                </span>
+                                {subItem.soon && (
+                                  <span className="text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2]">
+                                    soon
+                                  </span>
+                                )}
+                              </div>
+                              <span className="text-sm text-gray-400">
+                                {subItem.description}
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
