@@ -2,23 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FreeTrialModal } from "./ui/FreeTrialModal";
 import {
-  FiBox, // For Dependencies
-  FiServer, // For IaC
-  FiCode, // For API Scanning and Developer
-  FiZap, // For AI Autofix
-  FiKey, // For Secrets
-  FiCheckCircle, // For License Risk
-  FiMonitor, // For Virtual Machines
-  FiGitBranch, // For CI/CD Security
-  FiLayers, // For Use Cases
-  FiBriefcase, // For Industries
-  FiShield, // For Security
-  FiGithub, // For Open Source
-  FiLink, // For Integrations
+  FiServer, // For MSSP
+  FiCode, // For Developers
+  FiZap, // For Try Kikimora
+  FiShield, // For Managed Security
   FiInfo, // For About
+  FiBookOpen, // For Blog
   FiUsers, // For Careers
   FiFileText, // For Press Kit
-  FiBookOpen, // For Blog
+  FiGithub, // For Open Source
+  FiLink, // For Integrations
+  FiLayers, // For Use Cases
+  FiBriefcase, // For Industries
 } from "react-icons/fi";
 
 interface NewNavbarProps {
@@ -50,52 +45,46 @@ const navItems: NavItem[] = [
     dropdown: {
       items: [
         {
-          label: "Dependencies",
-          href: "/product/dependencies",
-          description: "Prevent open-source risks (SCA)",
-          icon: <FiBox className="w-6 h-6" />,
-        },
-        {
-          label: "IaC",
-          href: "/product/iac",
-          description: "Scan IaC for misconfigurations",
-          icon: <FiServer className="w-6 h-6" />,
-        },
-        {
-          label: "API Scanning",
-          href: "/product/api-scanning",
-          description: "Test your APIs for vulns",
-          icon: <FiCode className="w-6 h-6" />,
-        },
-        {
-          label: "AI Autofix",
-          href: "/product/ai-autofix",
-          description: "Save time with Alexa AI",
+          label: "Try Kikimora",
+          href: "/trykikimora",
+          description: "Experience our platform",
           icon: <FiZap className="w-6 h-6" />,
         },
         {
-          label: "Secrets",
-          href: "/product/secrets",
-          description: "Search for exposed secrets",
-          icon: <FiKey className="w-6 h-6" />,
+          label: "Managed Security",
+          href: "/managed-security",
+          description: "Professional security services",
+          icon: <FiShield className="w-6 h-6" />,
         },
         {
-          label: "License Risk & SBOMs",
-          href: "/product/license-risk",
-          description: "Avoid risk be compliant",
-          icon: <FiCheckCircle className="w-6 h-6" />,
+          label: "MSSP",
+          href: "/mssp",
+          description: "Managed Security Service Provider",
+          icon: <FiServer className="w-6 h-6" />,
         },
         {
-          label: "Virtual Machines",
-          href: "/product/virtual-machines",
-          description: "No agents, no overhead",
-          icon: <FiMonitor className="w-6 h-6" />,
+          label: "Case Study",
+          href: "/case-study",
+          description: "Success stories and implementations",
+          icon: <FiFileText className="w-6 h-6" />,
         },
         {
-          label: "CI/CD Security",
-          href: "/product/cicd-security",
-          description: "Scan before merge and deployment",
-          icon: <FiGitBranch className="w-6 h-6" />,
+          label: "Developers",
+          href: "/developers",
+          description: "Resources for developers",
+          icon: <FiCode className="w-6 h-6" />,
+        },
+        {
+          label: "Blog",
+          href: "/blog",
+          description: "Latest news and updates",
+          icon: <FiBookOpen className="w-6 h-6" />,
+        },
+        {
+          label: "About",
+          href: "/about",
+          description: "Learn about our mission",
+          icon: <FiInfo className="w-6 h-6" />,
         },
       ],
     },
