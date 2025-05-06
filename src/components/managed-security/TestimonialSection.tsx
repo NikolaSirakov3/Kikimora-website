@@ -24,10 +24,10 @@ export function TestimonialSection() {
     <div className="w-full bg-[#001324] py-16">
       <div className="container mx-auto px-4">
         <div className="bg-[#002847] rounded-3xl p-12 max-w-[1200px] mx-auto">
-          <p className="text-white text-lg md:text-xl text-center italic mb-12 leading-relaxed">
-            {testimonial.quote}
+          <p className="text-white text-lg md:text-xl text-left italic mb-12 leading-relaxed font-serif">
+            "{testimonial.quote}"
           </p>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-start gap-4">
             <div className="w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center">
               <img
                 src={testimonial.author.image}
