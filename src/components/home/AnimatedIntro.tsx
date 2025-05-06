@@ -209,8 +209,8 @@ export function AnimatedIntro() {
   const currentConversation = CONVERSATIONS[activeTab];
 
   return (
-    <div className="bg-[#0A192F] h-[80vh] w-full z-20">
-      <div className="relative max-w-[500px] mx-auto pt-16">
+    <div className="h-[600px] w-full z-20 flex items-center">
+      <div className="relative max-w-[500px] mx-auto">
         <div className="relative bg-black px-4 pt-12 pb-4 rounded-lg mb-3">
           <AnimatedLogo />
           <div className="flex gap-2 text-sm">

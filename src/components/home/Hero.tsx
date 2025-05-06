@@ -4,6 +4,7 @@ import { useCallback } from "react";
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
+import { AnimatedIntro } from "@/components/home/AnimatedIntro";
 
 export function Hero() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -124,9 +125,7 @@ export function Hero() {
 
             {/* Right side - Image */}
             <div className="w-1/2 flex justify-center mt-10">
-              <div className="w-[500px] h-[500px] bg-[#8C50C8] rounded-lg">
-                {/* Placeholder for the shield image */}
-              </div>
+              <AnimatedIntro />
             </div>
           </div>
         </section>

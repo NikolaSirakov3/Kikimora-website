@@ -20,7 +20,6 @@ import { About } from "@/pages/About";
 import { ImageSwitcher } from "@/components/home/ImageSwitcher";
 import { MSSP } from "@/pages/MSSP";
 import { TryKikimora } from "@/pages/TryKikimora";
-import { AnimatedIntro } from "@/components/home/AnimatedIntro";
 import ManagedSecurity from "@/pages/managed-security";
 
 function App() {
@@ -38,7 +37,6 @@ function App() {
               element={
                 <>
                   <Hero />
-                  <AnimatedIntro />
                   <ImageSwitcher />
                   <Benefits />
                   <DevelopersCaseStudy />
