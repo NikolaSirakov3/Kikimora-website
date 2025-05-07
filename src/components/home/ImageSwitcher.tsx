@@ -19,29 +19,29 @@ export function ImageSwitcher() {
 
   return (
     <section className="py-16 px-4 bg-[#001E38]">
-      <div className="flex flex-col items-center gap-8">
+      <div className="flex flex-col items-center gap-8 bg-white pb-8 max-w-[1200px] mx-auto rounded-lg relative z-50">
         {/* Image switcher text links */}
-        <div className="flex gap-6 justify-center">
-          {imageOptions.map((option) => (
-            <button
-              key={option.id}
-              onClick={() => setSelectedImage(option.id)}
-              style={{
-                borderRadius: 0,
-                borderTop: "none",
-                borderLeft: "none",
-                borderRight: "none",
-                textDecoration: "none",
-                outline: "none",
-              }}
-              className={`text-base bg-transparent pb-2 font-montserrat hover:no-underline focus:outline-none focus:ring-0 ${
-                selectedImage === option.id
-                  ? "text-white font-semibold"
-                  : "text-white/60"
-              }`}
-            >
-              {option.label}
-            </button>
+        <div className="flex justify-center items-center bg-gray-200 rounded-full p-2 mt-8 shadow-sm">
+          {imageOptions.map((option, idx) => (
+            <React.Fragment key={option.id}>
+              <button
+                onClick={() => setSelectedImage(option.id)}
+                className={`px-6 py-2 font-montserrat text-base focus:outline-none transition-colors duration-200
+                  ${
+                    selectedImage === option.id
+                      ? "bg-white text-blue-600 rounded-full shadow"
+                      : "bg-transparent text-gray-600 hover:text-blue-500"
+                  }
+                `}
+                style={{ border: "none", outline: "none" }}
+                aria-pressed={selectedImage === option.id}
+              >
+                {option.label}
+              </button>
+              {idx < imageOptions.length - 1 && (
+                <div className="h-6 w-px bg-gray-300 mx-1" aria-hidden="true" />
+              )}
+            </React.Fragment>
           ))}
         </div>
 
