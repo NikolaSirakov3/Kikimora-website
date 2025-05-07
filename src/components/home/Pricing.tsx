@@ -50,7 +50,7 @@ export function Pricing() {
   };
 
   return (
-    <div className="w-full max-w-[420px] px-0 flex flex-col items-center">
+    <div className="w-full max-w-[800px] px-0 flex flex-col items-center">
       <div className="w-full z-10">
         {/* Pricing Card */}
         <div className="bg-gradient-to-r from-[#60348c] via-[#2A1D4C] to-[#492d65] rounded-3xl p-6">
@@ -231,7 +231,7 @@ export function Pricing() {
                     One time payment will get you a 10% discount
                   </p>
                 )}
-                <p className="text-white/60 font-montserrat text-xs mb-3">
+                <p className="text-white/60 font-montserrat text-xs mb-3 ml-20">
                   To get more detailed information about the pricing you can
                   contact us at
                 </p>

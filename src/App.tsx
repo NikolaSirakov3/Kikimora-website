@@ -9,7 +9,6 @@ import { Developers } from "@/pages/Developers";
 import { DevelopersCaseStudy } from "@/components/home/DevelopersCaseStudy";
 import { Clients } from "@/components/home/Clients";
 import { SecurityEfficiency } from "@/components/home/SecurityEfficiency";
-import { Pricing } from "@/components/home/Pricing";
 import { Newsletter } from "@/components/home/Newsletter";
 import { Testimonials } from "@/components/home/Testimonials";
 import { RequestDemo } from "@/components/home/RequestDemo";
@@ -43,7 +42,6 @@ function App() {
                   <DevelopersCaseStudy />
                   <Clients />
                   <SecurityEfficiency />
-                  <Pricing />
                   <Testimonials />
                   <RequestDemo />
                   <Blog />
