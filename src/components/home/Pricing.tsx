@@ -170,74 +170,63 @@ export function Pricing() {
 
             {/* Right side - Total price and illustration */}
             <div className="flex-1 flex flex-col items-end">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb-4 border border-[#3EDDCA] rounded-full">
                 {/* Payment period buttons */}
-                <div className="flex gap-2">
+                <div className="flex">
                   <button
-                    className={`px-4 py-1.5 rounded-full font-montserrat text-sm transition-colors ${
+                    className={`px-4 py-1.5 font-montserrat text-sm transition-colors border-none bg-transparent outline-none focus:outline-none focus:ring-0 ${
                       paymentPeriod === "yearly"
-                        ? "bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90"
-                        : "bg-transparent border border-[#3EDDCA] text-[#3EDDCA] hover:bg-[#3EDDCA]/10"
+                        ? "text-[#58f9e6]"
+                        : "text-[#3EDDCA]/50 hover:text-[#3EDDCA]"
                     }`}
                     onClick={() => setPaymentPeriod("yearly")}
                   >
-                    Yearly
+                    Year
                   </button>
+                  <div className="w-[1px] h-6 bg-[#3EDDCA] mx-2 self-center" />
                   <button
-                    className={`px-4 py-1.5 rounded-full font-montserrat text-sm transition-colors ${
+                    className={`px-4 py-1.5 font-montserrat text-sm transition-colors border-none bg-transparent outline-none focus:outline-none focus:ring-0 ${
                       paymentPeriod === "monthly"
-                        ? "bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90"
-                        : "bg-transparent border border-[#3EDDCA] text-[#3EDDCA] hover:bg-[#3EDDCA]/10"
+                        ? "text-[#58f9e6]"
+                        : "text-[#3EDDCA]/50 hover:text-[#3EDDCA]"
                     }`}
                     onClick={() => setPaymentPeriod("monthly")}
                   >
                     Monthly
                   </button>
                 </div>
-
-                {/* Price display */}
-                <div className="text-right">
-                  <div className="mb-1">
-                    <span className="text-white/60 font-conthrax text-xl">
-                      {paymentPeriod === "yearly" ? (
-                        <>
-                          <span className="mr-2">€</span>
-                          <span>{yearlyPrice.toFixed(2)}</span>
-                        </>
-                      ) : (
-                        "12 months"
-                      )}
-                    </span>
-                  </div>
-                </div>
               </div>
 
-              <div className="text-right">
-                <div className="flex items-center justify-end gap-2 mb-1">
-                  <span className="text-white/60 font-montserrat text-sm">
-                    {paymentPeriod === "yearly"
-                      ? "Total Price:"
-                      : "Monthly Price:"}
-                  </span>
-                  <span className="text-[#3EDDCA] font-montserrat text-xl">
-                    €{" "}
-                    {paymentPeriod === "yearly"
-                      ? yearlyPrice.toFixed(2)
-                      : monthlyPrice.toFixed(2)}
-                  </span>
-                </div>
-                {paymentPeriod === "yearly" && (
-                  <p className="text-white/60 font-montserrat text-xs mb-2">
-                    One time payment will get you a 10% discount
+              <div className="text-right flex-1 flex flex-col">
+                <div>
+                  <div className="flex items-center justify-end gap-2 mb-1">
+                    <span className="text-white/60 font-montserrat text-sm">
+                      {paymentPeriod === "yearly"
+                        ? "Annual Price:"
+                        : "Monthly Price:"}
+                    </span>
+                    <span className="text-[#3EDDCA] font-montserrat text-xl">
+                      €{" "}
+                      {paymentPeriod === "yearly"
+                        ? yearlyPrice.toFixed(2)
+                        : monthlyPrice.toFixed(2)}
+                    </span>
+                  </div>
+                  {paymentPeriod === "yearly" && (
+                    <p className="text-white/60 font-montserrat text-xs mb-2">
+                      One time payment will get you a 10% discount
+                    </p>
+                  )}
+                  <p className="text-white/60 font-montserrat text-xs mb-3 ml-20">
+                    To get more detailed information about the pricing you can
+                    contact us at
                   </p>
-                )}
-                <p className="text-white/60 font-montserrat text-xs mb-3 ml-20">
-                  To get more detailed information about the pricing you can
-                  contact us at
-                </p>
-                <Button className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-full px-6 py-3 font-montserrat text-sm">
-                  Contact us
-                </Button>
+                </div>
+                <div className="mt-auto">
+                  <Button className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-full px-6 py-3 font-montserrat text-sm">
+                    Contact us
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
