@@ -5,58 +5,64 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-interface BlogPost {
+interface PodcastEpisode {
   id: number;
   title: string;
   description: string;
   date: Date;
   image: string;
+  duration: string;
 }
 
-const blogPosts: BlogPost[] = [
+const podcastEpisodes: PodcastEpisode[] = [
   {
     id: 1,
-    title: "Funding round completed!",
+    title: "The Future of AI in Cybersecurity",
     description:
-      "Kikimora has successfully secured €500k in funding for the development of our innovative vulnerability management software.",
-    date: new Date("2023-12-15"),
-    image: "/team-photo.jpg", // Placeholder path, replace with actual image
+      "Exploring how artificial intelligence is revolutionizing threat detection and response in modern security operations.",
+    date: new Date("2024-03-15"),
+    image: "/podcast-ai.jpg",
+    duration: "45:30",
   },
   {
     id: 2,
-    title: "Understanding the CVSS Base Score",
+    title: "Zero Trust Architecture Deep Dive",
     description:
-      "Kikimora has successfully secured €500k in funding for the development of our innovative vulnerability management software.",
-    date: new Date("2023-11-28"),
-    image: "/security-graph.jpg", // Placeholder path, replace with actual image
+      "A comprehensive discussion on implementing and maintaining zero trust security models in enterprise environments.",
+    date: new Date("2024-03-01"),
+    image: "/podcast-zero-trust.jpg",
+    duration: "52:15",
   },
   {
     id: 3,
-    title: "Pulse Connect Secure - Critical 0-DAY Vulnerability",
+    title: "Cloud Security Best Practices",
     description:
-      "An authentication bypass vulnerability that can allow an authenticated...",
-    date: new Date("2023-04-22"),
-    image: "/security-scan.jpg", // Placeholder path, replace with actual image
+      "Expert insights on securing cloud infrastructure and preventing common cloud security vulnerabilities.",
+    date: new Date("2024-02-15"),
+    image: "/podcast-cloud.jpg",
+    duration: "48:45",
   },
   {
     id: 4,
-    title: "Pulse Connect Secure - Critical 0-DAY Vulnerability",
+    title: "The Human Element in Security",
     description:
-      "An authentication bypass vulnerability that can allow an authenticated...",
-    date: new Date("2023-04-22"),
-    image: "/security-scan.jpg", // Placeholder path, replace with actual image
+      "Understanding the role of human behavior in cybersecurity and strategies for building a security-first culture.",
+    date: new Date("2024-02-01"),
+    image: "/podcast-human.jpg",
+    duration: "50:20",
   },
   {
     id: 5,
-    title: "Funding round completed!",
+    title: "Emerging Threats in 2024",
     description:
-      "Kikimora has successfully received €500k in funding for the development of our innovative vulnerability management software.",
-    date: new Date("2023-12-15"),
-    image: "/team-photo.jpg", // Placeholder path, replace with actual image
+      "Analysis of the latest cybersecurity threats and trends that organizations need to watch out for.",
+    date: new Date("2024-01-15"),
+    image: "/podcast-threats.jpg",
+    duration: "47:10",
   },
 ];
 
-export function BlogHero() {
+export function SoCyberPodcast() {
   const settings = {
     dots: true,
     infinite: true,
@@ -89,39 +95,44 @@ export function BlogHero() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl text-white font-conthrax mb-4">
-            In the news
+            SoCyber Podcast
           </h1>
           <p className="text-white/60 text-lg font-montserrat">
-            Key developments and breaking stories shaping the cybersecurity landscape.
+            Expert insights and deep dives into the world of cybersecurity through our engaging podcast series.
           </p>
         </div>
 
-        {/* Blog Carousel */}
+        {/* Podcast Carousel */}
         <div className="px-4">
           <div className="max-w-[1200px] mx-auto">
             <Slider {...settings}>
-              {blogPosts.map((post) => (
-                <div key={post.id} className="px-2">
+              {podcastEpisodes.map((episode) => (
+                <div key={episode.id} className="px-2">
                   <Link
-                    to={`/blog/${post.id}`}
+                    to={`/podcast/${episode.id}`}
                     className="w-[300px] bg-gradient-to-b from-[#002A4E] to-[#001E38] rounded-xl overflow-hidden transition-transform hover:scale-[1.01] h-full"
                   >
                     <div className="aspect-[16/9] relative">
                       <div className="absolute inset-0 bg-gradient-to-b from-[#002A4E] to-[#001E38] flex items-center justify-center">
                         <span className="text-white/20 font-montserrat">
-                          News Image
+                          Podcast Thumbnail
                         </span>
                       </div>
                     </div>
                     <div className="p-4">
-                      <div className="text-[#00E5BE] text-xs font-montserrat mb-2">
-                        {format(post.date, "MMMM dd, yyyy")}
+                      <div className="flex justify-between items-center mb-2">
+                        <div className="text-[#00E5BE] text-xs font-montserrat">
+                          {format(episode.date, "MMMM dd, yyyy")}
+                        </div>
+                        <div className="text-[#00E5BE] text-xs font-montserrat">
+                          {episode.duration}
+                        </div>
                       </div>
                       <h3 className="text-white text-lg font-conthrax mb-2 line-clamp-2">
-                        {post.title}
+                        {episode.title}
                       </h3>
                       <p className="text-white/60 font-montserrat text-sm line-clamp-3">
-                        {post.description}
+                        {episode.description}
                       </p>
                     </div>
                   </Link>
@@ -133,4 +144,4 @@ export function BlogHero() {
       </div>
     </section>
   );
-}
+} 

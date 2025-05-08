@@ -22,6 +22,7 @@ import { TryKikimora } from "@/pages/TryKikimora";
 import ManagedSecurity from "@/pages/managed-security";
 import { CaseStudy } from "@/pages/case-study";
 import { PlatformSection } from "./components/home/PlatformSection";
+import { SoCyberPodcast } from "@/components/podcast/SoCyberPodcast";
 
 function App() {
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
@@ -46,6 +47,7 @@ function App() {
                   <Testimonials />
                   <RequestDemo />
                   <Blog />
+                  <SoCyberPodcast />
                   <PlatformSection />
                   <GetInTouch />
                   <Newsletter />
