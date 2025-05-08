@@ -85,11 +85,11 @@ export function Newsletter() {
           </div>
 
           {/* Center section */}
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-row items-center justify-center gap-6 h-full mt-6">
             <span className="text-white/60 font-montserrat text-sm text-center max-w-[180px] whitespace-pre-line">
               {"Request a demo to see\nthe full power of Kikimora"}
             </span>
-            <button className="bg-[#00E5BE] text-[#001E38] font-montserrat text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#00E5BE]/90">
+            <button className="bg-[#00E5BE] text-[#001E38] font-montserrat text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#00E5BE]/90 whitespace-nowrap">
               Request Demo
             </button>
           </div>

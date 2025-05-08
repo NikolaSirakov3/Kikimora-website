@@ -47,8 +47,8 @@ function App() {
                   <RequestDemo />
                   <Blog />
                   <GetInTouch />
-                  <Newsletter />
                   <PlatformSection />
+                  <Newsletter />
                 </>
               }
             />
