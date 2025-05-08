@@ -18,8 +18,8 @@ export function ImageSwitcher() {
   const [selectedImage, setSelectedImage] = useState<number>(1);
 
   return (
-    <section className="py-16 px-4 bg-[#001E38]">
-      <div className="flex flex-col items-center gap-8 bg-white pb-8 max-w-[1200px] mx-auto rounded-lg relative z-50">
+    <section className="py-4 px-4 bg-white">
+      <div className="flex flex-col items-center gap-8 bg-white pb-8 max-w-[1200px] mx-auto rounded-lg relative z-2">
         {/* Image switcher text links */}
         <div className="flex justify-center items-center bg-gray-200 rounded-full p-2 mt-8 shadow-sm">
           {imageOptions.map((option, idx) => (

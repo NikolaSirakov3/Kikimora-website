@@ -21,6 +21,7 @@ import { MSSP } from "@/pages/MSSP";
 import { TryKikimora } from "@/pages/TryKikimora";
 import ManagedSecurity from "@/pages/managed-security";
 import { CaseStudy } from "@/pages/case-study";
+import { PlatformSection } from "./components/home/PlatformSection";
 
 function App() {
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
