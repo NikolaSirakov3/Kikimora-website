@@ -1,6 +1,9 @@
 import React from "react";
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface BlogPost {
   id: number;
@@ -54,12 +57,38 @@ const blogPosts: BlogPost[] = [
 ];
 
 export function BlogHero() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <section className="w-full bg-[#001E38] pt-20 pb-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-6xl text-white font-conthrax mb-4">
+          <h1 className="text-4xl text-white font-conthrax mb-4">
             The latest news about
             <br />
             Cybersecurity
@@ -70,61 +99,38 @@ export function BlogHero() {
           </p>
         </div>
 
-        {/* Blog Grid */}
-        <div className="flex flex-col gap-8">
-          {/* Featured Post (Full width) */}
-          <Link
-            to={`/blog/${blogPosts[0].id}`}
-            className="w-full bg-gradient-to-b from-[#002A4E] to-[#001E38] rounded-2xl overflow-hidden transition-transform hover:scale-[1.01]"
-          >
-            <div className="aspect-[16/5.4] relative">
-              <div className="absolute inset-0 bg-gradient-to-b from-[#002A4E] to-[#001E38] flex items-center justify-center">
-                <span className="text-white/20 font-montserrat">
-                  Team Photo
-                </span>
-              </div>
-            </div>
-            <div className="p-8">
-              <div className="text-[#00E5BE] text-sm font-montserrat mb-4">
-                {format(blogPosts[0].date, "MMMM dd, yyyy")}
-              </div>
-              <h2 className="text-white text-2xl font-conthrax mb-4">
-                {blogPosts[0].title}
-              </h2>
-              <p className="text-white/60 font-montserrat">
-                {blogPosts[0].description}
-              </p>
-            </div>
-          </Link>
-
-          {/* Two Column Grid for Regular Posts */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {blogPosts.slice(1, 5).map((post) => (
-              <Link
-                key={post.id}
-                to={`/blog/${post.id}`}
-                className="bg-gradient-to-b from-[#002A4E] to-[#001E38] rounded-2xl overflow-hidden transition-transform hover:scale-[1.01]"
-              >
-                <div className="aspect-[16/9] relative">
-                  <div className="absolute inset-0 bg-gradient-to-b from-[#002A4E] to-[#001E38] flex items-center justify-center">
-                    <span className="text-white/20 font-montserrat">
-                      Blog Image
-                    </span>
-                  </div>
+        {/* Blog Carousel */}
+        <div className="px-4">
+          <div className="max-w-[1200px] mx-auto">
+            <Slider {...settings}>
+              {blogPosts.map((post) => (
+                <div key={post.id} className="px-2">
+                  <Link
+                    to={`/blog/${post.id}`}
+                    className="w-[300px] bg-gradient-to-b from-[#002A4E] to-[#001E38] rounded-xl overflow-hidden transition-transform hover:scale-[1.01] h-full"
+                  >
+                    <div className="aspect-[16/9] relative">
+                      <div className="absolute inset-0 bg-gradient-to-b from-[#002A4E] to-[#001E38] flex items-center justify-center">
+                        <span className="text-white/20 font-montserrat">
+                          Blog Image
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-4">
+                      <div className="text-[#00E5BE] text-xs font-montserrat mb-2">
+                        {format(post.date, "MMMM dd, yyyy")}
+                      </div>
+                      <h3 className="text-white text-lg font-conthrax mb-2 line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-white/60 font-montserrat text-sm line-clamp-3">
+                        {post.description}
+                      </p>
+                    </div>
+                  </Link>
                 </div>
-                <div className="p-6">
-                  <div className="text-[#00E5BE] text-sm font-montserrat mb-3">
-                    {format(post.date, "MMMM dd, yyyy")}
-                  </div>
-                  <h3 className="text-white text-xl font-conthrax mb-3">
-                    {post.title}
-                  </h3>
-                  <p className="text-white/60 font-montserrat text-sm">
-                    {post.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
+              ))}
+            </Slider>
           </div>
         </div>
       </div>
