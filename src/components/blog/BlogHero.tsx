@@ -89,13 +89,10 @@ export function BlogHero() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl text-white font-conthrax mb-4">
-            The latest news about
-            <br />
-            Cybersecurity
+            In the news
           </h1>
           <p className="text-white/60 text-lg font-montserrat">
-            Our blog features insights on new features, security trends, and
-            best coding practices.
+            Key developments and breaking stories shaping the cybersecurity landscape.
           </p>
         </div>
 
