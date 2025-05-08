@@ -13,9 +13,9 @@ export function SecurityEfficiency() {
           </p>
 
           {/* Stats cards container */}
-          <div className="flex justify-between gap-8">
+          <div className="flex justify-center gap-5">
             {/* Improved compliance */}
-            <div className="flex-1 bg-gradient-to-b from-[#159ECE] via-[#00539B] to-[#159ECE] rounded-3xl p-8 flex flex-col items-center min-h-[280px] justify-center z-10">
+            <div className="min-w-[400px] min-h-[250px] bg-gradient-to-b from-[#159ECE] via-[#00539B] to-[#159ECE] rounded-3xl p-8 flex flex-col items-center justify-center z-10">
               <span className="text-6xl text-white font-conthrax mb-4">
                 80%
               </span>
@@ -25,7 +25,7 @@ export function SecurityEfficiency() {
             </div>
 
             {/* Faster Mean Time */}
-            <div className="flex-1 bg-gradient-to-b from-[#159ECE] via-[#00539B] to-[#159ECE] rounded-3xl p-8 flex flex-col items-center min-h-[280px] justify-center z-10">
+            <div className="min-w-[400px] min-h-[250px] bg-gradient-to-b from-[#159ECE] via-[#00539B] to-[#159ECE] rounded-3xl p-8 flex flex-col items-center justify-center z-10">
               <span className="text-6xl text-white font-conthrax mb-4">
                 70%
               </span>
@@ -35,7 +35,7 @@ export function SecurityEfficiency() {
             </div>
 
             {/* Risk score reduction */}
-            <div className="flex-1 bg-gradient-to-b from-[#159ECE] via-[#00539B] to-[#159ECE] rounded-3xl p-8 flex flex-col items-center min-h-[280px] justify-center z-10">
+            <div className="min-w-[400px] min-h-[250px] bg-gradient-to-b from-[#159ECE] via-[#00539B] to-[#159ECE] rounded-3xl p-8 flex flex-col items-center justify-center z-10">
               <span className="text-6xl text-white font-conthrax mb-4">
                 30%
               </span>
