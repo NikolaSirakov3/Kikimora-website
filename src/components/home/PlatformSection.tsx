@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 
 export function PlatformSection() {
   return (
-    <section className="h-screen -mt-[480px] ml-24">
-      <div className="h-full flex items-center">
+    <section className="py-24 bg-[#24317f]">
+      <div className="flex items-center">
         {/* Left side - Dashboard Image */}
         <div className="w-1/2 flex justify-center">
           <div className="w-[600px] h-[400px] bg-[#8C50C8] rounded-lg z-10">

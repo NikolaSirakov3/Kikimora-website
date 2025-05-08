@@ -48,6 +48,7 @@ function App() {
                   <Blog />
                   <GetInTouch />
                   <Newsletter />
+                  <PlatformSection />
                 </>
               }
             />

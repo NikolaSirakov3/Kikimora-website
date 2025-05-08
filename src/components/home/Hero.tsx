@@ -49,7 +49,7 @@ export function Hero() {
               random: true,
             },
             move: {
-              enable: false,
+              enable: true,
               speed: 1,
               direction: "none",
               random: true,
