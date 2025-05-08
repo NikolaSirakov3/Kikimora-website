@@ -1,0 +1,47 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+const clientNames = [
+  "VITOSHA",
+  "IMPETUS",
+  "CYEN",
+  "SEEDBLINK",
+  "TECHNOLOGY",
+  "INNOVATION",
+  "SECURITY",
+  "SOLUTIONS",
+];
+
+export function ScrollingClients() {
+  return (
+    <div className="w-full bg-gray-500 overflow-hidden relative z-2">
+      <div className="w-full py-12 relative flex items-center">
+        <motion.div
+          className="flex whitespace-nowrap absolute"
+          animate={{
+            x: [0, -50 * clientNames.length * 16],
+          }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 100,
+              ease: "linear",
+            },
+          }}
+        >
+          {[...clientNames, ...clientNames, ...clientNames].map(
+            (name, index) => (
+              <span
+                key={`${name}-${index}`}
+                className="text-white font-bold text-xl mx-8"
+              >
+                {name}
+              </span>
+            )
+          )}
+        </motion.div>
+      </div>
+    </div>
+  );
+}
