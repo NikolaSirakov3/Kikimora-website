@@ -242,7 +242,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                   {/* Updated Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.label && (
                     <div
-                      className={`absolute left-0 ${
+                      className={`absolute left-0 top-full ${
                         item.dropdown.items.length <= 2
                           ? "w-[480px]"
                           : item.dropdown.items.length === 4
@@ -256,9 +256,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                             : "grid-cols-3"
                       } gap-6 border border-white/40 backdrop-blur-sm`}
                       style={{
-                        marginTop: "-0.5rem",
-                        paddingTop: "1rem",
-                        paddingBottom: "1rem",
+                        marginTop: "1rem",
                       }}
                     >
                       {item.dropdown.items.map((subItem) => (
