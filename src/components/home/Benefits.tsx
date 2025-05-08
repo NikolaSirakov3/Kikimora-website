@@ -1,12 +1,12 @@
 import React from "react";
 import {
-  CircleDot,
-  ClipboardList,
-  Timer,
-  AlertTriangle,
-  FileCheck,
-  Settings,
-} from "lucide-react";
+  CheckCircleIcon,
+  ClipboardDocumentListIcon,
+  ClockIcon,
+  ExclamationTriangleIcon,
+  DocumentCheckIcon,
+  Cog6ToothIcon,
+} from "@heroicons/react/24/outline";
 
 export function Benefits() {
   return (
@@ -34,7 +34,7 @@ export function Benefits() {
                   and ensure consistent security policies across the board
                 </p>
               </div>
-              <CircleDot className="text-[#3EDDCA] w-10 h-10 flex-shrink-0" />
+              <CheckCircleIcon className="w-10 h-10 text-[#3EDDCA] flex-shrink-0" />
             </div>
           </div>
 
@@ -51,7 +51,7 @@ export function Benefits() {
                   enhancing productivity
                 </p>
               </div>
-              <ClipboardList className="text-[#3EDDCA] w-10 h-10 flex-shrink-0" />
+              <ClipboardDocumentListIcon className="w-10 h-10 text-[#3EDDCA] flex-shrink-0" />
             </div>
           </div>
 
@@ -68,7 +68,7 @@ export function Benefits() {
                   vulnerabilities
                 </p>
               </div>
-              <Timer className="text-[#3EDDCA] w-10 h-10 flex-shrink-0" />
+              <ClockIcon className="w-10 h-10 text-[#3EDDCA] flex-shrink-0" />
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export function Benefits() {
                   and vulnerabilities
                 </p>
               </div>
-              <AlertTriangle className="text-[#3EDDCA] w-10 h-10 flex-shrink-0" />
+              <ExclamationTriangleIcon className="w-10 h-10 text-[#3EDDCA] flex-shrink-0" />
             </div>
           </div>
 
@@ -102,7 +102,7 @@ export function Benefits() {
                   recommendations
                 </p>
               </div>
-              <FileCheck className="text-[#3EDDCA] w-10 h-10 flex-shrink-0" />
+              <DocumentCheckIcon className="w-10 h-10 text-[#3EDDCA] flex-shrink-0" />
             </div>
           </div>
 
@@ -119,7 +119,7 @@ export function Benefits() {
                   vulnerability management is a fact
                 </p>
               </div>
-              <Settings className="text-[#3EDDCA] w-10 h-10 flex-shrink-0" />
+              <Cog6ToothIcon className="w-10 h-10 text-[#3EDDCA] flex-shrink-0" />
             </div>
           </div>
         </div>

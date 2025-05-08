@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FreeTrialModal } from "./ui/FreeTrialModal";
 import {
-  FiServer, // For MSSP
-  FiCode, // For Developers
-  FiZap, // For Try Kikimora
-  FiShield, // For Managed Security
-  FiInfo, // For About
-  FiBookOpen, // For Blog
-  FiUsers, // For Careers
-  FiFileText, // For Press Kit
-  FiGithub, // For Open Source
-  FiLink, // For Integrations
-  FiLayers, // For Use Cases
-  FiBriefcase, // For Industries
-} from "react-icons/fi";
+  ServerIcon,
+  CodeBracketIcon,
+  BoltIcon,
+  ShieldCheckIcon,
+  InformationCircleIcon,
+  BookOpenIcon,
+  UserGroupIcon,
+  DocumentTextIcon,
+  CommandLineIcon,
+  LinkIcon,
+  Squares2X2Icon,
+  BriefcaseIcon,
+} from "@heroicons/react/24/outline";
 
 interface NewNavbarProps {
   isAnnouncementVisible: boolean;
@@ -48,37 +48,37 @@ const navItems: NavItem[] = [
           label: "Try Kikimora",
           href: "/trykikimora",
           description: "Experience our platform",
-          icon: <FiZap className="w-6 h-6" />,
+          icon: <BoltIcon className="w-6 h-6" />,
         },
         {
           label: "Managed Security",
           href: "/managed-security",
           description: "Professional security services",
-          icon: <FiShield className="w-6 h-6" />,
+          icon: <ShieldCheckIcon className="w-6 h-6" />,
         },
         {
           label: "MSSP",
           href: "/mssp",
           description: "Managed Security Service Provider",
-          icon: <FiServer className="w-6 h-6" />,
+          icon: <ServerIcon className="w-6 h-6" />,
         },
         {
           label: "Case Study",
           href: "/case-study",
           description: "Success stories and implementations",
-          icon: <FiFileText className="w-6 h-6" />,
+          icon: <DocumentTextIcon className="w-6 h-6" />,
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: <FiBookOpen className="w-6 h-6" />,
+          icon: <BookOpenIcon className="w-6 h-6" />,
         },
         {
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: <FiInfo className="w-6 h-6" />,
+          icon: <InformationCircleIcon className="w-6 h-6" />,
         },
       ],
     },
@@ -92,13 +92,13 @@ const navItems: NavItem[] = [
           label: "Use Cases",
           href: "/solutions/use-cases",
           description: "Explore common security use cases",
-          icon: <FiLayers className="w-6 h-6" />,
+          icon: <Squares2X2Icon className="w-6 h-6" />,
         },
         {
           label: "Industries",
           href: "/solutions/industries",
           description: "Security solutions by industry",
-          icon: <FiBriefcase className="w-6 h-6" />,
+          icon: <BriefcaseIcon className="w-6 h-6" />,
         },
       ],
     },
@@ -112,25 +112,25 @@ const navItems: NavItem[] = [
           label: "Developer",
           href: "/resources/developer",
           description: "Resources for developers",
-          icon: <FiCode className="w-6 h-6" />,
+          icon: <CodeBracketIcon className="w-6 h-6" />,
         },
         {
           label: "Security",
           href: "/resources/security",
           description: "Security best practices",
-          icon: <FiShield className="w-6 h-6" />,
+          icon: <ShieldCheckIcon className="w-6 h-6" />,
         },
         {
           label: "Open Source",
           href: "/resources/open-source",
           description: "Open source security",
-          icon: <FiGithub className="w-6 h-6" />,
+          icon: <CommandLineIcon className="w-6 h-6" />,
         },
         {
           label: "Integrations",
           href: "/resources/integrations",
           description: "Connect with your tools",
-          icon: <FiLink className="w-6 h-6" />,
+          icon: <LinkIcon className="w-6 h-6" />,
         },
       ],
     },
@@ -144,31 +144,31 @@ const navItems: NavItem[] = [
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: <FiInfo className="w-6 h-6" />,
+          icon: <InformationCircleIcon className="w-6 h-6" />,
         },
         {
           label: "Developers",
           href: "/developers",
           description: "Resources for developers",
-          icon: <FiCode className="w-6 h-6" />,
+          icon: <CodeBracketIcon className="w-6 h-6" />,
         },
         {
           label: "Careers",
           href: "/careers",
           description: "Join our team",
-          icon: <FiUsers className="w-6 h-6" />,
+          icon: <UserGroupIcon className="w-6 h-6" />,
         },
         {
           label: "Press Kit",
           href: "/press-kit",
           description: "Media resources",
-          icon: <FiFileText className="w-6 h-6" />,
+          icon: <DocumentTextIcon className="w-6 h-6" />,
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: <FiBookOpen className="w-6 h-6" />,
+          icon: <BookOpenIcon className="w-6 h-6" />,
         },
       ],
     },
