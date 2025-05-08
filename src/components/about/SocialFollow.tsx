@@ -69,26 +69,6 @@ export function SocialFollow() {
                 </div>
               </div>
 
-              {/* Decorative Elements */}
-              <div className="absolute left-4 top-1/2 -translate-y-1/2">
-                {/* Butterfly */}
-                <div className="w-16 h-16 text-[#B66BFF] opacity-80">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.402 0.504587C12.4993 0.342544 12.7467 0.342544 12.844 0.504587L14.6394 3.49541C14.7367 3.65746 14.63 3.85 14.4446 3.85H10.8014C10.616 3.85 10.5093 3.65746 10.6066 3.49541L12.402 0.504587Z" />
-                    <path d="M14.402 3.50459C14.4993 3.34254 14.7467 3.34254 14.844 3.50459L16.6394 6.49541C16.7367 6.65746 16.63 6.85 16.4446 6.85H12.8014C12.616 6.85 12.5093 6.65746 12.6066 6.49541L14.402 3.50459Z" />
-                    <path d="M10.402 3.50459C10.4993 3.34254 10.7467 3.34254 10.844 3.50459L12.6394 6.49541C12.7367 6.65746 12.63 6.85 12.4446 6.85H8.80139C8.61599 6.85 8.50934 6.65746 8.60665 6.49541L10.402 3.50459Z" />
-                  </svg>
-                </div>
-                {/* Dotted Line */}
-                <div className="absolute top-1/2 left-16 w-32 border-t-2 border-dashed border-[#B66BFF] opacity-40" />
-              </div>
-
-              {/* Right Decorative Element */}
-              <div className="absolute right-0 bottom-0">
-                <div className="w-32 h-32">
-                  <div className="w-full h-full bg-[#B66BFF] opacity-20 rounded-tl-full" />
-                </div>
-              </div>
             </div>
           </div>
         </div>

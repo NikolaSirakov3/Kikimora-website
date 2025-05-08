@@ -69,12 +69,6 @@ const navItems: NavItem[] = [
           icon: <FiFileText className="w-6 h-6" />,
         },
         {
-          label: "Developers",
-          href: "/developers",
-          description: "Resources for developers",
-          icon: <FiCode className="w-6 h-6" />,
-        },
-        {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
@@ -153,6 +147,12 @@ const navItems: NavItem[] = [
           icon: <FiInfo className="w-6 h-6" />,
         },
         {
+          label: "Developers",
+          href: "/developers",
+          description: "Resources for developers",
+          icon: <FiCode className="w-6 h-6" />,
+        },
+        {
           label: "Careers",
           href: "/careers",
           description: "Join our team",
@@ -180,14 +180,34 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+  const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
 
   const handleDropdownToggle = (label: string) => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      setCloseTimeout(null);
+    }
     setActiveDropdown(activeDropdown === label ? null : label);
+  };
+
+  const handleMouseEnter = (label: string) => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      setCloseTimeout(null);
+    }
+    setActiveDropdown(label);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 200); // 200ms delay before closing
+    setCloseTimeout(timeout);
   };
 
   return (
     <nav
-      className={`bg-black fixed w-full z-40 transition-all duration-10 ${
+      className={`bg-[#3a44b7] fixed w-full z-40 transition-all duration-10 ${
         isAnnouncementVisible ? "top-[35px]" : "top-0"
       }`}
       style={{ transition: "top 0.3s ease-in-out" }}
@@ -211,11 +231,9 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
               <div key={item.label} className="relative">
                 <div
                   onMouseEnter={() =>
-                    item.dropdown && handleDropdownToggle(item.label)
+                    item.dropdown && handleMouseEnter(item.label)
                   }
-                  onMouseLeave={() =>
-                    item.dropdown && handleDropdownToggle(item.label)
-                  }
+                  onMouseLeave={() => item.dropdown && handleMouseLeave()}
                   className="relative"
                 >
                   <button className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none flex items-center justify-between w-full gap-2">
@@ -242,6 +260,10 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                   {/* Updated Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.label && (
                     <div
+                      onMouseEnter={() =>
+                        item.dropdown && handleMouseEnter(item.label)
+                      }
+                      onMouseLeave={() => item.dropdown && handleMouseLeave()}
                       className={`absolute left-0 top-full ${
                         item.dropdown.items.length <= 2
                           ? "w-[480px]"
