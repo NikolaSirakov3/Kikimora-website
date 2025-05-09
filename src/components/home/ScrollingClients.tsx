@@ -19,18 +19,18 @@ export function ScrollingClients() {
         <motion.div
           className="flex whitespace-nowrap absolute"
           animate={{
-            x: [0, -50 * clientNames.length * 16],
+            x: [0, -1000],
           }}
           transition={{
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 100,
+              duration: 20,
               ease: "linear",
             },
           }}
         >
-          {[...clientNames, ...clientNames, ...clientNames].map(
+          {[...clientNames, ...clientNames, ...clientNames, ...clientNames].map(
             (name, index) => (
               <span
                 key={`${name}-${index}`}
