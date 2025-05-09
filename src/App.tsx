@@ -7,7 +7,6 @@ import { Hero } from "@/components/home/Hero";
 import { Benefits } from "@/components/home/Benefits";
 import { Developers } from "@/pages/Developers";
 import { DevelopersCaseStudy } from "@/components/home/DevelopersCaseStudy";
-import { Clients } from "@/components/home/Clients";
 import { ScrollingClients } from "@/components/home/ScrollingClients";
 import { SecurityEfficiency } from "@/components/home/SecurityEfficiency";
 import { Newsletter } from "@/components/home/Newsletter";
@@ -40,17 +39,16 @@ function App() {
               element={
                 <>
                   <Hero />
-                  <ImageSwitcher />
                   <ScrollingClients />
+                  <ImageSwitcher />
                   <Benefits />
                   <DevelopersCaseStudy />
-                  <Clients />
                   <SecurityEfficiency />
                   <Testimonials />
                   <RequestDemo />
                   <Blog />
-                  <SoCyberPodcast />
                   <PlatformSection />
+                  <SoCyberPodcast />
                   <GetInTouch />
                   <Newsletter />
                 </>
