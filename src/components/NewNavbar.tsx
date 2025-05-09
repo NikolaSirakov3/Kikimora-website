@@ -48,37 +48,37 @@ const navItems: NavItem[] = [
           label: "Try Kikimora",
           href: "/trykikimora",
           description: "Experience our platform",
-          icon: <BoltIcon className="w-12 h-12" />,
+          icon: <BoltIcon className="w-9 h-9" />,
         },
         {
           label: "Managed Security",
           href: "/managed-security",
           description: "Professional security services",
-          icon: <ShieldCheckIcon className="w-12 h-12" />,
+          icon: <ShieldCheckIcon className="w-9 h-9" />,
         },
         {
           label: "MSSP",
           href: "/mssp",
           description: "Managed Security Service Provider",
-          icon: <ServerIcon className="w-12 h-12" />,
+          icon: <ServerIcon className="w-9 h-9" />,
         },
         {
           label: "Case Study",
           href: "/case-study",
           description: "Success stories and implementations",
-          icon: <DocumentTextIcon className="w-12 h-12" />,
+          icon: <DocumentTextIcon className="w-9 h-9" />,
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: <BookOpenIcon className="w-12 h-12" />,
+          icon: <BookOpenIcon className="w-9 h-9" />,
         },
         {
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: <InformationCircleIcon className="w-12 h-12" />,
+          icon: <InformationCircleIcon className="w-9 h-9" />,
         },
       ],
     },
@@ -92,13 +92,13 @@ const navItems: NavItem[] = [
           label: "Use Cases",
           href: "/solutions/use-cases",
           description: "Explore common security use cases",
-          icon: <Squares2X2Icon className="w-12 h-12" />,
+          icon: <Squares2X2Icon className="w-9 h-9" />,
         },
         {
           label: "Industries",
           href: "/solutions/industries",
           description: "Security solutions by industry",
-          icon: <BriefcaseIcon className="w-12 h-12" />,
+          icon: <BriefcaseIcon className="w-9 h-9" />,
         },
       ],
     },
@@ -112,25 +112,25 @@ const navItems: NavItem[] = [
           label: "Developer",
           href: "/resources/developer",
           description: "Resources for developers",
-          icon: <CodeBracketIcon className="w-12 h-12" />,
+          icon: <CodeBracketIcon className="w-9 h-9" />,
         },
         {
           label: "Security",
           href: "/resources/security",
           description: "Security best practices",
-          icon: <ShieldCheckIcon className="w-12 h-12" />,
+          icon: <ShieldCheckIcon className="w-9 h-9" />,
         },
         {
           label: "Open Source",
           href: "/resources/open-source",
           description: "Open source security",
-          icon: <CommandLineIcon className="w-12 h-12" />,
+          icon: <CommandLineIcon className="w-9 h-9" />,
         },
         {
           label: "Integrations",
           href: "/resources/integrations",
           description: "Connect with your tools",
-          icon: <LinkIcon className="w-12 h-12" />,
+          icon: <LinkIcon className="w-9 h-9" />,
         },
       ],
     },
@@ -144,31 +144,31 @@ const navItems: NavItem[] = [
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: <InformationCircleIcon className="w-12 h-12" />,
+          icon: <InformationCircleIcon className="w-9 h-9" />,
         },
         {
           label: "Developers",
           href: "/developers",
           description: "Resources for developers",
-          icon: <CodeBracketIcon className="w-12 h-12" />,
+          icon: <CodeBracketIcon className="w-9 h-9" />,
         },
         {
           label: "Careers",
           href: "/careers",
           description: "Join our team",
-          icon: <UserGroupIcon className="w-12 h-12" />,
+          icon: <UserGroupIcon className="w-9 h-9" />,
         },
         {
           label: "Press Kit",
           href: "/press-kit",
           description: "Media resources",
-          icon: <DocumentTextIcon className="w-12 h-12" />,
+          icon: <DocumentTextIcon className="w-9 h-9" />,
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: <BookOpenIcon className="w-12 h-12" />,
+          icon: <BookOpenIcon className="w-9 h-9" />,
         },
       ],
     },
@@ -264,9 +264,9 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                         item.dropdown && handleMouseEnter(item.label)
                       }
                       onMouseLeave={() => item.dropdown && handleMouseLeave()}
-                      className={`absolute left-0 top-full w-[900px] bg-[#003A6E] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-3 gap-6 border border-white/40 backdrop-blur-sm items-center justify-center`}
+                      className={`absolute left-0 top-full w-[900px] bg-[#040b11] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-3 gap-6 border border-white/40 backdrop-blur-sm items-center justify-center`}
                       style={{
-                        marginTop: "1rem",
+                        marginTop: "1.5rem",
                       }}
                     >
                       {item.dropdown.items.map((subItem) => (
@@ -275,8 +275,8 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                           to={subItem.href}
                           className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[200px] max-w-[260px]"
                         >
-                          <div className="flex items-center justify-center w-14 h-14 aspect-square rounded-xl bg-white/10 shadow-lg shadow-[0_0_12px_2px_rgba(41,171,226,0.25)]">
-                            <div className="w-12 h-12">{subItem.icon}</div>
+                          <div className="flex items-center justify-center w-10.5 h-10.5 aspect-square rounded-xl bg-white/10 shadow-lg shadow-[0_0_12px_2px_rgba(41,171,226,0.25)]">
+                            <div className="w-9 h-9">{subItem.icon}</div>
                           </div>
                           <div className="flex flex-col justify-center min-w-0 w-full">
                             <span className="text-white font-semibold text-base mb-1 block truncate">
@@ -391,8 +391,8 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                       to={subItem.href}
                       className="flex flex-row items-center text-left gap-4 p-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     >
-                      <div className="flex items-center justify-center w-16 h-16 bg-white/10 shadow-[0_0_15px_rgba(41,171,226,0.3)]">
-                        <div className="w-12 h-12">{subItem.icon}</div>
+                      <div className="flex items-center justify-center w-12 h-12 bg-white/10 shadow-[0_0_15px_rgba(41,171,226,0.3)]">
+                        <div className="w-9 h-9">{subItem.icon}</div>
                       </div>
                       <div className="flex flex-col justify-center text-left">
                         <div className="flex items-center gap-2">
