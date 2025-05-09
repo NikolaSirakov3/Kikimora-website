@@ -8,7 +8,6 @@ import { Benefits } from "@/components/home/Benefits";
 import { Developers } from "@/pages/Developers";
 import { DevelopersCaseStudy } from "@/components/home/DevelopersCaseStudy";
 import { ScrollingClients } from "@/components/home/ScrollingClients";
-import { SecurityEfficiency } from "@/components/home/SecurityEfficiency";
 import { Newsletter } from "@/components/home/Newsletter";
 import { Testimonials } from "@/components/home/Testimonials";
 import { RequestDemo } from "@/components/home/RequestDemo";
@@ -43,7 +42,6 @@ function App() {
                   <ImageSwitcher />
                   <Benefits />
                   <DevelopersCaseStudy />
-                  <SecurityEfficiency />
                   <Testimonials />
                   <RequestDemo />
                   <Blog />

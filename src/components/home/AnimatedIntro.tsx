@@ -211,7 +211,7 @@ export function AnimatedIntro() {
         className="h-[50px]" // Adjusted height to a reasonable size for a logo
           />
         </div>
-        <div className="relative bg-black px-4 pt-12 pb-4 rounded-lg mb-3">
+        <div className="relative bg-[#8015ec] px-4 pt-12 pb-4 rounded-lg mb-3">
           <div className="flex gap-2 text-sm">
             <button
               onClick={() => handleTabChange("SMART_RISK_SCORE")}

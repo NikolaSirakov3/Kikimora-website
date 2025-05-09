@@ -28,19 +28,19 @@ export function AnnouncementBar({ onVisibilityChange }: AnnouncementBarProps) {
   return (
     <div
       data-announcement
-      className={`w-full bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] text-white fixed top-0 z-50 transition-transform duration-50 ${
+      className={`w-full bg-gray-900 text-white fixed top-0 z-50 transition-transform duration-50 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="container mx-auto px-4 py-2">
         <Link
           to="/trykikimora"
-          className="flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+          className="flex items-center justify-center gap-2 hover:opacity-90 transition-opacity group"
         >
-          <span className="text-sm font-medium">
-            Start with Kikimora community today
+          <span className="text-sm font-medium text-[#05c7a3]">
+            Start free with Kikimora community today!
           </span>
-          <ArrowRight className="w-4 h-4" />
+          <ArrowRight className="w-4 h-4 text-[#05c7a3] transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </div>
     </div>

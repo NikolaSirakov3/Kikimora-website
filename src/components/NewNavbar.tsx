@@ -48,37 +48,37 @@ const navItems: NavItem[] = [
           label: "Try Kikimora",
           href: "/trykikimora",
           description: "Experience our platform",
-          icon: <BoltIcon className="w-6 h-6" />,
+          icon: <BoltIcon className="w-12 h-12" />,
         },
         {
           label: "Managed Security",
           href: "/managed-security",
           description: "Professional security services",
-          icon: <ShieldCheckIcon className="w-6 h-6" />,
+          icon: <ShieldCheckIcon className="w-12 h-12" />,
         },
         {
           label: "MSSP",
           href: "/mssp",
           description: "Managed Security Service Provider",
-          icon: <ServerIcon className="w-6 h-6" />,
+          icon: <ServerIcon className="w-12 h-12" />,
         },
         {
           label: "Case Study",
           href: "/case-study",
           description: "Success stories and implementations",
-          icon: <DocumentTextIcon className="w-6 h-6" />,
+          icon: <DocumentTextIcon className="w-12 h-12" />,
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: <BookOpenIcon className="w-6 h-6" />,
+          icon: <BookOpenIcon className="w-12 h-12" />,
         },
         {
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: <InformationCircleIcon className="w-6 h-6" />,
+          icon: <InformationCircleIcon className="w-12 h-12" />,
         },
       ],
     },
@@ -92,13 +92,13 @@ const navItems: NavItem[] = [
           label: "Use Cases",
           href: "/solutions/use-cases",
           description: "Explore common security use cases",
-          icon: <Squares2X2Icon className="w-6 h-6" />,
+          icon: <Squares2X2Icon className="w-12 h-12" />,
         },
         {
           label: "Industries",
           href: "/solutions/industries",
           description: "Security solutions by industry",
-          icon: <BriefcaseIcon className="w-6 h-6" />,
+          icon: <BriefcaseIcon className="w-12 h-12" />,
         },
       ],
     },
@@ -112,25 +112,25 @@ const navItems: NavItem[] = [
           label: "Developer",
           href: "/resources/developer",
           description: "Resources for developers",
-          icon: <CodeBracketIcon className="w-6 h-6" />,
+          icon: <CodeBracketIcon className="w-12 h-12" />,
         },
         {
           label: "Security",
           href: "/resources/security",
           description: "Security best practices",
-          icon: <ShieldCheckIcon className="w-6 h-6" />,
+          icon: <ShieldCheckIcon className="w-12 h-12" />,
         },
         {
           label: "Open Source",
           href: "/resources/open-source",
           description: "Open source security",
-          icon: <CommandLineIcon className="w-6 h-6" />,
+          icon: <CommandLineIcon className="w-12 h-12" />,
         },
         {
           label: "Integrations",
           href: "/resources/integrations",
           description: "Connect with your tools",
-          icon: <LinkIcon className="w-6 h-6" />,
+          icon: <LinkIcon className="w-12 h-12" />,
         },
       ],
     },
@@ -144,31 +144,31 @@ const navItems: NavItem[] = [
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: <InformationCircleIcon className="w-6 h-6" />,
+          icon: <InformationCircleIcon className="w-12 h-12" />,
         },
         {
           label: "Developers",
           href: "/developers",
           description: "Resources for developers",
-          icon: <CodeBracketIcon className="w-6 h-6" />,
+          icon: <CodeBracketIcon className="w-12 h-12" />,
         },
         {
           label: "Careers",
           href: "/careers",
           description: "Join our team",
-          icon: <UserGroupIcon className="w-6 h-6" />,
+          icon: <UserGroupIcon className="w-12 h-12" />,
         },
         {
           label: "Press Kit",
           href: "/press-kit",
           description: "Media resources",
-          icon: <DocumentTextIcon className="w-6 h-6" />,
+          icon: <DocumentTextIcon className="w-12 h-12" />,
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: <BookOpenIcon className="w-6 h-6" />,
+          icon: <BookOpenIcon className="w-12 h-12" />,
         },
       ],
     },
@@ -207,13 +207,13 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
 
   return (
     <nav
-      className={`bg-[#3a44b7] fixed w-full z-40 transition-all duration-10 ${
+      className={`bg-[#030104] fixed w-full z-40 transition-all duration-10 ${
         isAnnouncementVisible ? "top-[35px]" : "top-0"
       }`}
       style={{ transition: "top 0.3s ease-in-out" }}
     >
-      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+      <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center">
@@ -264,19 +264,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                         item.dropdown && handleMouseEnter(item.label)
                       }
                       onMouseLeave={() => item.dropdown && handleMouseLeave()}
-                      className={`absolute left-0 top-full ${
-                        item.dropdown.items.length <= 2
-                          ? "w-[480px]"
-                          : item.dropdown.items.length === 4
-                            ? "w-[720px]"
-                            : "w-[720px]"
-                      } bg-[#003A6E] rounded-lg shadow-lg py-6 px-8 z-50 grid ${
-                        item.dropdown.items.length <= 2
-                          ? "grid-cols-2"
-                          : item.dropdown.items.length === 4
-                            ? "grid-cols-2"
-                            : "grid-cols-3"
-                      } gap-6 border border-white/40 backdrop-blur-sm`}
+                      className={`absolute left-0 top-full w-[900px] bg-[#003A6E] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-3 gap-6 border border-white/40 backdrop-blur-sm items-center justify-center`}
                       style={{
                         marginTop: "1rem",
                       }}
@@ -285,27 +273,23 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                         <Link
                           key={subItem.label}
                           to={subItem.href}
-                          className="flex flex-col gap-2 p-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                          className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[200px] max-w-[260px]"
                         >
-                          <div className="flex items-start gap-3">
-                            <div className="text-[#29ABE2] mt-1">
-                              {subItem.icon}
-                            </div>
-                            <div className="flex flex-col">
-                              <div className="flex items-center gap-2">
-                                <span className="text-white font-medium">
-                                  {subItem.label}
+                          <div className="flex items-center justify-center w-14 h-14 aspect-square rounded-xl bg-white/10 shadow-lg shadow-[0_0_12px_2px_rgba(41,171,226,0.25)]">
+                            <div className="w-12 h-12">{subItem.icon}</div>
+                          </div>
+                          <div className="flex flex-col justify-center min-w-0 w-full">
+                            <span className="text-white font-semibold text-base mb-1 block truncate">
+                              {subItem.label}
+                              {subItem.soon && (
+                                <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2] align-middle">
+                                  soon
                                 </span>
-                                {subItem.soon && (
-                                  <span className="text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2]">
-                                    soon
-                                  </span>
-                                )}
-                              </div>
-                              <span className="text-sm text-gray-400">
-                                {subItem.description}
-                              </span>
-                            </div>
+                              )}
+                            </span>
+                            <span className="text-sm text-gray-400 leading-tight block truncate">
+                              {subItem.description}
+                            </span>
                           </div>
                         </Link>
                       ))}
@@ -405,10 +389,12 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                     <Link
                       key={subItem.label}
                       to={subItem.href}
-                      className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                      className="flex flex-row items-center text-left gap-4 p-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     >
-                      <div className="text-[#29ABE2] mt-1">{subItem.icon}</div>
-                      <div className="flex flex-col">
+                      <div className="flex items-center justify-center w-16 h-16 bg-white/10 shadow-[0_0_15px_rgba(41,171,226,0.3)]">
+                        <div className="w-12 h-12">{subItem.icon}</div>
+                      </div>
+                      <div className="flex flex-col justify-center text-left">
                         <div className="flex items-center gap-2">
                           <span className="text-white font-medium">
                             {subItem.label}

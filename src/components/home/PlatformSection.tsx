@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function PlatformSection() {
   return (
-    <section className="py-24 bg-[#24317f]">
+    <section className="py-24 bg-[#24317f] relative z-2">
       <div className="flex items-center">
         {/* Left side - Dashboard Image */}
         <div className="w-1/2 flex justify-center">

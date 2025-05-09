@@ -18,7 +18,7 @@ export function ImageSwitcher() {
   const [selectedImage, setSelectedImage] = useState<number>(1);
 
   return (
-    <section className="py-4 px-4 bg-white">
+    <section className="py-4 px-4 bg-white relative z-2">
       <div className="flex flex-col items-center gap-8 bg-white pb-8 max-w-[1200px] mx-auto rounded-lg relative z-2">
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mt-12">
