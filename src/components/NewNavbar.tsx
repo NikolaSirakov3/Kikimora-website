@@ -275,7 +275,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                           to={subItem.href}
                           className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[200px] max-w-[260px]"
                         >
-                          <div className="flex items-center justify-center w-10.5 h-10.5 aspect-square rounded-xl bg-white/10 shadow-lg shadow-[0_0_12px_2px_rgba(41,171,226,0.25)]">
+                          <div className="flex items-center justify-center w-10.5 h-10.5">
                             <div className="w-9 h-9">{subItem.icon}</div>
                           </div>
                           <div className="flex flex-col justify-center min-w-0 w-full">
