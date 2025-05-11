@@ -3,7 +3,7 @@ import React from "react";
 function HeroCaseStudy() {
   return (
     <section className="w-screen bg-[#071C2C] py-12 px-4 md:px-16 min-h-[90vh]">
-      <div className="max-w-[1200px] h-[80vh] ml-80 flex flex-col items-start justify-center mt-40">
+      <div className="max-w-[1200px] h-[80vh] ml-80 flex flex-col items-start justify-center mt-10">
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-2 leading-tight text-left">
           <span>Empower Your Code with</span>
           <br />
