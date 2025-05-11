@@ -3,11 +3,12 @@ import { Button } from "@/components/ui/button";
 
 export function PlatformSection() {
   return (
-    <section className="py-24 bg-[#24317f] relative z-2">
+    <div className="bg-[#001E38]">
+    <section className="py-24 bg-[#24317f] relative z-2 w-[1200px] mx-auto rounded-lg">
       <div className="flex items-center">
         {/* Left side - Dashboard Image */}
         <div className="w-1/2 flex justify-center">
-          <div className="w-[600px] h-[400px] bg-[#8C50C8] rounded-lg z-10">
+          <div className="w-[500px] h-[400px] bg-[#8C50C8] rounded-lg z-10">
             {/* Placeholder for the dashboard image */}
           </div>
         </div>
@@ -28,7 +29,8 @@ export function PlatformSection() {
             </Button>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </div>
   );
 }
