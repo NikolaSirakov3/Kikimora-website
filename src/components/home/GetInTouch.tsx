@@ -41,7 +41,7 @@ export function GetInTouch() {
               adipiscing tincidunt interdum tellus eu.
             </p>
 
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-8 ml-20">
               {/* Contact Form */}
               <div className="flex flex-col gap-4">
                 <input
@@ -76,9 +76,9 @@ export function GetInTouch() {
                         <span>
                           {month} {year}
                         </span>
-                        <button className="p-1">
+                        <button className="p-1 bg-white hover:bg-gray-50 rounded-full transition-colors">
                           <svg
-                            className="w-5 h-5"
+                            className="w-5 h-5 text-gray-600"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -133,19 +133,19 @@ export function GetInTouch() {
                     <div className="space-y-2">
                       <div className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50">
                         <span>09:00 AM</span>
-                        <button className="text-blue-500 px-4 py-1 rounded-full border border-blue-500">
+                        <button className="bg-[#00E5BE] text-[#001E38] font-montserrat font-semibold px-4 py-1 rounded-full hover:bg-[#00E5BE]/90 transition-colors">
                           Select
                         </button>
                       </div>
                       <div className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50">
                         <span>10:00 AM</span>
-                        <button className="text-blue-500 px-4 py-1 rounded-full border border-blue-500">
+                        <button className="bg-[#00E5BE] text-[#001E38] font-montserrat font-semibold px-4 py-1 rounded-full hover:bg-[#00E5BE]/90 transition-colors">
                           Select
                         </button>
                       </div>
                       <div className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50">
                         <span>11:00 AM</span>
-                        <button className="text-blue-500 px-4 py-1 rounded-full border border-blue-500">
+                        <button className="bg-[#00E5BE] text-[#001E38] font-montserrat font-semibold px-4 py-1 rounded-full hover:bg-[#00E5BE]/90 transition-colors">
                           Select
                         </button>
                       </div>
