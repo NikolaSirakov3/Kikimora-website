@@ -3,7 +3,7 @@ import { BlogHero } from "@/components/blog/BlogHero";
 
 export function Blog() {
   return (
-    <div className="w-[99.1vw]">
+    <div>
       <BlogHero />
     </div>
   );

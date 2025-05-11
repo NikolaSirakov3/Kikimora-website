@@ -6,7 +6,6 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/home/Hero";
 import { Benefits } from "@/components/home/Benefits";
 import { Developers } from "@/pages/Developers";
-import { DevelopersCaseStudy } from "@/components/home/DevelopersCaseStudy";
 import { ScrollingClients } from "@/components/home/ScrollingClients";
 import { Newsletter } from "@/components/home/Newsletter";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -41,11 +40,10 @@ function App() {
                   <ScrollingClients />
                   <ImageSwitcher />
                   <Benefits />
-                  <DevelopersCaseStudy />
+                  <PlatformSection />
                   <Testimonials />
                   <RequestDemo />
                   <Blog />
-                  <PlatformSection />
                   <SoCyberPodcast />
                   <GetInTouch />
                   <Newsletter />
