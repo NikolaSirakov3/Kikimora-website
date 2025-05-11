@@ -2,9 +2,9 @@ import React from "react";
 
 function IntroCaseStudy() {
   return (
-    <div className="w-screen bg-blue-950 flex justify-center md:justify-start py-12">
+    <div className="w-screen bg-blue-950 flex justify-center py-12">
       <section
-        className="max-w-md md:max-w-[800px] bg-gradient-to-br from-blue-800 to-purple-800 rounded-xl shadow-lg p-6 md:p-8 m-4 text-white md:ml-64"
+        className="max-w-md md:max-w-[800px] bg-gradient-to-br from-blue-800 to-purple-800 rounded-xl shadow-lg p-6 md:p-8 m-4 text-white"
         aria-label="Project Introduction"
       >
         <h2 className="text-2xl md:text-3xl font-bold mb-2 font-sans">
