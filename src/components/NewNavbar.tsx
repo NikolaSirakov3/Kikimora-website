@@ -256,45 +256,48 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                       </svg>
                     )}
                   </button>
-
-                  {/* Updated Dropdown Menu */}
-                  {item.dropdown && activeDropdown === item.label && (
-                    <div
-                      onMouseEnter={() =>
-                        item.dropdown && handleMouseEnter(item.label)
-                      }
-                      onMouseLeave={() => item.dropdown && handleMouseLeave()}
-                      className={`absolute left-0 top-full w-[900px] bg-[#040b11] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-3 gap-6 border border-white/40 backdrop-blur-sm items-center justify-center`}
-                      style={{
-                        marginTop: "1.5rem",
-                      }}
-                    >
-                      {item.dropdown.items.map((subItem) => (
-                        <Link
-                          key={subItem.label}
-                          to={subItem.href}
-                          className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[200px] max-w-[260px]"
-                        >
-                          <div className="flex items-center justify-center w-10.5 h-10.5">
-                            <div className="w-9 h-9">{subItem.icon}</div>
-                          </div>
-                          <div className="flex flex-col justify-center min-w-0 w-full">
-                            <span className="text-white font-semibold text-base mb-1 block truncate">
-                              {subItem.label}
-                              {subItem.soon && (
-                                <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2] align-middle">
-                                  soon
+                  {/* Only render the dropdown under the Product button */}
+                  {item.label === "Product" &&
+                    activeDropdown &&
+                    navItems.find((nav) => nav.label === activeDropdown)
+                      ?.dropdown && (
+                      <div
+                        onMouseEnter={() => handleMouseEnter(activeDropdown)}
+                        onMouseLeave={handleMouseLeave}
+                        className={`absolute top-full w-[420px] bg-[#040b11] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-2 gap-6 border border-white/40 backdrop-blur-sm items-center justify-center`}
+                        style={{
+                          marginTop: "1.5rem",
+                          left: 0,
+                        }}
+                      >
+                        {navItems
+                          .find((nav) => nav.label === activeDropdown)
+                          ?.dropdown?.items.map((subItem) => (
+                            <Link
+                              key={subItem.label}
+                              to={subItem.href}
+                              className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[160px] max-w-[210px]"
+                            >
+                              <div className="flex items-center justify-center w-10.5 h-10.5">
+                                <div className="w-9 h-9">{subItem.icon}</div>
+                              </div>
+                              <div className="flex flex-col justify-center min-w-0 w-full">
+                                <span className="text-white font-semibold text-base mb-1 block truncate">
+                                  {subItem.label}
+                                  {subItem.soon && (
+                                    <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2] align-middle">
+                                      soon
+                                    </span>
+                                  )}
                                 </span>
-                              )}
-                            </span>
-                            <span className="text-sm text-gray-400 leading-tight block truncate">
-                              {subItem.description}
-                            </span>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                                <span className="text-sm text-gray-400 leading-tight block truncate">
+                                  {subItem.description}
+                                </span>
+                              </div>
+                            </Link>
+                          ))}
+                      </div>
+                    )}
                 </div>
               </div>
             ))}
