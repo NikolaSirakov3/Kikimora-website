@@ -348,7 +348,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
             </Link>
             <button
               onClick={() => setIsTrialModalOpen(true)}
-              className="text-white hover:text-white px-4 py-2 text-sm font-medium bg-[#31c9b7] rounded-full border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
+              className="text-white hover:text-white px-4 py-2 text-sm font-medium bg-[#31c9b7] rounded-lg border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
             >
               Start Free
             </button>
@@ -464,7 +464,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
             </Link>
             <button
               onClick={() => setIsTrialModalOpen(true)}
-              className="w-full text-left px-3 py-2 text-base font-medium text-white hover:text-white bg-[#3EDDCA] rounded-full border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
+              className="w-full text-left px-3 py-2 text-base font-medium text-white hover:text-white bg-[#3EDDCA] rounded-lg border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
             >
               Start Free
             </button>

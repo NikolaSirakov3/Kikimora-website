@@ -223,7 +223,7 @@ export function Pricing() {
                   </p>
                 </div>
                 <div className="mt-auto">
-                  <Button className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-full px-6 py-3 font-montserrat text-sm">
+                  <Button className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-lg px-6 py-3 font-montserrat text-sm">
                     Contact us
                   </Button>
                 </div>

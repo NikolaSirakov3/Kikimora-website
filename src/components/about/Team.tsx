@@ -15,11 +15,11 @@ export function Team() {
 
           {/* Action buttons */}
           <div className="flex gap-4 mb-12">
-            <button className="bg-[#00E5BE] text-[#001E38] font-montserrat font-semibold px-6 py-3 rounded-full hover:bg-[#00E5BE]/90 transition-colors">
-              Book a Call with us
+            <button className="bg-[#00E5BE] text-[#001E38] font-montserrat font-semibold px-6 py-3 rounded-lg hover:bg-[#00E5BE]/90 transition-colors">
+              Join our team
             </button>
-            <button className="bg-[#001E38] border border-[#00E5BE] text-[#00E5BE] font-montserrat font-semibold px-6 py-3 rounded-full hover:bg-[#00E5BE]/10 transition-colors">
-              Invest in Kikimora.io
+            <button className="bg-[#001E38] border border-[#00E5BE] text-[#00E5BE] font-montserrat font-semibold px-6 py-3 rounded-lg hover:bg-[#00E5BE]/10 transition-colors">
+              View open positions
             </button>
           </div>
 
