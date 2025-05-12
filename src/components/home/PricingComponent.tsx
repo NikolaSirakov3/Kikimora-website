@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Pricing } from "./Pricing";
 
-export function RequestDemo() {
+export function PricingComponent() {
   return (
     <div className="bg-[#001E38]">
       {/* Full-width section with gradient background */}

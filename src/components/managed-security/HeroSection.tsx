@@ -16,7 +16,7 @@ export function HeroSection({
 }: HeroSectionProps) {
   return (
     <div className="pt-20 w-[99.2vw] flex items-center justify-center min-h-[600px] px-8 md:px-16 lg:px-24 bg-[#001324]">
-      <div className="w-[1500px] flex justify-between">
+      <div className="w-[1300px] flex justify-between">
         <div className="mt-20 pl-20 flex flex-col gap-6 max-w-[800px]">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
             {title}

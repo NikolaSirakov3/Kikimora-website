@@ -52,7 +52,7 @@ const pricingTiers: PricingTier[] = [
 export function PricingSection() {
   return (
     <section className="py-16 px-4 md:px-8 lg:px-16 bg-[#001324]">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Asset-Based Pricing To Meet The Precise Needs Of

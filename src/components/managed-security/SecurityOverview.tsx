@@ -1,7 +1,7 @@
 export function SecurityOverview() {
   return (
     <section className="py-16 px-4 md:px-8 lg:px-16 bg-[#001324]">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Left side - Image with monitor */}
         <div className="w-full lg:w-1/2 relative">
           <div className="relative w-full max-w-2xl mx-auto">

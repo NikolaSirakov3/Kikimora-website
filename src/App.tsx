@@ -9,7 +9,6 @@ import { Developers } from "@/pages/Developers";
 import { ScrollingClients } from "@/components/home/ScrollingClients";
 import { Newsletter } from "@/components/home/Newsletter";
 import { Testimonials } from "@/components/home/Testimonials";
-import { RequestDemo } from "@/components/home/RequestDemo";
 import { Blog } from "@/pages/Blog";
 import { BlogPost } from "@/pages/BlogPost";
 import { GetInTouch } from "@/components/home/GetInTouch";
@@ -42,7 +41,6 @@ function App() {
                   <Benefits />
                   <PlatformSection />
                   <Testimonials />
-                  <RequestDemo />
                   <Blog />
                   <SoCyberPodcast />
                   <GetInTouch />

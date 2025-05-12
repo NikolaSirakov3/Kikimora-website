@@ -14,7 +14,7 @@ const securityFeatures: SecurityFeature[] = [
 export function SecureOrganization() {
   return (
     <section className="py-16 px-4 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Left Column - Text Content */}
         <div className="flex-1 space-y-6">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
