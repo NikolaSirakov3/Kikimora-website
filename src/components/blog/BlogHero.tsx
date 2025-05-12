@@ -65,6 +65,8 @@ export function BlogHero() {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "0",
+    nextArrow: <div className="next-arrow" />,
+    prevArrow: <div className="prev-arrow" />,
     responsive: [
       {
         breakpoint: 1024,
@@ -84,15 +86,24 @@ export function BlogHero() {
   };
 
   return (
-    <section className="w-full bg-[#001E38] pt-20 pb-32">
+    <section className="w-full bg-[#f2f4f6] pt-20 pb-32 relative z-10">
+      <style>
+        {`
+          .slick-prev:before,
+          .slick-next:before {
+            color: black !important;
+          }
+        `}
+      </style>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl text-white font-conthrax mb-4">
+          <h1 className="text-4xl text-black font-conthrax mb-4">
             In the news
           </h1>
-          <p className="text-white/60 text-lg font-montserrat">
-            Key developments and breaking stories shaping the cybersecurity landscape.
+          <p className="text-black text-lg font-montserrat">
+            Key developments and breaking stories shaping the cybersecurity
+            landscape.
           </p>
         </div>
 
@@ -117,10 +128,10 @@ export function BlogHero() {
                       <div className="text-[#00E5BE] text-xs font-montserrat mb-2">
                         {format(post.date, "MMMM dd, yyyy")}
                       </div>
-                      <h3 className="text-white text-lg font-conthrax mb-2 line-clamp-2">
+                      <h3 className="text-black text-lg font-conthrax mb-2 line-clamp-2">
                         {post.title}
                       </h3>
-                      <p className="text-white/60 font-montserrat text-sm line-clamp-3">
+                      <p className="text-black font-montserrat text-sm line-clamp-3">
                         {post.description}
                       </p>
                     </div>
