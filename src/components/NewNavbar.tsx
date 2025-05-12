@@ -50,31 +50,31 @@ const navItems: NavItem[] = [
           label: "Try Kikimora",
           href: "/trykikimora",
           description: "Experience our platform",
-          icon: <BoltIcon className="w-9 h-9" />,
+          icon: <BoltIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Managed Security",
           href: "/managed-security",
           description: "Professional security services",
-          icon: <ShieldCheckIcon className="w-9 h-9" />,
+          icon: <ShieldCheckIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "MSSP",
           href: "/mssp",
           description: "Managed Security Service Provider",
-          icon: <ServerIcon className="w-9 h-9" />,
+          icon: <ServerIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: <BookOpenIcon className="w-9 h-9" />,
+          icon: <BookOpenIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: <InformationCircleIcon className="w-9 h-9" />,
+          icon: <InformationCircleIcon className="w-9 h-9" strokeWidth={1} />,
         },
       ],
     },
@@ -88,25 +88,25 @@ const navItems: NavItem[] = [
           label: "Startup",
           href: "/startup",
           description: "Success stories and implementations",
-          icon: <RocketLaunchIcon className="w-9 h-9" />,
+          icon: <RocketLaunchIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Healthcare",
           href: "/healthcare",
           description: "Healthcare security solutions",
-          icon: <HeartIcon className="w-9 h-9" />,
+          icon: <HeartIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Fintech",
           href: "/fintech",
           description: "Financial technology security",
-          icon: <BanknotesIcon className="w-9 h-9" />,
+          icon: <BanknotesIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "SME",
           href: "/sme",
           description: "Small and medium enterprise solutions",
-          icon: <BuildingOfficeIcon className="w-9 h-9" />,
+          icon: <BuildingOfficeIcon className="w-9 h-9" strokeWidth={1} />,
         },
       ],
     },
@@ -120,25 +120,25 @@ const navItems: NavItem[] = [
           label: "Developer",
           href: "/resources/developer",
           description: "Resources for developers",
-          icon: <CodeBracketIcon className="w-9 h-9" />,
+          icon: <CodeBracketIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Security",
           href: "/resources/security",
           description: "Security best practices",
-          icon: <ShieldCheckIcon className="w-9 h-9" />,
+          icon: <ShieldCheckIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Open Source",
           href: "/resources/open-source",
           description: "Open source security",
-          icon: <CommandLineIcon className="w-9 h-9" />,
+          icon: <CommandLineIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Integrations",
           href: "/resources/integrations",
           description: "Connect with your tools",
-          icon: <LinkIcon className="w-9 h-9" />,
+          icon: <LinkIcon className="w-9 h-9" strokeWidth={1} />,
         },
       ],
     },
@@ -152,31 +152,31 @@ const navItems: NavItem[] = [
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: <InformationCircleIcon className="w-9 h-9" />,
+          icon: <InformationCircleIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Developers",
           href: "/developers",
           description: "Resources for developers",
-          icon: <CodeBracketIcon className="w-9 h-9" />,
+          icon: <CodeBracketIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Careers",
           href: "/careers",
           description: "Join our team",
-          icon: <UserGroupIcon className="w-9 h-9" />,
+          icon: <UserGroupIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Press Kit",
           href: "/press-kit",
           description: "Media resources",
-          icon: <DocumentTextIcon className="w-9 h-9" />,
+          icon: <DocumentTextIcon className="w-9 h-9" strokeWidth={1} />,
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: <BookOpenIcon className="w-9 h-9" />,
+          icon: <BookOpenIcon className="w-9 h-9" strokeWidth={1} />,
         },
       ],
     },
@@ -283,7 +283,9 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                             className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[160px] max-w-[290px]"
                           >
                             <div className="flex items-center justify-center w-10.5 h-10.5">
-                              <div className="w-9 h-9">{subItem.icon}</div>
+                              <div className="w-9 h-9 [&>svg]:stroke-[1.5]">
+                                {subItem.icon}
+                              </div>
                             </div>
                             <div className="flex flex-col justify-center min-w-0 w-full">
                               <span className="text-white font-semibold text-base mb-1 block truncate">
@@ -407,7 +409,9 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                       className="flex flex-row items-center text-left gap-4 p-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
                     >
                       <div className="flex items-center justify-center w-12 h-12 bg-white/10 shadow-[0_0_15px_rgba(41,171,226,0.3)]">
-                        <div className="w-9 h-9">{subItem.icon}</div>
+                        <div className="w-9 h-9 [&>svg]:stroke-[1.5]">
+                          {subItem.icon}
+                        </div>
                       </div>
                       <div className="flex flex-col justify-center text-left">
                         <div className="flex items-center gap-2">
