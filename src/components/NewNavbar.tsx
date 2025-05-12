@@ -12,8 +12,10 @@ import {
   DocumentTextIcon,
   CommandLineIcon,
   LinkIcon,
-  Squares2X2Icon,
-  BriefcaseIcon,
+  BuildingOfficeIcon,
+  BanknotesIcon,
+  HeartIcon,
+  RocketLaunchIcon,
 } from "@heroicons/react/24/outline";
 
 interface NewNavbarProps {
@@ -63,12 +65,6 @@ const navItems: NavItem[] = [
           icon: <ServerIcon className="w-9 h-9" />,
         },
         {
-          label: "Case Study",
-          href: "/startup",
-          description: "Success stories and implementations",
-          icon: <DocumentTextIcon className="w-9 h-9" />,
-        },
-        {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
@@ -84,21 +80,33 @@ const navItems: NavItem[] = [
     },
   },
   {
-    label: "Use cases",
-    href: "/use-cases",
+    label: "Use Cases",
+    href: "/usecases",
     dropdown: {
       items: [
         {
-          label: "Use Cases",
-          href: "/solutions/use-cases",
-          description: "Explore common security use cases",
-          icon: <Squares2X2Icon className="w-9 h-9" />,
+          label: "Startup",
+          href: "/startup",
+          description: "Success stories and implementations",
+          icon: <RocketLaunchIcon className="w-9 h-9" />,
         },
         {
-          label: "Industries",
-          href: "/solutions/industries",
-          description: "Security solutions by industry",
-          icon: <BriefcaseIcon className="w-9 h-9" />,
+          label: "Healthcare",
+          href: "/healthcare",
+          description: "Healthcare security solutions",
+          icon: <HeartIcon className="w-9 h-9" />,
+        },
+        {
+          label: "Fintech",
+          href: "/fintech",
+          description: "Financial technology security",
+          icon: <BanknotesIcon className="w-9 h-9" />,
+        },
+        {
+          label: "SME",
+          href: "/sme",
+          description: "Small and medium enterprise solutions",
+          icon: <BuildingOfficeIcon className="w-9 h-9" />,
         },
       ],
     },
@@ -262,7 +270,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                       <div
                         onMouseEnter={() => handleMouseEnter(activeDropdown)}
                         onMouseLeave={handleMouseLeave}
-                        className={`absolute top-full w-[420px] bg-[#040b11] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-2 gap-6 border border-white/40 backdrop-blur-sm items-center justify-center`}
+                        className={`absolute top-full w-[620px] bg-[#040b11] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-2 gap-6 border border-white/40 backdrop-blur-sm items-center justify-center`}
                         style={{
                           marginTop: "1.5rem",
                           left: 0,
@@ -272,7 +280,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                           <Link
                             key={subItem.label}
                             to={subItem.href}
-                            className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[160px] max-w-[210px]"
+                            className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[160px] max-w-[290px]"
                           >
                             <div className="flex items-center justify-center w-10.5 h-10.5">
                               <div className="w-9 h-9">{subItem.icon}</div>

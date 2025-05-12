@@ -21,6 +21,9 @@ import { PlatformSection } from "./components/home/PlatformSection";
 import { SoCyberPodcast } from "@/components/podcast/SoCyberPodcast";
 import PricingInfo from "@/pages/pricing-info";
 import { Startup } from "@/pages/startup";
+import { Healthcare } from "@/pages/healthcare";
+import { Fintech } from "@/pages/fintech";
+import { SME } from "@/pages/sme";
 
 function App() {
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
@@ -61,6 +64,9 @@ function App() {
             <Route path="/managed-security" element={<ManagedSecurity />} />
             <Route path="/pricing-info" element={<PricingInfo />} />
             <Route path="/startup" element={<Startup />} />
+            <Route path="/healthcare" element={<Healthcare />} />
+            <Route path="/fintech" element={<Fintech />} />
+            <Route path="/sme" element={<SME />} />
           </Routes>
         </main>
         <Footer />
