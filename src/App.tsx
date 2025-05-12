@@ -17,9 +17,10 @@ import { ImageSwitcher } from "@/components/home/ImageSwitcher";
 import { MSSP } from "@/pages/MSSP";
 import { TryKikimora } from "@/pages/TryKikimora";
 import ManagedSecurity from "@/pages/managed-security";
-import { CaseStudy } from "@/pages/case-study";
 import { PlatformSection } from "./components/home/PlatformSection";
 import { SoCyberPodcast } from "@/components/podcast/SoCyberPodcast";
+import PricingInfo from "@/pages/pricing-info";
+import { Startup } from "@/pages/startup";
 
 function App() {
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
@@ -58,7 +59,8 @@ function App() {
             <Route path="/mssp" element={<MSSP />} />
             <Route path="/trykikimora" element={<TryKikimora />} />
             <Route path="/managed-security" element={<ManagedSecurity />} />
-            <Route path="/case-study" element={<CaseStudy />} />
+            <Route path="/pricing-info" element={<PricingInfo />} />
+            <Route path="/startup" element={<Startup />} />
           </Routes>
         </main>
         <Footer />

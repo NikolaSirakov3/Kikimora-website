@@ -64,7 +64,7 @@ const navItems: NavItem[] = [
         },
         {
           label: "Case Study",
-          href: "/case-study",
+          href: "/startup",
           description: "Success stories and implementations",
           icon: <DocumentTextIcon className="w-9 h-9" />,
         },
@@ -173,7 +173,7 @@ const navItems: NavItem[] = [
       ],
     },
   },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Pricing", href: "/pricing-info" },
 ];
 
 const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
@@ -229,38 +229,36 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <div key={item.label} className="relative">
-                <div
-                  onMouseEnter={() =>
-                    item.dropdown && handleMouseEnter(item.label)
-                  }
-                  onMouseLeave={() => item.dropdown && handleMouseLeave()}
-                  className="relative"
-                >
-                  <button className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none flex items-center justify-between w-full gap-2">
-                    {item.label}
-                    {item.dropdown && (
-                      <svg
-                        className={`h-4 w-4 transition-transform duration-300 group-hover:text-[#29ABE2] group-hover:rotate-180 ${
-                          activeDropdown === item.label ? "rotate-180" : ""
-                        }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    )}
-                  </button>
-                  {/* Only render the dropdown under the Product button */}
-                  {item.label === "Product" &&
-                    activeDropdown &&
-                    navItems.find((nav) => nav.label === activeDropdown)
-                      ?.dropdown && (
+                {item.dropdown ? (
+                  <div
+                    onMouseEnter={() =>
+                      item.dropdown && handleMouseEnter(item.label)
+                    }
+                    onMouseLeave={() => item.dropdown && handleMouseLeave()}
+                    className="relative"
+                  >
+                    <button className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none flex items-center justify-between w-full gap-2">
+                      {item.label}
+                      {item.dropdown && (
+                        <svg
+                          className={`h-4 w-4 transition-transform duration-300 group-hover:text-[#29ABE2] group-hover:rotate-180 ${
+                            activeDropdown === item.label ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      )}
+                    </button>
+                    {/* Dropdown content */}
+                    {item.dropdown && activeDropdown === item.label && (
                       <div
                         onMouseEnter={() => handleMouseEnter(activeDropdown)}
                         onMouseLeave={handleMouseLeave}
@@ -270,35 +268,41 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                           left: 0,
                         }}
                       >
-                        {navItems
-                          .find((nav) => nav.label === activeDropdown)
-                          ?.dropdown?.items.map((subItem) => (
-                            <Link
-                              key={subItem.label}
-                              to={subItem.href}
-                              className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[160px] max-w-[210px]"
-                            >
-                              <div className="flex items-center justify-center w-10.5 h-10.5">
-                                <div className="w-9 h-9">{subItem.icon}</div>
-                              </div>
-                              <div className="flex flex-col justify-center min-w-0 w-full">
-                                <span className="text-white font-semibold text-base mb-1 block truncate">
-                                  {subItem.label}
-                                  {subItem.soon && (
-                                    <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2] align-middle">
-                                      soon
-                                    </span>
-                                  )}
-                                </span>
-                                <span className="text-sm text-gray-400 leading-tight block truncate">
-                                  {subItem.description}
-                                </span>
-                              </div>
-                            </Link>
-                          ))}
+                        {item.dropdown.items.map((subItem) => (
+                          <Link
+                            key={subItem.label}
+                            to={subItem.href}
+                            className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[160px] max-w-[210px]"
+                          >
+                            <div className="flex items-center justify-center w-10.5 h-10.5">
+                              <div className="w-9 h-9">{subItem.icon}</div>
+                            </div>
+                            <div className="flex flex-col justify-center min-w-0 w-full">
+                              <span className="text-white font-semibold text-base mb-1 block truncate">
+                                {subItem.label}
+                                {subItem.soon && (
+                                  <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2] align-middle">
+                                    soon
+                                  </span>
+                                )}
+                              </span>
+                              <span className="text-sm text-gray-400 leading-tight block truncate">
+                                {subItem.description}
+                              </span>
+                            </div>
+                          </Link>
+                        ))}
                       </div>
                     )}
-                </div>
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium"
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </div>
             ))}
           </div>

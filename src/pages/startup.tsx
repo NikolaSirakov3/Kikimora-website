@@ -5,7 +5,7 @@ import { InteractiveDemos } from "../components/case-study/InteractiveDemos";
 import { DashboardShowcase } from "../components/case-study/DashboardShowcase";
 import { EUFunding } from "@/components/shared/EUFunding";
 
-function CaseStudy() {
+function Startup() {
   return (
     <main className="w-[99.2vw]">
       <HeroCaseStudy />
@@ -18,4 +18,4 @@ function CaseStudy() {
   );
 }
 
-export { CaseStudy };
+export { Startup };
