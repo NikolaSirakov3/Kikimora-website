@@ -1,22 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FreeTrialModal } from "./ui/FreeTrialModal";
-import {
-  ServerIcon,
-  CodeBracketIcon,
-  BoltIcon,
-  ShieldCheckIcon,
-  InformationCircleIcon,
-  BookOpenIcon,
-  UserGroupIcon,
-  DocumentTextIcon,
-  CommandLineIcon,
-  LinkIcon,
-  BuildingOfficeIcon,
-  BanknotesIcon,
-  HeartIcon,
-  RocketLaunchIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowSquareRight } from "@phosphor-icons/react";
 
 interface NewNavbarProps {
   isAnnouncementVisible: boolean;
@@ -50,31 +35,41 @@ const navItems: NavItem[] = [
           label: "Try Kikimora",
           href: "/trykikimora",
           description: "Experience our platform",
-          icon: <BoltIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Managed Security",
           href: "/managed-security",
           description: "Professional security services",
-          icon: <ShieldCheckIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "MSSP",
           href: "/mssp",
           description: "Managed Security Service Provider",
-          icon: <ServerIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: <BookOpenIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: <InformationCircleIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
       ],
     },
@@ -88,25 +83,33 @@ const navItems: NavItem[] = [
           label: "Startup",
           href: "/startup",
           description: "Success stories and implementations",
-          icon: <RocketLaunchIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Healthcare",
           href: "/healthcare",
           description: "Healthcare security solutions",
-          icon: <HeartIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Fintech",
           href: "/fintech",
           description: "Financial technology security",
-          icon: <BanknotesIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "SME",
           href: "/sme",
           description: "Small and medium enterprise solutions",
-          icon: <BuildingOfficeIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
       ],
     },
@@ -120,25 +123,33 @@ const navItems: NavItem[] = [
           label: "Developer",
           href: "/resources/developer",
           description: "Resources for developers",
-          icon: <CodeBracketIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Security",
           href: "/resources/security",
           description: "Security best practices",
-          icon: <ShieldCheckIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Open Source",
           href: "/resources/open-source",
           description: "Open source security",
-          icon: <CommandLineIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Integrations",
           href: "/resources/integrations",
           description: "Connect with your tools",
-          icon: <LinkIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
       ],
     },
@@ -152,31 +163,41 @@ const navItems: NavItem[] = [
           label: "About",
           href: "/about",
           description: "Learn about our mission",
-          icon: <InformationCircleIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Developers",
           href: "/developers",
           description: "Resources for developers",
-          icon: <CodeBracketIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Careers",
           href: "/careers",
           description: "Join our team",
-          icon: <UserGroupIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Press Kit",
           href: "/press-kit",
           description: "Media resources",
-          icon: <DocumentTextIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
         {
           label: "Blog",
           href: "/blog",
           description: "Latest news and updates",
-          icon: <BookOpenIcon className="w-9 h-9" strokeWidth={1} />,
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
         },
       ],
     },
