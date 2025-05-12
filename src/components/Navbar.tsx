@@ -70,7 +70,7 @@ export function Navbar() {
         </div>
 
         {/* Right side - Button */}
-        <Button className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-full font-montserrat text-sm">
+        <Button className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-lg font-montserrat text-sm">
           Request Demo
         </Button>
       </div>

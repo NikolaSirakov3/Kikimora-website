@@ -30,7 +30,7 @@ export function DevelopersHero() {
 
         {/* CTA Buttons */}
         <div className="flex justify-center gap-4 mb-20">
-          <Button className="bg-[#00E5BE] text-[#001E38] hover:bg-[#00E5BE]/90 rounded-full px-6 py-3 font-montserrat font-semibold flex items-center gap-2">
+          <Button className="bg-[#00E5BE] text-[#001E38] hover:bg-[#00E5BE]/90 rounded-lg px-6 py-3 font-montserrat font-semibold flex items-center gap-2">
             Request Demo
             <ChevronRight className="h-4 w-4" />
           </Button>

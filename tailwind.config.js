@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         conthrax: ["ConthraxSb", "sans-serif"],
+        orbitron: ["Orbitron", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

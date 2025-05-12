@@ -98,7 +98,7 @@ export function Hero() {
           <div className="h-3/4 flex items-center">
             {/* Left side - Content */}
             <div className="flex flex-col gap-6 w-1/2 pl-[10%] mt-10">
-              <h1 className="text-5xl text-white font-conthrax leading-tight">
+              <h1 className="text-5xl text-white font-orbitron font-semibold leading-tight">
                 Elevating your security posture
               </h1>
               <p className="text-white/80 text-lg font-montserrat">

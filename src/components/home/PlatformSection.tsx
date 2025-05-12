@@ -24,7 +24,7 @@ export function PlatformSection() {
             fingertips.
           </p>
           <div className="flex gap-4 mt-4">
-            <Button className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-full px-8 py-6 font-montserrat">
+            <Button className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-lg px-8 py-6 font-montserrat">
               Request Demo
             </Button>
           </div>
