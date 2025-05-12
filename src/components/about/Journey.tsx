@@ -18,11 +18,11 @@ const timelineData = [
     title: "Qualys integration",
   },
   {
-    year: "2024",
+    year: "2025",
     title: "AI Assistant Release",
   },
   {
-    year: "2024",
+    year: "2025",
     title: "Integrated Consulting",
   },
 ];

@@ -44,7 +44,7 @@ export function Footer() {
 
         {/* Middle - Copyright Text */}
         <div className="text-white text-sm font-montserrat">
-          © 2024 Kikimora. All rights reserved.
+          © 2025 Kikimora. All rights reserved.
         </div>
 
         {/* Right side - Policy Links */}
