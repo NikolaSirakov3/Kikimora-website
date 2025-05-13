@@ -93,6 +93,19 @@ export function BlogHero() {
           .slick-next:before {
             color: black !important;
           }
+          
+          .slick-prev,
+          .slick-next {
+            top: 110px !important;
+          }
+          
+          .slick-prev {
+            left: 20 !important;
+          }
+          
+          .slick-next {
+            right: 20 !important;
+          }
         `}
       </style>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
