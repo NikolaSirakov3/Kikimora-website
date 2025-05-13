@@ -89,7 +89,12 @@ export function Newsletter() {
             <span className="text-white/60 font-montserrat text-sm text-center max-w-[180px] whitespace-pre-line">
               {"Request a demo to see\nthe full power of Kikimora"}
             </span>
-            <button className="bg-[#00E5BE] text-[#001E38] font-montserrat text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#00E5BE]/90 whitespace-nowrap">
+            <button
+              className="bg-[#00E5BE] text-[#001E38] font-montserrat text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#00E5BE]/90 whitespace-nowrap"
+              onClick={() =>
+                window.open("https://calendly.com/o-antonov", "_blank")
+              }
+            >
               Book Demo
             </button>
           </div>

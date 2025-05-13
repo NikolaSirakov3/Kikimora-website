@@ -72,7 +72,12 @@ export function SecurityFeatures() {
               placeholder="Email"
               className="flex-1 px-6 py-4 rounded-lg bg-[#004B7A] text-white border border-gray-600 focus:outline-none focus:border-blue-500 text-lg"
             />
-            <Button className="px-10 py-4 bg-[#4169E1] hover:bg-[#3154b3] text-white font-bold rounded-lg text-lg transition-all duration-300 hover:scale-105">
+            <Button
+              className="px-10 py-4 bg-[#4169E1] hover:bg-[#3154b3] text-white font-bold rounded-lg text-lg transition-all duration-300 hover:scale-105"
+              onClick={() =>
+                window.open("https://calendly.com/o-antonov", "_blank")
+              }
+            >
               BOOK DEMO
             </Button>
           </div>

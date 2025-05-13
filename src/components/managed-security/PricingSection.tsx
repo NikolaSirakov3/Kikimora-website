@@ -93,6 +93,9 @@ export function PricingSection() {
 
               <button
                 className={`${tier.buttonColor} text-white py-3 px-6 rounded-md font-medium hover:opacity-90 transition-opacity mt-auto`}
+                onClick={() =>
+                  window.open("https://calendly.com/o-antonov", "_blank")
+                }
               >
                 Book Demo
               </button>

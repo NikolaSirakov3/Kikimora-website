@@ -19,7 +19,12 @@ export function PricingComponent() {
                   request a free demo
                 </span>
               </div>
-              <Button className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-lg px-8 py-6 font-montserrat">
+              <Button
+                className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-lg px-8 py-6 font-montserrat"
+                onClick={() =>
+                  window.open("https://calendly.com/o-antonov", "_blank")
+                }
+              >
                 Book Demo
               </Button>
             </div>

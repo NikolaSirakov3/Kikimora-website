@@ -109,7 +109,12 @@ export function TryKikimora() {
                     <option>500+ Assets</option>
                   </select>
                 </div>
-                <button className="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg">
+                <button
+                  className="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg"
+                  onClick={() =>
+                    window.open("https://calendly.com/o-antonov", "_blank")
+                  }
+                >
                   Book Demo
                 </button>
               </div>
