@@ -87,7 +87,7 @@ export function FreeTrialModal({ isOpen, onClose }: FreeTrialModalProps) {
               value={formData.fullName}
               onChange={handleInputChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0B2653]"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0B2653] bg-white"
             />
 
             <input
@@ -97,7 +97,7 @@ export function FreeTrialModal({ isOpen, onClose }: FreeTrialModalProps) {
               value={formData.businessEmail}
               onChange={handleInputChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0B2653]"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0B2653] bg-white"
             />
 
             <input
@@ -106,7 +106,7 @@ export function FreeTrialModal({ isOpen, onClose }: FreeTrialModalProps) {
               placeholder="Phone number (optional)"
               value={formData.phoneNumber}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0B2653]"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0B2653] bg-white"
             />
 
             <input
@@ -116,7 +116,7 @@ export function FreeTrialModal({ isOpen, onClose }: FreeTrialModalProps) {
               value={formData.companyName}
               onChange={handleInputChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0B2653]"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-[#0B2653] bg-white"
             />
 
             <button
