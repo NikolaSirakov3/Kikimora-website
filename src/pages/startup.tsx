@@ -7,7 +7,7 @@ import { EUFunding } from "@/components/shared/EUFunding";
 
 function Startup() {
   return (
-    <main className="w-[99.2vw]">
+    <main className="w-[99.1vw]">
       <HeroCaseStudy />
       <IntroCaseStudy />
       <DashboardShowcase />

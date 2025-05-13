@@ -12,7 +12,7 @@ export function Hero() {
   }, []);
 
   return (
-    <div className="bg-[#001E38] relative w-[99.2vw]">
+    <div className="bg-[#001E38] relative w-[99.1vw]">
       <Particles
         id="tsparticles"
         init={particlesInit}
