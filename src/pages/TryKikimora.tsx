@@ -190,7 +190,10 @@ export function TryKikimora() {
           <p className="text-gray-300 text-lg mb-8">
             Book a free consultation with our team!
           </p>
-          <button className="bg-teal-500 hover:bg-teal-600 text-white text-lg font-semibold py-4 px-8 rounded-lg">
+          <button 
+            className="bg-teal-500 hover:bg-teal-600 text-white text-lg font-semibold py-4 px-8 rounded-lg"
+            onClick={() => window.open("https://calendly.com/o-antonov", "_blank")}
+          >
             Book Call
           </button>
         </div>

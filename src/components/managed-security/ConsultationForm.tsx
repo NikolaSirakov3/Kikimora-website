@@ -18,7 +18,12 @@ export function ConsultationForm() {
             placeholder="Email"
             className="flex-1 px-6 py-4 rounded-md bg-white/10 backdrop-blur-sm text-white placeholder-white/70 border border-white/20 focus:outline-none focus:border-white/40"
           />
-          <button className="px-8 py-4 bg-[#4169E1] text-white font-medium rounded-md hover:bg-[#3154b3] transition-colors">
+          <button
+            className="px-8 py-4 bg-[#4169E1] text-white font-medium rounded-md hover:bg-[#3154b3] transition-colors"
+            onClick={() =>
+              window.open("https://calendly.com/o-antonov", "_blank")
+            }
+          >
             Book
           </button>
         </div>

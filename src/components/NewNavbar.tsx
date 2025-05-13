@@ -340,12 +340,14 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/login"
+            <button
+              onClick={() =>
+                window.open("https://calendly.com/o-antonov", "_blank")
+              }
               className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none"
             >
               Book Demo
-            </Link>
+            </button>
             <button
               onClick={() => setIsTrialModalOpen(true)}
               className="text-white hover:text-white px-4 py-2 text-sm font-medium bg-[#31c9b7] rounded-lg border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
@@ -456,12 +458,14 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
             </div>
           ))}
           <div className="pt-4 pb-3 border-t border-white/20">
-            <Link
-              to="/login"
-              className="block px-3 py-2 text-base font-medium text-white hover:text-[#29ABE2] bg-transparent border-none outline-none focus:outline-none"
+            <button
+              onClick={() =>
+                window.open("https://calendly.com/o-antonov", "_blank")
+              }
+              className="block w-full text-left px-3 py-2 text-base font-medium text-white hover:text-[#29ABE2] bg-transparent border-none outline-none focus:outline-none"
             >
               Book Demo
-            </Link>
+            </button>
             <button
               onClick={() => setIsTrialModalOpen(true)}
               className="w-full text-left px-3 py-2 text-base font-medium text-white hover:text-white bg-[#3EDDCA] rounded-lg border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"

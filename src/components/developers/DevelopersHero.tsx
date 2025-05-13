@@ -30,9 +30,11 @@ export function DevelopersHero() {
 
         {/* CTA Buttons */}
         <div className="flex justify-center gap-4 mb-20">
-          <Button 
+          <Button
             className="bg-[#00E5BE] text-[#001E38] hover:bg-[#00E5BE]/90 rounded-lg px-6 py-3 font-montserrat font-semibold flex items-center gap-2"
-            onClick={() => window.open("https://calendly.com/o-antonov", "_blank")}
+            onClick={() =>
+              window.open("https://calendly.com/o-antonov", "_blank")
+            }
           >
             Book Demo
             <ChevronRight className="h-4 w-4" />
@@ -40,7 +42,9 @@ export function DevelopersHero() {
           <Button
             variant="outline"
             className="border-[#00E5BE] text-[#00E5BE] hover:bg-[#00E5BE]/10 rounded-full px-6 py-3 font-montserrat font-semibold"
-            onClick={() => window.open("https://calendly.com/o-antonov", "_blank")}
+            onClick={() =>
+              window.open("https://calendly.com/o-antonov", "_blank")
+            }
           >
             Book a Consultation
           </Button>
