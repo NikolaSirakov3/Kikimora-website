@@ -90,7 +90,7 @@ export function Newsletter() {
               {"Request a demo to see\nthe full power of Kikimora"}
             </span>
             <button className="bg-[#00E5BE] text-[#001E38] font-montserrat text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#00E5BE]/90 whitespace-nowrap">
-              Request Demo
+              Book Demo
             </button>
           </div>
 

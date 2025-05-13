@@ -344,7 +344,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
               to="/login"
               className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none"
             >
-              Book a Demo
+              Book Demo
             </Link>
             <button
               onClick={() => setIsTrialModalOpen(true)}
@@ -460,7 +460,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
               to="/login"
               className="block px-3 py-2 text-base font-medium text-white hover:text-[#29ABE2] bg-transparent border-none outline-none focus:outline-none"
             >
-              Book a Demo
+              Book Demo
             </Link>
             <button
               onClick={() => setIsTrialModalOpen(true)}
