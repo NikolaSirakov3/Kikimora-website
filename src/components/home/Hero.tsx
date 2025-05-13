@@ -59,11 +59,7 @@ export function Hero() {
               },
             },
             links: {
-              enable: true,
-              distance: 150,
-              color: "#3EDDCA",
-              opacity: 0.4,
-              width: 1,
+              enable: false,
             },
           },
           interactivity: {
