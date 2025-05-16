@@ -1,5 +1,10 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import NewNavbar from "@/components/NewNavbar";
 import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { Footer } from "@/components/Footer";
@@ -26,11 +31,23 @@ import { Fintech } from "@/pages/fintech";
 import { SME } from "@/pages/sme";
 import { PodcastEpisodePage } from "@/pages/PodcastEpisodePage";
 
+// Add ScrollToTop component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col overflow-x-hidden">
         <AnnouncementBar onVisibilityChange={setIsAnnouncementVisible} />
         <NewNavbar isAnnouncementVisible={isAnnouncementVisible} />

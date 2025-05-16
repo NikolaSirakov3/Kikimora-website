@@ -4,7 +4,19 @@ import colorAndBlack from "../assets/colorAndBlack.png";
 
 export function PodcastEpisodePage() {
   const { id } = useParams<{ id: string }>();
-  const [isChapterOpen, setIsChapterOpen] = useState(false);
+  const [openChapters, setOpenChapters] = useState<{ [key: string]: boolean }>({
+    chapter1: false,
+    chapter2: false,
+    chapter3: false,
+    chapter4: false,
+  });
+
+  const toggleChapter = (chapterId: string) => {
+    setOpenChapters((prev) => ({
+      ...prev,
+      [chapterId]: !prev[chapterId],
+    }));
+  };
 
   return (
     <section className="w-[99.1vw] xl:w-[99.2vw] min-h-screen bg-[#001E38] pt-[80px] pb-12 px-0">
@@ -81,25 +93,19 @@ export function PodcastEpisodePage() {
               injected humour, or randomised words which don't look even
               slightly believable. If you are going to use a passage of Lorem
               Ipsum, you need to be sure there isn't anything embarrassing
-              hidden in the middle of text. All the Lorem Ipsum generators on
-              the Internet tend to repeat predefined chunks as necessary, making
-              this the first true generator on the Internet. It uses a
-              dictionary of over 200 Latin words, combined with a handful of
-              model sentence structures, to generate Lorem Ipsum which looks
-              reasonable. The generated Lorem Ipsum is therefore always free
-              from repetition, injected humour, or non-characteristic words etc.
+              hidden in the middle of text.
             </p>
             {/* Collapsible Chapter 1 */}
             <div className="flex flex-col items-start w-full mb-2">
               <div className="w-full">
                 <button
-                  className="flex items-center gap-2 bg-[#2B2320] text-[#fff] font-conthrax text-xl focus:outline-none px-6 py-2 rounded transition-colors w-full text-left shadow-md"
-                  onClick={() => setIsChapterOpen((v) => !v)}
-                  aria-expanded={isChapterOpen}
+                  className="flex items-center gap-2 text-[#fff] font-conthrax text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
+                  onClick={() => toggleChapter("chapter1")}
+                  aria-expanded={openChapters.chapter1}
                   aria-controls="chapter1-content"
                 >
                   <svg
-                    className={`transition-transform duration-200 ${isChapterOpen ? "rotate-90" : "rotate-0"}`}
+                    className={`transition-transform duration-200 ${openChapters.chapter1 ? "rotate-90" : "rotate-0"}`}
                     width="24"
                     height="24"
                     viewBox="0 0 20 20"
@@ -116,7 +122,7 @@ export function PodcastEpisodePage() {
                   </svg>
                   CHAPTER 1: RANSOMWARE
                 </button>
-                {isChapterOpen && (
+                {openChapters.chapter1 && (
                   <div
                     id="chapter1-content"
                     className="mt-3 text-white/80 font-montserrat text-base bg-transparent rounded-xl p-0"
@@ -126,15 +132,133 @@ export function PodcastEpisodePage() {
                     form, by injected humour, or randomised words which don't
                     look even slightly believable. If you are going to use a
                     passage of Lorem Ipsum, you need to be sure there isn't
-                    anything embarrassing hidden in the middle of text. All the
-                    Lorem Ipsum generators on the Internet tend to repeat
-                    predefined chunks as necessary, making this the first true
-                    generator on the Internet. It uses a dictionary of over 200
-                    Latin words, combined with a handful of model sentence
-                    structures, to generate Lorem Ipsum which looks reasonable.
-                    The generated Lorem Ipsum is therefore always free from
-                    repetition, injected humour, or non-characteristic words
-                    etc.
+                    anything embarrassing hidden in the middle of text.
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Collapsible Chapter 2 */}
+            <div className="flex flex-col items-start w-full mb-2">
+              <div className="w-full">
+                <button
+                  className="flex items-center gap-2 text-[#fff] font-conthrax text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
+                  onClick={() => toggleChapter("chapter2")}
+                  aria-expanded={openChapters.chapter2}
+                  aria-controls="chapter2-content"
+                >
+                  <svg
+                    className={`transition-transform duration-200 ${openChapters.chapter2 ? "rotate-90" : "rotate-0"}`}
+                    width="24"
+                    height="24"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 8L10 12L14 8"
+                      stroke="#fff"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  CHAPTER 2: PHISHING ATTACKS
+                </button>
+                {openChapters.chapter2 && (
+                  <div
+                    id="chapter2-content"
+                    className="mt-3 text-white/80 font-montserrat text-base bg-transparent rounded-xl p-0"
+                  >
+                    Phishing attacks are becoming increasingly sophisticated.
+                    Learn about the latest techniques used by attackers and how
+                    to protect yourself and your organization from these
+                    threats. Understanding the psychology behind phishing is
+                    crucial for developing effective defense strategies.
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Collapsible Chapter 3 */}
+            <div className="flex flex-col items-start w-full mb-2">
+              <div className="w-full">
+                <button
+                  className="flex items-center gap-2 text-[#fff] font-conthrax text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
+                  onClick={() => toggleChapter("chapter3")}
+                  aria-expanded={openChapters.chapter3}
+                  aria-controls="chapter3-content"
+                >
+                  <svg
+                    className={`transition-transform duration-200 ${openChapters.chapter3 ? "rotate-90" : "rotate-0"}`}
+                    width="24"
+                    height="24"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 8L10 12L14 8"
+                      stroke="#fff"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  CHAPTER 3: SOCIAL ENGINEERING
+                </button>
+                {openChapters.chapter3 && (
+                  <div
+                    id="chapter3-content"
+                    className="mt-3 text-white/80 font-montserrat text-base bg-transparent rounded-xl p-0"
+                  >
+                    Social engineering exploits human psychology to gain
+                    unauthorized access to systems and information. This chapter
+                    explores common social engineering tactics and provides
+                    practical advice on how to recognize and prevent these types
+                    of attacks.
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Collapsible Chapter 4 */}
+            <div className="flex flex-col items-start w-full mb-2">
+              <div className="w-full">
+                <button
+                  className="flex items-center gap-2 text-[#fff] font-conthrax text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
+                  onClick={() => toggleChapter("chapter4")}
+                  aria-expanded={openChapters.chapter4}
+                  aria-controls="chapter4-content"
+                >
+                  <svg
+                    className={`transition-transform duration-200 ${openChapters.chapter4 ? "rotate-90" : "rotate-0"}`}
+                    width="24"
+                    height="24"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 8L10 12L14 8"
+                      stroke="#fff"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  CHAPTER 4: SECURITY BEST PRACTICES
+                </button>
+                {openChapters.chapter4 && (
+                  <div
+                    id="chapter4-content"
+                    className="mt-3 text-white/80 font-montserrat text-base bg-transparent rounded-xl p-0"
+                  >
+                    Implementing strong security practices is essential for
+                    protecting your digital assets. This chapter covers password
+                    management, two-factor authentication, regular updates, and
+                    other fundamental security measures that everyone should
+                    follow.
                   </div>
                 )}
               </div>
