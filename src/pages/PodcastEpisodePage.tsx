@@ -1,30 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import colorAndBlack from "../assets/colorAndBlack.png";
 
 export function PodcastEpisodePage() {
   const { id } = useParams<{ id: string }>();
+  const [isChapterOpen, setIsChapterOpen] = useState(false);
 
   return (
-    <section className="w-[99.1vw] xl:w-[99.2vw] min-h-screen bg-[#001E38] pt-20 pb-32">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Placeholder Header */}
-        <div className="max-w-3xl mx-auto mb-10">
-          <div className="aspect-[16/6] rounded-2xl bg-[#00539B] flex items-center justify-center border-4 border-[#00E5BE]">
-            <span className="text-white text-3xl font-conthrax">
-              Podcast {id}
-            </span>
+    <section className="w-[99.1vw] xl:w-[99.2vw] min-h-screen bg-[#001E38] pt-[80px] pb-12 px-0">
+      {/* Navigation Bar Offset with pt-[80px] */}
+      <div className="flex flex-col items-center w-full mt-10">
+        {/* Placeholder, Play Button, Waveform */}
+        <div className="w-full max-w-[900px] mb-8 -ml-[15vw]">
+          {/* Podcast Image Placeholder */}
+          <div className="w-full aspect-[16/7] bg-[#1B2B3A] rounded-2xl mb-4 relative overflow-hidden max-w-[900px]">
+            <img
+              src={colorAndBlack}
+              alt="Podcast Placeholder"
+              className="object-cover w-full h-full rounded-2xl"
+              style={{ maxWidth: 900 }}
+            />
           </div>
-        </div>
-        {/* Main Content Layout */}
-        <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
-          {/* Left: Main Content */}
-          <div className="flex-1 min-w-0">
-            <div className="mb-6">
+          {/* Play Button and Waveform */}
+          <div className="w-full flex flex-col items-center">
+            <div className="w-full bg-[#6ED0FF] rounded-xl flex items-center px-6 py-4 mb-2">
               <button
-                className="flex items-center gap-2 text-[#00E5BE] font-montserrat text-base focus:outline-none hover:underline"
+                className="flex items-center gap-2 bg-[#1B2B3A] text-[#00E5BE] font-montserrat text-base focus:outline-none px-6 py-2 rounded-lg shadow-md font-bold"
                 aria-label="Play podcast episode"
               >
-                <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
+                <svg width="28" height="28" fill="none" viewBox="0 0 32 32">
                   <circle
                     cx="16"
                     cy="16"
@@ -34,60 +38,122 @@ export function PodcastEpisodePage() {
                   />
                   <polygon points="13,10 23,16 13,22" fill="#00E5BE" />
                 </svg>
-                <span>Play Episode</span>
               </button>
-              <div className="h-2 w-full bg-[#00E5BE] rounded mt-4 mb-6" />
+              {/* Waveform (vertical lines) */}
+              <div className="flex items-end gap-[2px] h-6 ml-8">
+                {[
+                  8, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 14, 20,
+                  12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18,
+                  10, 16, 8, 14, 20, 12, 18, 10, 16, 14, 20, 12, 18, 10, 16, 8,
+                  14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 8, 14, 20,
+                  12, 18, 10, 16, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10,
+                  16, 8, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 14,
+                  20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12,
+                  18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 14, 20, 12, 18, 10, 16,
+                  8, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 8, 14,
+                  20, 12, 18, 10, 16, 14, 20,
+                ].map((h, i) => (
+                  <div
+                    key={i}
+                    className="w-[3px] rounded bg-[#1B2B3A]"
+                    style={{
+                      height: `${h}px`,
+                      opacity: 0.7 + 0.3 * (i % 2 ? 1 : 0),
+                    }}
+                  />
+                ))}
+              </div>
             </div>
-            <h2 className="text-white font-conthrax text-2xl mb-4">
-              WHITE HAT RIDDLES - Episode {id}
-            </h2>
-            <p className="text-white/80 font-montserrat mb-6">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn't anything embarrassing
-              hidden in the middle of text. All the Lorem Ipsum generators on
-              the Internet tend to repeat predefined chunks as necessary, making
-              this the first true generator on the Internet. It uses a
-              dictionary of over 200 Latin words, combined with a handful of
-              model sentence structures, to generate Lorem Ipsum which looks
-              reasonable. The generated Lorem Ipsum is therefore always free
-              from repetition, injected humour, or non-characteristic words etc.
-            </p>
-            <h3 className="text-white font-conthrax text-xl mb-2">
-              CHAPTER 1: RANSOMWARE
-            </h3>
-            <p className="text-white/80 font-montserrat mb-6">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn't anything embarrassing
-              hidden in the middle of text. All the Lorem Ipsum generators on
-              the Internet tend to repeat predefined chunks as necessary, making
-              this the first true generator on the Internet. It uses a
-              dictionary of over 200 Latin words, combined with a handful of
-              model sentence structures, to generate Lorem Ipsum which looks
-              reasonable. The generated Lorem Ipsum is therefore always free
-              from repetition, injected humour, or non-characteristic words etc.
-            </p>
           </div>
-          {/* Right: Timestamps Box */}
-          <aside className="w-full lg:w-[340px] flex-shrink-0">
-            <div className="bg-[#3EDDCA]/20 rounded-2xl p-6">
-              <h4 className="text-white font-conthrax text-lg mb-4 text-center">
-                Timestamps
-              </h4>
-              <p className="text-white/80 font-montserrat text-sm">
-                These are sample sections of a podcast episode. You can use this
-                area to list timestamps, chapters, or key moments for the
-                episode. This helps users jump to the most interesting parts
-                quickly and improves accessibility for all listeners. Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-                odio. Praesent libero. Sed cursus ante dapibus diam.
-              </p>
+        </div>
+        {/* Main Content and Timestamps stacked below */}
+        <div className="flex flex-row items-start justify-between w-[1200px] gap-6">
+          {/* Left Column - Main Content */}
+          <div className="flex flex-col items-start w-[800px] gap-6">
+            {/* Title */}
+            <h1 className="text-white text-3xl mb-2 mt-2 tracking-wide text-left w-full">
+              WHITE HAT RIDDLES - Episode {id}
+            </h1>
+            {/* Description */}
+            <p className="text-white/90 font-montserrat text-base mb-4 w-full text-left">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text. All the Lorem Ipsum generators on
+              the Internet tend to repeat predefined chunks as necessary, making
+              this the first true generator on the Internet. It uses a
+              dictionary of over 200 Latin words, combined with a handful of
+              model sentence structures, to generate Lorem Ipsum which looks
+              reasonable. The generated Lorem Ipsum is therefore always free
+              from repetition, injected humour, or non-characteristic words etc.
+            </p>
+            {/* Collapsible Chapter 1 */}
+            <div className="flex flex-col items-start w-full mb-2">
+              <div className="w-full">
+                <button
+                  className="flex items-center gap-2 bg-[#2B2320] text-[#fff] font-conthrax text-xl focus:outline-none px-6 py-2 rounded transition-colors w-full text-left shadow-md"
+                  onClick={() => setIsChapterOpen((v) => !v)}
+                  aria-expanded={isChapterOpen}
+                  aria-controls="chapter1-content"
+                >
+                  <svg
+                    className={`transition-transform duration-200 ${isChapterOpen ? "rotate-90" : "rotate-0"}`}
+                    width="24"
+                    height="24"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 8L10 12L14 8"
+                      stroke="#fff"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  CHAPTER 1: RANSOMWARE
+                </button>
+                {isChapterOpen && (
+                  <div
+                    id="chapter1-content"
+                    className="mt-3 text-white/80 font-montserrat text-base bg-transparent rounded-xl p-0"
+                  >
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look even slightly believable. If you are going to use a
+                    passage of Lorem Ipsum, you need to be sure there isn't
+                    anything embarrassing hidden in the middle of text. All the
+                    Lorem Ipsum generators on the Internet tend to repeat
+                    predefined chunks as necessary, making this the first true
+                    generator on the Internet. It uses a dictionary of over 200
+                    Latin words, combined with a handful of model sentence
+                    structures, to generate Lorem Ipsum which looks reasonable.
+                    The generated Lorem Ipsum is therefore always free from
+                    repetition, injected humour, or non-characteristic words
+                    etc.
+                  </div>
+                )}
+              </div>
             </div>
+          </div>
+
+          {/* Right Column - Aside */}
+          <aside className="w-[350px] bg-[#6ED0FF] rounded-2xl p-6 mt-2">
+            <h4 className="text-[#001E38] font-conthrax text-2xl mb-4 text-center">
+              Timestamps
+            </h4>
+            <p className="text-[#001E38]/90 font-montserrat text-base text-center">
+              These are sample sections of a podcast episode. You can use this
+              area to list timestamps, chapters, or key moments for the episode.
+              This helps users jump to the most interesting parts quickly and
+              improves accessibility for all listeners. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit. Integer nec odio. Praesent
+              libero. Sed cursus ante dapibus diam.
+            </p>
           </aside>
         </div>
       </div>
