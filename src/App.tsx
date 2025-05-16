@@ -24,6 +24,7 @@ import { Startup } from "@/pages/startup";
 import { Healthcare } from "@/pages/healthcare";
 import { Fintech } from "@/pages/fintech";
 import { SME } from "@/pages/sme";
+import { PodcastEpisodePage } from "@/pages/PodcastEpisodePage";
 
 function App() {
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
@@ -56,6 +57,7 @@ function App() {
             <Route path="/developers" element={<Developers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/podcast/:id" element={<PodcastEpisodePage />} />
             <Route path="/docs" element={<div>Documentation Page</div>} />
             <Route path="/privacy" element={<div>Privacy Policy Page</div>} />
             <Route path="/terms" element={<div>Terms & Conditions Page</div>} />

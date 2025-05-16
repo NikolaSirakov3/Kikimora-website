@@ -65,6 +65,13 @@ export default {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
     },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1800px",
+      "2xl": "1536px",
+    },
   },
   plugins: [],
 };
