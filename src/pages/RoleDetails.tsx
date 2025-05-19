@@ -22,7 +22,7 @@ export function RoleDetails() {
   return (
     <main className="w-[99.1vw] min-h-screen bg-[#00345B] flex flex-col items-center">
       <section className="w-[1200px] mt-40 mb-10">
-        <div className="w-full bg-white rounded-3xl shadow-2xl p-10 border border-gray-200 flex flex-col">
+        <div className="w-full bg-white rounded-3xl shadow-2xl p-10 border border-gray-200 flex flex-col shadow-xl">
           <Link to="/careers" className="text-[#31c9b7] mb-4 w-fit">
             &larr; All Careers
           </Link>
@@ -104,6 +104,77 @@ export function RoleDetails() {
               </ul>
             </div>
           )}
+          {/* Apply Now Form */}
+          <div className="mt-10">
+            <h2 className="text-2xl font-bold text-black mb-6">Apply Now</h2>
+            <form className="flex flex-col gap-4">
+              <div>
+                <label
+                  className="block text-black font-medium mb-1"
+                  htmlFor="fullName"
+                >
+                  Full Name
+                </label>
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  placeholder="Name"
+                  className="w-full px-6 py-4 rounded-2xl bg-gray-200 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#31c9b7] shadow-xl"
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-black font-medium mb-1"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  className="w-full px-6 py-4 rounded-2xl bg-gray-200 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#31c9b7] shadow-xl"
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-black font-medium mb-1"
+                  htmlFor="message"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                  rows={4}
+                  className="w-full px-6 py-4 rounded-2xl bg-gray-200 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#31c9b7] shadow-xl"
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-black font-medium mb-1"
+                  htmlFor="cv"
+                >
+                  Upload your CV
+                </label>
+                <input
+                  id="cv"
+                  name="cv"
+                  type="file"
+                  className="w-full px-4 py-2 rounded-2xl bg-gray-200 text-black file:bg-white file:text-black file:rounded file:px-4 file:py-2 shadow-xl"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-fit px-8 py-3 mt-2 rounded-2xl bg-[#31c9b7] text-white font-semibold text-lg hover:bg-[#25b0a3] transition-colors"
+              >
+                Apply Now
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
