@@ -1,6 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
+import { ArrowSquareRight, ArrowSquareLeft } from "@phosphor-icons/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -65,8 +66,16 @@ export function BlogHero() {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "0",
-    nextArrow: <div className="next-arrow" />,
-    prevArrow: <div className="prev-arrow" />,
+    nextArrow: (
+      <div className="next-arrow">
+        <ArrowSquareRight size={32} weight="bold" className="text-black" />
+      </div>
+    ),
+    prevArrow: (
+      <div className="prev-arrow">
+        <ArrowSquareLeft size={32} weight="bold" className="text-black" />
+      </div>
+    ),
     responsive: [
       {
         breakpoint: 1024,
@@ -86,25 +95,37 @@ export function BlogHero() {
   };
 
   return (
-    <section className="w-full bg-[#f2f4f6] pt-20 pb-32 relative z-10">
+    <section className="blog-hero w-full bg-[#f2f4f6] pt-20 pb-32 relative z-10">
       <style>
         {`
+          .blog-hero .slick-dots li button:before {
+            color: #000 !important;
+            opacity: 0.5;
+          }
+          .blog-hero .slick-dots .slick-active button:before {
+            color: #000 !important;
+            opacity: 1;
+          }
           .slick-prev:before,
           .slick-next:before {
-            color: black !important;
+            display: none !important;
           }
-          
           .slick-prev,
           .slick-next {
             top: 110px !important;
+            width: 32px !important;
+            height: 32px !important;
+            z-index: 1;
           }
-          
           .slick-prev {
-            left: 20 !important;
+            left: -40px !important;
           }
-          
           .slick-next {
-            right: 20 !important;
+            right: -40px !important;
+          }
+          .slick-prev:hover,
+          .slick-next:hover {
+            opacity: 0.8;
           }
         `}
       </style>

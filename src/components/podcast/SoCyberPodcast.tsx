@@ -1,6 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
+import { ArrowSquareRight, ArrowSquareLeft } from "@phosphor-icons/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -71,6 +72,16 @@ export function SoCyberPodcast() {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "0",
+    nextArrow: (
+      <div className="next-arrow">
+        <ArrowSquareRight size={32} weight="bold" className="text-white" />
+      </div>
+    ),
+    prevArrow: (
+      <div className="prev-arrow">
+        <ArrowSquareLeft size={32} weight="bold" className="text-white" />
+      </div>
+    ),
     responsive: [
       {
         breakpoint: 1024,
@@ -91,6 +102,39 @@ export function SoCyberPodcast() {
 
   return (
     <section className="w-full bg-[#001E38] pt-20 pb-32">
+      <style>
+        {`
+          .slick-prev:before,
+          .slick-next:before {
+            display: none !important;
+          }
+          .slick-prev,
+          .slick-next {
+            top: 110px !important;
+            width: 32px !important;
+            height: 32px !important;
+            z-index: 1;
+          }
+          .slick-prev {
+            left: -40px !important;
+          }
+          .slick-next {
+            right: -40px !important;
+          }
+          .slick-prev:hover,
+          .slick-next:hover {
+            opacity: 0.8;
+          }
+          .slick-dots li button:before {
+            color: #fff !important;
+            opacity: 0.5;
+          }
+          .slick-dots .slick-active button:before {
+            color: #fff !important;
+            opacity: 1;
+          }
+        `}
+      </style>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -98,7 +142,8 @@ export function SoCyberPodcast() {
             SoCyber Podcast
           </h1>
           <p className="text-white/60 text-lg font-montserrat">
-            Expert insights and deep dives into the world of cybersecurity through our engaging podcast series.
+            Expert insights and deep dives into the world of cybersecurity
+            through our engaging podcast series.
           </p>
         </div>
 
@@ -144,4 +189,4 @@ export function SoCyberPodcast() {
       </div>
     </section>
   );
-} 
+}
