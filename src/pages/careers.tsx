@@ -75,10 +75,10 @@ const roles = [
 
 export function Careers() {
   return (
-    <main className="w-[99.1vw] min-h-screen bg-white flex flex-col items-center">
+    <main className="w-[99.1vw] min-h-screen bg-[#00345B] flex flex-col items-center">
       {/* Header */}
       <header className="w-full py-14 flex flex-col items-center my-10">
-        <h1 className="text-5xl md:text-6xl font-bold text-black text-center tracking-tight drop-shadow-lg">
+        <h1 className="text-5xl md:text-6xl font-bold text-white text-center tracking-tight drop-shadow-lg">
           Open Positions
         </h1>
       </header>
@@ -87,12 +87,12 @@ export function Careers() {
         {roles.map((role) => (
           <div
             key={role.title}
-            className="w-full max-w-[1200px] rounded-3xl bg-[#00345B] shadow-2xl p-8 flex flex-col border border-white/10"
+            className="w-full max-w-[1200px] rounded-3xl bg-white shadow-2xl p-8 flex flex-col border border-gray-200"
           >
             <div className="flex flex-col items-start ml-[10px]">
               <div className="flex flex-row items-center gap-4 mb-10">
                 {role.icon}
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-0">
+                <h2 className="text-2xl md:text-3xl font-bold text-black mb-0">
                   {role.title}
                 </h2>
               </div>
@@ -106,7 +106,7 @@ export function Careers() {
                   </span>
                 ))}
               </div>
-              <p className="text-white text-base md:text-lg mb-6">
+              <p className="text-black text-base md:text-lg mb-6">
                 {role.description}
               </p>
               <button
