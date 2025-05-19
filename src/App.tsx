@@ -31,6 +31,7 @@ import { Fintech } from "@/pages/fintech";
 import { SME } from "@/pages/sme";
 import { PodcastEpisodePage } from "@/pages/PodcastEpisodePage";
 import { Careers } from "@/pages/careers";
+import RoleDetails from "@/pages/RoleDetails";
 
 // Add ScrollToTop component
 function ScrollToTop() {
@@ -88,6 +89,7 @@ function App() {
             <Route path="/fintech" element={<Fintech />} />
             <Route path="/sme" element={<SME />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/careers/:role" element={<RoleDetails />} />
           </Routes>
         </main>
         <Footer />

@@ -6,9 +6,11 @@ import {
   Shield,
   ShieldCheck,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const roles = [
+export const roles = [
   {
+    slug: "sharepoint-onedrive-specialist",
     icon: (
       <BriefcaseBusiness
         size={48}
@@ -26,6 +28,7 @@ const roles = [
       "We are looking for several profiles for a SharePoint and OneDrive migration specialist. The key requested skill is being a real expert with SharePoint and OneDrive migration (Migrations done) AND Sharegate and Planner with Apps4.Pro Enterprise. Those requirements are MANDATORY; otherwise, candidates are rejected. The starting date is ASAP. Please send a CV and rate if you have suitable specialists.",
   },
   {
+    slug: "marketing-specialist",
     icon: <Megaphone size={48} className="text-[#29ABE2]" aria-hidden="true" />,
     title: "Marketing Specialist",
     tags: [
@@ -37,6 +40,7 @@ const roles = [
       "We are seeking a creative Marketing Specialist to join our team. You will be responsible for developing and executing marketing strategies, managing campaigns, and analyzing performance metrics. Experience with digital marketing and content creation is a plus.",
   },
   {
+    slug: "backend-developer-contractor",
     icon: <Server size={48} className="text-[#29ABE2]" aria-hidden="true" />,
     title: "Backend Developer - Contractor",
     tags: [
@@ -48,6 +52,7 @@ const roles = [
       "Join our engineering team as a Backend Developer (Contractor). You will design, build, and maintain scalable backend systems. Strong experience with Node.js, TypeScript, and cloud infrastructure is required.",
   },
   {
+    slug: "penetration-tester",
     icon: <Shield size={48} className="text-[#29ABE2]" aria-hidden="true" />,
     title: "Penetration Tester",
     tags: [
@@ -59,6 +64,7 @@ const roles = [
       "We are looking for a skilled Penetration Tester to assess the security of our applications and infrastructure. You will perform vulnerability assessments, penetration tests, and provide actionable recommendations.",
   },
   {
+    slug: "information-security-auditor",
     icon: (
       <ShieldCheck size={48} className="text-[#29ABE2]" aria-hidden="true" />
     ),
@@ -109,12 +115,13 @@ export function Careers() {
               <p className="text-black text-base md:text-lg mb-6">
                 {role.description}
               </p>
-              <button
-                className="bg-[#31c9b7] hover:bg-[#3EDDCA] text-white font-semibold px-6 py-3 rounded-full transition-colors text-base w-fit"
+              <Link
+                to={`/careers/${role.slug}`}
+                className="bg-[#31c9b7] hover:bg-[#3EDDCA] text-white font-semibold px-6 py-3 rounded-full transition-colors text-base w-fit inline-block text-center"
                 aria-label={`Learn more about the ${role.title} position`}
               >
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         ))}
