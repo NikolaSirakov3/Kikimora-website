@@ -30,6 +30,7 @@ import { Healthcare } from "@/pages/healthcare";
 import { Fintech } from "@/pages/fintech";
 import { SME } from "@/pages/sme";
 import { PodcastEpisodePage } from "@/pages/PodcastEpisodePage";
+import { Careers } from "@/pages/careers";
 
 // Add ScrollToTop component
 function ScrollToTop() {
@@ -86,6 +87,7 @@ function App() {
             <Route path="/healthcare" element={<Healthcare />} />
             <Route path="/fintech" element={<Fintech />} />
             <Route path="/sme" element={<SME />} />
+            <Route path="/careers" element={<Careers />} />
           </Routes>
         </main>
         <Footer />

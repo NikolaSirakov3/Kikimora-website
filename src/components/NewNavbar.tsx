@@ -56,14 +56,6 @@ const navItems: NavItem[] = [
           ),
         },
         {
-          label: "Blog",
-          href: "/blog",
-          description: "Latest news and updates",
-          icon: (
-            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
-          ),
-        },
-        {
           label: "About",
           href: "/about",
           description: "Learn about our mission",
@@ -187,14 +179,6 @@ const navItems: NavItem[] = [
           label: "Press Kit",
           href: "/press-kit",
           description: "Media resources",
-          icon: (
-            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
-          ),
-        },
-        {
-          label: "Blog",
-          href: "/blog",
-          description: "Latest news and updates",
           icon: (
             <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
           ),
