@@ -33,7 +33,7 @@ const pricingTiers: PricingTier[] = [
       application: "1 application",
       domains: "10 domains",
     },
-    buttonColor: "bg-[#0A2540]",
+    buttonColor: "bg-[#00D1A7]",
   },
   {
     title: "Cyber Elite",
@@ -45,7 +45,7 @@ const pricingTiers: PricingTier[] = [
       application: "1 application",
       domains: "80 domains",
     },
-    buttonColor: "bg-[#0A2540]",
+    buttonColor: "bg-[#00D1A7]",
   },
 ];
 
@@ -92,7 +92,7 @@ export function PricingSection() {
               </div>
 
               <button
-                className={`${tier.buttonColor} text-white py-3 px-6 rounded-md font-medium hover:opacity-90 transition-opacity mt-auto`}
+                className={`${tier.buttonColor} text-white py-3 px-6 rounded-md font-medium hover:opacity-80 transition-opacity mt-auto`}
                 onClick={() =>
                   window.open("https://calendly.com/o-antonov", "_blank")
                 }
