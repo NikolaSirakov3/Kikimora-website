@@ -127,52 +127,57 @@ export function TryKikimora() {
       <div className="w-full border-t border-white/30" />
 
       {/* Features Section */}
-      <div className="p-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left Column */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  FORTIFY YOUR CYBERSECURITY: START WITH A FREE TRIAL TODAY!
-                </h3>
-                <p className="text-gray-300 text-lg mb-4">
-                  Experience the full power of Kikimora with a one-month free
-                  trial! No credit card required!
-                </p>
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  Free Trial Includes:
-                </h4>
-                <ul className="text-gray-300 text-lg space-y-2 list-disc pl-6">
-                  <li>Onboarding Guide</li>
-                  <li>Access to scanners and tools</li>
-                  <li>Expert support</li>
-                  <li>No fees or cancelation requirements</li>
-                </ul>
-              </div>
+      <div className="p-8 bg-white">
+        <div className="max-w-7xl mx-auto space-y-40">
+          {/* Row 1 */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-10">
+            {/* Left: Header and Paragraph */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                FORTIFY YOUR CYBERSECURITY: START WITH A FREE TRIAL TODAY!
+              </h3>
+              <p className="text-gray-600 text-lg">
+                Experience the full power of Kikimora with a one-month free
+                trial! No credit card required!
+              </p>
             </div>
-
-            {/* Right Column */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  EXPLORE KIKIMORA COMMUNITY!
-                </h3>
-                <p className="text-gray-300 text-lg mb-4">
-                  Kikimora Community is a lightweight client allowing you to
-                  improve your security posture at no starting cost.
-                </p>
-                <h4 className="text-xl font-semibold text-white mb-3">
-                  Kikimora Community includes all the essentials needed:
-                </h4>
-                <ul className="text-gray-300 text-lg space-y-2 list-disc pl-6">
-                  <li>ISO27001, NIST templates</li>
-                  <li>1 Custom Compliance Agent</li>
-                  <li>1 monthly Network Scan</li>
-                  <li>1 monthly Web Application Scan</li>
-                  <li>Up to 30 assets</li>
-                </ul>
-              </div>
+            {/* Right: List Header and List */}
+            <div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                Free Trial Includes:
+              </h4>
+              <ul className="text-gray-600 text-lg space-y-2 list-disc pl-6">
+                <li>Onboarding Guide</li>
+                <li>Access to scanners and tools</li>
+                <li>Expert support</li>
+                <li>No fees or cancelation requirements</li>
+              </ul>
+            </div>
+          </div>
+          {/* Row 2 */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ">
+            {/* Left: Header and Paragraph */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                EXPLORE KIKIMORA COMMUNITY!
+              </h3>
+              <p className="text-gray-600 text-lg">
+                Kikimora Community is a lightweight client allowing you to
+                improve your security posture at no starting cost.
+              </p>
+            </div>
+            {/* Right: List Header and List */}
+            <div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                Kikimora Community includes all the essentials needed:
+              </h4>
+              <ul className="text-gray-600 text-lg space-y-2 list-disc pl-6">
+                <li>ISO27001, NIST templates</li>
+                <li>1 Custom Compliance Agent</li>
+                <li>1 monthly Network Scan</li>
+                <li>1 monthly Web Application Scan</li>
+                <li>Up to 30 assets</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -190,9 +195,11 @@ export function TryKikimora() {
           <p className="text-gray-300 text-lg mb-8">
             Book a free consultation with our team!
           </p>
-          <button 
+          <button
             className="bg-teal-500 hover:bg-teal-600 text-white text-lg font-semibold py-4 px-8 rounded-lg"
-            onClick={() => window.open("https://calendly.com/o-antonov", "_blank")}
+            onClick={() =>
+              window.open("https://calendly.com/o-antonov", "_blank")
+            }
           >
             Book Call
           </button>
