@@ -6,7 +6,7 @@ export function TryKikimora() {
     <div className="w-[99.1vw] min-h-screen bg-[#001324]">
       {/* Header Image Placeholder */}
       <div className="w-full h-[400px] relative overflow-hidden">
-        <div className="w-[80vw] absolute left-1/2 -translate-x-1/2 inset-y-0 bg-gradient-to-r from-teal-500/20 to-purple-500/20 border-2 m-10 mt-20" />
+        <div className="w-[65vw] absolute left-1/2 -translate-x-1/2 inset-y-0 bg-gradient-to-r from-teal-500/20 to-purple-500/20 border-2 ml-2 mt-20" />
         <div className="absolute inset-0 flex items-center justify-center"></div>
       </div>
 
