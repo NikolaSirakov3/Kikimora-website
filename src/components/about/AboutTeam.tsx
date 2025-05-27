@@ -4,7 +4,7 @@ export function AboutTeam() {
   return (
     <div className="bg-[#001E38] w-full">
       <div className="w-screen px-[5%] flex flex-col items-center">
-        <div className="max-w-[1400px] w-full py-20">
+        <div className="max-w-[1300px] w-full py-20">
           {/* Content Grid */}
           <div className="grid grid-cols-2 gap-12">
             {/* Left Column */}

@@ -43,9 +43,9 @@ export function SocialFollow() {
   return (
     <div className="w-full bg-[#001E38]">
       <div className="flex justify-center w-full px-[5%] py-16">
-        <div className="bg-[#006466] rounded-2xl max-w-[1400px] w-full relative overflow-hidden">
+        <div className="bg-[#006466] rounded-2xl max-w-[1300px] w-full relative overflow-hidden">
           <div className="px-16 py-16 flex flex-col items-center">
-            <div className="max-w-[1400px] w-full relative">
+            <div className="max-w-[1300px] w-full relative">
               {/* Content */}
               <div className="text-center relative z-10">
                 <h2 className="text-white font-conthrax text-5xl mb-2">
@@ -68,7 +68,6 @@ export function SocialFollow() {
                   ))}
                 </div>
               </div>
-
             </div>
           </div>
         </div>

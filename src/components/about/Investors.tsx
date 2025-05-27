@@ -15,7 +15,7 @@ export function Investors() {
       {/* Full width gray section */}
       <div className="w-full bg-gray-500">
         <div className="w-full px-[5%] py-12">
-          <div className="max-w-[1400px] mx-auto flex justify-between items-center">
+          <div className="max-w-[1300px] mx-auto flex justify-between items-center">
             <span className="text-white font-bold text-xl">VITOSHA</span>
             <span className="text-white font-bold text-xl">IMPETUS</span>
             <span className="text-white font-bold text-xl">CYEN</span>

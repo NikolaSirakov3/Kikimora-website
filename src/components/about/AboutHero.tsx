@@ -5,7 +5,7 @@ export function AboutHero() {
     <div className="relative bg-[#2A1B54] w-full overflow-hidden min-h-[57vh] flex items-center">
       {/* Content Container */}
       <div className="w-screen px-[5%] flex flex-col items-center">
-        <div className="max-w-[1400px] w-full flex justify-between items-center">
+        <div className="max-w-[1300px] w-full flex justify-between items-center">
           {/* Left Side - Title */}
           <div className="w-[45%]">
             <h1 className="text-white font-conthrax text-4xl leading-tight">

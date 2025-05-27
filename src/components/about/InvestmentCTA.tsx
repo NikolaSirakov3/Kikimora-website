@@ -4,7 +4,7 @@ export function InvestmentCTA() {
   return (
     <div className="bg-[#001E38] w-full">
       <div className="w-screen px-[5%] flex flex-col items-center">
-        <div className="max-w-[1400px] w-full py-20 flex justify-between items-center">
+        <div className="max-w-[1300px] w-full py-20 flex justify-between items-center">
           {/* Left Side - Form */}
           <div className="w-[45%]">
             <h2 className="text-white font-conthrax text-5xl leading-tight mb-8">

@@ -4,7 +4,7 @@ export function Partners() {
   return (
     <div className="bg-[#001E38] w-full">
       <div className="w-screen px-[5%] flex flex-col items-center">
-        <div className="max-w-[1400px] w-full py-20">
+        <div className="max-w-[1300px] w-full py-20">
           {/* Partner Card */}
           <div className="bg-gradient-to-r from-[#002A4E] to-[#004275] rounded-3xl p-12 relative overflow-hidden">
             {/* Content */}

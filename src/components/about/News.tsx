@@ -32,7 +32,7 @@ export function News() {
   return (
     <div className="bg-[#001E38] w-full py-20">
       <div className="w-screen px-[5%] flex flex-col items-center">
-        <div className="max-w-[1400px] w-full">
+        <div className="max-w-[1300px] w-full">
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-white font-conthrax text-5xl mb-4">
