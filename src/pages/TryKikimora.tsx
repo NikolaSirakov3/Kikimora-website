@@ -6,7 +6,7 @@ export function TryKikimora() {
     <div className="w-[99.1vw] min-h-screen bg-[#001324]">
       {/* Header Image Placeholder */}
       <div className="w-full h-[400px] relative overflow-hidden">
-        <div className="w-[80vw] absolute left-1/2 -translate-x-1/2 inset-y-0 bg-gradient-to-r from-teal-500/20 to-purple-500/20 border-2 m-10" />
+        <div className="w-[80vw] absolute left-1/2 -translate-x-1/2 inset-y-0 bg-gradient-to-r from-teal-500/20 to-purple-500/20 border-2 m-10 mt-20" />
         <div className="absolute inset-0 flex items-center justify-center"></div>
       </div>
 
@@ -130,7 +130,7 @@ export function TryKikimora() {
       <div className="p-8 bg-white">
         <div className="max-w-7xl mx-auto space-y-40">
           {/* Row 1 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ml-20 mt-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ml-10 mt-10">
             {/* Left: Header and Paragraph */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -155,7 +155,7 @@ export function TryKikimora() {
             </div>
           </div>
           {/* Row 2 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ml-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ml-10">
             {/* Left: Header and Paragraph */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
