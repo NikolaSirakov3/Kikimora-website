@@ -130,7 +130,7 @@ export function TryKikimora() {
       <div className="p-8 bg-white">
         <div className="max-w-7xl mx-auto space-y-40">
           {/* Row 1 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ml-20 mt-10">
             {/* Left: Header and Paragraph */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -155,7 +155,7 @@ export function TryKikimora() {
             </div>
           </div>
           {/* Row 2 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start ml-20">
             {/* Left: Header and Paragraph */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
