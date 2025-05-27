@@ -250,11 +250,11 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                     onMouseLeave={() => item.dropdown && handleMouseLeave()}
                     className="relative"
                   >
-                    <button className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none flex items-center justify-between w-full gap-2">
+                    <button className="text-white px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none flex items-center justify-between w-full gap-2">
                       {item.label}
                       {item.dropdown && (
                         <svg
-                          className={`h-4 w-4 transition-transform duration-300 group-hover:text-[#29ABE2] group-hover:rotate-180 ${
+                          className={`h-4 w-4 transition-transform duration-300 group-hover:rotate-180 ${
                             activeDropdown === item.label ? "rotate-180" : ""
                           }`}
                           fill="none"
@@ -285,7 +285,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                           <Link
                             key={subItem.label}
                             to={subItem.href}
-                            className="flex flex-row items-center gap-5 p-4 rounded-xl hover:bg-white/10 transition-colors duration-200 min-w-[160px] max-w-[290px]"
+                            className="flex flex-row items-center gap-5 p-4 rounded-xl transition-colors duration-200 min-w-[160px] max-w-[290px] relative group"
                           >
                             <div className="flex items-center justify-center w-10.5 h-10.5">
                               <div className="w-9 h-9 [&>svg]:stroke-[1.5]">
@@ -305,6 +305,10 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                                 {subItem.description}
                               </span>
                             </div>
+                            <span className="absolute inset-0 w-full h-full">
+                              <span className="absolute inset-0 w-full h-full border-t border-b border-transparent group-hover:border-white transition-all duration-700 ease-in-out transform group-hover:scale-x-100 scale-x-0 origin-left"></span>
+                              <span className="absolute inset-0 w-full h-full border-l border-r border-transparent group-hover:border-white transition-all duration-700 ease-in-out transform group-hover:scale-y-100 scale-y-0 origin-top"></span>
+                            </span>
                           </Link>
                         ))}
                       </div>
@@ -313,7 +317,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                 ) : (
                   <Link
                     to={item.href}
-                    className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium"
+                    className="text-white px-3 py-2 text-sm font-medium"
                   >
                     {item.label}
                   </Link>
@@ -413,7 +417,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                     <Link
                       key={subItem.label}
                       to={subItem.href}
-                      className="flex flex-row items-center text-left gap-4 p-4 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                      className="flex flex-row items-center text-left gap-4 p-4 rounded-lg hover:bg-[#29ABE2]/10 transition-colors duration-200"
                     >
                       <div className="flex items-center justify-center w-12 h-12 bg-white/10 shadow-[0_0_15px_rgba(41,171,226,0.3)]">
                         <div className="w-9 h-9 [&>svg]:stroke-[1.5]">
