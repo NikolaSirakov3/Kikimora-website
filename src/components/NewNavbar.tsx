@@ -306,8 +306,20 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                               </span>
                             </div>
                             <span className="absolute inset-0 w-full h-full">
-                              <span className="absolute inset-0 w-full h-full border-t border-b border-transparent group-hover:border-white transition-all duration-700 ease-in-out transform group-hover:scale-x-100 scale-x-0 origin-left"></span>
-                              <span className="absolute inset-0 w-full h-full border-l border-r border-transparent group-hover:border-white transition-all duration-700 ease-in-out transform group-hover:scale-y-100 scale-y-0 origin-top"></span>
+                              <span
+                                className="absolute inset-0 w-full h-full border-t border-b border-transparent group-hover:border-[#29ABE2] transition-all duration-700 ease-in-out transform group-hover:scale-x-100 scale-x-0 origin-left"
+                                style={{
+                                  borderImage:
+                                    "linear-gradient(to right, #29ABE2, #3EDDCA) 1",
+                                }}
+                              ></span>
+                              <span
+                                className="absolute inset-0 w-full h-full border-l border-r border-transparent group-hover:border-[#29ABE2] transition-all duration-700 ease-in-out transform group-hover:scale-y-100 scale-y-0 origin-top"
+                                style={{
+                                  borderImage:
+                                    "linear-gradient(to bottom, #29ABE2, #3EDDCA) 1",
+                                }}
+                              ></span>
                             </span>
                           </Link>
                         ))}
