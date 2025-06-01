@@ -12,8 +12,8 @@ export function TryKikimora() {
 
       {/* Main Content Section */}
       <div className="p-8 bg-[#001324]/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-12">
+        <div className="w-[65vw] mx-auto pl-6">
+          <div className="flex flex-col lg:flex-row gap-12 ">
             {/* Left Content */}
             <div className="lg:w-1/2">
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -169,7 +169,7 @@ export function TryKikimora() {
             {/* Right: List Header and List */}
             <div>
               <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                Kikimora Community includes all the essentials needed:
+                Kikimora Community includes all the essentials:
               </h4>
               <ul className="text-gray-600 text-lg space-y-2 list-disc pl-6">
                 <li>ISO27001, NIST templates</li>
