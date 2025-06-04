@@ -5,7 +5,7 @@ import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
 import { AnimatedIntro } from "@/components/home/AnimatedIntro";
 
-export default function Hero() {
+export function Hero() {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
