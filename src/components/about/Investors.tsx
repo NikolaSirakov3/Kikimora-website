@@ -1,5 +1,3 @@
-import React from "react";
-
 export function Investors() {
   return (
     <div className="bg-[#001E38]">

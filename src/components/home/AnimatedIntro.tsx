@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import colorAndBlack from "../../assets/colorAndBlack.png";
 import { useSpring, animated, config } from "react-spring";
 import { useInView } from "react-intersection-observer";

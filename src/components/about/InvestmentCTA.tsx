@@ -1,5 +1,3 @@
-import React from "react";
-
 export function InvestmentCTA() {
   return (
     <div className="bg-[#001E38] w-full">

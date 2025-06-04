@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Resend } from "resend";
 
 const resend = new Resend("re_4yQzv6Uz_FKEzv4TbmCYo4tWXqejqA5F7");

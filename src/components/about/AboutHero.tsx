@@ -1,5 +1,3 @@
-import React from "react";
-
 export function AboutHero() {
   return (
     <div className="relative bg-[#2A1B54] w-full overflow-hidden min-h-[57vh] flex items-center">

@@ -1,4 +1,3 @@
-import React from "react";
 
 const teamMembers = [
   {
@@ -72,7 +71,7 @@ export function People() {
                   {"socials" in member ? (
                     <>
                       <a
-                        href={member.socials.instagram}
+                        href={member.socials?.instagram}
                         className="text-white/60 hover:text-white"
                       >
                         <svg
@@ -84,7 +83,7 @@ export function People() {
                         </svg>
                       </a>
                       <a
-                        href={member.socials.youtube}
+                        href={member.socials?.youtube}
                         className="text-white/60 hover:text-white"
                       >
                         <svg

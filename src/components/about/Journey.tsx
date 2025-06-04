@@ -1,5 +1,3 @@
-import React from "react";
-
 const timelineData = [
   {
     year: "2022",

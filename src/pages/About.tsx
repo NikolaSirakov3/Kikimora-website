@@ -1,4 +1,3 @@
-import React from "react";
 import { Team } from "@/components/about/Team";
 import { AboutTeam } from "@/components/about/AboutTeam";
 import { Journey } from "@/components/about/Journey";

@@ -1,4 +1,3 @@
-import React from "react";
 import { EUFunding } from "@/components/shared/EUFunding";
 
 export function TryKikimora() {

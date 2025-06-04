@@ -1,5 +1,3 @@
-import React from "react";
-
 export function AboutTeam() {
   return (
     <div className="bg-[#001E38] w-full">
