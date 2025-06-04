@@ -1,8 +1,53 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { format } from "date-fns";
+
+interface BlogPost {
+  id: number;
+  title: string;
+  description: string;
+  date: Date;
+  image: string;
+}
+
+const blogPosts: BlogPost[] = [
+  {
+    id: 1,
+    title: "Funding round completed!",
+    description:
+      "Kikimora has successfully secured €596K in funding for the development of our innovative vulnerability management software.",
+    date: new Date("2023-12-15"),
+    image: "/team-photo.jpg",
+  },
+  {
+    id: 2,
+    title: "Understanding the CVSS Base Score",
+    description:
+      "Kikimora has successfully secured €500k in funding for the development of our innovative vulnerability management software.",
+    date: new Date("2023-11-28"),
+    image: "/security-graph.jpg",
+  },
+  {
+    id: 3,
+    title: "Pulse Connect Secure - Critical 0-DAY Vulnerability",
+    description:
+      "An authentication bypass vulnerability that can allow an authenticated...",
+    date: new Date("2023-04-22"),
+    image: "/security-scan.jpg",
+  },
+];
 
 export function BlogPost() {
   const { id } = useParams();
+  const post = blogPosts.find((p) => p.id === Number(id));
+
+  if (!post) {
+    return (
+      <div className="w-[99.1vw] bg-[#001E38] min-h-screen flex items-center justify-center">
+        <h1 className="text-5xl text-white font-conthrax">Post not found</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="w-[99.1vw] bg-[#001E38] min-h-screen">
@@ -10,16 +55,13 @@ export function BlogPost() {
         {/* Header */}
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl text-white font-conthrax mb-4">
-            Funding round completed!
+            {post.title}
           </h1>
           <p className="text-[#00E5BE] text-sm font-montserrat mb-8">
-            December 15, 2023
+            {format(post.date, "MMMM dd, yyyy")}
           </p>
           <p className="text-white/60 text-lg font-montserrat mb-12">
-            Kikimora has successfully secured €596K in funding for the
-            development of our innovative vulnerability management software.
-            This resources will be invested in product development, marketing
-            and strategic partnerships.
+            {post.description}
           </p>
         </div>
 
@@ -27,11 +69,11 @@ export function BlogPost() {
         <div className="max-w-6xl mx-auto mb-16">
           <div className="aspect-[16/9] relative rounded-2xl overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-[#002A4E] to-[#001E38] flex items-center justify-center">
-              <span className="text-white/20 font-montserrat">Team Photo</span>
+              <span className="text-white/20 font-montserrat">News Image</span>
             </div>
             <img
-              src="/team-photo.jpg"
-              alt="Kikimora Team"
+              src={post.image}
+              alt={post.title}
               className="w-full h-full object-cover relative z-10"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
