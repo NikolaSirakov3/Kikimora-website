@@ -1,15 +1,21 @@
-import { Button } from "@/components/ui/button";
+import { ShieldCheck, Radar, Activity, FileBarChart2 } from "lucide-react";
 
 interface SecurityFeatureProps {
   title: string;
   description: string;
+  icon: JSX.Element;
 }
 
-function SecurityFeature({ title, description }: SecurityFeatureProps) {
+function SecurityFeature({ title, description, icon }: SecurityFeatureProps) {
   return (
-    <div className="flex flex-col items-center text-center p-6 bg-[#003A66] rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-[#004B7A]">
-      <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
-      <p className="text-gray-300">{description}</p>
+    <div className="flex flex-col items-start text-left p-8 bg-[#232F47] rounded-2xl border border-[#2D3A54] shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-[#2B3957] min-h-[120px] w-full max-w-[360px] mx-auto">
+      <span className="flex items-center justify-center w-16 h-16 rounded-lg bg-[#23304A] mb-6">
+        {icon}
+      </span>
+      <h3 className="text-2xl font-bold text-white mb-3 leading-tight">
+        {title}
+      </h3>
+      <p className="text-gray-300 text-base leading-relaxed">{description}</p>
     </div>
   );
 }
@@ -19,70 +25,53 @@ export function SecurityFeatures() {
     {
       title: "Cybersecurity Assessments",
       description:
-        "Identify vulnerabilities, weaknesses & misconfigurations in your security posture",
+        "Identify vulnerabilities, weaknesses & misconfigurations in your security posture.",
+      icon: <ShieldCheck size={36} strokeWidth={2.2} color="#A3AED0" />,
     },
     {
-      title: "Threat Detection & Monitoring",
+      title: "Detection & Monitoring",
       description:
-        "Implement proactive defense mechanisms against evolving cyber threats",
+        "Implement proactive defense mechanisms against evolving cyber threats.",
+      icon: <Radar size={36} strokeWidth={2.2} color="#A3AED0" />,
     },
     {
       title: "Penetration Testing",
-      description: "Regular tests of your infrastructure, networks and assets",
+      description: "Regular tests of your infrastructure, networks and assets.",
+      icon: <Activity size={36} strokeWidth={2.2} color="#A3AED0" />,
     },
     {
       title: "Compliance & Reporting",
-      description: "Quick access to compliance data and comprehens",
+      description:
+        "Quick access to compliance data and comprehensive executive reporting.",
+      icon: <FileBarChart2 size={36} strokeWidth={2.2} color="#A3AED0" />,
     },
   ];
 
   return (
-    <div className="w-full bg-gradient-to-b from-[#001324] to-[#002847] py-32 px-4">
-      <div className="container mx-auto max-w-[1200px]">
-        <div className="bg-gradient-to-br from-[#002847] to-[#722195] rounded-xl p-16 shadow-2xl border border-gray">
-          <h2 className="text-5xl font-bold text-white text-center mb-20">
-            Comprehensive SME Security, Simplified
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
-            {features.map((feature, index) => (
+    <section className="w-full bg-[#0B1424] py-28 px-4">
+      <div className="max-w-7xl mx-auto flex flex-col items-center">
+        <h2 className="text-5xl font-bold text-white text-center mb-6 leading-tight">
+          Comprehensive Security, Simplified.
+        </h2>
+        <p className="text-lg text-gray-300 text-center max-w-6xl mb-16">
+          Kikimora Managed Security provides comprehensive cybersecurity
+          protection for SMEs, safeguarding your business from evolving threats
+          while ensuring compliance and minimizing response times. Kikimora acts
+          as your dedicated security team, allowing you to focus on your core
+          business.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full justify-center">
+          {features.map((feature, index) => (
+            <div className="flex justify-center" key={index}>
               <SecurityFeature
-                key={index}
                 title={feature.title}
                 description={feature.description}
+                icon={feature.icon}
               />
-            ))}
-          </div>
-
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-12">
-              Let Kikimora handle cybersecurity, so you can focus on growing
-              your business.
-            </h2>
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-6 max-w-[1000px] mx-auto items-center">
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="flex-1 px-6 py-4 rounded-lg bg-[#004B7A] text-white border border-gray-600 focus:outline-none focus:border-blue-500 text-lg"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="flex-1 px-6 py-4 rounded-lg bg-[#004B7A] text-white border border-gray-600 focus:outline-none focus:border-blue-500 text-lg"
-            />
-            <Button
-              className="px-10 py-4 bg-[#4169E1] hover:bg-[#3154b3] text-white font-bold rounded-lg text-lg transition-all duration-300 hover:scale-105"
-              onClick={() =>
-                window.open("https://calendly.com/o-antonov", "_blank")
-              }
-            >
-              BOOK DEMO
-            </Button>
-          </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
