@@ -3,6 +3,7 @@ import { PartnersSection } from "@/components/managed-security/PartnersSection";
 import { SecurityFeatures } from "@/components/managed-security/SecurityFeatures";
 import { ROISection } from "@/components/managed-security/ROISection";
 import { AdvantagesSection } from "@/components/managed-security/AdvantagesSection";
+import { TestimonialSection } from "@/components/managed-security/TestimonialSection";
 
 export default function ManagedSecurity() {
   return (
@@ -15,6 +16,7 @@ export default function ManagedSecurity() {
       <SecurityFeatures />
       <ROISection />
       <AdvantagesSection />
+      <TestimonialSection />
     </main>
   );
 }

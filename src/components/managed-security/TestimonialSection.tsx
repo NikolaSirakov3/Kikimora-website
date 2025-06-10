@@ -11,7 +11,7 @@ interface TestimonialProps {
 export function TestimonialSection() {
   const testimonial: TestimonialProps = {
     quote:
-      "With a focus on security and efficiency, D Commerce Bank AD continually seeks innovative ways to enhance its operations and ensure the highest standards of service. The implementation of Kikimora.io opened new opportunities for the bank's security department to manage cyber security risks more effectively. Should you need a 5-tier, flexible, all-in-one platform for vulnerability management, we strongly recommend Kikimora.io.",
+      "The implementation of Kikimora opened new opportunities for the bank's security department to manage cyber security risks more effectively.",
     author: {
       name: "Stefan Tsonev",
       position: "Head of IT Security Department at D Commerce Bank AD",
@@ -21,10 +21,10 @@ export function TestimonialSection() {
   };
 
   return (
-    <div className="w-full bg-[#001324] py-16">
+    <div className="w-full bg-white py-16">
       <div className="container mx-auto px-4">
-        <div className="bg-[#002847] rounded-3xl p-12 max-w-[1200px] mx-auto">
-          <p className="text-white text-lg md:text-xl text-left italic mb-12 leading-relaxed font-serif">
+        <div className="bg-gray-100 rounded-3xl p-12 max-w-[1200px] mx-auto">
+          <p className="text-black text-lg md:text-xl text-left italic mb-12 leading-relaxed font-serif">
             "{testimonial.quote}"
           </p>
           <div className="flex items-center justify-start gap-4">
@@ -36,10 +36,10 @@ export function TestimonialSection() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-white font-bold">
+              <span className="text-black font-bold">
                 {testimonial.author.name}
               </span>
-              <span className="text-gray-300 text-sm">
+              <span className="text-gray-black text-sm">
                 {testimonial.author.position}
               </span>
             </div>
