@@ -10,7 +10,7 @@ import { ConsultationForm } from "../components/managed-security/ConsultationFor
 
 export default function ManagedSecurity() {
   return (
-    <main className="min-h-screen bg-gray-100">
+    <main className="min-h-screen bg-white">
       <HeroSection
         title="Effortless Security for businesses of all sizes!"
         description="Kikimora Managed Security offers a blend of robust tools, tailored to meet the requirements of growing companies facing the pain of managing complex compliance and cybersecurity tasks."

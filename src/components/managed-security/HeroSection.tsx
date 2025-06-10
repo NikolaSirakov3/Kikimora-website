@@ -7,7 +7,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ title, description }: HeroSectionProps) {
   return (
-    <div className="pt-20 w-[99.1vw] flex items-center justify-center min-h-[600px] px-8 md:px-16 lg:px-24 bg-gray-100">
+    <div className="pt-20 w-[99.1vw] flex items-center justify-center min-h-[600px] px-8 md:px-16 lg:px-24 bg-gray-50">
       <div className="w-[1200px] flex justify-between items-center">
         <div className="flex flex-col gap-6 max-w-[600px]">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
