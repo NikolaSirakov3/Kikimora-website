@@ -1,5 +1,3 @@
-import React from "react";
-
 export function ContactSection() {
   return (
     <section className="w-full flex flex-col items-center py-16 bg-white">

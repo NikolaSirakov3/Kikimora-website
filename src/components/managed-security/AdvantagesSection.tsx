@@ -1,5 +1,3 @@
-import React from "react";
-
 export function AdvantagesSection() {
   return (
     <section className="w-full max-w-7xl mx-auto flex flex-col items-center py-16 bg-white dark:bg-[#0a1626]">
