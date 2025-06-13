@@ -3,15 +3,57 @@ import { useCallback } from "react";
 import { loadSlim } from "tsparticles-slim";
 import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
-import { AnimatedIntro } from "@/components/home/AnimatedIntro";
+import { FloatingStatsImage } from "@/components/ui/FloatingStatsImage";
 
 export function Hero() {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
 
+  const stats = [
+    {
+      text: "Reduce security incidents by up to",
+      value: "35%",
+      valueColor: "green" as const,
+      position: {
+        top: "-30px",
+        left: "60%",
+      },
+    },
+    {
+      text: "Cut operational costs by up to",
+      value: "70%",
+      valueColor: "red" as const,
+      position: {
+        top: "65%",
+        left: "-10px",
+        translate: "-50%",
+      },
+    },
+    {
+      text: "Complete compliance tasks",
+      value: "40% quicker",
+      valueColor: "green" as const,
+      position: {
+        bottom: "-40px",
+        left: "50%",
+        translate: "-50%",
+      },
+    },
+    {
+      text: "Reduction of 'Critical' Vulnerabilities",
+      value: "99%",
+      valueColor: "red" as const,
+      position: {
+        top: "46.67%",
+        right: "-120px",
+        translate: "-50%",
+      },
+    },
+  ];
+
   return (
-    <div className="bg-[#001E38] relative w-[99.1vw]">
+    <div className="bg-[#001E38] relative w-[99.2vw]">
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -88,7 +130,7 @@ export function Hero() {
         }}
         className="absolute inset-0"
       />
-      <div className="max-w-[1500px] mx-auto">
+      <div className="max-w-[1500px] mx-auto py-20">
         <section className="h-3/5 relative z-10">
           <div className="h-3/4 flex items-center">
             {/* Left side - Content */}
@@ -119,7 +161,11 @@ export function Hero() {
 
             {/* Right side - Image */}
             <div className="w-1/2 flex justify-center mt-10">
-              <AnimatedIntro />
+              <FloatingStatsImage
+                imageSrc="/menu3.jfif"
+                imageAlt="Kikimora Security"
+                stats={stats}
+              />
             </div>
           </div>
         </section>
