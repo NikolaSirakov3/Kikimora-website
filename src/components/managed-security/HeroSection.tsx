@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { FloatingStatsImage } from "@/components/ui/FloatingStatsImage";
 
 interface HeroSectionProps {
   title: string;
@@ -6,6 +7,48 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ title, description }: HeroSectionProps) {
+  const stats = [
+    {
+      text: "Reduce security incidents by up to",
+      value: "35%",
+      valueColor: "green" as const,
+      position: {
+        top: "-30px",
+        left: "60%",
+      },
+    },
+    {
+      text: "Cut operational costs by up to",
+      value: "70%",
+      valueColor: "red" as const,
+      position: {
+        top: "65%",
+        left: "-10px",
+        translate: "-50%",
+      },
+    },
+    {
+      text: "Complete compliance tasks",
+      value: "40% quicker",
+      valueColor: "green" as const,
+      position: {
+        bottom: "-40px",
+        left: "50%",
+        translate: "-50%",
+      },
+    },
+    {
+      text: "Reduction of 'Critical' Vulnerabilities",
+      value: "99%",
+      valueColor: "red" as const,
+      position: {
+        top: "46.67%",
+        right: "-120px",
+        translate: "-50%",
+      },
+    },
+  ];
+
   return (
     <div className="pt-20 w-[99.1vw] flex items-center justify-center min-h-[600px] px-8 md:px-16 lg:px-24 bg-gray-50">
       <div className="w-[1200px] flex justify-between items-center">
@@ -26,31 +69,11 @@ export function HeroSection({ title, description }: HeroSectionProps) {
             </Button>
           </div>
         </div>
-        <div className="hidden md:block relative w-[550px]">
-          {/* Floating Info Boxes */}
-          <div className="absolute top-[-30px] left-60 z-10 bg-yellow-100 border border-yellow-100 rounded-lg shadow-lg px-4 py-2 text-gray-900 text-sm font-semibold max-w-[160px] text-center">
-            Reduce security incidents by up to{" "}
-            <span className="text-green-600 font-bold">35%</span>
-          </div>
-          <div className="absolute top-3/4 left-[-60px] -translate-y-1/2 z-10 bg-yellow-100 border border-yellow-100 rounded-lg shadow-lg px-4 py-2 text-gray-900 text-sm font-semibold max-w-[160px] text-center">
-            Cut operational costs by up to{" "}
-            <span className="text-red-600 font-bold">70%</span>
-          </div>
-          <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 z-10 bg-yellow-100 border border-yellow-100 rounded-lg shadow-lg px-4 py-2 text-gray-900 text-sm font-semibold max-w-[160px] text-center">
-            Complete compliance tasks{" "}
-            <span className="text-green-600 font-bold">40% quicker</span>
-          </div>
-          <div className="absolute top-2/3 right-[-120px] -translate-y-1/2 z-10 bg-yellow-100 border border-yellow-100 rounded-lg shadow-lg px-4 py-2 text-gray-900 text-sm font-semibold max-w-[160px] text-center">
-            <span className="text-red-600 font-bold">99%</span> Reduction of
-            'Critical' Vulnerabilities
-          </div>
-          {/* Main Image */}
-          <img
-            src="/menu3.jfif"
-            alt="Kikimora Security"
-            className="w-[550px] h-auto object-contain z-0"
-          />
-        </div>
+        <FloatingStatsImage
+          imageSrc="/menu3.jfif"
+          imageAlt="Kikimora Security"
+          stats={stats}
+        />
       </div>
     </div>
   );
