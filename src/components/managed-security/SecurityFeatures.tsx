@@ -15,7 +15,7 @@ function SecurityFeature({
 }: SecurityFeatureProps) {
   return (
     <div
-      className="flex flex-col items-center text-center p-8 bg-white rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 min-h-[340px] w-full max-w-[360px] mx-auto relative justify-between"
+      className="flex flex-col items-center text-center p-8 bg-white rounded-2xl border border-gray-200 shadow-lg transition-all duration-300 min-h-[340px] w-full max-w-[360px] mx-auto relative justify-between hover:shadow-2xl hover:-translate-y-2"
       style={{ minHeight: 340 }}
     >
       <div className="flex flex-col items-center flex-grow">
@@ -138,7 +138,7 @@ export function SecurityFeatures() {
           Comprehensive cybersecurity solutions that protect your business from
           evolving threats while ensuring compliance and operational excellence
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full justify-center">
           {features.slice(0, 3).map((feature, index) => (
             <div className="flex justify-center" key={index}>
               <SecurityFeature
@@ -151,7 +151,7 @@ export function SecurityFeatures() {
           ))}
         </div>
         <div className="h-10" />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full justify-center">
           {features.slice(3).map((feature, index) => (
             <div className="flex justify-center" key={index}>
               <SecurityFeature
