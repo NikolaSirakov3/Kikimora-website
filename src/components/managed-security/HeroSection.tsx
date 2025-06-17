@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
-    <div className="pt-20 w-[99.2vw] flex items-center justify-center min-h-[600px] px-8 md:px-16 lg:p-24  bg-gray-50">
+    <div className="pt-20 w-[99.2vw] bg-[#001E38] flex items-center justify-center min-h-[600px] px-8 md:px-16 lg:p-24">
       <div className="w-[1200px] flex justify-between items-center">
         <div className="flex flex-col gap-6 max-w-[600px]">
           <div className="flex items-center gap-2">
@@ -13,21 +13,21 @@ export function HeroSection() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className="text-gray-600">Managed Security Solutions</span>
+            <span className="text-[#4B9EF6]">Managed Security Solutions</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-gray-900">
-            Kikimora
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold">
+            <span className="text-white">Kikimora</span>
             <br />
-            Managed Security
+            <span className="text-[#4B9EF6]">Managed Security</span>
           </h1>
 
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-300 text-lg">
             The essential toolset to meet your security and compliance
             objectives.
           </p>
 
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-300 text-lg">
             Let Kikimora handle the security complexities, while you focus on
             the important business objectives!
           </p>
@@ -35,13 +35,13 @@ export function HeroSection() {
           <div className="flex gap-4">
             <Button
               variant="default"
-              className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 text-lg rounded-full"
+              className="bg-white hover:bg-gray-100 text-[#001E38] px-8 py-6 text-lg rounded-xl"
             >
               Schedule a Demo
             </Button>
             <Button
               variant="outline"
-              className="border-2 border-gray-300 hover:bg-gray-100 text-gray-900 px-8 py-6 text-lg rounded-full flex items-center gap-2"
+              className="bg-transparent border-2 border-[#4B9EF6] hover:bg-white/10 text-[#4B9EF6] px-8 py-6 text-lg rounded-xl flex items-center gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,21 +61,21 @@ export function HeroSection() {
 
           <div className="flex gap-12 mt-8">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-gray-900">24/7</span>
-              <span className="text-gray-600">Monitoring</span>
+              <span className="text-2xl font-bold text-white">24/7</span>
+              <span className="text-gray-300">Monitoring</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-gray-900">500+</span>
-              <span className="text-gray-600">Clients Protected</span>
+              <span className="text-2xl font-bold text-white">500+</span>
+              <span className="text-gray-300">Clients Protected</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-gray-900">99.9%</span>
-              <span className="text-gray-600">Uptime</span>
+              <span className="text-2xl font-bold text-white">99.9%</span>
+              <span className="text-gray-300">Uptime</span>
             </div>
           </div>
         </div>
 
-        <div className="w-[550px] h-[400px] bg-gray-200 rounded-xl relative">
+        <div className="w-[550px] h-[400px] bg-gray-200/50 rounded-xl relative">
           <img
             src="/logos/colorAndBlack.png"
             alt="Kikimora Logo"
