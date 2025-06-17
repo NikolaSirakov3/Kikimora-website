@@ -1,79 +1,87 @@
 import { Button } from "@/components/ui/button";
-import { FloatingStatsImage } from "@/components/ui/FloatingStatsImage";
 
-interface HeroSectionProps {
-  title: string;
-  description: string;
-}
-
-export function HeroSection({ title, description }: HeroSectionProps) {
-  const stats = [
-    {
-      text: "Reduce security incidents by up to",
-      value: "35%",
-      valueColor: "green" as const,
-      position: {
-        top: "-30px",
-        left: "60%",
-      },
-    },
-    {
-      text: "Cut operational costs by up to",
-      value: "70%",
-      valueColor: "red" as const,
-      position: {
-        top: "65%",
-        left: "-10px",
-        translate: "-50%",
-      },
-    },
-    {
-      text: "Complete compliance tasks",
-      value: "40% quicker",
-      valueColor: "green" as const,
-      position: {
-        bottom: "-40px",
-        left: "50%",
-        translate: "-50%",
-      },
-    },
-    {
-      text: "Reduction of 'Critical' Vulnerabilities",
-      value: "99%",
-      valueColor: "red" as const,
-      position: {
-        top: "46.67%",
-        right: "-120px",
-        translate: "-50%",
-      },
-    },
-  ];
-
+export function HeroSection() {
   return (
-    <div className="pt-20 w-[99.1vw] flex items-center justify-center min-h-[600px] px-8 md:px-16 lg:px-24 bg-gray-50">
+    <div className="pt-20 w-[99.2vw] flex items-center justify-center min-h-[600px] px-8 md:px-16 lg:p-24  bg-gray-50">
       <div className="w-[1200px] flex justify-between items-center">
         <div className="flex flex-col gap-6 max-w-[600px]">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
-            {title}
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+              <img
+                src="/logos/colorAndBlack.png"
+                alt="Kikimora Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <span className="text-gray-600">Managed Security Solutions</span>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-gray-900">
+            Kikimora
+            <br />
+            Managed Security
           </h1>
-          <p className="text-gray-600 text-lg">{description}</p>
-          <p className="text-gray-600 text-lg mt-4">
-            All your security needs in a single package!
+
+          <p className="text-gray-600 text-lg">
+            The essential toolset to meet your security and compliance
+            objectives.
           </p>
-          <div>
+
+          <p className="text-gray-600 text-lg">
+            Let Kikimora handle the security complexities, while you focus on
+            the important business objectives!
+          </p>
+
+          <div className="flex gap-4">
             <Button
               variant="default"
-              className="bg-[#4169E1] hover:bg-[#3154b3] text-white px-8 py-6 text-lg rounded-full"
+              className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 text-lg rounded-full"
             >
-              Download Brochure
+              Schedule a Demo
+            </Button>
+            <Button
+              variant="outline"
+              className="border-2 border-gray-300 hover:bg-gray-100 text-gray-900 px-8 py-6 text-lg rounded-full flex items-center gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              Watch Demo
             </Button>
           </div>
+
+          <div className="flex gap-12 mt-8">
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-gray-900">24/7</span>
+              <span className="text-gray-600">Monitoring</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-gray-900">500+</span>
+              <span className="text-gray-600">Clients Protected</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-gray-900">99.9%</span>
+              <span className="text-gray-600">Uptime</span>
+            </div>
+          </div>
         </div>
-        <FloatingStatsImage
-          imageSrc="/menu3.jfif"
-          imageAlt="Kikimora Security"
-          stats={stats}
-        />
+
+        <div className="w-[550px] h-[400px] bg-gray-200 rounded-xl relative">
+          <img
+            src="/logos/colorAndBlack.png"
+            alt="Kikimora Logo"
+            className="absolute top-[-16px] right-[-16px] w-16 h-auto"
+          />
+        </div>
       </div>
     </div>
   );
