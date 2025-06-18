@@ -33,7 +33,7 @@ export function SecureOrganization() {
           <ul className="space-y-4 mt-8">
             {securityFeatures.map((feature, index) => (
               <li key={index} className="flex items-center gap-3">
-                <span className="text-blue-400 -mt-1">■</span>
+                <span className="text-[#31c9b7] -mt-1">■</span>
                 <span className="text-gray-300">{feature.text}</span>
               </li>
             ))}
@@ -49,9 +49,9 @@ export function SecureOrganization() {
               className="w-full h-full object-contain relative z-10"
             />
             {/* Add overlay elements for the shield effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#31c9b7]/20 to-purple-500/20 rounded-lg" />
             <div className="absolute -right-4 top-1/2 -translate-y-1/2">
-              <div className="w-16 h-32 bg-blue-500/20 blur-xl" />
+              <div className="w-16 h-32 bg-[#31c9b7]/20 blur-xl" />
             </div>
           </div>
         </div>

@@ -19,7 +19,7 @@ function SecurityFeature({
       style={{ minHeight: 340 }}
     >
       <div className="flex flex-col items-center flex-grow">
-        <span className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 mb-6">
+        <span className="flex items-center justify-center w-16 h-16 rounded-full bg-[#31c9b7] mb-6">
           {icon}
         </span>
         <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
@@ -45,7 +45,7 @@ function SecurityFeature({
       )}
       <style>{`
         .list-disc > li::marker {
-          color: #2563eb;
+          color: #31c9b7;
         }
       `}</style>
     </div>

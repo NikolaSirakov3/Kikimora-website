@@ -13,13 +13,13 @@ export function HeroSection() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className="text-[#4B9EF6]">Managed Security Solutions</span>
+            <span className="text-[#31c9b7]">Managed Security Solutions</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold">
             <span className="text-white">Kikimora</span>
             <br />
-            <span className="text-[#4B9EF6]">Managed Security</span>
+            <span className="text-[#31c9b7]">Managed Security</span>
           </h1>
 
           <p className="text-gray-300 text-lg">
@@ -35,13 +35,13 @@ export function HeroSection() {
           <div className="flex gap-4">
             <Button
               variant="default"
-              className="bg-white hover:bg-gray-100 text-[#001E38] px-8 py-6 text-lg rounded-xl"
+              className="bg-white hover:bg-gray-100 text-[#31c9b7] px-8 py-6 text-lg rounded-xl"
             >
               Schedule a Demo
             </Button>
             <Button
               variant="outline"
-              className="bg-transparent border-2 border-[#4B9EF6] hover:bg-white/10 text-[#4B9EF6] px-8 py-6 text-lg rounded-xl flex items-center gap-2"
+              className="bg-transparent border-2 border-[#31c9b7] hover:bg-white/10 text-[#31c9b7] px-8 py-6 text-lg rounded-xl flex items-center gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

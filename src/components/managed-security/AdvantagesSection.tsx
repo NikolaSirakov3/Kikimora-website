@@ -27,7 +27,7 @@ export function AdvantagesSection() {
           <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
             <div className="flex items-center mb-4">
               <svg
-                className="w-6 h-6 text-[#4b3ff4] mr-2"
+                className="w-6 h-6 text-[#31c9b7] mr-2"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -48,7 +48,7 @@ export function AdvantagesSection() {
           <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
             <div className="flex items-center mb-4">
               <svg
-                className="w-6 h-6 text-[#4b3ff4] mr-2"
+                className="w-6 h-6 text-[#31c9b7] mr-2"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -69,7 +69,7 @@ export function AdvantagesSection() {
           <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
             <div className="flex items-center mb-4">
               <svg
-                className="w-6 h-6 text-[#4b3ff4] mr-2"
+                className="w-6 h-6 text-[#31c9b7] mr-2"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -90,7 +90,7 @@ export function AdvantagesSection() {
           <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
             <div className="flex items-center mb-4">
               <svg
-                className="w-6 h-6 text-[#4b3ff4] mr-2"
+                className="w-6 h-6 text-[#31c9b7] mr-2"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
@@ -110,7 +110,7 @@ export function AdvantagesSection() {
           <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
             <div className="flex items-center mb-4">
               <svg
-                className="w-6 h-6 text-[#4b3ff4] mr-2"
+                className="w-6 h-6 text-[#31c9b7] mr-2"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >

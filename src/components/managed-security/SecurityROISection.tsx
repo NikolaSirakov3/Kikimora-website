@@ -1,7 +1,7 @@
 export function SecurityROISection() {
   return (
     <section className="py-16 max-w-7xl mx-auto">
-      <div className="bg-blue-50 rounded-lg p-8">
+      <div className="bg-[#31c9b7]/10 rounded-lg p-8">
         <h2 className="text-3xl font-bold text-center mb-8">
           Recent Security Statistics
         </h2>
