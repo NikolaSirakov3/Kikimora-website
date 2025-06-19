@@ -33,7 +33,7 @@ function StrategicPathwaySection() {
   ];
 
   return (
-    <section className="w-full flex flex-col items-center py-16 px-4 bg-blue-50">
+    <section className="w-full flex flex-col items-center py-16 px-4 bg-">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#0a1a2f]">
         Our Strategic Pathway to Resilience
       </h1>

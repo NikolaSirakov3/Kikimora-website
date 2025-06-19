@@ -1,10 +1,10 @@
 import { HeroCaseStudy } from "../components/case-study/HeroCaseStudy";
-import { FeaturesCaseStudy } from "../components/case-study/FeaturesCaseStudy";
-import { EUFunding } from "@/components/shared/EUFunding";
 import { PartnersSection } from "@/components/managed-security/PartnersSection";
 import { FintechIntroSection } from "@/components/case-study/FintechIntroSection";
 import { SecurityEcosystemSection } from "@/components/case-study/SecurityEcosystemSection";
 import { StrategicPathwaySection } from "../components/case-study/StrategicPathwaySection";
+import { EUFunding } from "@/components/shared/EUFunding";
+import { SolutionsSection } from "../components/case-study/FeaturesCaseStudy";
 
 function Fintech() {
   return (
@@ -14,7 +14,7 @@ function Fintech() {
       <FintechIntroSection />
       <SecurityEcosystemSection />
       <StrategicPathwaySection />
-      <FeaturesCaseStudy />
+      <SolutionsSection />
       <EUFunding />
     </main>
   );
