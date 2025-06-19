@@ -5,6 +5,7 @@ import { SecurityEcosystemSection } from "@/components/case-study/SecurityEcosys
 import { StrategicPathwaySection } from "../components/case-study/StrategicPathwaySection";
 import { FeaturesCaseStudy } from "../components/case-study/FeaturesCaseStudy";
 import { FintechTestimonialSection } from "../components/case-study/FintechTestimonialSection";
+import { FintechConsultationSection } from "../components/case-study/FintechConsultationSection";
 
 function Fintech() {
   return (
@@ -16,6 +17,7 @@ function Fintech() {
       <StrategicPathwaySection />
       <FeaturesCaseStudy />
       <FintechTestimonialSection />
+      <FintechConsultationSection />
     </main>
   );
 }

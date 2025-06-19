@@ -41,7 +41,7 @@ function StrategicPathwaySection() {
         {steps.map((step) => (
           <div key={step.number} className="flex items-center gap-6">
             <div className="flex-shrink-0">
-              <div className="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-white text-2xl font-bold">
+              <div className="w-16 h-16 rounded-full bg-[#31c9b7] flex items-center justify-center text-white text-2xl font-bold">
                 {step.number}
               </div>
             </div>

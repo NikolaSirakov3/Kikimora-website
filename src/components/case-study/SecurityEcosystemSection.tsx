@@ -63,7 +63,7 @@ export function SecurityEcosystemSection() {
                 onClick={() => setActiveTab(index)}
                 className={`px-6 py-4 text-lg font-medium transition-colors duration-200 outline-none focus:outline-none border-t-0 border-l-0 border-r-0 rounded-none ${
                   activeTab === index
-                    ? "text-blue-600 bg-gray-50 border-b-2 border-solid border-blue-600"
+                    ? "text-[#31c9b7] bg-gray-50 border-b-2 border-solid border-[#31c9b7]"
                     : "text-gray-600 bg-gray-50 border-b-0"
                 }`}
               >

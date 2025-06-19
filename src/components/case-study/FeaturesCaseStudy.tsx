@@ -15,7 +15,7 @@ function FeaturesCaseStudy() {
             baseline with monthly scans and essential compliance templates.
           </p>
           <div className="mt-auto">
-            <div className="text-2xl font-extrabold text-blue-600 mb-4 text-center">
+            <div className="text-2xl font-extrabold text-[#31c9b7] mb-4 text-center">
               Free
             </div>
             <button className="w-full bg-white border border-[#e5e7eb] rounded-lg py-3 font-semibold text-[#071C2C] hover:bg-[#f1f5f9] transition mb-2">
@@ -34,7 +34,7 @@ function FeaturesCaseStudy() {
             Pricing scales transparently with your assets.
           </p>
           <div className="mt-auto">
-            <div className="text-2xl font-extrabold text-blue-600 mb-4 text-center">
+            <div className="text-2xl font-extrabold text-[#31c9b7] mb-4 text-center">
               Based on Assets
             </div>
             <button className="w-full bg-[#071C2C] text-white rounded-lg py-3 font-semibold hover:bg-[#0a1a2f] transition mb-2">
@@ -53,7 +53,7 @@ function FeaturesCaseStudy() {
             and compliance oversight.
           </p>
           <div className="mt-auto">
-            <div className="text-2xl font-extrabold text-blue-600 mb-4 text-center">
+            <div className="text-2xl font-extrabold text-[#31c9b7] mb-4 text-center">
               Tiered Plans
             </div>
             <button className="w-full bg-[#071C2C] text-white rounded-lg py-3 font-semibold hover:bg-[#0a1a2f] transition mb-2">
