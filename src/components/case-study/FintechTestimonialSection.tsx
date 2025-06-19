@@ -1,5 +1,3 @@
-import React from "react";
-
 function FintechTestimonialSection() {
   return (
     <section className="w-full py-16 px-4 flex flex-col items-center bg-white">
@@ -21,7 +19,7 @@ function FintechTestimonialSection() {
         {/* Right: Testimonial Card */}
         <div className="bg-[#fafbfc] rounded-2xl shadow-lg p-8 md:p-10 max-w-xl w-full flex flex-col gap-4">
           <span className="text-[#31c9b7] text-6xl mb-2" aria-hidden="true">
-          &#x275E;
+            &#x275E;
           </span>
           <p className="text-[#071C2C] italic text-lg md:text-xl mb-2">
             "We are entirely satisfied with the results achieved and the quality

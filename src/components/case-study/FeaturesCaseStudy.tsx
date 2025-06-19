@@ -1,6 +1,4 @@
-import React from "react";
-
-function SolutionsSection() {
+function FeaturesCaseStudy() {
   return (
     <section className="w-full bg-[#f8f9fa] py-16 px-4 flex flex-col items-center">
       <h1 className="text-4xl md:text-4xl font-bold text-[#071C2C] mb-12 text-center">
@@ -68,4 +66,4 @@ function SolutionsSection() {
   );
 }
 
-export { SolutionsSection };
+export { FeaturesCaseStudy };

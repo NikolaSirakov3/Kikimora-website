@@ -11,10 +11,7 @@ import { ConsultationForm } from "../components/managed-security/ConsultationFor
 export default function PricingInfo() {
   return (
     <main className="min-h-screen bg-[#001324]">
-      <HeroSection
-        title="Kikimora Pricing: Transparent Pricing. Flexible Plans."
-        description="Explore our comprehensive pricing plans designed to meet your security needs. From startups to enterprises, we have the right solution for your organization."
-      />
+      <HeroSection />
       <PartnersSection />
       <PricingComponent />
       <TestimonialSection />

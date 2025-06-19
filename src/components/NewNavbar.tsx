@@ -402,7 +402,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                 onClick={() =>
                   item.dropdown && handleDropdownToggle(item.label)
                 }
-                className="w-full text-left text-white hover:text-[#29ABE2] block px-3 py-2 text-base font-medium flex items-center justify-between bg-transparent group border-none outline-none focus:outline-none gap-2"
+                className="w-full text-left text-white hover:text-[#29ABE2] px-3 py-2 text-base font-medium flex items-center justify-between bg-transparent group border-none outline-none focus:outline-none gap-2"
               >
                 {item.label}
                 {item.dropdown && (
