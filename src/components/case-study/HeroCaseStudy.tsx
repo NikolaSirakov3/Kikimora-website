@@ -1,61 +1,50 @@
-
 function HeroCaseStudy() {
   return (
-    <section className="w-screen bg-[#071C2C] py-12 px-4 md:px-16 min-h-[90vh]">
-      <div className="max-w-[1200px] h-[80vh] ml-80 flex flex-col items-start justify-center mt-10">
-        <h1 className="text-3xl md:text-5xl font-bold text-white mb-2 leading-tight text-left">
-          <span>Empower Your Code with</span>
+    <section className="relative w-screen min-h-[70vh] bg-[#071C2C] flex items-center justify-center overflow-hidden px-4 py-12">
+      {/* Blurred/darkened chart background overlay */}
+      <img
+        src="/public/illustrations/8.png" // Use a chart-like image from your assets
+        alt="Background chart"
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-60 blur-sm pointer-events-none select-none"
+        style={{ zIndex: 1 }}
+      />
+      {/* Blue gradient overlay for readability */}
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-[#071C2C]/80 to-[#071C2C]"
+        style={{ zIndex: 2 }}
+        aria-hidden="true"
+      />
+      {/* Main content */}
+      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-7xl mx-auto text-center">
+        <h1 className="text-white font-bold text-3xl md:text-5xl lg:text-5xl leading-tight mb-4">
+          From Regulatory Complexity to
           <br />
-          <span>Advanced Security</span>
+          <span className="text-[#31c9b7] text-4xl md:text-6xl lg:text-6xl block mt-2">
+            Cyber Resilience
+          </span>
         </h1>
-        <p className="text-base md:text-lg text-[#B0C4D9] mb-8 whitespace-nowrap overflow-hidden text-ellipsis w-full text-left">
-          Integrate cutting-edge security solutions effortlessly. Begin your
-          seamless integration journey today!
+        <p className="text-[#B0C4D9] text-lg md:text-2xl mb-4 font-medium">
+          The Unified Security Platform for the Financial Sector.
         </p>
-        <div className="flex flex-row items-center justify-start gap-x-8 w-full mt-10">
-          <div className="relative w-[800px] aspect-video rounded-xl overflow-hidden shadow-lg bg-[#0a1622] p-4 flex items-center justify-center">
-            <img
-              src="/menu1.jfif"
-              alt="Video placeholder"
-              className="object-cover w-full h-full rounded-lg"
-            />
-            <div
-              className="pointer-events-none absolute left-0 bottom-0 w-full h-1/3"
-              style={{
-                background:
-                  "linear-gradient(to bottom, transparent, #071C2C 90%)",
-              }}
-            />
-            <button
-              className="absolute inset-0 flex items-center justify-center"
-              aria-label="Play video"
-              tabIndex={0}
-              style={{ background: "rgba(0,0,0,0.3)" }}
-              disabled
-            >
-              <svg
-                width="64"
-                height="64"
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="32"
-                  cy="32"
-                  r="32"
-                  fill="#1E293B"
-                  fillOpacity="0.7"
-                />
-                <polygon points="26,20 48,32 26,44" fill="#38BDF8" />
-              </svg>
-            </button>
-          </div>
-          <img
-            src="/shield1.png"
-            alt="Kikimora logo"
-            className="w-96 md:w-[28rem] max-w-full drop-shadow-xl ml-20"
-          />
+        <p className="text-[#B0C4D9] text-base md:text-lg mb-8 max-w-3xl mx-auto">
+          Navigate DORA, NIS2, and PCI DSS, secure critical APIs, and manage
+          vulnerabilities with a single platform and an expert team that grows
+          with your business.
+        </p>
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center w-full">
+          <button
+            className="bg-[#31c9b7] hover:bg-[#2ab3a3] text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2"
+            type="button"
+          >
+            Request a Consultation
+          </button>
+          <button
+            className="bg-white/10 hover:bg-white/20 text-[#31c9b7] font-semibold py-3 px-8 rounded-lg border border-[#31c9b7] shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2"
+            type="button"
+          >
+            View Platform Capabilities
+          </button>
         </div>
       </div>
     </section>
