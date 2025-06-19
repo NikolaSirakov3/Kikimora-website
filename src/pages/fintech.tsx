@@ -1,16 +1,18 @@
 import { HeroCaseStudy } from "../components/case-study/HeroCaseStudy";
-import { IntroCaseStudy } from "../components/case-study/IntroCaseStudy";
 import { FeaturesCaseStudy } from "../components/case-study/FeaturesCaseStudy";
 import { InteractiveDemos } from "../components/case-study/InteractiveDemos";
-import { DashboardShowcase } from "../components/case-study/DashboardShowcase";
 import { EUFunding } from "@/components/shared/EUFunding";
+import { PartnersSection } from "@/components/managed-security/PartnersSection";
+import { FintechIntroSection } from "@/components/case-study/FintechIntroSection";
+import { SecurityEcosystemSection } from "@/components/case-study/SecurityEcosystemSection";
 
 function Fintech() {
   return (
     <main className="w-[99.1vw]">
       <HeroCaseStudy />
-      <IntroCaseStudy />
-      <DashboardShowcase />
+      <PartnersSection />
+      <FintechIntroSection />
+      <SecurityEcosystemSection />
       <InteractiveDemos />
       <FeaturesCaseStudy />
       <EUFunding />
