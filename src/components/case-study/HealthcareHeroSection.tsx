@@ -1,6 +1,6 @@
 function HealthcareHeroSection() {
   return (
-    <section className="relative w-screen min-h-[85vh] bg-[#071C2C] flex items-center justify-center overflow-hidden px-4 py-24">
+    <section className="relative w-screen min-h-[80vh] bg-[#071C2C] flex items-center justify-center overflow-hidden px-4 py-24">
       {/* Background Image */}
       <img
         src="/public/illustrations/background 3.png" // Using a more subtle background
