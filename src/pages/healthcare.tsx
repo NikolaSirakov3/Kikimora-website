@@ -3,7 +3,7 @@ import { TechnologyPartnersSection } from "../components/case-study/TechnologyPa
 import { HealthcareThreatsSection } from "../components/case-study/HealthcareThreatsSection";
 import { FeaturesCaseStudy } from "../components/case-study/FeaturesCaseStudy";
 import { InteractiveDemos } from "../components/case-study/InteractiveDemos";
-import { DashboardShowcase } from "../components/case-study/DashboardShowcase";
+import { UnifiedDefenseSection } from "@/components/case-study/UnifiedDefenseSection";
 import { EUFunding } from "@/components/shared/EUFunding";
 
 function Healthcare() {
@@ -12,7 +12,7 @@ function Healthcare() {
       <HealthcareHeroSection />
       <TechnologyPartnersSection />
       <HealthcareThreatsSection />
-      <DashboardShowcase />
+      <UnifiedDefenseSection />
       <InteractiveDemos />
       <FeaturesCaseStudy />
       <EUFunding />
