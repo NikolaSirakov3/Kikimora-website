@@ -2,6 +2,7 @@ import { HealthcareHeroSection } from "../components/case-study/HealthcareHeroSe
 import { TechnologyPartnersSection } from "../components/case-study/TechnologyPartnersSection";
 import { HealthcareThreatsSection } from "../components/case-study/HealthcareThreatsSection";
 import { KikimoraDifferenceSection } from "../components/case-study/KikimoraDifferenceSection";
+import { CyberResilienceJourneySection } from "../components/case-study/CyberResilienceJourneySection";
 import { ComplianceSection } from "@/components/case-study/ComplianceSection";
 import { UnifiedDefenseSection } from "@/components/case-study/UnifiedDefenseSection";
 import { EUFunding } from "@/components/shared/EUFunding";
@@ -15,6 +16,7 @@ function Healthcare() {
       <UnifiedDefenseSection />
       <ComplianceSection />
       <KikimoraDifferenceSection />
+      <CyberResilienceJourneySection />
       <EUFunding />
     </main>
   );
