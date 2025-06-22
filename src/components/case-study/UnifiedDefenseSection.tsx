@@ -14,25 +14,25 @@ const platformFeatures = [
     icon: <Shield className="w-6 h-6 text-white" />,
     title: "Unified Vulnerability Management",
     description: "See all risks in one place",
-    bgColor: "bg-blue-600",
+    bgColor: "bg-[#31c9b7]",
   },
   {
     icon: <Eye className="w-6 h-6 text-white" />,
     title: "Continuous Asset & Attack Surface Management",
     description: "Know what you need to protect",
-    bgColor: "bg-blue-600",
+    bgColor: "bg-[#31c9b7]",
   },
   {
     icon: <FileText className="w-6 h-6 text-white" />,
     title: "Automated Compliance Monitoring",
     description: "Simplify HIPAA & NIS2 audits with our Compliance Agents",
-    bgColor: "bg-blue-600",
+    bgColor: "bg-[#31c9b7]",
   },
   {
     icon: <Target className="w-6 h-6 text-white" />,
     title: "AI-Powered Prioritization",
     description: "Focus on the threats that matter most",
-    bgColor: "bg-blue-600",
+    bgColor: "bg-[#31c9b7]",
   },
 ];
 

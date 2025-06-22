@@ -111,7 +111,7 @@ function ComplianceSection() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`w-1/2 py-4 text-center font-medium transition-colors duration-200 focus:outline-none ${
                   activeTab === tab.id
-                    ? "bg-blue-600 text-white"
+                    ? "bg-[#31c9b7] text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
@@ -129,7 +129,7 @@ function ComplianceSection() {
                 <p className="mt-4 text-base text-gray-600">
                   {activeTabData.description}
                 </p>
-                <div className="p-6 mt-6 bg-blue-50">
+                <div className="p-6 mt-6 bg-[#31c9b7]/10">
                   <h4 className="text-lg font-semibold text-gray-800">
                     {activeTabData.requirementsTitle}
                   </h4>

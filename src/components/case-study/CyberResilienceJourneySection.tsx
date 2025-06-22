@@ -44,7 +44,7 @@ export const CyberResilienceJourneySection: FC = () => {
           {journeySteps.map((step, index) => (
             <div key={index} className="flex items-start mb-8">
               <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-600 text-white font-bold text-xl">
+                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#31c9b7] text-white font-bold text-xl">
                   {step.number}
                 </div>
               </div>
