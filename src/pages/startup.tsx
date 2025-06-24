@@ -4,6 +4,7 @@ import { CoPilotSection } from "../components/startup/CoPilotSection";
 import { PlatformShowcaseSection } from "../components/startup/PlatformShowcaseSection";
 import { FeaturesOverviewSection } from "../components/startup/FeaturesOverviewSection";
 import { ManagedSecuritySection } from "../components/startup/ManagedSecuritySection";
+import { ComplianceEdgeSection } from "../components/startup/ComplianceEdgeSection";
 // import { EUFunding } from "@/components/shared/EUFunding";
 
 function Startup() {
@@ -15,6 +16,7 @@ function Startup() {
       <PlatformShowcaseSection />
       <FeaturesOverviewSection />
       <ManagedSecuritySection />
+      <ComplianceEdgeSection />
       {/* <EUFunding /> */}
     </main>
   );
