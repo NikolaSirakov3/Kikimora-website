@@ -5,7 +5,6 @@ import {
   Users,
   LayoutDashboard,
   Brain,
-  Settings,
 } from "lucide-react";
 
 const FEATURES = [
