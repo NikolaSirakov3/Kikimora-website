@@ -3,6 +3,7 @@ import { DilemmaSection } from "../components/startup/DilemmaSection";
 import { CoPilotSection } from "../components/startup/CoPilotSection";
 import { PlatformShowcaseSection } from "../components/startup/PlatformShowcaseSection";
 import { FeaturesOverviewSection } from "../components/startup/FeaturesOverviewSection";
+import { ManagedSecuritySection } from "../components/startup/ManagedSecuritySection";
 // import { EUFunding } from "@/components/shared/EUFunding";
 
 function Startup() {
@@ -13,6 +14,7 @@ function Startup() {
       <CoPilotSection />
       <PlatformShowcaseSection />
       <FeaturesOverviewSection />
+      <ManagedSecuritySection />
       {/* <EUFunding /> */}
     </main>
   );
