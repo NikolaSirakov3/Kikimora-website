@@ -5,11 +5,12 @@ import { PlatformShowcaseSection } from "../components/startup/PlatformShowcaseS
 import { FeaturesOverviewSection } from "../components/startup/FeaturesOverviewSection";
 import { ManagedSecuritySection } from "../components/startup/ManagedSecuritySection";
 import { ComplianceEdgeSection } from "../components/startup/ComplianceEdgeSection";
-// import { EUFunding } from "@/components/shared/EUFunding";
+import { SecureGrowthSection } from "../components/startup/SecureGrowthSection";
+import { EUFunding } from "@/components/shared/EUFunding";
 
 function Startup() {
   return (
-    <main className="w-[99.1vw]">
+    <main className="w-[99.2vw]">
       <StartupHeroSection />
       <DilemmaSection />
       <CoPilotSection />
@@ -17,7 +18,8 @@ function Startup() {
       <FeaturesOverviewSection />
       <ManagedSecuritySection />
       <ComplianceEdgeSection />
-      {/* <EUFunding /> */}
+      <SecureGrowthSection />
+      <EUFunding />
     </main>
   );
 }
