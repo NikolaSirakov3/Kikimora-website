@@ -10,7 +10,7 @@ function SecureGrowthSection() {
       <div className="flex flex-col md:flex-row gap-8 w-full max-w-6xl justify-center">
         {/* Left Card */}
         <div
-          className="flex-[2] bg-[#2563eb] rounded-xl shadow-lg p-8 flex flex-col justify-between items-center text-center min-w-[320px] min-h-[320px]"
+          className="flex-[2] bg-[#31c9b7] rounded-xl shadow-lg p-8 flex flex-col justify-between items-center text-center min-w-[320px] min-h-[320px]"
           role="region"
           aria-labelledby="explore-now-title"
         >
@@ -21,7 +21,7 @@ function SecureGrowthSection() {
             >
               Start Exploring Now
             </h3>
-            <p className="text-base md:text-lg text-blue-100 mb-8 font-montserrat">
+            <p className="text-base md:text-lg text-white mb-8 font-montserrat">
               Get a feel for the platform with our free Community Edition. Scan
               up to 30 assets and see your security posture today. No credit
               card required.
@@ -30,7 +30,7 @@ function SecureGrowthSection() {
           <Button
             variant="secondary"
             size="lg"
-            className="bg-white text-[#2563eb] hover:bg-blue-100 font-bold"
+            className="bg-white text-[#31c9b7] hover:bg-[#31c9b7]/10 font-bold"
             onClick={() =>
               window.open("https://app.kikimora.io/register", "_blank")
             }

@@ -51,12 +51,12 @@ function PlatformShowcaseSection() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-4 justify-center mt-12">
-        <Button className="bg-[#2563eb] text-white px-6 py-3 font-montserrat rounded-lg hover:bg-[#1d4ed8]">
+        <Button className="bg-[#31c9b7] text-white px-6 py-3 font-montserrat rounded-lg hover:bg-[#31c9b7]/90">
           Start with Community Edition
         </Button>
         <Button
           variant="outline"
-          className="px-6 py-3 font-montserrat rounded-lg border border-[#2563eb] text-[#2563eb] hover:bg-[#eff6ff]"
+          className="px-6 py-3 font-montserrat rounded-lg border border-[#31c9b7] text-[#31c9b7] hover:bg-[#31c9b7]/10"
         >
           Explore Platform Features
         </Button>

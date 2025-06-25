@@ -4,7 +4,7 @@ function ComplianceEdgeSection() {
       <h2 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-2 font-conthrax">
         Turn Compliance into Your Competitive Edge
       </h2>
-      <p className="text-base md:text-lg text-center text-blue-100 mb-12 max-w-2xl font-montserrat">
+      <p className="text-base md:text-lg text-center text-[#31c9b7] mb-12 max-w-2xl font-montserrat">
         Don't just meet standards. Win bigger deals, faster.
       </p>
       {/* Flow steps */}
@@ -12,7 +12,7 @@ function ComplianceEdgeSection() {
         {/* Step 1 */}
         <div className="flex flex-col items-center">
           <svg
-            className="w-12 h-12 mb-2 text-blue-300"
+            className="w-12 h-12 mb-2 text-[#31c9b7]"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -32,12 +32,12 @@ function ComplianceEdgeSection() {
               strokeWidth="2"
             />
           </svg>
-          <span className="text-blue-200 text-sm font-semibold mt-1">
+          <span className="text-[#31c9b7] text-sm font-semibold mt-1">
             Standards Met
           </span>
         </div>
         <svg
-          className="w-6 h-6 text-blue-400 mx-2 hidden md:block"
+          className="w-6 h-6 text-[#31c9b7] mx-2 hidden md:block"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -75,7 +75,7 @@ function ComplianceEdgeSection() {
           </span>
         </div>
         <svg
-          className="w-6 h-6 text-blue-400 mx-2 hidden md:block"
+          className="w-6 h-6 text-[#31c9b7] mx-2 hidden md:block"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -106,12 +106,12 @@ function ComplianceEdgeSection() {
       </div>
       {/* Testimonial */}
       <div className="w-full max-w-3xl bg-white/10 rounded-xl shadow-lg p-8 flex flex-col items-center mt-4">
-        <p className="italic text-blue-100 text-center text-base md:text-lg mb-4">
+        <p className="italic text-[#31c9b7] text-center text-base md:text-lg mb-4">
           "Kikimora was instrumental in our ISO 27001 certification process,
           which was a key requirement for closing our largest enterprise
           client."
         </p>
-        <span className="text-blue-200 text-sm text-center">
+        <span className="text-[#31c9b7] text-sm text-center">
           — Enterprise Customer
         </span>
       </div>
