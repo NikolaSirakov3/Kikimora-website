@@ -3,6 +3,7 @@ import { SMEFrontsSection } from "@/components/home/SMEFrontsSection";
 import { PlatformFeaturesSection } from "@/components/home/PlatformFeaturesSection";
 import { SMEWhyTraditionalSection } from "@/components/home/SMEWhyTraditionalSection";
 import { SMEPlatformPartnershipSection } from "@/components/home/SMEPlatformPartnershipSection";
+import { FitForBusinessSection } from "@/components/home/FitForBusinessSection";
 // import { EUFunding } from "@/components/shared/EUFunding";
 
 function SME() {
@@ -14,6 +15,7 @@ function SME() {
       <SMEWhyTraditionalSection />
       <SMEPlatformPartnershipSection />
       {/* <EUFunding /> */}
+      <FitForBusinessSection />
     </main>
   );
 }
