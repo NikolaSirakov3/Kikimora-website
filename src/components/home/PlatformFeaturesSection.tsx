@@ -72,7 +72,7 @@ function PlatformFeaturesSection() {
             className="bg-[#f8fafc] rounded-xl p-8 flex items-start gap-4 shadow-sm h-full"
           >
             <Icon
-              className="w-10 h-10 text-[#2563eb] flex-shrink-0 mt-1"
+              className="w-10 h-10 text-[#31c9b7] flex-shrink-0 mt-1"
               aria-hidden="true"
             />
             <div>

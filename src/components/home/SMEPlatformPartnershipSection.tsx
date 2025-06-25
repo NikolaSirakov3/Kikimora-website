@@ -79,7 +79,7 @@ function SMEPlatformPartnershipSection() {
             className="p-8 flex flex-col items-center text-center h-full"
           >
             <div className="bg-[#f5f8ff] rounded-full p-4 mb-4 flex items-center justify-center">
-              <Icon className="w-12 h-12 text-blue-400" aria-hidden="true" />
+              <Icon className="w-12 h-12 text-[#31c9b7]" aria-hidden="true" />
             </div>
             <h4 className="text-md font-bold mb-2 text-[#111827] font-montserrat">
               {title}
@@ -99,7 +99,10 @@ function SMEPlatformPartnershipSection() {
             key={title}
             className="bg-[#f5f8ff] rounded-xl p-8 flex flex-col items-center text-center shadow-sm h-full"
           >
-            <Icon className="w-10 h-10 text-blue-400 mb-4" aria-hidden="true" />
+            <Icon
+              className="w-10 h-10 text-[#31c9b7] mb-4"
+              aria-hidden="true"
+            />
             <h4 className="text-lg font-bold mb-2 text-[#111827] font-montserrat">
               {title}
             </h4>
@@ -110,7 +113,7 @@ function SMEPlatformPartnershipSection() {
         ))}
       </div>
       <Button
-        className="bg-[#2563eb] text-white hover:bg-[#1d4ed8] px-8 py-4 rounded-lg font-montserrat text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 mt-4"
+        className="bg-[#31c9b7] text-white hover:bg-[#2bb3a3] px-8 py-4 rounded-lg font-montserrat text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-[#31c9b7] mt-4"
         onClick={() => window.open("#platform-services", "_self")}
         aria-label="Explore Our Platform & Services"
       >
