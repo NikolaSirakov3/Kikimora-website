@@ -120,8 +120,8 @@ const navItems: NavItem[] = [
           ),
         },
         {
-          label: "Security",
-          href: "/resources/security",
+          label: "OT Security",
+          href: "/ot-security",
           description: "Security best practices",
           icon: (
             <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
