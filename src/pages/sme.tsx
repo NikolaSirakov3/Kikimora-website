@@ -5,7 +5,8 @@ import { SMEWhyTraditionalSection } from "@/components/home/SMEWhyTraditionalSec
 import { SMEPlatformPartnershipSection } from "@/components/home/SMEPlatformPartnershipSection";
 import { FitForBusinessSection } from "@/components/home/FitForBusinessSection";
 import { TrustedByEuropeSection } from "@/components/home/TrustedByEuropeSection";
-// import { EUFunding } from "@/components/shared/EUFunding";
+import { SMEFinalCTASection } from "@/components/home/SMEFinalCTASection";
+import { EUFunding } from "@/components/shared/EUFunding";
 
 function SME() {
   return (
@@ -15,9 +16,10 @@ function SME() {
       <PlatformFeaturesSection />
       <SMEWhyTraditionalSection />
       <SMEPlatformPartnershipSection />
-      {/* <EUFunding /> */}
       <FitForBusinessSection />
       <TrustedByEuropeSection />
+      <SMEFinalCTASection />
+      <EUFunding />
     </main>
   );
 }
