@@ -4,16 +4,18 @@ import { RiskCardsSection } from "@/components/ot-security/RiskCardsSection";
 import { SecurityPlatformSection } from "@/components/ot-security/SecurityPlatformSection";
 import { OTSecurityFeatureSection } from "@/components/ot-security/OTSecurityFeatureSection";
 import { PartnershipSection } from "@/components/ot-security/PartnershipSection";
+import { FinancialCaseStudySection } from "@/components/ot-security/FinancialCaseStudySection";
 
 function OTSecurityPage() {
   return (
-    <main className="w-[100vw]">
+    <main className="w-[99.2vw]">
       <OTSecurityHero />
       <TrustedByCriticalIndustriesSection />
       <RiskCardsSection />
       <SecurityPlatformSection />
       <OTSecurityFeatureSection />
       <PartnershipSection />
+      <FinancialCaseStudySection />
     </main>
   );
 }

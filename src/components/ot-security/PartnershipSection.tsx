@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 function PartnershipSection() {
   return (
     <section
-      className="w-full flex flex-col items-center py-16 px-4 bg-gray-50"
+      className="w-[99.2vw] flex flex-col items-center py-16 px-4 bg-gray-50"
       aria-labelledby="partnership-heading"
     >
       <h2

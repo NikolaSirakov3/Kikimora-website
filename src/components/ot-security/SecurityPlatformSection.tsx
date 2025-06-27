@@ -109,7 +109,7 @@ const CARDS = [
 function SecurityPlatformSection() {
   return (
     <section
-      className="w-full flex flex-col items-center py-24 px-4 bg-[#f8f9fa]"
+      className="w-[99vw] flex flex-col items-center py-24 px-4 bg-[#f8f9fa]"
       aria-labelledby="platform-heading"
     >
       <h2
