@@ -3,6 +3,7 @@ import { TrustedByCriticalIndustriesSection } from "@/components/ot-security/Tru
 import { RiskCardsSection } from "@/components/ot-security/RiskCardsSection";
 import { SecurityPlatformSection } from "@/components/ot-security/SecurityPlatformSection";
 import { OTSecurityFeatureSection } from "@/components/ot-security/OTSecurityFeatureSection";
+import { PartnershipSection } from "@/components/ot-security/PartnershipSection";
 
 function OTSecurityPage() {
   return (
@@ -12,6 +13,7 @@ function OTSecurityPage() {
       <RiskCardsSection />
       <SecurityPlatformSection />
       <OTSecurityFeatureSection />
+      <PartnershipSection />
     </main>
   );
 }
