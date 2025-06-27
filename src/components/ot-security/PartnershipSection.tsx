@@ -12,7 +12,7 @@ function PartnershipSection() {
         className="text-3xl md:text-4xl font-bold text-center mb-2 font-montserrat"
       >
         More Than a Platform.{" "}
-        <span className="text-[#2563eb]">A Partnership.</span>
+        <span className="text-[#31c9b7]">A Partnership.</span>
       </h2>
       <p className="text-lg md:text-xl text-center text-[#374151] mb-12 max-w-2xl">
         Bridge the OT security skills gap with our expert team.
@@ -24,7 +24,7 @@ function PartnershipSection() {
           role="region"
           aria-label="Managed Security Services"
         >
-          <div className="bg-[#e8f0fe] rounded-full p-4 mb-4">
+          <div className="bg-[#e6f7f5] rounded-full p-4 mb-4">
             {/* Monitor Icon */}
             <svg
               width="48"
@@ -33,17 +33,17 @@ function PartnershipSection() {
               viewBox="0 0 48 48"
               aria-hidden="true"
             >
-              <rect width="48" height="48" rx="24" fill="#E8F0FE" />
+              <rect width="48" height="48" rx="24" fill="#E6F7F5" />
               <rect
                 x="14"
                 y="18"
                 width="20"
                 height="12"
                 rx="2"
-                stroke="#2563eb"
+                stroke="#31c9b7"
                 strokeWidth="2.5"
               />
-              <rect x="22" y="32" width="4" height="2" rx="1" fill="#2563eb" />
+              <rect x="22" y="32" width="4" height="2" rx="1" fill="#31c9b7" />
             </svg>
           </div>
           <h3 className="text-xl font-bold mb-2 font-montserrat">
@@ -98,7 +98,7 @@ function PartnershipSection() {
         </div>
       </div>
       <Button
-        className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white text-base font-semibold px-8 py-3 rounded-lg shadow"
+        className="bg-[#31c9b7] hover:bg-[#2bb3a3] text-white text-base font-semibold px-8 py-3 rounded-lg shadow"
         asChild
       >
         <a href="#services" aria-label="Explore Our Services">

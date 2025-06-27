@@ -20,9 +20,9 @@ export function OTSecurityHero() {
           resilience from the factory floor to the cloud—on your terms, with
           on-premise control.
         </p>
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4">
           <button
-            className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-semibold px-8 py-4 rounded-lg text-base shadow transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+            className="bg-[#31c9b7] hover:bg-[#2bb3a3] text-white font-semibold px-8 py-4 rounded-lg text-base shadow transition-colors focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2"
             aria-label="Schedule Your Demo"
             type="button"
           >
@@ -30,7 +30,7 @@ export function OTSecurityHero() {
             <span className="ml-2">→</span>
           </button>
           <button
-            className="bg-white/80 text-[#2563eb] font-semibold px-8 py-4 rounded-lg text-base shadow border border-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 transition-colors"
+            className="bg-white/80 text-[#31c9b7] font-semibold px-8 py-4 rounded-lg text-base shadow border border-white focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2 transition-colors"
             aria-label="Explore On-Premise Options"
             type="button"
           >

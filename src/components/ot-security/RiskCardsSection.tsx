@@ -115,7 +115,7 @@ function RiskCardsSection() {
         />
         <RiskCard
           icon={
-            <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100">
+            <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#e6f7f5]">
               {/* Compliance/Check SVG */}
               <svg
                 width="32"
@@ -130,13 +130,13 @@ function RiskCardsSection() {
                   width="24"
                   height="24"
                   rx="12"
-                  stroke="#60A5FA"
+                  stroke="#31c9b7"
                   strokeWidth="2"
-                  fill="#DBEAFE"
+                  fill="#e6f7f5"
                 />
                 <path
                   d="M11 17l4 4 6-8"
-                  stroke="#2563EB"
+                  stroke="#31c9b7"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"

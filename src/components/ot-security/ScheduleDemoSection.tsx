@@ -36,7 +36,7 @@ function ScheduleDemoSection() {
               name="name"
               type="text"
               required
-              className="w-full px-4 py-2 rounded-lg bg-[#353f54] text-white border border-[#3d465a] focus:border-[#2563eb] focus:outline-none placeholder:text-white/60"
+              className="w-full px-4 py-2 rounded-lg bg-[#353f54] text-white border border-[#3d465a] focus:border-[#31c9b7] focus:outline-none placeholder:text-white/60"
               placeholder="Your Name"
               aria-label="Your Name"
             />
@@ -50,7 +50,7 @@ function ScheduleDemoSection() {
               name="company"
               type="text"
               required
-              className="w-full px-4 py-2 rounded-lg bg-[#353f54] text-white border border-[#3d465a] focus:border-[#2563eb] focus:outline-none placeholder:text-white/60"
+              className="w-full px-4 py-2 rounded-lg bg-[#353f54] text-white border border-[#3d465a] focus:border-[#31c9b7] focus:outline-none placeholder:text-white/60"
               placeholder="Company Name"
               aria-label="Company Name"
             />
@@ -66,7 +66,7 @@ function ScheduleDemoSection() {
               name="role"
               type="text"
               required
-              className="w-full px-4 py-2 rounded-lg bg-[#353f54] text-white border border-[#3d465a] focus:border-[#2563eb] focus:outline-none placeholder:text-white/60"
+              className="w-full px-4 py-2 rounded-lg bg-[#353f54] text-white border border-[#3d465a] focus:border-[#31c9b7] focus:outline-none placeholder:text-white/60"
               placeholder="Your Role"
               aria-label="Your Role"
             />
@@ -80,14 +80,14 @@ function ScheduleDemoSection() {
               name="email"
               type="email"
               required
-              className="w-full px-4 py-2 rounded-lg bg-[#353f54] text-white border border-[#3d465a] focus:border-[#2563eb] focus:outline-none placeholder:text-white/60"
+              className="w-full px-4 py-2 rounded-lg bg-[#353f54] text-white border border-[#3d465a] focus:border-[#31c9b7] focus:outline-none placeholder:text-white/60"
               placeholder="email@company.com"
               aria-label="Business Email"
             />
           </div>
         </div>
         <DemoButton
-          className="w-full bg-[#2563eb] hover:bg-[#1d4ed8] text-white text-base font-semibold px-8 py-3 rounded-lg shadow mt-2"
+          className="w-full bg-[#31c9b7] hover:bg-[#2bb3a3] text-white text-base font-semibold px-8 py-3 rounded-lg shadow mt-2"
           size="lg"
         >
           Schedule Your Demo

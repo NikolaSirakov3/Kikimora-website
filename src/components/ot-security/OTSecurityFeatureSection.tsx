@@ -7,7 +7,7 @@ const features = [
     subheading: (
       <a
         href="#on-premise"
-        className="text-[#2563eb] underline font-semibold"
+        className="text-[#31c9b7] underline font-semibold"
         aria-label="Achieve Maximum Security with On-Premise Deployment."
       >
         Achieve Maximum Security with On-Premise Deployment.
@@ -18,10 +18,10 @@ const features = [
     button: {
       label: "Learn About On-Premise Deployment",
       href: "#on-premise",
-      color: "bg-[#2563eb] hover:bg-[#1d4ed8] text-white",
+      color: "bg-[#31c9b7] hover:bg-[#2bb3a3] text-white",
     },
     card: {
-      bg: "bg-[#e8f0fe] border-[#c7d6f3]",
+      bg: "bg-[#e6f7f5] border-[#b8e8e0]",
       icon: (
         <svg
           width="48"
@@ -30,10 +30,10 @@ const features = [
           viewBox="0 0 48 48"
           aria-hidden="true"
         >
-          <rect width="48" height="48" rx="12" fill="#E8F0FE" />
+          <rect width="48" height="48" rx="12" fill="#E6F7F5" />
           <path
             d="M24 16a4 4 0 0 1 4 4v2h-8v-2a4 4 0 0 1 4-4Zm-8 6a8 8 0 1 1 16 0v2h1a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H15a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3h1v-2Zm2 2v2h12v-2a6 6 0 1 0-12 0Zm-3 5v7a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1H15a1 1 0 0 0-1 1Z"
-            fill="#2563eb"
+            fill="#31c9b7"
           />
         </svg>
       ),

@@ -12,7 +12,7 @@ function FinancialCaseStudySection() {
       >
         Proven in High-Stakes Financial Environments
       </h2>
-      <div className="w-full max-w-4xl bg-blue-50 rounded-2xl p-8 md:p-12 flex flex-col items-center shadow-md">
+      <div className="w-full max-w-4xl bg-[#e6f7f5] rounded-2xl p-8 md:p-12 flex flex-col items-center shadow-md">
         <div className="flex flex-col md:flex-row w-full justify-between gap-8 mb-8">
           <div className="flex-1 text-center md:text-left">
             <h3 className="text-lg font-bold mb-2 text-[#111827]">Challenge</h3>
@@ -45,7 +45,7 @@ function FinancialCaseStudySection() {
           "Should you need a S-tier, flexible, all-in-one platform for
           vulnerability management, we strongly recommend Kikimora.io."
         </blockquote>
-        <cite className="not-italic text-[#2563eb] text-base font-medium text-center block">
+        <cite className="not-italic text-[#31c9b7] text-base font-medium text-center block">
           — Stefan Tsonev, Head of IT Security Department, D Commerce Bank AD
         </cite>
       </div>

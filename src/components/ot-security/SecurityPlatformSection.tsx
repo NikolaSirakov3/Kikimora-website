@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const CARDS = [
   {
     icon: (
-      <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100">
+      <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#e6f7f5]">
         {/* Monitor SVG */}
         <svg
           width="32"
@@ -19,11 +19,11 @@ const CARDS = [
             width="20"
             height="14"
             rx="3"
-            fill="#DBEAFE"
-            stroke="#60A5FA"
+            fill="#e6f7f5"
+            stroke="#31c9b7"
             strokeWidth="2"
           />
-          <rect x="12" y="24" width="8" height="2" rx="1" fill="#60A5FA" />
+          <rect x="12" y="24" width="8" height="2" rx="1" fill="#31c9b7" />
         </svg>
       </span>
     ),
