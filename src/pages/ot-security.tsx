@@ -6,6 +6,7 @@ import { OTSecurityFeatureSection } from "@/components/ot-security/OTSecurityFea
 import { PartnershipSection } from "@/components/ot-security/PartnershipSection";
 import { FinancialCaseStudySection } from "@/components/ot-security/FinancialCaseStudySection";
 import { ScheduleDemoSection } from "@/components/ot-security/ScheduleDemoSection";
+import { EUFunding } from "@/components/shared/EUFunding";
 
 function OTSecurityPage() {
   return (
@@ -18,6 +19,7 @@ function OTSecurityPage() {
       <PartnershipSection />
       <FinancialCaseStudySection />
       <ScheduleDemoSection />
+      <EUFunding />
     </main>
   );
 }
