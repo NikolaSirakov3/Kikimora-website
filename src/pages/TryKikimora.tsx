@@ -2,6 +2,7 @@ import TryKikimoraHero from "@/components/try-kikimora/TryKikimoraHero";
 import CommunityFeatureSection from "@/components/try-kikimora/CommunityFeatureSection";
 import TryKikimoraBenefits from "@/components/try-kikimora/TryKikimoraBenefits";
 import QandASection from "@/components/try-kikimora/QandASection";
+import BookCallSection from "@/components/try-kikimora/BookCallSection";
 
 export default function TryKikimora() {
   return (
@@ -10,6 +11,7 @@ export default function TryKikimora() {
       <CommunityFeatureSection />
       <TryKikimoraBenefits />
       <QandASection />
+      <BookCallSection />
     </main>
   );
 }
