@@ -21,7 +21,7 @@ function FeatureCard({
 
 export default function TryKikimoraHero() {
   return (
-    <div className="min-h-[90vh] w-[99.2vw] flex flex-col items-center justify-center">
+    <div className="min-h-[90vh] w-[99.1vw] flex flex-col items-center justify-center bg-gradient-to-b from-[#181F3A] to-[#1B2340]">
       <div className="flex flex-col items-center mb-12">
         <span className="bg-[#22305A] text-[#7FB3FF] px-6 py-2 rounded-full text-base font-medium mb-6">
           Everything you need
