@@ -52,7 +52,7 @@ const communityEssentials = [
 
 export default function CommunityFeatureSection() {
   return (
-    <section className="w-full flex flex-col items-center justify-center py-16 bg-white">
+    <section className="w-[99.1vw] flex flex-col items-center justify-center py-16 bg-white">
       <h2 className="text-3xl md:text-4xl font-bold text-[#181F3A] text-center mb-2">
         Explore Kikimora Community
       </h2>

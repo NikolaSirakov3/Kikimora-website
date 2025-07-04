@@ -11,7 +11,7 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="bg-[#16213A] rounded-xl p-8 flex flex-col items-center text-center shadow-md min-w-[260px] max-w-[300px] flex-1">
+    <div className="bg-[#16213A] rounded-xl p-8 flex flex-col items-center text-center shadow-md min-w-[260px] max-w-[300px] flex-1 border border-blue-100/20">
       <div className="mb-4">{icon}</div>
       <h3 className="text-white font-semibold text-lg mb-2">{title}</h3>
       <p className="text-[#B0B8D1] text-sm">{description}</p>
@@ -21,7 +21,7 @@ function FeatureCard({
 
 export default function TryKikimoraHero() {
   return (
-    <div className="min-h-[90vh] flex flex-col items-center justify-center">
+    <div className="min-h-[90vh] w-[99.2vw] flex flex-col items-center justify-center">
       <div className="flex flex-col items-center mb-12">
         <span className="bg-[#22305A] text-[#7FB3FF] px-6 py-2 rounded-full text-base font-medium mb-6">
           Everything you need
