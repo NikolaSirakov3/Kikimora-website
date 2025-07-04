@@ -103,6 +103,14 @@ const navItems: NavItem[] = [
             <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
           ),
         },
+        {
+          label: "OT Security",
+          href: "/ot-security",
+          description: "Operational Technology security",
+          icon: (
+            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
+          ),
+        },
       ],
     },
   },
@@ -115,14 +123,6 @@ const navItems: NavItem[] = [
           label: "Developer",
           href: "/resources/developer",
           description: "Resources for developers",
-          icon: (
-            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
-          ),
-        },
-        {
-          label: "OT Security",
-          href: "/ot-security",
-          description: "Security best practices",
           icon: (
             <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
           ),
