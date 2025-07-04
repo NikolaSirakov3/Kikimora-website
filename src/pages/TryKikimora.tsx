@@ -7,7 +7,7 @@ import TryKikimoraFooter from "@/components/try-kikimora/TryKikimoraFooter";
 
 export default function TryKikimora() {
   return (
-    <main className="w-[99.1vw] flex flex-col items-center justify-center px-4 py-12">
+    <main className="w-[99.1vw] flex flex-col items-center justify-center px-4">
       <TryKikimoraHero />
       <CommunityFeatureSection />
       <TryKikimoraBenefits />
