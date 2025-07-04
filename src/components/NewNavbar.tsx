@@ -26,6 +26,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
+  { label: "Home", href: "/" },
   {
     label: "Product",
     href: "/product",
@@ -114,38 +115,7 @@ const navItems: NavItem[] = [
       ],
     },
   },
-  {
-    label: "Industries",
-    href: "/industries",
-    dropdown: {
-      items: [
-        {
-          label: "Developer",
-          href: "/resources/developer",
-          description: "Resources for developers",
-          icon: (
-            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
-          ),
-        },
-        {
-          label: "Open Source",
-          href: "/resources/open-source",
-          description: "Open source security",
-          icon: (
-            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
-          ),
-        },
-        {
-          label: "Integrations",
-          href: "/resources/integrations",
-          description: "Connect with your tools",
-          icon: (
-            <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
-          ),
-        },
-      ],
-    },
-  },
+  { label: "Pricing", href: "/pricing-info" },
   {
     label: "About",
     href: "/about",
@@ -186,7 +156,7 @@ const navItems: NavItem[] = [
       ],
     },
   },
-  { label: "Pricing", href: "/pricing-info" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
@@ -329,7 +299,11 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                 ) : (
                   <Link
                     to={item.href}
-                    className="text-white px-3 py-2 text-sm font-medium"
+                    className="text-white px-3 py-2 text-base font-medium hover:text-[#1abc9c] transition-colors duration-150"
+                    style={{
+                      fontFamily: "Montserrat, sans-serif",
+                      fontWeight: 500,
+                    }}
                   >
                     {item.label}
                   </Link>
@@ -339,20 +313,21 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center">
             <button
               onClick={() =>
                 window.open("https://calendly.com/o-antonov", "_blank")
               }
-              className="text-white hover:text-[#29ABE2] px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none"
+              className="ml-8 bg-[#23b098] hover:bg-[#1abc9c] text-white font-bold px-8 py-2 rounded transition-colors duration-200 text-lg shadow flex items-center justify-center"
+              style={{
+                fontFamily: "Montserrat, sans-serif",
+                lineHeight: "1.1",
+                minWidth: "170px",
+                minHeight: "unset",
+                height: "44px",
+              }}
             >
-              Book Demo
-            </button>
-            <button
-              onClick={() => setIsTrialModalOpen(true)}
-              className="text-white hover:text-white px-4 py-2 text-sm font-medium bg-[#31c9b7] rounded-lg border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
-            >
-              Start Free
+              Schedule Demo
             </button>
           </div>
 
@@ -464,13 +439,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
               }
               className="block w-full text-left px-3 py-2 text-base font-medium text-white hover:text-[#29ABE2] bg-transparent border-none outline-none focus:outline-none"
             >
-              Book Demo
-            </button>
-            <button
-              onClick={() => setIsTrialModalOpen(true)}
-              className="w-full text-left px-3 py-2 text-base font-medium text-white hover:text-white bg-[#3EDDCA] rounded-lg border-none outline-none focus:outline-none hover:bg-[#3EDDCA]/90"
-            >
-              Start Free
+              Schedule Demo
             </button>
           </div>
         </div>
