@@ -1,6 +1,7 @@
 import { AboutHeader } from "../components/about/AboutHeader";
 import { MissionSection } from "../components/about/MissionSection";
 import { StatsSection } from "../components/managed-security/StatsSection";
+import { AdvantagesSection } from "../components/managed-security/AdvantagesSection";
 
 export function About() {
   return (
@@ -8,6 +9,7 @@ export function About() {
       <AboutHeader />
       <MissionSection />
       <StatsSection />
+      <AdvantagesSection />
     </div>
   );
 }

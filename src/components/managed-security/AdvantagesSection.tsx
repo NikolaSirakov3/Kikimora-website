@@ -11,9 +11,9 @@ export function AdvantagesSection() {
               className="w-full h-full object-contain"
             />
           </div>
-          <h2 className="text-4xl font-semibold text-[#0a1626] dark:text-white mb-4">
+          <h1 className="text-4xl font-semibold text-[#0a1626] dark:text-white mb-4">
             Not just a tool in your arsenal!
-          </h2>
+          </h1>
           <p className="text-lg text-[#0a1626] dark:text-white/80 max-w-4xl">
             The Kikimora team will act as a trusted advisor, foster a culture of
             security awareness within your organization and integrate security
@@ -37,7 +37,7 @@ export function AdvantagesSection() {
                 In-House Expertise
               </h3>
             </div>
-            <p className="text-[#0a1626] dark:text-white/80">
+            <p className="text-gray-500 dark:text-white/80">
               Access to a team of cybersecurity specialists with extensive
               knowledge and experience in threat detection, vulnerability
               management, and incident response.
@@ -58,7 +58,7 @@ export function AdvantagesSection() {
                 24/7 Monitoring
               </h3>
             </div>
-            <p className="text-[#0a1626] dark:text-white/80">
+            <p className="text-gray-500 dark:text-white/80">
               Gain access to real-time data and monitoring capabilities for your
               whole organization. Detect and address vulnerabilities and
               misconfiguration proactively and effectively.
@@ -79,7 +79,7 @@ export function AdvantagesSection() {
                 Flexibility
               </h3>
             </div>
-            <p className="text-[#0a1626] dark:text-white/80">
+            <p className="text-gray-500 dark:text-white/80">
               Kikimora Managed Security evolves with the needs of your business,
               scaling seamlessly as your organization grows and your security
               and compliance requirements change.
@@ -100,7 +100,7 @@ export function AdvantagesSection() {
                 Compliance-ready
               </h3>
             </div>
-            <p className="text-[#0a1626] dark:text-white/80">
+            <p className="text-gray-500 dark:text-white/80">
               Get the right tools to meeting industry-specific regulations and
               standards, such as HIPAA or PCI DSS, ensuring compliance.
             </p>
@@ -120,9 +120,30 @@ export function AdvantagesSection() {
                 Cost-Effectiveness
               </h3>
             </div>
-            <p className="text-[#0a1626] dark:text-white/80">
+            <p className="text-gray-500 dark:text-white/80">
               Access to the best latest cybersecurity solutions and tools
               without the overhead and training.
+            </p>
+          </div>
+
+          {/* Trust Partner */}
+          <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
+            <div className="flex items-center mb-4">
+              <svg
+                className="w-6 h-6 text-[#31c9b7] mr-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h3 className="text-xl font-semibold text-[#0a1626] dark:text-white">
+                Trust Partner
+              </h3>
+            </div>
+            <p className="text-gray-500 dark:text-white/80">
+              Trust Partner with an expert in-house cybersecurity team, ready to
+              support your organization in overcoming complex challenges and
+              achieving security goals.
             </p>
           </div>
         </div>
