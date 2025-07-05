@@ -133,7 +133,7 @@ export function ContactSection() {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-2/5 mt-10 mr-20 bg-blue-900 text-white py-4 px-6 rounded-lg shadow-white shadow-md h-[180px]">
+          <div className="w-full md:w-2/5 mt-10 mr-20 bg-blue-500 text-white py-4 px-6 rounded-lg shadow-white shadow-md h-[180px]">
             <p className="text-base">
               The governance module provides a stable foundation for companies
               operating in high-risk, data-sensitive, or critical service
