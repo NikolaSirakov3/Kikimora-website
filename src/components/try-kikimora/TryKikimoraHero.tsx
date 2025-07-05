@@ -11,7 +11,7 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="bg-[#16213A] rounded-xl p-8 flex flex-col items-center text-center shadow-md min-w-[260px] max-w-[300px] flex-1 border border-blue-100/20">
+    <div className="bg-[#16213A] rounded-xl p-8 flex flex-col items-center text-center shadow-md min-w-[260px] max-w-[300px] flex-1 border border-[#23b098]/20">
       <div className="mb-4">{icon}</div>
       <h3 className="text-white font-semibold text-lg mb-2">{title}</h3>
       <p className="text-[#B0B8D1] text-sm">{description}</p>
@@ -33,7 +33,7 @@ export default function TryKikimoraHero() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
           impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis.
         </p>
-        <Button className="bg-[#3970F7] hover:bg-[#2d5cc6] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md">
+        <Button className="bg-[#23b098] hover:bg-[#1e9a8a] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md">
           Get Started
         </Button>
       </div>

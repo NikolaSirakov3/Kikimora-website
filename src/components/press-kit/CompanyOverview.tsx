@@ -21,38 +21,55 @@ export function CompanyOverview() {
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 w-full">
           <div className="flex flex-col items-center min-w-[120px]">
-            <span className="text-2xl md:text-3xl font-bold text-blue-700">
+            <span
+              className="text-2xl md:text-3xl font-bold"
+              style={{ color: "#23b098" }}
+            >
               2018
             </span>
             <span className="text-gray-500 text-sm mt-1">Founded</span>
           </div>
           <div className="flex flex-col items-center min-w-[120px]">
-            <span className="text-2xl md:text-3xl font-bold text-blue-700 text-center">
-              San
-              Francisco
+            <span
+              className="text-2xl md:text-3xl font-bold text-center"
+              style={{ color: "#23b098" }}
+            >
+              San Francisco
             </span>
             <span className="text-gray-500 text-sm mt-1">Headquarters</span>
           </div>
           <div className="flex flex-col items-center min-w-[120px]">
-            <span className="text-2xl md:text-3xl font-bold text-blue-700">
+            <span
+              className="text-2xl md:text-3xl font-bold"
+              style={{ color: "#23b098" }}
+            >
               250+
             </span>
             <span className="text-gray-500 text-sm mt-1">Employees</span>
           </div>
           <div className="flex flex-col items-center min-w-[120px]">
-            <span className="text-2xl md:text-3xl font-bold text-blue-700">
+            <span
+              className="text-2xl md:text-3xl font-bold"
+              style={{ color: "#23b098" }}
+            >
               10,000+
             </span>
             <span className="text-gray-500 text-sm mt-1">Customers</span>
           </div>
           <div className="flex flex-col items-center min-w-[120px]">
-            <span className="text-2xl md:text-3xl font-bold text-blue-700">
+            <span
+              className="text-2xl md:text-3xl font-bold"
+              style={{ color: "#23b098" }}
+            >
               45+
             </span>
             <span className="text-gray-500 text-sm mt-1">Countries Served</span>
           </div>
           <div className="flex flex-col items-center min-w-[120px]">
-            <span className="text-2xl md:text-3xl font-bold text-blue-700">
+            <span
+              className="text-2xl md:text-3xl font-bold"
+              style={{ color: "#23b098" }}
+            >
               $85M
             </span>
             <span className="text-gray-500 text-sm mt-1">Funding Raised</span>

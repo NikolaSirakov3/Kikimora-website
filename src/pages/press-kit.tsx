@@ -9,7 +9,7 @@ import TryKikimoraFooter from "../components/try-kikimora/TryKikimoraFooter";
 
 export default function PressKitPage() {
   return (
-    <div className="flex flex-col min-h-screen w-[99.12vw]">
+    <div className="flex flex-col min-h-screen w-[99.1vw]">
       <PressKitHero />
       <CompanyOverview />
       <MediaAssetsSection />
