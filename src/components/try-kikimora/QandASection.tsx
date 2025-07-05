@@ -40,9 +40,9 @@ export default function QandASection() {
   return (
     <section className="w-full max-w-5xl mx-auto mt-20 mb-8">
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#181F3A]">
+        <h1 className="text-3xl md:text-4xl font-bold mb-2 text-[#181F3A]">
           Q&amp;A: Vulnerability Management for SMEs
-        </h2>
+        </h1>
         <p className="text-[#5A6273] text-base md:text-lg max-w-2xl mx-auto">
           Here are some common questions that small and medium-sized business
           owners have about vulnerability management:

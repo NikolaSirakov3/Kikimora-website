@@ -49,9 +49,9 @@ const BENEFITS = [
 export default function TryKikimoraBenefits() {
   return (
     <section className="w-full flex flex-col items-center py-20 px-2 bg-[#fafbfc]">
-      <h2 className="text-3xl md:text-4xl font-conthrax text-center mb-3 text-gray-900">
+      <h1 className="text-3xl md:text-3xl font-conthrax text-center mb-3 text-gray-900">
         Benefits of a Vulnerability Management Tool for SMEs
-      </h2>
+      </h1>
       <p className="text-gray-600 text-center max-w-2xl mb-12 font-montserrat">
         For a small or medium-sized enterprise, the prospect of managing
         cybersecurity can be daunting. However, with the right tools, you can
@@ -59,7 +59,7 @@ export default function TryKikimoraBenefits() {
         tool, especially one with a free trial, offers numerous benefits:
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
-        {BENEFITS.slice(0, 3).map((benefit, i) => (
+        {BENEFITS.slice(0, 3).map((benefit) => (
           <div
             key={benefit.title}
             className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 flex flex-col items-start text-left min-h-[260px] max-w-[400px] mx-auto"
@@ -76,7 +76,7 @@ export default function TryKikimoraBenefits() {
       </div>
       <div className="h-6" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
-        {BENEFITS.slice(3).map((benefit, i) => (
+        {BENEFITS.slice(3).map((benefit) => (
           <div
             key={benefit.title}
             className="bg-white rounded-xl border border-gray-200 shadow-sm p-8 flex flex-col items-start text-left min-h-[260px] max-w-[400px] mx-auto"

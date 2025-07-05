@@ -8,9 +8,9 @@ export default function BookCallSection() {
         <div className="mb-4">
           <Phone className="w-10 h-10 text-[#31c9b7]" />
         </div>
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
+        <h1 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
           Not sure what is the right solution for you?
-        </h2>
+        </h1>
         <p className="text-white text-center mb-6 text-base md:text-lg">
           Book a free consultation with our team!
         </p>

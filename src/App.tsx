@@ -20,7 +20,7 @@ import { GetInTouch } from "@/components/home/GetInTouch";
 import { About } from "@/pages/About";
 import { ImageSwitcher } from "@/components/home/ImageSwitcher";
 import { MSSP } from "@/pages/MSSP";
-import { TryKikimora } from "@/pages/TryKikimora";
+import TryKikimora from "@/pages/TryKikimora";
 import ManagedSecurity from "@/pages/managed-security";
 import { PlatformSection } from "./components/home/PlatformSection";
 import { SoCyberPodcast } from "@/components/podcast/SoCyberPodcast";
