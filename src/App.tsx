@@ -34,6 +34,7 @@ import { Careers } from "@/pages/careers";
 import RoleDetails from "@/pages/RoleDetails";
 import OTSecurityPage from "@/pages/ot-security";
 import ContactPage from "@/pages/contact";
+import PressKitPage from "@/pages/press-kit";
 
 // Add ScrollToTop component
 function ScrollToTop() {
@@ -94,6 +95,7 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/careers/:role" element={<RoleDetails />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/press-kit" element={<PressKitPage />} />
           </Routes>
         </main>
         <Footer />
