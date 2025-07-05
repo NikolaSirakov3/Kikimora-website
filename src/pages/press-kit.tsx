@@ -3,6 +3,7 @@ import { PressKitHero } from "../components/press-kit/PressKitHero";
 import { CompanyOverview } from "../components/press-kit/CompanyOverview";
 import { MediaAssetsSection } from "../components/press-kit/MediaAssetsSection";
 import { ExecutiveTeamSection } from "../components/press-kit/ExecutiveTeamSection";
+import { PressReleasesSection } from "../components/press-kit/PressReleasesSection";
 
 export default function PressKitPage() {
   return (
@@ -11,6 +12,7 @@ export default function PressKitPage() {
       <CompanyOverview />
       <MediaAssetsSection />
       <ExecutiveTeamSection />
+      <PressReleasesSection />
     </div>
   );
 }
