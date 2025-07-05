@@ -5,6 +5,7 @@ import { MediaAssetsSection } from "../components/press-kit/MediaAssetsSection";
 import { ExecutiveTeamSection } from "../components/press-kit/ExecutiveTeamSection";
 import { PressReleasesSection } from "../components/press-kit/PressReleasesSection";
 import { MediaContactSection } from "../components/press-kit/MediaContactSection";
+import TryKikimoraFooter from "../components/try-kikimora/TryKikimoraFooter";
 
 export default function PressKitPage() {
   return (
@@ -15,6 +16,7 @@ export default function PressKitPage() {
       <ExecutiveTeamSection />
       <PressReleasesSection />
       <MediaContactSection />
+      <TryKikimoraFooter />
     </div>
   );
 }
