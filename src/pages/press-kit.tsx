@@ -1,4 +1,3 @@
-import React from "react";
 import { PressKitHero } from "../components/press-kit/PressKitHero";
 import { CompanyOverview } from "../components/press-kit/CompanyOverview";
 import { MediaAssetsSection } from "../components/press-kit/MediaAssetsSection";

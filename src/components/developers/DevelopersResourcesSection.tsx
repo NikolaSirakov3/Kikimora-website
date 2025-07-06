@@ -1,4 +1,3 @@
-import React from "react";
 import { FiCode } from "react-icons/fi";
 import { Button } from "@/components/ui/button";
 

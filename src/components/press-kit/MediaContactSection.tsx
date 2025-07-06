@@ -1,5 +1,3 @@
-import React from "react";
-
 export function MediaContactSection() {
   return (
     <section className="flex flex-col items-center justify-center py-12 w-full">

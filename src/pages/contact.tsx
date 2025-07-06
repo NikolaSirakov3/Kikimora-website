@@ -1,4 +1,4 @@
-import React from "react";
+
 import TryKikimoraFooter from "../components/try-kikimora/TryKikimoraFooter";
 
 function ContactPage() {

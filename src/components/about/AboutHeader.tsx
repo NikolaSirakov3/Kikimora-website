@@ -1,5 +1,3 @@
-import React from "react";
-
 export function AboutHeader() {
   return (
     <header className="w-full bg-gradient-to-b from-[#101C3C] to-[#1B2B5A] py-20 flex flex-col items-center justify-center text-center">

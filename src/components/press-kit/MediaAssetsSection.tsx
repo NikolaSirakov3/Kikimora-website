@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../ui/button";
 import { Download } from "lucide-react";
 
@@ -80,7 +79,7 @@ export function MediaAssetsSection() {
             <div className="mt-auto pt-6">
               <Button
                 className="w-full h-12 text-base font-semibold"
-                style={{ backgroundColor: '#23b098' }}
+                style={{ backgroundColor: "#23b098" }}
                 size="lg"
               >
                 Download All

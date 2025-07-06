@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../ui/button";
 
 interface PressRelease {
@@ -45,7 +44,7 @@ export function PressReleasesSection() {
         Recent Press Releases
       </h2>
       <div className="flex flex-col gap-8 w-full max-w-4xl">
-        {pressReleases.map((release, idx) => (
+        {pressReleases.map((release) => (
           <div
             key={release.title}
             className="bg-white rounded-2xl shadow-md px-8 py-7 flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
