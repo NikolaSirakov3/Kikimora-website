@@ -3,6 +3,7 @@ import { MissionSection } from "../components/about/MissionSection";
 import { StatsSection } from "../components/managed-security/StatsSection";
 import { AdvantagesSection } from "../components/managed-security/AdvantagesSection";
 import { RecentSecurityStatisticsSection } from "../components/managed-security/RecentSecurityStatisticsSection";
+import TryKikimoraFooter from '../components/try-kikimora/TryKikimoraFooter';
 
 export function About() {
   return (
@@ -12,6 +13,7 @@ export function About() {
       <StatsSection />
       <AdvantagesSection />
       <RecentSecurityStatisticsSection />
+      <TryKikimoraFooter />
     </div>
   );
 }
