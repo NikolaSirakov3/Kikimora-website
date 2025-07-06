@@ -118,6 +118,9 @@ export function Careers() {
         <h1 className="text-5xl md:text-6xl font-bold text-white text-center tracking-tight drop-shadow-lg">
           Open Positions
         </h1>
+        <p className="text-white text-center text-xl mt-10">
+        Join our team of cybersecurity experts and help build the future of managed security services.
+        </p>
       </header>
       {/* Cards Section */}
       <section className="w-[1200px] flex flex-col gap-10 justify-center z-10 mb-10">
