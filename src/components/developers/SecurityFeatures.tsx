@@ -1,124 +1,76 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils";
+import React from "react";
+import {
+  FiShield,
+  FiDatabase,
+  FiCloud,
+  FiZap,
+  FiUsers,
+  FiCheckCircle,
+} from "react-icons/fi";
 
-interface SecurityFeature {
-  id: number;
-  icon: string;
-  title: string;
-  description: string;
-}
-
-const features: SecurityFeature[] = [
+const features = [
   {
-    id: 1,
-    icon: "📱",
-    title: "Proactive Vulnerability Detection",
-    description:
-      "Quickly identify and mitigate vulnerabilities for each of your deliveries, ensuring a more stable and secure product offering",
+    icon: <FiShield size={32} color="#00E5BE" aria-hidden="true" />,
+    title: "Powerful threat detection",
+    description: "Advanced algorithms to detect and prevent security threats",
   },
   {
-    id: 2,
-    icon: "🔄",
-    title: "Streamlined Workflows for Higher Efficiency",
-    description:
-      "Integrate Kikimora.io within your current workflow to decrease time spent on project management, while increasing the value of your service",
+    icon: <FiDatabase size={32} color="#00E5BE" aria-hidden="true" />,
+    title: "Secure data handling",
+    description: "Enterprise-grade security for your sensitive data",
   },
   {
-    id: 3,
-    icon: "🎯",
-    title: "Competitive Advantage through More Value",
-    description:
-      "Higher security distinguishes your service in the market, attracting customers and improving retention for a stronger market position",
+    icon: <FiCloud size={32} color="#00E5BE" aria-hidden="true" />,
+    title: "Comprehensive threat reports",
+    description: "Detailed insights and analytics on security events",
   },
   {
-    id: 4,
-    icon: "💼",
-    title: "Improved CRM through transparency & trust",
-    description:
-      "Share your Kikimora.io reports with clients ensuring transparency and trust, encouraging long-term partnerships and sustained growth",
+    icon: <FiZap size={32} color="#00E5BE" aria-hidden="true" />,
+    title: "Real-time monitoring",
+    description: "24/7 continuous monitoring and instant alerts",
   },
   {
-    id: 5,
-    icon: "📈",
-    title: "Scalable and Adaptable to Growth",
-    description:
-      "A security solution that integrates effortlessly with your development process supports scalable growth without compromising security, enabling expansion into new markets or technologies",
+    icon: <FiUsers size={32} color="#00E5BE" aria-hidden="true" />,
+    title: "Multi-user support",
+    description: "Team collaboration and role-based access control",
   },
   {
-    id: 6,
-    icon: "💰",
-    title: "Reduced Costs",
-    description:
-      "Addressing security issues early in the development process avoids costly post-release fixes, leading to significant long-term savings",
-  },
-  {
-    id: 7,
-    icon: "✅",
-    title: "Proactive Compliance Support",
-    description:
-      "Help your software development services not only keep pace with evolving regulatory changes but stay ahead of them via proactive measures",
+    icon: <FiCheckCircle size={32} color="#00E5BE" aria-hidden="true" />,
+    title: "Compliance automation",
+    description: "Automated compliance reporting and documentation",
   },
 ];
 
 export function SecurityFeatures() {
-  const [expandedId, setExpandedId] = useState<number | null>(null);
-
   return (
-    <section className="w-full bg-gradient-to-b from-[#001E38] to-[#1B0B42] py-20">
+    <section className="w-full bg-gradient-to-b from-[#001E38] to-[#1B0B42] pb-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl text-white font-conthrax mb-4">
-            Enhance security. Stay compliant
+          <h2 className="text-4xl md:text-5xl text-white font-conthrax font-bold mb-4">
+            Enhance security, stay compliant
           </h2>
           <p className="text-white/60 text-lg font-montserrat">
-            Advanced Security, Simplified
+            Powerful features designed for developers
           </p>
         </div>
-
-        {/* Features List */}
-        <div className="max-w-4xl mx-auto space-y-4">
-          {features.map((feature) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {features.map((feature, idx) => (
             <div
-              key={feature.id}
-              className="bg-gradient-to-b from-[#001E38] to-[#1B0B42]"
+              key={feature.title}
+              className="bg-[#1B2342]/80 rounded-xl p-8 flex flex-col items-start shadow-lg min-h-[180px]"
+              role="region"
+              aria-labelledby={`feature-title-${idx}`}
             >
-              <button
-                onClick={() =>
-                  setExpandedId(expandedId === feature.id ? null : feature.id)
-                }
-                className="w-full px-6 py-4 flex items-center justify-between text-left group bg-transparent"
+              <div className="mb-4">{feature.icon}</div>
+              <h3
+                id={`feature-title-${idx}`}
+                className="text-white text-xl font-semibold mb-2 font-montserrat"
               >
-                <div className="flex items-center gap-4">
-                  <span className="text-2xl">{feature.icon}</span>
-                  <span className="text-white font-montserrat font-semibold">
-                    {feature.title}
-                  </span>
-                </div>
-                <ChevronDown
-                  className={cn(
-                    "w-5 h-5 text-[#00E5BE] transition-transform duration-200 bg-transparent stroke-[#00E5BE] fill-transparent",
-                    expandedId === feature.id ? "transform rotate-180" : ""
-                  )}
-                />
-              </button>
-
-              {expandedId === feature.id && (
-                <div className="px-6 pb-4 pt-2">
-                  <p className="text-white/60 font-montserrat">
-                    {feature.description}
-                  </p>
-                  {feature.id === 7 && (
-                    <a
-                      href="#"
-                      className="text-[#00E5BE] hover:underline font-montserrat block mt-2"
-                    >
-                      Learn More about upcoming regulations
-                    </a>
-                  )}
-                </div>
-              )}
+                {feature.title}
+              </h3>
+              <p className="text-white/70 font-montserrat text-base">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
