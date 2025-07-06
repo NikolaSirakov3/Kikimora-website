@@ -1,6 +1,7 @@
 import { DevelopersHero } from "@/components/developers/DevelopersHero";
 import { SecurityFeatures } from "@/components/developers/SecurityFeatures";
 import { ProductStatsSection } from "@/components/developers/ProductStatsSection";
+import { DevelopersResourcesSection } from "@/components/developers/DevelopersResourcesSection";
 
 export function Developers() {
   return (
@@ -8,6 +9,7 @@ export function Developers() {
       <DevelopersHero />
       <SecurityFeatures />
       <ProductStatsSection />
+      <DevelopersResourcesSection />
     </div>
   );
 }
