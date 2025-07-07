@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { DiscoveryCard } from "../components/ui/DiscoveryCard";
+import { SecurityTrainingCard } from "../components/ui/SecurityTrainingCard";
+import { LoginCard } from "../components/ui/LoginCard";
 
 const SecurityBundle: React.FC = () => {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -25,6 +27,14 @@ const SecurityBundle: React.FC = () => {
               style={{ top: "-30px", left: 0 }}
             >
               <DiscoveryCard />
+            </div>
+            {/* Security Training Card Overlapping, below DiscoveryCard */}
+            <div className="absolute z-10" style={{ top: "180px", left: 0 }}>
+              <SecurityTrainingCard />
+            </div>
+            {/* Login Card Overlapping, below SecurityTrainingCard */}
+            <div className="absolute z-10" style={{ top: "370px", left: 0 }}>
+              <LoginCard />
             </div>
           </div>
         </div>
