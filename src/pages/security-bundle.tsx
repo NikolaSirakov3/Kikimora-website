@@ -39,8 +39,8 @@ const SecurityBundle: React.FC = () => {
               <DiscoveryCard />
               {/* Animated LineDot on hover */}
               {isHovered && (
-                <div className="absolute left-1/2 top-full mt-2 z-20">
-                  <AnimatedLineDot />
+                <div className="absolute top-[120px] left-[290px] -translate-y-full translate-x-1/2 z-20">
+                  <AnimatedLineDot animate={isHovered} />
                 </div>
               )}
             </div>
