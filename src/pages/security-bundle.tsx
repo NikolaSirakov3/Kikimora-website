@@ -3,6 +3,7 @@ import { DiscoveryCard } from "../components/ui/DiscoveryCard";
 import { SecurityTrainingCard } from "../components/ui/SecurityTrainingCard";
 import { InformationGatheringCard } from "../components/ui/InformationGatheringCard";
 import { SecurityAssessmentCard } from "../components/ui/SecurityAssessmentCard";
+import { DefenseMechanismsCard } from "../components/ui/DefenseMechanismsCard";
 // import { LoginCard } from "../components/ui/LoginCard";
 
 const SecurityBundle: React.FC = () => {
@@ -41,6 +42,10 @@ const SecurityBundle: React.FC = () => {
             {/* Security Assessment Card Overlapping, bottom right */}
             <div className="absolute z-10" style={{ top: "270px", right: 0 }}>
               <SecurityAssessmentCard />
+            </div>
+            {/* Defense Mechanisms Card at bottom middle */}
+            <div className="absolute z-10" style={{ top: "540px", right: 400 }}>
+              <DefenseMechanismsCard />
             </div>
             {/* Login Card Overlapping, below SecurityTrainingCard */}
             {/* <div className="absolute z-10" style={{ top: "370px", left: 0 }}>

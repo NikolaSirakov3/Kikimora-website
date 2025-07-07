@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 
-export function SecurityTrainingCard() {
+export function DefenseMechanismsCard() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="bg-white rounded-2xl shadow-lg p-6 w-70 flex flex-col drop-shadow-xl transition-all duration-300 ease-in-out relative max-h-[500px]"
+      className="bg-white rounded-2xl shadow-lg p-6 w-84 flex flex-col drop-shadow-xl transition-all duration-300 ease-in-out relative max-h-[500px]"
       style={{ boxShadow: "0 4px 24px 0 rgba(0,0,0,0.06)" }}
       role="region"
-      aria-label="Security Training Card"
+      aria-label="Defense Mechanisms Card"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <h2 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
-        Security Training
+        Defense
+        Mechanisms
       </h2>
       <div className="bg-gray-100 rounded-md px-4 py-2 w-fit">
         <span className="text-md font-semibold text-gray-700 whitespace-nowrap">
-          Building a Culture
+          System Security
+          Hardening
         </span>
       </div>
       <ul
@@ -28,9 +30,10 @@ export function SecurityTrainingCard() {
         }`}
         aria-hidden={!isHovered}
       >
-        <li>Phishing Campaigns</li>
-        <li>Security Awareness</li>
-        <li>Secure Code Practices</li>
+        <li>Windows</li>
+        <li>Linux</li>
+        <li>Docker</li>
+        <li>Kubernetes</li>
       </ul>
     </div>
   );
