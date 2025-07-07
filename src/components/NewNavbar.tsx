@@ -57,9 +57,9 @@ const navItems: NavItem[] = [
           ),
         },
         {
-          label: "About",
-          href: "/about",
-          description: "Learn about our mission",
+          label: "Security Bundle",
+          href: "/security-bundle",
+          description: "Comprehensive security solutions",
           icon: (
             <ArrowSquareRight className="w-9 h-9 text-white" weight="regular" />
           ),

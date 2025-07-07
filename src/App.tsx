@@ -35,6 +35,7 @@ import RoleDetails from "@/pages/RoleDetails";
 import OTSecurityPage from "@/pages/ot-security";
 import ContactPage from "@/pages/contact";
 import PressKitPage from "@/pages/press-kit";
+import SecurityBundle from "@/pages/security-bundle";
 
 // Add ScrollToTop component
 function ScrollToTop() {
@@ -96,6 +97,7 @@ function App() {
             <Route path="/careers/:role" element={<RoleDetails />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/press-kit" element={<PressKitPage />} />
+            <Route path="/security-bundle" element={<SecurityBundle />} />
           </Routes>
         </main>
         <Footer />
