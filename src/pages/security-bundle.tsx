@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { DiscoveryCard } from "../components/ui/DiscoveryCard";
 import { SecurityTrainingCard } from "../components/ui/SecurityTrainingCard";
 import { InformationGatheringCard } from "../components/ui/InformationGatheringCard";
+import { SecurityAssessmentCard } from "../components/ui/SecurityAssessmentCard";
 // import { LoginCard } from "../components/ui/LoginCard";
 
 const SecurityBundle: React.FC = () => {
@@ -36,6 +37,10 @@ const SecurityBundle: React.FC = () => {
             {/* Information Gathering Card Overlapping, top right */}
             <div className="absolute z-10" style={{ top: "-30px", right: 0 }}>
               <InformationGatheringCard />
+            </div>
+            {/* Security Assessment Card Overlapping, bottom right */}
+            <div className="absolute z-10" style={{ top: "370px", right: 0 }}>
+              <SecurityAssessmentCard />
             </div>
             {/* Login Card Overlapping, below SecurityTrainingCard */}
             {/* <div className="absolute z-10" style={{ top: "370px", left: 0 }}>
