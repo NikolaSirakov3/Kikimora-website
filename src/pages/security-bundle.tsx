@@ -20,18 +20,18 @@ const SecurityBundle: React.FC = () => {
               ref={laptopRef}
               src="/security-centre.svg"
               alt="Security Center"
-              className="w-[80vw] md:w-[40vw] h-[70vh] object-contain"
+              className="w-[80vw] md:w-[40vw] h-[70vh] object-contain mb-40"
             />
             {/* Discovery Card Overlapping */}
             <div
               ref={cardRef}
               className="absolute z-10"
-              style={{ top: "-30px", left: 0 }}
+              style={{ top: "100px", left: 50 }}
             >
               <DiscoveryCard />
             </div>
             {/* Security Training Card Overlapping, below DiscoveryCard */}
-            <div className="absolute z-10" style={{ top: "180px", left: 0 }}>
+            <div className="absolute z-10" style={{ top: "400px", left: 40 }}>
               <SecurityTrainingCard />
             </div>
             {/* Information Gathering Card Overlapping, top right */}
@@ -39,7 +39,7 @@ const SecurityBundle: React.FC = () => {
               <InformationGatheringCard />
             </div>
             {/* Security Assessment Card Overlapping, bottom right */}
-            <div className="absolute z-10" style={{ top: "370px", right: 0 }}>
+            <div className="absolute z-10" style={{ top: "270px", right: 0 }}>
               <SecurityAssessmentCard />
             </div>
             {/* Login Card Overlapping, below SecurityTrainingCard */}

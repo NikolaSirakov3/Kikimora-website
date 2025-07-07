@@ -14,12 +14,12 @@ export function SecurityAssessmentCard() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <h2 className="text-xl font-bold text-gray-900 mb-4">
+      <h2 className="text-lg font-bold text-gray-900 mb-4">
         Cybersecurity Assessment
       </h2>
       {/* Penetration Testing */}
       <div className="mb-3">
-        <div className="bg-gray-100 rounded-lg px-6 py-3 mb-1 w-full font-semibold text-lg text-gray-700 text-center shadow-sm">
+        <div className="bg-gray-100 rounded-lg px-6 py-2 mb-1 w-full font-semibold text-md text-gray-700 text-center shadow-sm">
           Penetration Testing
         </div>
         <ul
@@ -38,7 +38,7 @@ export function SecurityAssessmentCard() {
       </div>
       {/* Vulnerability Scanning */}
       <div className="mb-3">
-        <div className="bg-gray-100 rounded-lg px-6 py-3 mb-1 w-full font-semibold text-lg text-gray-700 text-center shadow-sm">
+        <div className="bg-gray-100 rounded-lg px-6 py-2 mb-1 w-full font-semibold text-md text-gray-700 text-center shadow-sm">
           Vulnerability Scanning
         </div>
         <ul
@@ -57,7 +57,7 @@ export function SecurityAssessmentCard() {
       </div>
       {/* Agent Deployment */}
       <div>
-        <div className="bg-gray-100 rounded-lg px-6 py-3 mb-1 w-full font-semibold text-lg text-gray-700 text-center shadow-sm">
+        <div className="bg-gray-100 rounded-lg px-6 py-2 mb-1 w-full font-semibold text-md text-gray-700 text-center shadow-sm">
           Agent Deployment
         </div>
         <ul
