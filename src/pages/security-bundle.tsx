@@ -1,19 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { DiscoveryCard } from "../components/ui/DiscoveryCard";
-import { AnimatedLineDot } from "../components/ui/AnimatedLineDot";
 
 const SecurityBundle: React.FC = () => {
   const cardRef = useRef<HTMLDivElement>(null);
   const laptopRef = useRef<HTMLImageElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
-
-  function handleMouseEnter() {
-    setIsHovered(true);
-  }
-
-  function handleMouseLeave() {
-    setIsHovered(false);
-  }
 
   return (
     <div className="min-h-screen w-[99.12vw] bg-gray-100">
@@ -33,16 +23,8 @@ const SecurityBundle: React.FC = () => {
               ref={cardRef}
               className="absolute z-10"
               style={{ top: "-30px", left: 0 }}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
             >
               <DiscoveryCard />
-              {/* Animated LineDot on hover */}
-              {isHovered && (
-                <div className="absolute top-[120px] left-[290px] -translate-y-full translate-x-1/2 z-20">
-                  <AnimatedLineDot animate={isHovered} />
-                </div>
-              )}
             </div>
           </div>
         </div>
