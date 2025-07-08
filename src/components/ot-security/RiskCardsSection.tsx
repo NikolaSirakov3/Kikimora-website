@@ -14,10 +14,12 @@ function RiskCard({ icon, title, description }: RiskCardProps) {
       aria-label={title}
     >
       <div className="mb-4">{icon}</div>
-      <h3 className="text-lg font-bold text-[#111827] mb-2 text-center">
+      <h3 className="text-lg font-bold text-[#111827] mb-2 text-left w-full">
         {title}
       </h3>
-      <p className="text-sm text-[#374151] text-center">{description}</p>
+      <p className="text-sm text-[#374151] text-left w-full leading-relaxed">
+        {description}
+      </p>
     </div>
   );
 }
@@ -67,7 +69,9 @@ function RiskCardsSection() {
             </span>
           }
           title="The Visibility Gap"
-          description="Your attack surface is expanding. From legacy PLCs to new IIoT sensors, you can't protect what you can't see. A single blind spot can become your biggest liability."
+          description={`Your attack surface is expanding. From legacy PLCs to new IIoT
+sensors, you can't protect what you can't see. A single blind-
+spot can become your biggest liability.`}
         />
         <RiskCard
           icon={
@@ -111,7 +115,9 @@ function RiskCardsSection() {
             </span>
           }
           title="The Operational Dilemma"
-          description="You can't afford downtime. But unpatchable legacy systems and the IT/OT divide leave you exposed. How do you secure your operations without disrupting them?"
+          description={`You can't afford downtime. But unpatchable legacy systems and
+the IT/OT divide leave you exposed. How do you secure your oper-
+ations without disrupting them?`}
         />
         <RiskCard
           icon={
@@ -145,9 +151,9 @@ function RiskCardsSection() {
             </span>
           }
           title="The Compliance Pressure"
-          description={
-            "Regulators are watching. NIS2 and other mandates place direct liability on management for cybersecurity failures. Proving compliance is now as critical as maintaining production."
-          }
+          description={`Regulators are watching. NIS2 and other mandates place direct
+liability on management for cybersecurity failures. Proving com-
+pliance is now as critical as maintaining production.`}
         />
       </div>
     </section>
