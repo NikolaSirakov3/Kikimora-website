@@ -24,9 +24,9 @@ const CARDS = [
         </svg>
       </span>
     ),
-    title: "Unified Visibility",
+    title: "Unified Visi-bility",
     description:
-      "Complete asset discovery and monitoring across IT/OT environments with real-time threat detection.",
+      "Complete asset discovery and moni-toring across IT/OT environ-ments with real-time threat detec-tion.",
   },
   {
     icon: (
@@ -59,9 +59,9 @@ const CARDS = [
         </svg>
       </span>
     ),
-    title: "Contextual Intelligence",
+    title: "Contextual Intel-ligence",
     description:
-      "OT-aware risk prioritization that understands your operational context and business impact.",
+      "OT-aware risk prioritization that under-stands your operational context and busi-ness impact.",
   },
   {
     icon: (
@@ -97,7 +97,7 @@ const CARDS = [
         </svg>
       </span>
     ),
-    title: "Expert Services",
+    title: "Expert Ser-vices",
     description:
       "24/7 monitoring, threat hunting, and on-demand consulting from OT security specialists.",
   },
@@ -125,13 +125,13 @@ function SecurityPlatformSection() {
         {CARDS.map(({ icon, title, description }) => (
           <div
             key={title}
-            className="bg-white rounded-xl p-8 flex flex-col items-center shadow-sm h-full border border-[#e5e7eb]"
+            className="bg-white rounded-xl p-8 flex flex-col shadow-sm h-full border border-[#e5e7eb]"
           >
-            <div className="mb-4">{icon}</div>
-            <h3 className="text-xl font-bold mb-2 text-[#111827] font-montserrat text-center">
+            <div className="mb-4 flex justify-center">{icon}</div>
+            <h3 className="text-xl font-bold mb-2 text-[#111827] font-montserrat">
               {title}
             </h3>
-            <p className="text-[#374151] text-base font-montserrat text-center mb-2">
+            <p className="text-[#374151] text-base font-montserrat mb-2">
               {description}
             </p>
           </div>
