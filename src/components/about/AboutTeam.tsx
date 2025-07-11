@@ -11,7 +11,7 @@ export function AboutTeam() {
                 About the team
               </h2>
               <p className="text-white/80 font-montserrat text-lg leading-relaxed">
-                The journey to creating Kikimora.io started when its founders,
+                The journey to creating Kikimora started when its founders,
                 working in cybersecurity, noticed a common issue among their
                 clients: even when vulnerabilities were clearly pointed out,
                 many weren't fixed. Curious, the team talked to their clients
@@ -37,7 +37,7 @@ export function AboutTeam() {
             {/* Right Column */}
             <div className="flex flex-col justify-center max-w-[90%] ml-auto">
               <p className="text-white/80 font-montserrat text-lg leading-relaxed">
-                To address this, we developed Kikimora.io, a tool designed to
+                To address this, we developed Kikimora, a tool designed to
                 simplify security management for companies. It works seamlessly
                 with existing project management tools like Jira, provides
                 automated scans, and offers expert advice, making it easier for

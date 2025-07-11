@@ -82,7 +82,7 @@ function FinancialCaseStudySection() {
             }}
           >
             "Should you need a 5-tier, flexible, all-in-one platform for
-            vulnerability management, we strongly recommend Kikimora.io."
+            vulnerability management, we strongly recommend Kikimora."
           </blockquote>
           <cite className="not-italic text-[#31c9b7] text-base font-medium text-center block">
             — Stefan Tsonev, Head of IT Security Department, D Commerce Bank AD

@@ -11,7 +11,7 @@ const journeySteps = [
     number: "02",
     title: "Unify & Prioritize",
     description:
-      "We deploy the Kikimora.io platform to centralize your security data, continuously manage your attack surface, and use AI-driven analysis to prioritize the most critical risks.",
+      "We deploy the Kikimora platform to centralize your security data, continuously manage your attack surface, and use AI-driven analysis to prioritize the most critical risks.",
   },
   {
     number: "03",

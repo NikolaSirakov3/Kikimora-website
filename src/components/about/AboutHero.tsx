@@ -9,7 +9,7 @@ export function AboutHero() {
             <h1 className="text-white font-conthrax text-4xl leading-tight">
               Discover{" "}
               <span className="block mt-2">
-                Kikimora.io for software developers
+                Kikimora for software developers
               </span>
             </h1>
           </div>

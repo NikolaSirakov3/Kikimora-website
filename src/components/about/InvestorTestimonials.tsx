@@ -8,7 +8,7 @@ const testimonials = [
   },
   {
     quote:
-      "We continue to support Kikimora.io because it provides high added value and solves a fundamental problem for businesses - analyzing cybersecurity and vulnerabilities quickly and efficiently without unnecessary cost",
+      "We continue to support Kikimora because it provides high added value and solves a fundamental problem for businesses - analyzing cybersecurity and vulnerabilities quickly and efficiently without unnecessary cost",
     author: "Viktor Manev",
     company: "Impetus",
     logo: "/images/impetus-logo.png",

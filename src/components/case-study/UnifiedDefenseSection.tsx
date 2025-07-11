@@ -81,7 +81,7 @@ function UnifiedDefenseSection() {
           {/* Kikimora.io Platform Card */}
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2 text-center">
-              The Kikimora.io Platform
+              The Kikimora Platform
             </h3>
             <p className="text-gray-500 dark:text-gray-400 mb-8 text-center">
               Your Centralized Command Center

@@ -5,7 +5,7 @@ const timelineData = [
   },
   {
     year: "2022",
-    title: "Kikimora.io MVP release",
+    title: "Kikimora MVP release",
   },
   {
     year: "2023",

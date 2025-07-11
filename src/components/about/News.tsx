@@ -4,7 +4,7 @@ const newsArticles = [
     date: "December 13, 2023",
     title: "Funding round completed!",
     description:
-      "Kikimora.io has successfully secured €393K in funding for the development of our innovative vulnerability management software.",
+      "Kikimora has successfully secured €393K in funding for the development of our innovative vulnerability management software.",
     image: "/images/news/funding.jpg",
     isFeatured: true,
   },
