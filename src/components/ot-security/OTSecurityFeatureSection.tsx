@@ -144,11 +144,34 @@ function OTSecurityFeatureSection() {
           role="region"
           aria-label={feature.heading}
         >
-          <div className="flex-1 flex flex-col items-start justify-center max-w-xl">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#111827] mb-2 font-montserrat">
+          {/* Heading and Card (Icon/Image) Side */}
+          <div className="flex-1 flex flex-col items-start justify-center max-w-xl gap-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#111827] font-montserrat mb-0">
               {feature.heading}
             </h3>
-            <div className="text-base md:text-lg mb-2">
+            <div
+              className={`w-full max-w-xs md:max-w-sm lg:max-w-md aspect-video flex flex-col items-center justify-center rounded-xl border p-4 ${feature.card.bg}`}
+            >
+              {feature.card.icon}
+              <span className="text-center text-sm text-[#374151] font-montserrat mt-2">
+                {feature.card.label}
+              </span>
+            </div>
+          </div>
+          {/* Subheader, Description, List, and Button Side */}
+          <div className="flex-1 flex flex-col items-start justify-center max-w-xl">
+            <div
+              className="text-base md:text-lg mb-2 font-semibold"
+              style={{
+                color: feature.reverse
+                  ? "#22c55e"
+                  : feature.button.color?.includes("#31c9b7")
+                    ? "#31c9b7"
+                    : feature.button.color?.includes("#a21caf")
+                      ? "#a21caf"
+                      : undefined,
+              }}
+            >
               {feature.subheading}
             </div>
             <p className="text-sm md:text-base text-[#374151] mb-4 whitespace-pre-line">
@@ -170,16 +193,6 @@ function OTSecurityFeatureSection() {
                 {feature.button.label}
               </a>
             </Button>
-          </div>
-          <div className="flex-1 flex flex-col items-center justify-center">
-            <div
-              className={`w-full max-w-xs md:max-w-sm lg:max-w-md aspect-video flex flex-col items-center justify-center rounded-xl border p-4 ${feature.card.bg}`}
-            >
-              {feature.card.icon}
-              <span className="text-center text-sm text-[#374151] font-montserrat mt-2">
-                {feature.card.label}
-              </span>
-            </div>
           </div>
         </div>
       ))}
