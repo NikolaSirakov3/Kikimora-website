@@ -9,11 +9,11 @@ interface RiskCardProps {
 function RiskCard({ icon, title, description }: RiskCardProps) {
   return (
     <div
-      className="flex flex-col items-center bg-white rounded-2xl shadow-md p-8 w-full max-w-lg min-h-[260px] transition-transform hover:-translate-y-1 hover:shadow-lg"
+      className="flex flex-col bg-white rounded-2xl shadow-md p-8 w-full max-w-lg min-h-[260px] transition-transform hover:-translate-y-1 hover:shadow-lg"
       role="region"
       aria-label={title}
     >
-      <div className="mb-4">{icon}</div>
+      <div className="mb-4 self-start">{icon}</div>
       <h3 className="text-lg font-bold text-[#111827] mb-2 text-left w-full">
         {title}
       </h3>
@@ -30,12 +30,12 @@ function RiskCardsSection() {
       className="w-full flex flex-col items-center py-16 px-4 bg-transparent"
       aria-labelledby="risks-heading"
     >
-      <h2
+      <h1
         id="risks-heading"
-        className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#111827] font-conthrax"
+        className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#111827]"
       >
         Your World, Your Risks. We Get It.
-      </h2>
+      </h1>
       <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch w-full max-w-6xl">
         <RiskCard
           icon={
