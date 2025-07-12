@@ -6,7 +6,7 @@ import {
 function SMEFrontsSection() {
   return (
     <section className="w-full flex flex-col items-center py-16 px-2">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 font-orbitron text-[#111827]">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#111827]">
         The Two Fronts of the European SME's Digital Battle
       </h2>
       <div className="w-full max-w-5xl flex flex-col md:flex-row gap-8 md:gap-12 justify-center">
@@ -16,7 +16,7 @@ function SMEFrontsSection() {
             className="w-14 h-14 text-red-500 mb-4"
             aria-hidden="true"
           />
-          <h3 className="text-xl font-bold text-center mb-6 text-[#111827] font-orbitron">
+          <h3 className="text-xl font-bold text-center mb-6 text-[#111827]">
             A Rising Tide of Cyberattacks
           </h3>
           <div className="w-full flex flex-col gap-4">
@@ -48,7 +48,7 @@ function SMEFrontsSection() {
             className="w-14 h-14 text-yellow-600 mb-4"
             aria-hidden="true"
           />
-          <h3 className="text-xl font-bold text-center mb-6 text-[#111827] font-orbitron">
+          <h3 className="text-xl font-bold text-center mb-6 text-[#111827]">
             A New Wave of Compliance Demands
           </h3>
           <div className="w-full flex flex-col gap-4">

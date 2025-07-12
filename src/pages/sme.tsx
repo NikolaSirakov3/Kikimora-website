@@ -15,8 +15,8 @@ function SME() {
       <SMEFrontsSection />
       <PlatformFeaturesSection />
       <SMEWhyTraditionalSection />
-      <SMEPlatformPartnershipSection />
       <FitForBusinessSection />
+      <SMEPlatformPartnershipSection />
       <TrustedByEuropeSection />
       <SMEFinalCTASection />
       <EUFunding />

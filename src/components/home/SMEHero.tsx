@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 function SMEHero() {
   return (
     <section className="w-full bg-[#f2f7ff] flex flex-col items-center py-24 px-4 text-center">
-      <h1 className="text-5xl md:text-6xl font-bold text-[#111827] font-orbitron leading-tight">
+      <h1 className="text-5xl md:text-6xl font-bold text-[#111827] leading-tight">
         Stop Juggling Threats and
         <br />
         Regulations.

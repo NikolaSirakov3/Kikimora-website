@@ -38,7 +38,7 @@ const CARDS: CardData[] = [
 function SMEWhyTraditionalSection() {
   return (
     <section className="w-full flex flex-col items-center py-24 px-4 bg-[#f8fafc]">
-      <h2 className="text-4xl md:text-4xl font-bold text-center mb-16 font-orbitron text-[#111827]">
+      <h2 className="text-4xl md:text-4xl font-bold text-center mb-16 text-[#111827]">
         Why Traditional Security Solutions Fail Growing Businesses
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
