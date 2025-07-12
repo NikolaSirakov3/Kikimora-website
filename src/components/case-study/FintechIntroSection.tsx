@@ -14,7 +14,7 @@ const ChallengeCard: React.FC<ChallengeCardProps> = ({
   title,
   description,
 }) => (
-  <div className="flex flex-col items-center text-center p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out h-[500px]">
+  <div className="flex flex-col items-start text-left p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out h-[500px]">
     <div
       className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${icon === "shield" ? "bg-red-100" : icon === "scale" ? "bg-yellow-100" : "bg-blue-100"}`}
     >
@@ -22,8 +22,8 @@ const ChallengeCard: React.FC<ChallengeCardProps> = ({
       {icon === "scale" && <MdBalance className="h-8 w-8 text-yellow-500" />}
       {icon === "graph" && <MdTrendingUp className="h-8 w-8 text-blue-500" />}
     </div>
-    <h3 className="text-xl font-bold mb-4 w-[80%]">{title}</h3>
-    <p className="text-gray-600 leading-relaxed w-[80%]">{description}</p>
+    <h3 className="text-xl font-bold mb-4 w-full">{title}</h3>
+    <p className="text-gray-600 leading-relaxed w-full">{description}</p>
   </div>
 );
 
