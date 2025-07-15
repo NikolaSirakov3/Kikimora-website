@@ -24,7 +24,7 @@ export function AdvantagesSection() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4">
           {/* In-House Expertise */}
-          <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
+          <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md">
             <div className="flex items-center mb-4">
               <svg
                 className="w-6 h-6 text-[#31c9b7] mr-2"
@@ -33,11 +33,11 @@ export function AdvantagesSection() {
               >
                 <path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h3 className="text-xl font-semibold text-[#0a1626] dark:text-white">
+              <h3 className="text-xl font-bold text-[#111827] font-montserrat">
                 In-House Expertise
               </h3>
             </div>
-            <p className="text-gray-500 dark:text-white/80">
+            <p className="text-[#374151] text-base font-montserrat">
               Access to a team of cybersecurity specialists with extensive
               knowledge and experience in threat detection, vulnerability
               management, and incident response.
@@ -45,7 +45,7 @@ export function AdvantagesSection() {
           </div>
 
           {/* 24/7 Monitoring */}
-          <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
+          <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md">
             <div className="flex items-center mb-4">
               <svg
                 className="w-6 h-6 text-[#31c9b7] mr-2"
@@ -54,11 +54,11 @@ export function AdvantagesSection() {
               >
                 <path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h3 className="text-xl font-semibold text-[#0a1626] dark:text-white">
+              <h3 className="text-xl font-bold text-[#111827] font-montserrat">
                 24/7 Monitoring
               </h3>
             </div>
-            <p className="text-gray-500 dark:text-white/80">
+            <p className="text-[#374151] text-base font-montserrat">
               Gain access to real-time data and monitoring capabilities for your
               whole organization. Detect and address vulnerabilities and
               misconfiguration proactively and effectively.
@@ -66,7 +66,7 @@ export function AdvantagesSection() {
           </div>
 
           {/* Flexibility */}
-          <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
+          <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md">
             <div className="flex items-center mb-4">
               <svg
                 className="w-6 h-6 text-[#31c9b7] mr-2"
@@ -75,11 +75,11 @@ export function AdvantagesSection() {
               >
                 <path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h3 className="text-xl font-semibold text-[#0a1626] dark:text-white">
+              <h3 className="text-xl font-bold text-[#111827] font-montserrat">
                 Flexibility
               </h3>
             </div>
-            <p className="text-gray-500 dark:text-white/80">
+            <p className="text-[#374151] text-base font-montserrat">
               Kikimora Managed Security evolves with the needs of your business,
               scaling seamlessly as your organization grows and your security
               and compliance requirements change.
@@ -87,7 +87,7 @@ export function AdvantagesSection() {
           </div>
 
           {/* Compliance-ready */}
-          <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
+          <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md">
             <div className="flex items-center mb-4">
               <svg
                 className="w-6 h-6 text-[#31c9b7] mr-2"
@@ -96,18 +96,18 @@ export function AdvantagesSection() {
               >
                 <path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h3 className="text-xl font-semibold text-[#0a1626] dark:text-white">
+              <h3 className="text-xl font-bold text-[#111827] font-montserrat">
                 Compliance-ready
               </h3>
             </div>
-            <p className="text-gray-500 dark:text-white/80">
+            <p className="text-[#374151] text-base font-montserrat">
               Get the right tools to meeting industry-specific regulations and
               standards, such as HIPAA or PCI DSS, ensuring compliance.
             </p>
           </div>
 
           {/* Cost-Effectiveness */}
-          <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
+          <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md">
             <div className="flex items-center mb-4">
               <svg
                 className="w-6 h-6 text-[#31c9b7] mr-2"
@@ -116,18 +116,18 @@ export function AdvantagesSection() {
               >
                 <path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h3 className="text-xl font-semibold text-[#0a1626] dark:text-white">
+              <h3 className="text-xl font-bold text-[#111827] font-montserrat">
                 Cost-Effectiveness
               </h3>
             </div>
-            <p className="text-gray-500 dark:text-white/80">
+            <p className="text-[#374151] text-base font-montserrat">
               Access to the best latest cybersecurity solutions and tools
               without the overhead and training.
             </p>
           </div>
 
           {/* Trust Partner */}
-          <div className="bg-white dark:bg-[#0a1626] p-6 rounded-lg shadow-lg">
+          <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md">
             <div className="flex items-center mb-4">
               <svg
                 className="w-6 h-6 text-[#31c9b7] mr-2"
@@ -136,11 +136,11 @@ export function AdvantagesSection() {
               >
                 <path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h3 className="text-xl font-semibold text-[#0a1626] dark:text-white">
+              <h3 className="text-xl font-bold text-[#111827] font-montserrat">
                 Trust Partner
               </h3>
             </div>
-            <p className="text-gray-500 dark:text-white/80">
+            <p className="text-[#374151] text-base font-montserrat">
               Trust Partner with an expert in-house cybersecurity team, ready to
               support your organization in overcoming complex challenges and
               achieving security goals.

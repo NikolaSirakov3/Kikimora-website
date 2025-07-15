@@ -15,7 +15,7 @@ export function StatsSection() {
         you are growing. Our proven approach ensures your business is protected.
       </p>
       <div className="w-full max-w-6xl flex flex-col md:flex-row justify-center items-center gap-12 md:gap-0 ml-10">
-        <div className="flex-1 flex flex-col items-center mb-12 md:mb-0">
+        <div className="flex-1 flex flex-col items-center bg-white rounded-xl p-10 shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md mb-12 md:mb-0">
           <span className="text-5xl md:text-6xl font-semibold text-[#2563eb] leading-none">
             250%
           </span>
@@ -27,7 +27,7 @@ export function StatsSection() {
           className="hidden md:block w-px h-20 bg-[#0a1626]/10 mx-8"
           aria-hidden="true"
         />
-        <div className="flex-1 flex flex-col items-center mb-12 md:mb-0">
+        <div className="flex-1 flex flex-col items-center bg-white rounded-xl p-10 shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md mb-12 md:mb-0">
           <span className="text-5xl md:text-6xl font-semibold text-[#2563eb] leading-none">
             61%
           </span>
@@ -39,7 +39,7 @@ export function StatsSection() {
           className="hidden md:block w-px h-20 bg-[#0a1626]/10 mx-8"
           aria-hidden="true"
         />
-        <div className="flex-1 flex flex-col items-center mb-12 md:mb-0">
+        <div className="flex-1 flex flex-col items-center bg-white rounded-xl p-10 shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md mb-12 md:mb-0">
           <span className="text-5xl md:text-6xl font-semibold text-[#2563eb] leading-none">
             $120,000
           </span>
@@ -51,7 +51,7 @@ export function StatsSection() {
           className="hidden md:block w-px h-20 bg-[#0a1626]/10 mx-8"
           aria-hidden="true"
         />
-        <div className="flex-1 flex flex-col items-center">
+        <div className="flex-1 flex flex-col items-center bg-white rounded-xl p-10 shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md">
           <span className="text-5xl md:text-6xl font-semibold text-[#2563eb] leading-none">
             24/7
           </span>

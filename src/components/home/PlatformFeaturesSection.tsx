@@ -69,20 +69,18 @@ function PlatformFeaturesSection() {
         {FEATURES.map(({ icon: Icon, title, description }) => (
           <div
             key={title}
-            className="bg-[#f8fafc] rounded-xl p-8 flex items-start gap-4 shadow-sm h-full"
+            className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md"
           >
             <Icon
-              className="w-10 h-10 text-[#31c9b7] flex-shrink-0 mt-1"
+              className="w-14 h-14 text-[#31c9b7] mb-6"
               aria-hidden="true"
             />
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-[#111827] font-montserrat">
-                {title}
-              </h3>
-              <p className="text-[#374151] text-base font-montserrat">
-                {description}
-              </p>
-            </div>
+            <h3 className="text-xl font-bold mb-2 text-[#111827] font-montserrat">
+              {title}
+            </h3>
+            <p className="text-[#374151] text-base font-montserrat">
+              {description}
+            </p>
           </div>
         ))}
       </div>
