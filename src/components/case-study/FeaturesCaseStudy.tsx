@@ -26,7 +26,7 @@ function FeaturesCaseStudy() {
         {/* Card 2 */}
         <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col h-full">
           <h3 className="text-2xl font-bold text-[#071C2C] mb-4 text-center">
-            Kikimora.io Platform
+            Kikimora Platform
           </h3>
           <p className="text-[#071C2C] text-base mb-6 text-center flex-grow">
             For scaling businesses with in-house teams. A powerful SaaS platform

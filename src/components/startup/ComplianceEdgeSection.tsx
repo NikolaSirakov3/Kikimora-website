@@ -1,11 +1,11 @@
 function ComplianceEdgeSection() {
   return (
     <section className="w-full flex flex-col items-center py-20 px-2 bg-gradient-to-b from-[#1a357a] to-[#19284a]">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-2 font-conthrax">
-        Turn Compliance into Your Competitive Edge
+      <h2 className="text-3xl md:text-5xl font-extrabold text-center text-white mb-2">
+        Turn Challenges into opportunities
       </h2>
-      <p className="text-base md:text-lg text-center text-[#31c9b7] mb-12 max-w-2xl font-montserrat">
-        Don't just meet standards. Win bigger deals, faster.
+      <p className="text-base md:text-xl text-center text-[#31c9b7] mt-6 mb-12 max-w-2xl font-montserrat">
+        Meet regulatory standards with ease
       </p>
       {/* Flow steps */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
@@ -33,7 +33,7 @@ function ComplianceEdgeSection() {
             />
           </svg>
           <span className="text-[#31c9b7] text-sm font-semibold mt-1">
-            Standards Met
+            Meet security standards
           </span>
         </div>
         <svg
@@ -71,7 +71,7 @@ function ComplianceEdgeSection() {
             />
           </svg>
           <span className="text-green-200 text-sm font-semibold mt-1">
-            Compliance Achieved
+            Achieve compliance
           </span>
         </div>
         <svg
@@ -100,7 +100,7 @@ function ComplianceEdgeSection() {
             />
           </svg>
           <span className="text-yellow-100 text-sm font-semibold mt-1">
-            Enterprise Deals Won
+            Continous Monitoring
           </span>
         </div>
       </div>

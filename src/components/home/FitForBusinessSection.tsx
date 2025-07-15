@@ -22,11 +22,11 @@ const FIT_OPTIONS = [
 function FitForBusinessSection() {
   return (
     <section className="w-full flex flex-col items-center py-20 px-4 bg-[#fafbfc]">
-      <h2 className="text-xl md:text-2xl font-bold text-center mb-10 font-orbitron text-[#111827]">
+      <h2 className="text-xl md:text-2xl font-bold text-center mb-10 text-[#111827]">
         What&apos;s the Right Fit for Your Business?
       </h2>
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
-        {FIT_OPTIONS.map(({ title, description}) => (
+        {FIT_OPTIONS.map(({ title, description }) => (
           <div
             key={title}
             className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md"

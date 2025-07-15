@@ -1,4 +1,3 @@
-
 import {
   CheckCircleIcon,
   ClipboardDocumentListIcon,
@@ -13,9 +12,7 @@ export function Benefits() {
     <div className="bg-[#001E38] py-24">
       <div className="w-full px-[10%] flex flex-col items-center">
         {/* Header */}
-        <h2 className="text-5xl text-white font-conthrax text-center mb-6">
-          Benefits
-        </h2>
+        <h2 className="text-5xl text-white   text-center mb-6">Benefits</h2>
         <p className="text-white/80 text-lg font-montserrat text-center max-w-[800px] mb-16">
           Stay on top of your vulnerabilities and easily prioritize and manage
         </p>

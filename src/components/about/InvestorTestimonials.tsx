@@ -8,7 +8,7 @@ const testimonials = [
   },
   {
     quote:
-      "We continue to support Kikimora.io because it provides high added value and solves a fundamental problem for businesses - analyzing cybersecurity and vulnerabilities quickly and efficiently without unnecessary cost",
+      "We continue to support Kikimora because it provides high added value and solves a fundamental problem for businesses - analyzing cybersecurity and vulnerabilities quickly and efficiently without unnecessary cost",
     author: "Viktor Manev",
     company: "Impetus",
     logo: "/images/impetus-logo.png",
@@ -22,7 +22,7 @@ export function InvestorTestimonials() {
         <div className="max-w-[1300px] w-full">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-white font-conthrax text-5xl mb-4">
+            <h2 className="text-white text-5xl mb-4">
               What our investors say
             </h2>
             <p className="text-white/60 font-montserrat text-lg">

@@ -1,4 +1,3 @@
-
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
 import { ArrowSquareRight, ArrowSquareLeft } from "@phosphor-icons/react";
@@ -138,9 +137,7 @@ export function SoCyberPodcast() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl text-white font-conthrax mb-4">
-            SoCyber Podcast
-          </h1>
+          <h1 className="text-4xl text-white   mb-4">SoCyber Podcast</h1>
           <p className="text-white/60 text-lg font-montserrat">
             Expert insights and deep dives into the world of cybersecurity
             through our engaging podcast series.
@@ -173,7 +170,7 @@ export function SoCyberPodcast() {
                           {episode.duration}
                         </div>
                       </div>
-                      <h3 className="text-white text-lg font-conthrax mb-2 line-clamp-2">
+                      <h3 className="text-white text-lg   mb-2 line-clamp-2">
                         {episode.title}
                       </h3>
                       <p className="text-white/60 font-montserrat text-sm line-clamp-3">

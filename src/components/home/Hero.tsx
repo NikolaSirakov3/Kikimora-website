@@ -151,7 +151,7 @@ export function Hero() {
               <div className="flex items-center gap-2 mt-6 border border-[#3EDDCA] rounded-full py-2 px-4 w-fit">
                 <span className="text-[#3EDDCA]">⚡</span>
                 <span className="text-white/60 text-sm font-montserrat">
-                  Discover Kikimora.io for software developers
+                  Discover Kikimora for software developers
                 </span>
                 <span className="text-[#3EDDCA] ml-2 cursor-pointer hover:underline font-montserrat">
                   Explore →

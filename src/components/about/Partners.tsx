@@ -16,7 +16,7 @@ export function Partners() {
                     <div className="w-8 h-8 bg-[#002A4E]" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-white font-conthrax text-2xl">
+                    <span className="text-white text-2xl">
                       SoCyber
                     </span>
                     <span className="text-white/60 font-montserrat text-sm">

@@ -60,7 +60,7 @@ export function EUFunding() {
         {/* Funding Text */}
         <div className="max-w-xs flex-shrink-0">
           <p className="text-white text-sm">
-            Kikimora.io has been supported by "Vitosha Venture Partners Fund I",
+            Kikimora has been supported by "Vitosha Venture Partners Fund I",
             a private equity fund, co-financed by the European Structural and
             Investment Funds under the operational program "Innovation and
             Competitiveness 2014-2020", managed by the Fund Manager of Financial

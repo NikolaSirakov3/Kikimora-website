@@ -6,10 +6,10 @@ export function AboutHero() {
         <div className="max-w-[1300px] w-full flex justify-between items-center">
           {/* Left Side - Title */}
           <div className="w-[45%]">
-            <h1 className="text-white font-conthrax text-4xl leading-tight">
+            <h1 className="text-white text-4xl leading-tight">
               Discover{" "}
               <span className="block mt-2">
-                Kikimora.io for software developers
+                Kikimora for software developers
               </span>
             </h1>
           </div>
@@ -19,7 +19,7 @@ export function AboutHero() {
             {/* Floating Card */}
             <div className="absolute top-1/2 -translate-y-1/2 right-0 bg-gradient-to-br from-[#006466] to-[#065758] p-4 rounded-2xl w-[315px] shadow-xl">
               <div className="flex justify-between items-start mb-2">
-                <h2 className="text-white font-conthrax text-lg leading-tight">
+                <h2 className="text-white text-lg leading-tight">
                   Empower Your Code with Advanced Security
                 </h2>
                 <button className="text-white/60 hover:text-white">

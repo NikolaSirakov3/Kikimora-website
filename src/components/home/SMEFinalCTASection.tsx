@@ -6,7 +6,7 @@ function SMEFinalCTASection() {
       className="w-full flex flex-col items-center py-20 px-4 bg-gradient-to-b from-[#31c9b7] to-[#2bb3a3]"
       aria-label="Ready to Secure Your Business CTA"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 font-conthrax text-white">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-6   text-white">
         Ready to Secure Your Business and Your Future?
       </h2>
       <p className="max-w-2xl text-center text-white/90 text-lg font-montserrat mb-8">

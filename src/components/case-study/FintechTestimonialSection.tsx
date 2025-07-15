@@ -23,10 +23,10 @@ function FintechTestimonialSection() {
           </span>
           <p className="text-[#071C2C] italic text-lg md:text-xl mb-2">
             "We are entirely satisfied with the results achieved and the quality
-            of the software. The implementation of Kikimora.io opened new
+            of the software. The implementation of Kikimora opened new
             opportunities for the bank's security department to manage cyber
             security risks more effectively... we strongly recommend
-            Kikimora.io."
+            Kikimora."
           </p>
           <span className="font-bold text-[#071C2C] mt-2">
             – Stefan Tsonev, Head of IT Security Department at D Commerce Bank

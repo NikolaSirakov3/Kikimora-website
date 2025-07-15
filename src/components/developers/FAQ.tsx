@@ -49,9 +49,7 @@ export function FAQ() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl text-white font-conthrax mb-4">
-            Frequent ask qustions
-          </h2>
+          <h2 className="text-5xl text-white   mb-4">Frequent ask qustions</h2>
           <p className="text-white/60 text-lg font-montserrat max-w-3xl mx-auto">
             These are some of the Frequently Asked Questions related to Kikimora
             and its product characteristics. These include, but are not limited

@@ -111,7 +111,7 @@ function SecurityPlatformSection() {
     >
       <h2
         id="platform-heading"
-        className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#111827] font-orbitron"
+        className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#111827]"
       >
         Introducing the Kikimora Security Platform
       </h2>
@@ -127,7 +127,7 @@ function SecurityPlatformSection() {
             key={title}
             className="bg-white rounded-xl p-8 flex flex-col shadow-sm h-full border border-[#e5e7eb]"
           >
-            <div className="mb-4 flex justify-center">{icon}</div>
+            <div className="mb-4 flex justify-start">{icon}</div>
             <h3 className="text-xl font-bold mb-2 text-[#111827] font-montserrat">
               {title}
             </h3>

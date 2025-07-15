@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Pricing } from "./Pricing";
 
@@ -12,10 +11,10 @@ export function PricingComponent() {
             {/* Left side - Content */}
             <div className="max-w-[500px]">
               <div className="flex flex-col mb-8 leading-none">
-                <span className="text-3xl text-white font-conthrax">
+                <span className="text-3xl text-white  ">
                   Secure your code now,
                 </span>
-                <span className="text-3xl text-white font-conthrax mt-2">
+                <span className="text-3xl text-white   mt-2">
                   request a free demo
                 </span>
               </div>

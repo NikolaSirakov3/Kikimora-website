@@ -50,7 +50,7 @@ const greenTheme: Record<string, React.CSSProperties> = {
 export function CodeDemoSection() {
   return (
     <section className="w-full min-h-[400px] flex flex-col items-center justify-center bg-gradient-to-br from-[#0a1747] to-[#1a2a4d] py-20 px-4">
-      <h2 className="text-3xl md:text-3xl font-bold text-white text-center mb-10 font-conthrax">
+      <h2 className="text-3xl md:text-3xl font-bold text-white text-center mb-10  ">
         Secure your code now, thank yourself later
       </h2>
       <div className="w-full max-w-5xl bg-[#10192b] rounded-xl shadow-lg p-0 md:p-8 flex flex-col items-center">

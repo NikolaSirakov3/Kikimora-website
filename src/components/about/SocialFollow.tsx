@@ -1,4 +1,3 @@
-
 export function SocialFollow() {
   const socialLinks = [
     {
@@ -47,7 +46,7 @@ export function SocialFollow() {
             <div className="max-w-[1300px] w-full relative">
               {/* Content */}
               <div className="text-center relative z-10">
-                <h2 className="text-white font-conthrax text-5xl mb-2">
+                <h2 className="text-white   text-5xl mb-2">
                   Follow our journey
                 </h2>
                 <p className="text-white/60 font-montserrat text-lg mb-8">

@@ -65,7 +65,7 @@ const INTEGRATIONS = [
 function FeaturesOverviewSection() {
   return (
     <section className="w-full flex flex-col items-center py-20 px-2 bg-white">
-      <h2 className="text-4xl md:text-5xl font-conthrax text-center mb-2">
+      <h2 className="text-4xl md:text-5xl   text-center mb-2">
         Platform Features Overview
       </h2>
       <p className="text-lg md:text-xl text-center text-gray-700 mb-12 max-w-2xl font-montserrat">

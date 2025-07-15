@@ -6,7 +6,7 @@ function TrustedByCriticalIndustriesSection() {
     >
       <h2
         id="trusted-heading"
-        className="text-2xl md:text-3xl font-bold text-center mb-2 text-[#111827] font-conthrax"
+        className="text-2xl md:text-3xl font-bold text-center mb-2 text-[#111827]  "
       >
         Trusted by Leaders in Critical Industries
       </h2>

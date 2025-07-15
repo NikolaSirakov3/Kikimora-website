@@ -57,7 +57,7 @@ const INTEGRATIONS = [
 function PlatformFeaturesSection() {
   return (
     <section className="w-full flex flex-col items-center py-24 px-4 bg-white">
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 font-orbitron text-[#111827]">
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-[#111827]">
         Platform Features Overview
       </h2>
       <p className="text-lg text-[#374151] font-montserrat text-center max-w-2xl mb-12">
@@ -85,9 +85,7 @@ function PlatformFeaturesSection() {
         ))}
       </div>
       <div className="w-full max-w-6xl bg-green-50 rounded-2xl py-10 px-4 flex flex-col items-center">
-        <h3 className="text-2xl font-bold font-orbitron text-[#111827] mb-6">
-          Integrations
-        </h3>
+        <h3 className="text-2xl font-bold text-[#111827] mb-6">Integrations</h3>
         <div className="flex flex-wrap justify-center gap-6 w-full">
           {INTEGRATIONS.map((name) => (
             <div

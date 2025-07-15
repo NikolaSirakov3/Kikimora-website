@@ -5,7 +5,7 @@ const timelineData = [
   },
   {
     year: "2022",
-    title: "Kikimora.io MVP release",
+    title: "Kikimora MVP release",
   },
   {
     year: "2023",
@@ -31,7 +31,7 @@ export function Journey() {
       <div className="w-screen px-[5%] flex flex-col items-center">
         <div className="max-w-[1300px] w-full py-20">
           {/* Header */}
-          <h2 className="text-5xl text-white font-conthrax text-center mb-20">
+          <h2 className="text-5xl text-white text-center mb-20">
             Our journey
           </h2>
 

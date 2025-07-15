@@ -3,7 +3,7 @@ import colorAndBlackLogo from "/public/logos/colorAndBlack.png";
 function TrustedByEuropeSection() {
   return (
     <section className="w-full flex flex-col items-center py-20 px-4 bg-white">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 font-conthrax text-[#111827]">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10   text-[#111827]">
         Trusted by Growing Businesses Across Europe
       </h2>
       <div className="w-full max-w-6xl bg-[#f0fdfa] rounded-xl border border-[#31c9b7] p-8 md:p-12 flex flex-col relative">

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 export function PlatformSection() {
@@ -15,7 +14,7 @@ export function PlatformSection() {
 
           {/* Right side - Content */}
           <div className="flex flex-col gap-6 w-1/2 pr-[5%] pl-20">
-            <h2 className="text-5xl text-white font-conthrax leading-tight">
+            <h2 className="text-5xl text-white   leading-tight">
               The platform for efficient teams.
             </h2>
             <p className="text-white/80 text-lg font-montserrat">

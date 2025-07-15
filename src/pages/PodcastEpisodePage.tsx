@@ -99,7 +99,7 @@ export function PodcastEpisodePage() {
             <div className="flex flex-col items-start w-full mb-2">
               <div className="w-full">
                 <button
-                  className="flex items-center gap-2 text-[#fff] font-conthrax text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
+                  className="flex items-center gap-2 text-[#fff]   text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
                   onClick={() => toggleChapter("chapter1")}
                   aria-expanded={openChapters.chapter1}
                   aria-controls="chapter1-content"
@@ -142,7 +142,7 @@ export function PodcastEpisodePage() {
             <div className="flex flex-col items-start w-full mb-2">
               <div className="w-full">
                 <button
-                  className="flex items-center gap-2 text-[#fff] font-conthrax text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
+                  className="flex items-center gap-2 text-[#fff]   text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
                   onClick={() => toggleChapter("chapter2")}
                   aria-expanded={openChapters.chapter2}
                   aria-controls="chapter2-content"
@@ -184,7 +184,7 @@ export function PodcastEpisodePage() {
             <div className="flex flex-col items-start w-full mb-2">
               <div className="w-full">
                 <button
-                  className="flex items-center gap-2 text-[#fff] font-conthrax text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
+                  className="flex items-center gap-2 text-[#fff]   text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
                   onClick={() => toggleChapter("chapter3")}
                   aria-expanded={openChapters.chapter3}
                   aria-controls="chapter3-content"
@@ -226,7 +226,7 @@ export function PodcastEpisodePage() {
             <div className="flex flex-col items-start w-full mb-2">
               <div className="w-full">
                 <button
-                  className="flex items-center gap-2 text-[#fff] font-conthrax text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
+                  className="flex items-center gap-2 text-[#fff]   text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
                   onClick={() => toggleChapter("chapter4")}
                   aria-expanded={openChapters.chapter4}
                   aria-controls="chapter4-content"
@@ -267,7 +267,7 @@ export function PodcastEpisodePage() {
 
           {/* Right Column - Aside */}
           <aside className="w-[350px] bg-[#6ED0FF] rounded-2xl p-6 mt-2">
-            <h4 className="text-[#001E38] font-conthrax text-2xl mb-4 text-center">
+            <h4 className="text-[#001E38]   text-2xl mb-4 text-center">
               Timestamps
             </h4>
             <p className="text-[#001E38]/90 font-montserrat text-base text-center">

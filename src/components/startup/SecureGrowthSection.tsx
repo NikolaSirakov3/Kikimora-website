@@ -4,13 +4,13 @@ import { Button } from "../ui/button";
 function SecureGrowthSection() {
   return (
     <section className="w-full flex flex-col items-center py-20 px-2 bg-[#101728]">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-10 font-conthrax">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-white mb-10">
         Ready to Secure Your Growth?
       </h2>
       <div className="flex flex-col md:flex-row gap-8 w-full max-w-6xl justify-center">
         {/* Left Card */}
         <div
-          className="flex-[2] bg-[#31c9b7] rounded-xl shadow-lg p-8 flex flex-col justify-between items-center text-center min-w-[320px] min-h-[320px]"
+          className="flex-[2]  bg-white/10 rounded-xl shadow-lg p-8 flex flex-col justify-between items-center text-center min-w-[320px] min-h-[320px]"
           role="region"
           aria-labelledby="explore-now-title"
         >
@@ -41,7 +41,7 @@ function SecureGrowthSection() {
         </div>
         {/* Right Card */}
         <div
-          className="flex-[2] bg-[#16b157] rounded-xl shadow-lg p-8 flex flex-col justify-between items-center text-center min-w-[320px] min-h-[320px]"
+          className="flex-[2]  bg-white/10 rounded-xl shadow-lg p-8 flex flex-col justify-between items-center text-center min-w-[320px] min-h-[320px]"
           role="region"
           aria-labelledby="custom-strategy-title"
         >

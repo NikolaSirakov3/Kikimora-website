@@ -51,23 +51,34 @@ export function SecurityEcosystemSection() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12">
+        <h1 className="text-5xl font-bold text-center mb-12">
           A Unified Security and Compliance Ecosystem
         </h1>
 
         <div className="flex justify-center mb-8">
-          <div className="flex flex-wrap justify-center max-w-5xl">
+          <div className="flex flex-nowrap items-center justify-center max-w-5xl w-full">
             {tabs.map((tab, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`px-6 py-4 text-lg font-medium transition-colors duration-200 outline-none focus:outline-none focus:ring-0 border-t-0 border-l-0 border-r-0 rounded-none ${
-                  activeTab === index
-                    ? "text-[#31c9b7] bg-gray-50 border-b-2 !border-b-2 border-solid border-[#31c9b7] focus:!border-b-2 focus:!border-solid focus:!border-[#31c9b7] focus:border-b-2 focus:border-solid focus:border-[#31c9b7]"
-                    : "text-gray-600 bg-gray-50 border-b-0 focus:border-b-0"
-                }`}
+                className={`px-6 py-2 text-sm transition-colors duration-200 outline-none focus:outline-none focus:ring-0
+                  border-solid
+                  ${
+                    activeTab === index
+                      ? "text-[#31c9b7] bg-white border-2 border-[#31c9b7] z-10"
+                      : "text-gray-800 bg-gray-50 border border-gray-200 hover:bg-gray-100"
+                  }
+                  ${index === 0 ? "rounded-l-xl" : ""}
+                  ${index === tabs.length - 1 ? "rounded-r-xl" : ""}
+                  ${index !== tabs.length - 1 ? "-mr-px" : ""}
+                  w-1/4 min-w-[180px] h-16`}
+                style={{
+                  marginRight: index !== tabs.length - 1 ? "-1px" : undefined,
+                }}
               >
-                {tab.title}
+                <span className="block w-full line-clamp-2 leading-snug text-center">
+                  {tab.title}
+                </span>
               </button>
             ))}
           </div>

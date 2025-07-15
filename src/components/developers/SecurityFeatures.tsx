@@ -1,4 +1,3 @@
-
 import {
   FiShield,
   FiDatabase,
@@ -46,7 +45,7 @@ export function SecurityFeatures() {
     <section className="w-full bg-gradient-to-b from-[#001E38] to-[#1B0B42] pb-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl text-white font-conthrax font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl text-white   font-bold mb-4">
             Enhance security, stay compliant
           </h2>
           <p className="text-white/60 text-lg font-montserrat">

@@ -1,4 +1,3 @@
-
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
 import { ArrowSquareRight, ArrowSquareLeft } from "@phosphor-icons/react";
@@ -132,9 +131,7 @@ export function BlogHero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl text-black font-conthrax mb-4">
-            In the news
-          </h1>
+          <h1 className="text-4xl text-black   mb-4">In the news</h1>
           <p className="text-black text-lg font-montserrat">
             Key developments and breaking stories shaping the cybersecurity
             landscape.
@@ -162,7 +159,7 @@ export function BlogHero() {
                       <div className="text-[#00E5BE] text-xs font-montserrat mb-2">
                         {format(post.date, "MMMM dd, yyyy")}
                       </div>
-                      <h3 className="text-black text-lg font-conthrax mb-2 line-clamp-2">
+                      <h3 className="text-black text-lg   mb-2 line-clamp-2">
                         {post.title}
                       </h3>
                       <p className="text-black font-montserrat text-sm line-clamp-3">

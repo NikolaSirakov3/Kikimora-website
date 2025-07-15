@@ -49,7 +49,7 @@ const BENEFITS = [
 export default function TryKikimoraBenefits() {
   return (
     <section className="w-full flex flex-col items-center py-20 px-2 bg-[#fafbfc]">
-      <h1 className="text-3xl md:text-3xl font-conthrax text-center mb-3 text-gray-900">
+      <h1 className="text-3xl md:text-3xl   text-center mb-3 text-gray-900">
         Benefits of a Vulnerability Management Tool for SMEs
       </h1>
       <p className="text-gray-600 text-center max-w-2xl mb-12 font-montserrat">
