@@ -8,6 +8,7 @@ import { TrustedByEuropeSection } from "@/components/home/TrustedByEuropeSection
 import { SMEFinalCTASection } from "@/components/home/SMEFinalCTASection";
 import { EUFunding } from "@/components/shared/EUFunding";
 
+
 function SME() {
   return (
     <main className="w-[99.2vw]">

@@ -15,28 +15,27 @@ function SecurityFeature({
 }: SecurityFeatureProps) {
   return (
     <div
-      className="flex flex-col items-center text-center p-8 bg-white rounded-2xl border border-gray-200 shadow-lg transition-all duration-300 min-h-[340px] w-full max-w-[360px] mx-auto relative justify-between hover:shadow-2xl hover:-translate-y-2"
+      className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md w-full max-w-[360px] mx-auto relative justify-between"
       style={{ minHeight: 340 }}
     >
       <div className="flex flex-col items-center flex-grow">
         <span className="flex items-center justify-center w-16 h-16 rounded-full bg-[#31c9b7] mb-6">
           {icon}
         </span>
-        <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+        <h3 className="text-xl font-bold mb-2 text-[#111827] font-montserrat">
           {title}
         </h3>
-        <p className="text-gray-700 text-base leading-relaxed mb-3">
+        <p className="text-[#374151] text-base font-montserrat mb-3">
           {description}
         </p>
       </div>
       {bullets && (
         <ul
-          className="list-disc pl-5 space-y-1 text-gray-700 text-sm mt-auto w-full text-left flex flex-col items-start justify-end"
-          style={{ color: "#374151" }}
+          className="list-disc pl-5 space-y-1 text-[#374151] text-sm mt-auto w-full text-left flex flex-col items-start justify-end"
         >
           {bullets.map((b, i) => (
-            <li key={i} className="text-gray-700" style={{ color: "#374151" }}>
-              <span className="text-gray-700" style={{ color: "#374151" }}>
+            <li key={i} className="text-[#374151]">
+              <span className="text-[#374151]">
                 {b}
               </span>
             </li>
@@ -138,7 +137,7 @@ export function SecurityFeatures() {
           Comprehensive cybersecurity solutions that protect your business from
           evolving threats while ensuring compliance and operational excellence
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 w-full justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 w-full justify-center">
           {features.slice(0, 3).map((feature, index) => (
             <div className="flex justify-center" key={index}>
               <SecurityFeature
@@ -150,8 +149,8 @@ export function SecurityFeatures() {
             </div>
           ))}
         </div>
-        <div className="h-10" />
-        <div className="grid grid-cols-1 md:grid-cols-3 w-full justify-center">
+        <div className="h-6" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 w-full justify-center">
           {features.slice(3).map((feature, index) => (
             <div className="flex justify-center" key={index}>
               <SecurityFeature

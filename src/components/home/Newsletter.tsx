@@ -14,7 +14,7 @@ export function Newsletter() {
     if (!email) return;
 
     setIsSubmitting(true);
-    setError(null);
+    setError(null); 
     setSuccess(false);
 
     try {

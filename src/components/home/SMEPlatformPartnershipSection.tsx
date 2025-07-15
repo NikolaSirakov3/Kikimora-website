@@ -79,12 +79,12 @@ function SMEPlatformPartnershipSection() {
         {PLATFORM_FEATURES.map(({ icon: Icon, title, description }) => (
           <div
             key={title}
-            className="p-8 flex flex-col items-center text-center h-full"
+            className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md"
           >
             <div className="bg-[#f5f8ff] rounded-full p-4 mb-4 flex items-center justify-center">
               <Icon className="w-12 h-12 text-[#31c9b7]" aria-hidden="true" />
             </div>
-            <h4 className="text-md font-bold mb-2 text-[#111827] font-montserrat">
+            <h4 className="text-xl font-bold mb-2 text-[#111827] font-montserrat">
               {title}
             </h4>
             <p className="text-[#374151] text-base font-montserrat">
@@ -100,13 +100,13 @@ function SMEPlatformPartnershipSection() {
         {EXPERT_FEATURES.map(({ icon: Icon, title, description }) => (
           <div
             key={title}
-            className="bg-[#f5f8ff] rounded-xl p-8 flex flex-col items-center text-center shadow-sm h-full"
+            className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md"
           >
             <Icon
-              className="w-10 h-10 text-[#31c9b7] mb-4"
+              className="w-14 h-14 text-[#31c9b7] mb-6"
               aria-hidden="true"
             />
-            <h4 className="text-lg font-bold mb-2 text-[#111827] font-montserrat">
+            <h4 className="text-xl font-bold mb-2 text-[#111827] font-montserrat">
               {title}
             </h4>
             <p className="text-[#374151] text-base font-montserrat">

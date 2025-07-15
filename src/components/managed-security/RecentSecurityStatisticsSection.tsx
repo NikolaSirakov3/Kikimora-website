@@ -1,5 +1,3 @@
-
-
 export function RecentSecurityStatisticsSection() {
   return (
     <section
@@ -15,7 +13,7 @@ export function RecentSecurityStatisticsSection() {
         </h2>
         <div className="w-[1200px] flex flex-col md:flex-row gap-6 md:gap-8 justify-center">
           {/* Card 1 */}
-          <div className="bg-white rounded-xl shadow-sm flex flex-col items-center justify-center px-6 py-8 w-[600px]">
+          <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md w-full">
             <span className="text-3xl md:text-4xl font-bold text-[#e53935] mb-2">
               82%
             </span>
@@ -24,7 +22,7 @@ export function RecentSecurityStatisticsSection() {
             </span>
           </div>
           {/* Card 2 */}
-          <div className="bg-white rounded-xl shadow-sm flex flex-col items-center justify-center px-6 py-8 w-[600px]">
+          <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md w-full">
             <span className="text-3xl md:text-4xl font-bold text-[#e53935] mb-2">
               $4.88M
             </span>
@@ -33,7 +31,7 @@ export function RecentSecurityStatisticsSection() {
             </span>
           </div>
           {/* Card 3 */}
-          <div className="bg-white rounded-xl shadow-sm flex flex-col items-center justify-center px-6 py-8 w-[600px]">
+          <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md w-full">
             <span className="text-3xl md:text-4xl font-bold text-[#e53935] mb-2">
               22%
             </span>

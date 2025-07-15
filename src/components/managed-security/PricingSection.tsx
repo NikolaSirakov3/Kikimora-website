@@ -16,12 +16,12 @@ export function PricingSection() {
 
       <div className="flex flex-col lg:flex-row gap-6 justify-center items-stretch max-w-7xl px-4">
         {/* Cyber Essentials */}
-        <div className="bg-white rounded-lg border border-gray-200 flex flex-col w-full lg:w-1/3 p-6">
+        <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md flex-1">
           <div className="text-center">
-            <h3 className="text-xl font-bold text-[#001324] mb-2">
+            <h3 className="text-xl font-bold text-[#001324] mb-2 font-montserrat">
               Cyber Essentials
             </h3>
-            <p className="text-sm text-[#4A5567] mb-4">
+            <p className="text-[#4A5567] text-base font-montserrat mb-4">
               Essential security foundation for growing businesses
             </p>
             <div className="flex items-baseline justify-center mb-6">
@@ -106,19 +106,19 @@ export function PricingSection() {
         </div>
 
         {/* Cyber Advanced */}
-        <div className="bg-white rounded-lg border-2 border-[#31c9b7] flex flex-col w-full lg:w-[35%] p-8 -mt-4 -mb-6 relative">
+        <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border-2 border-[#31c9b7] min-h-[320px] text-center transition hover:shadow-md flex-1 relative">
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#31c9b7] text-white px-4 py-1 rounded-full text-sm">
             Most Popular
           </div>
           <div className="text-center">
-            <h3 className="text-xl font-bold text-[#001324] mb-2">
+            <h3 className="text-xl font-bold text-[#001324] mb-2 font-montserrat">
               Cyber Advanced
             </h3>
-            <p className="text-sm text-[#4A5567] mb-4">
+            <p className="text-[#4A5567] text-base font-montserrat mb-4">
               Comprehensive security for established organizations
             </p>
             <div className="flex items-baseline justify-center mb-6">
-              <span className="text-3xl font-bold text-[#31c9b7]">5,000</span>
+              <span className="text-3xl font-bold text-[#31c9b7]">4,000</span>
               <span className="text-lg ml-1 text-[#31c9b7]">EUR/MONTH</span>
             </div>
           </div>
@@ -189,7 +189,7 @@ export function PricingSection() {
             </li>
           </ul>
           <button
-            className="mt-6 w-full bg-[#31c9b7] text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-opacity"
+            className="mt-6 w-full bg-[#001324] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#0a2440] transition-colors"
             onClick={() =>
               window.open("https://calendly.com/o-antonov", "_blank")
             }
@@ -199,16 +199,16 @@ export function PricingSection() {
         </div>
 
         {/* Cyber Elite */}
-        <div className="bg-white rounded-lg border border-gray-200 flex flex-col w-full lg:w-1/3 p-6">
+        <div className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md flex-1">
           <div className="text-center">
-            <h3 className="text-xl font-bold text-[#001324] mb-2">
+            <h3 className="text-xl font-bold text-[#001324] mb-2 font-montserrat">
               Cyber Elite
             </h3>
-            <p className="text-sm text-[#4A5567] mb-4">
-              Enterprise-grade security with full coverage
+            <p className="text-[#4A5567] text-base font-montserrat mb-4">
+              Elite security for highly regulated industries
             </p>
             <div className="flex items-baseline justify-center mb-6">
-              <span className="text-3xl font-bold text-[#31c9b7]">10,000</span>
+              <span className="text-3xl font-bold text-[#31c9b7]">8,000</span>
               <span className="text-lg ml-1 text-[#31c9b7]">EUR/MONTH</span>
             </div>
           </div>
