@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export function SecurityAssessmentCard() {
   const [isHovered, setIsHovered] = useState(false);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export function DefenseMechanismsCard() {
   const [isHovered, setIsHovered] = useState(false);
@@ -13,13 +13,11 @@ export function DefenseMechanismsCard() {
       onMouseLeave={() => setIsHovered(false)}
     >
       <h2 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
-        Defense
-        Mechanisms
+        Defense Mechanisms
       </h2>
       <div className="bg-gray-100 rounded-md px-4 py-2 w-fit">
         <span className="text-md font-semibold text-gray-700 whitespace-nowrap">
-          System Security
-          Hardening
+          System Security Hardening
         </span>
       </div>
       <ul

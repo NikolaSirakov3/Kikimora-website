@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BorderBeam } from "@/components/magicui/border-beam";
 
 export function DiscoveryCard() {
