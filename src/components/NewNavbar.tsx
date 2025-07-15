@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FreeTrialModal } from "./ui/FreeTrialModal";
 import { ArrowSquareRight } from "@phosphor-icons/react";
+import colorAndBlackLogo from "../assets/colorAndBlack.png";
 
 interface NewNavbarProps {
   isAnnouncementVisible: boolean;
@@ -190,141 +191,149 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
 
   return (
     <nav
-      className={`bg-[#030104] fixed w-full z-40 transition-all duration-10 ${
+      className={`bg-white fixed w-full z-40 transition-all duration-10 ${
         isAnnouncementVisible ? "top-[35px]" : "top-0"
       }`}
       style={{ transition: "top 0.3s ease-in-out" }}
     >
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
-          {/* Logo */}
+          {/* Logo - Left Side */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center gap-3">
               <img
-                src="/logos/color_and_white.png"
+                src={colorAndBlackLogo}
                 alt="Kikimora Logo"
-                className="h-16 w-auto"
+                className="h-12 w-auto"
               />
+              <span
+                className="text-gray-900 font-semibold text-xl"
+                style={{ fontFamily: "Montserrat, sans-serif" }}
+              >
+                Kikimora
+              </span>
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <div key={item.label} className="relative">
-                {item.dropdown ? (
-                  <div
-                    onMouseEnter={() =>
-                      item.dropdown && handleMouseEnter(item.label)
-                    }
-                    onMouseLeave={() => item.dropdown && handleMouseLeave()}
-                    className="relative"
-                  >
-                    <button className="text-white px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none flex items-center justify-between w-full gap-2">
-                      {item.label}
-                      {item.dropdown && (
-                        <svg
-                          className={`h-4 w-4 transition-transform duration-300 group-hover:rotate-180 ${
-                            activeDropdown === item.label ? "rotate-180" : ""
-                          }`}
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
-                      )}
-                    </button>
-                    {/* Dropdown content */}
-                    {item.dropdown && activeDropdown === item.label && (
-                      <div
-                        onMouseEnter={() => handleMouseEnter(activeDropdown)}
-                        onMouseLeave={handleMouseLeave}
-                        className={`absolute top-full w-[620px] bg-[#040b11] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-2 gap-6 border border-white/40 backdrop-blur-sm items-center justify-center`}
-                        style={{
-                          marginTop: "1.5rem",
-                          left: 0,
-                        }}
-                      >
-                        {item.dropdown.items.map((subItem) => (
-                          <Link
-                            key={subItem.label}
-                            to={subItem.href}
-                            className="flex flex-row items-center gap-5 p-4 rounded-xl transition-colors duration-200 min-w-[160px] max-w-[290px] relative group"
+          {/* Desktop Navigation - Center */}
+          <div className="hidden md:flex items-center">
+            <div className="bg-[#1e293b] rounded-full px-4 py-2 flex items-center space-x-6">
+              {navItems.map((item) => (
+                <div key={item.label} className="relative">
+                  {item.dropdown ? (
+                    <div
+                      onMouseEnter={() =>
+                        item.dropdown && handleMouseEnter(item.label)
+                      }
+                      onMouseLeave={() => item.dropdown && handleMouseLeave()}
+                      className="relative"
+                    >
+                      <button className="text-white px-3 py-2 text-sm font-medium bg-transparent border-none outline-none focus:outline-none flex items-center justify-between w-full gap-2">
+                        {item.label}
+                        {item.dropdown && (
+                          <svg
+                            className={`h-4 w-4 transition-transform duration-300 group-hover:rotate-180 ${
+                              activeDropdown === item.label ? "rotate-180" : ""
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
                           >
-                            <div className="flex items-center justify-center w-10.5 h-10.5">
-                              <div className="w-9 h-9 [&>svg]:stroke-[1.5]">
-                                {subItem.icon}
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        )}
+                      </button>
+                      {/* Dropdown content */}
+                      {item.dropdown && activeDropdown === item.label && (
+                        <div
+                          onMouseEnter={() => handleMouseEnter(activeDropdown)}
+                          onMouseLeave={handleMouseLeave}
+                          className={`absolute top-full w-[620px] bg-[#040b11] rounded-lg shadow-lg py-6 px-8 z-50 grid grid-cols-2 gap-6 border border-white/40 backdrop-blur-sm items-center justify-center`}
+                          style={{
+                            marginTop: "1.5rem",
+                            left: 0,
+                          }}
+                        >
+                          {item.dropdown.items.map((subItem) => (
+                            <Link
+                              key={subItem.label}
+                              to={subItem.href}
+                              className="flex flex-row items-center gap-5 p-4 rounded-xl transition-colors duration-200 min-w-[160px] max-w-[290px] relative group"
+                            >
+                              <div className="flex items-center justify-center w-10.5 h-10.5">
+                                <div className="w-9 h-9 [&>svg]:stroke-[1.5]">
+                                  {subItem.icon}
+                                </div>
                               </div>
-                            </div>
-                            <div className="flex flex-col justify-center min-w-0 w-full">
-                              <span className="text-white font-semibold text-base mb-1 block truncate">
-                                {subItem.label}
-                                {subItem.soon && (
-                                  <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2] align-middle">
-                                    soon
-                                  </span>
-                                )}
+                              <div className="flex flex-col justify-center min-w-0 w-full">
+                                <span className="text-white font-semibold text-base mb-1 block truncate">
+                                  {subItem.label}
+                                  {subItem.soon && (
+                                    <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-[#29ABE2]/20 text-[#29ABE2] align-middle">
+                                      soon
+                                    </span>
+                                  )}
+                                </span>
+                                <span className="text-sm text-gray-400 leading-tight block truncate">
+                                  {subItem.description}
+                                </span>
+                              </div>
+                              <span className="absolute inset-0 w-full h-full">
+                                <span
+                                  className="absolute inset-0 w-full h-full border-t border-b border-transparent group-hover:border-[#29ABE2] transition-all duration-700 ease-in-out transform group-hover:scale-x-100 scale-x-0 origin-left"
+                                  style={{
+                                    borderImage:
+                                      "linear-gradient(to right, #29ABE2, #3EDDCA) 1",
+                                  }}
+                                ></span>
+                                <span
+                                  className="absolute inset-0 w-full h-full border-l border-r border-transparent group-hover:border-[#29ABE2] transition-all duration-700 ease-in-out transform group-hover:scale-y-100 scale-y-0 origin-top"
+                                  style={{
+                                    borderImage:
+                                      "linear-gradient(to bottom, #29ABE2, #3EDDCA) 1",
+                                  }}
+                                ></span>
                               </span>
-                              <span className="text-sm text-gray-400 leading-tight block truncate">
-                                {subItem.description}
-                              </span>
-                            </div>
-                            <span className="absolute inset-0 w-full h-full">
-                              <span
-                                className="absolute inset-0 w-full h-full border-t border-b border-transparent group-hover:border-[#29ABE2] transition-all duration-700 ease-in-out transform group-hover:scale-x-100 scale-x-0 origin-left"
-                                style={{
-                                  borderImage:
-                                    "linear-gradient(to right, #29ABE2, #3EDDCA) 1",
-                                }}
-                              ></span>
-                              <span
-                                className="absolute inset-0 w-full h-full border-l border-r border-transparent group-hover:border-[#29ABE2] transition-all duration-700 ease-in-out transform group-hover:scale-y-100 scale-y-0 origin-top"
-                                style={{
-                                  borderImage:
-                                    "linear-gradient(to bottom, #29ABE2, #3EDDCA) 1",
-                                }}
-                              ></span>
-                            </span>
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className="text-white px-3 py-2 text-base font-medium hover:text-[#1abc9c] transition-colors duration-150"
-                    style={{
-                      fontFamily: "Montserrat, sans-serif",
-                      fontWeight: 500,
-                    }}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </div>
-            ))}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="text-white px-3 py-2 text-sm font-medium hover:text-[#1abc9c] transition-colors duration-150"
+                      style={{
+                        fontFamily: "Montserrat, sans-serif",
+                        fontWeight: 500,
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center">
+          {/* Schedule Demo Button - Right Side */}
+          <div className="flex items-center">
             <button
               onClick={() =>
                 window.open("https://calendly.com/o-antonov", "_blank")
               }
-              className="ml-8 bg-[#23b098] hover:bg-[#1abc9c] text-white font-bold px-8 py-2 rounded transition-colors duration-200 text-lg shadow flex items-center justify-center"
+              className="bg-[#6366f1] hover:bg-[#4f46e5] text-white font-bold px-6 py-2 rounded-full transition-colors duration-200 text-sm shadow-sm flex items-center justify-center"
               style={{
                 fontFamily: "Montserrat, sans-serif",
                 lineHeight: "1.1",
-                minWidth: "170px",
+                minWidth: "140px",
                 minHeight: "unset",
-                height: "44px",
+                height: "40px",
               }}
             >
               Schedule Demo
@@ -335,7 +344,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 text-white hover:text-[#29ABE2] focus:outline-none bg-transparent border-none outline-none"
+              className="inline-flex items-center justify-center p-2 text-gray-600 hover:text-[#29ABE2] focus:outline-none bg-transparent border-none outline-none"
             >
               <svg
                 className={`h-6 w-6 ${isMobileMenuOpen ? "hidden" : "block"}`}
@@ -370,14 +379,14 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
 
       {/* Mobile menu */}
       <div className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
           {navItems.map((item) => (
             <div key={item.label}>
               <button
                 onClick={() =>
                   item.dropdown && handleDropdownToggle(item.label)
                 }
-                className="w-full text-left text-white hover:text-[#29ABE2] px-3 py-2 text-base font-medium flex items-center justify-between bg-transparent group border-none outline-none focus:outline-none gap-2"
+                className="w-full text-left text-gray-700 hover:text-[#29ABE2] px-3 py-2 text-base font-medium flex items-center justify-between bg-transparent group border-none outline-none focus:outline-none gap-2"
               >
                 {item.label}
                 {item.dropdown && (
@@ -404,16 +413,16 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                     <Link
                       key={subItem.label}
                       to={subItem.href}
-                      className="flex flex-row items-center text-left gap-4 p-4 rounded-lg hover:bg-[#29ABE2]/10 transition-colors duration-200"
+                      className="flex flex-row items-center text-left gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                     >
-                      <div className="flex items-center justify-center w-12 h-12 bg-white/10 shadow-[0_0_15px_rgba(41,171,226,0.3)]">
+                      <div className="flex items-center justify-center w-12 h-12 bg-[#29ABE2]/10 shadow-[0_0_15px_rgba(41,171,226,0.3)]">
                         <div className="w-9 h-9 [&>svg]:stroke-[1.5]">
                           {subItem.icon}
                         </div>
                       </div>
                       <div className="flex flex-col justify-center text-left">
                         <div className="flex items-center gap-2">
-                          <span className="text-white font-medium">
+                          <span className="text-gray-700 font-medium">
                             {subItem.label}
                           </span>
                           {subItem.soon && (
@@ -422,7 +431,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                             </span>
                           )}
                         </div>
-                        <span className="text-sm text-gray-400">
+                        <span className="text-sm text-gray-500">
                           {subItem.description}
                         </span>
                       </div>
@@ -432,12 +441,12 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
               )}
             </div>
           ))}
-          <div className="pt-4 pb-3 border-t border-white/20">
+          <div className="pt-4 pb-3 border-t border-gray-200">
             <button
               onClick={() =>
                 window.open("https://calendly.com/o-antonov", "_blank")
               }
-              className="block w-full text-left px-3 py-2 text-base font-medium text-white hover:text-[#29ABE2] bg-transparent border-none outline-none focus:outline-none"
+              className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-[#29ABE2] bg-transparent border-none outline-none focus:outline-none"
             >
               Schedule Demo
             </button>
