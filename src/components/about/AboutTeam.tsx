@@ -7,7 +7,7 @@ export function AboutTeam() {
           <div className="grid grid-cols-2 gap-12">
             {/* Left Column */}
             <div className="flex flex-col max-w-[90%]">
-              <h2 className="text-5xl text-white font-conthrax mb-8">
+              <h2 className="text-5xl text-white mb-8">
                 About the team
               </h2>
               <p className="text-white/80 font-montserrat text-lg leading-relaxed">

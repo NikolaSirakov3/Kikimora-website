@@ -1,4 +1,3 @@
-
 const teamMembers = [
   {
     name: "Krasimir Kotsev",
@@ -46,7 +45,7 @@ export function People() {
       <div className="w-screen px-[5%] flex flex-col items-center">
         <div className="max-w-[1300px] w-full py-20">
           {/* Header */}
-          <h2 className="text-5xl text-white font-conthrax text-center mb-16">
+          <h2 className="text-5xl text-white text-center mb-16">
             People behind Kikimora
           </h2>
 
@@ -59,9 +58,7 @@ export function People() {
                 <div className="aspect-square bg-[#002A4E] rounded-3xl mb-4" />
 
                 {/* Info */}
-                <h3 className="text-white font-conthrax text-lg mb-1">
-                  {member.name}
-                </h3>
+                <h3 className="text-white text-lg mb-1">{member.name}</h3>
                 <p className="text-white/60 font-montserrat text-sm mb-3">
                   {member.position}
                 </p>
@@ -116,12 +113,8 @@ export function People() {
             {/* Join Us Card */}
             <div className="flex flex-col">
               <div className="aspect-square bg-[#002A4E] rounded-3xl mb-4 flex flex-col items-center justify-center p-8 text-center">
-                <h3 className="text-white font-conthrax text-2xl mb-2">
-                  You can be the
-                </h3>
-                <span className="text-[#00E5BE] font-conthrax text-2xl mb-4">
-                  next
-                </span>
+                <h3 className="text-white text-2xl mb-2">You can be the</h3>
+                <span className="text-[#00E5BE]   text-2xl mb-4">next</span>
                 <button className="text-white/60 hover:text-white font-montserrat text-sm">
                   Send an open application
                 </button>

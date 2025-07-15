@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 export function DevelopersCaseStudy() {
@@ -8,12 +7,8 @@ export function DevelopersCaseStudy() {
         <div className="w-full max-w-[1400px] bg-[#2A1D4C] rounded-3xl p-10 flex justify-between z-10">
           {/* Left side content */}
           <div className="max-w-[600px]">
-            <h2 className="text-5xl text-white font-conthrax mb-3">
-              Developers
-            </h2>
-            <h3 className="text-4xl text-[#29ABE2] font-conthrax mb-4">
-              case study
-            </h3>
+            <h2 className="text-5xl text-white   mb-3">Developers</h2>
+            <h3 className="text-4xl text-[#29ABE2]   mb-4">case study</h3>
             <p className="text-white/80 text-lg font-montserrat mb-6">
               A robust platform for efficient and comprehensive vulnerability
               management, designed to streamline your cybersecurity processes.

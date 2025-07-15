@@ -1,11 +1,8 @@
-
 export function Clients() {
   return (
     <div className="bg-[#001E38]">
       <div className="w-full px-[5%] py-8 flex flex-col items-center">
-        <h2 className="text-5xl text-white font-conthrax text-center mb-4">
-          Clients
-        </h2>
+        <h2 className="text-5xl text-white   text-center mb-4">Clients</h2>
         <p className="text-white/80 text-lg font-montserrat text-center mb-12">
           Who are already staying ahead of threats
         </p>

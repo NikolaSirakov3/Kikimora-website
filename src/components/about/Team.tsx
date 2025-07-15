@@ -1,11 +1,10 @@
-
 export function Team() {
   return (
     <div className="bg-[#001E38] py-20 w-full">
       <div className="w-screen px-[5%] flex flex-col items-center">
         <div className="max-w-[1300px] w-full flex flex-col items-center">
           {/* Header */}
-          <h2 className="text-5xl text-white font-conthrax text-center mb-4">
+          <h2 className="text-5xl text-white   text-center mb-4">
             Meet the team
           </h2>
           <p className="text-white/60 font-montserrat text-center mb-8">

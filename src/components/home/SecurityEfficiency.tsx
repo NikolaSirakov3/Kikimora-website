@@ -1,10 +1,9 @@
-
 export function SecurityEfficiency() {
   return (
     <div className="bg-[#001E38] py-20">
       <div className="w-full px-[5%] flex flex-col items-center">
         <div className="max-w-[1400px] w-full">
-          <h2 className="text-5xl text-white font-conthrax text-center mb-4">
+          <h2 className="text-5xl text-white   text-center mb-4">
             Maximizing security efficiency
           </h2>
           <p className="text-white/80 text-lg font-montserrat text-center mb-16">
@@ -15,9 +14,7 @@ export function SecurityEfficiency() {
           <div className="flex justify-center gap-5">
             {/* Improved compliance */}
             <div className="min-w-[400px] min-h-[250px] bg-gradient-to-b from-[#159ECE] via-[#00539B] to-[#159ECE] rounded-3xl p-8 flex flex-col items-center justify-center z-10">
-              <span className="text-6xl text-white font-conthrax mb-4">
-                80%
-              </span>
+              <span className="text-6xl text-white   mb-4">80%</span>
               <span className="text-white/80 text-lg font-montserrat text-center">
                 Improved compliance
               </span>
@@ -25,9 +22,7 @@ export function SecurityEfficiency() {
 
             {/* Faster Mean Time */}
             <div className="min-w-[400px] min-h-[250px] bg-gradient-to-b from-[#159ECE] via-[#00539B] to-[#159ECE] rounded-3xl p-8 flex flex-col items-center justify-center z-10">
-              <span className="text-6xl text-white font-conthrax mb-4">
-                70%
-              </span>
+              <span className="text-6xl text-white   mb-4">70%</span>
               <span className="text-white/80 text-lg font-montserrat text-center">
                 Faster Mean Time to Prioritize
               </span>
@@ -35,9 +30,7 @@ export function SecurityEfficiency() {
 
             {/* Risk score reduction */}
             <div className="min-w-[400px] min-h-[250px] bg-gradient-to-b from-[#159ECE] via-[#00539B] to-[#159ECE] rounded-3xl p-8 flex flex-col items-center justify-center z-10">
-              <span className="text-6xl text-white font-conthrax mb-4">
-                30%
-              </span>
+              <span className="text-6xl text-white   mb-4">30%</span>
               <span className="text-white/80 text-lg font-montserrat text-center">
                 Risk score reduction
               </span>

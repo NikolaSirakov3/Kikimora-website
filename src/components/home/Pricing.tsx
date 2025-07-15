@@ -57,9 +57,7 @@ export function Pricing() {
           <div className="flex justify-between h-full">
             {/* Left side - Pricing details */}
             <div className="flex-1">
-              <h2 className="text-3xl text-white font-conthrax mb-3">
-                Pricing
-              </h2>
+              <h2 className="text-3xl text-white   mb-3">Pricing</h2>
               <p className="text-white/80 text-base font-montserrat mb-4">
                 Pricing based on your company needs.
               </p>

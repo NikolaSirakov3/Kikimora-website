@@ -33,7 +33,7 @@ export function GetInTouch() {
       <div className="w-screen relative -ml-[50vw] left-1/2">
         <div className="bg-gradient-to-r from-[#2A1D4C] via-[#1B4E5F] to-[#003D37] py-20">
           <div className="px-[5%] mx-auto max-w-[1400px]">
-            <h2 className="text-5xl text-white font-conthrax text-center mb-4">
+            <h2 className="text-5xl text-white   text-center mb-4">
               Get in touch today
             </h2>
             <p className="text-white/60 font-montserrat text-center mb-12 max-w-xl mx-auto">

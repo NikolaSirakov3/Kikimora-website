@@ -33,7 +33,7 @@ export function News() {
         <div className="max-w-[1300px] w-full">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-white font-conthrax text-5xl mb-4">
+            <h2 className="text-white text-5xl mb-4">
               News about us
             </h2>
             <p className="text-white/60 font-montserrat text-lg">
@@ -59,7 +59,7 @@ export function News() {
                   <div className="text-[#00E5BE] font-montserrat text-sm mb-2">
                     {article.date}
                   </div>
-                  <h3 className="text-white font-conthrax text-2xl mb-2 group-hover:text-[#00E5BE] transition-colors">
+                  <h3 className="text-white text-2xl mb-2 group-hover:text-[#00E5BE] transition-colors">
                     {article.title}
                   </h3>
                   <p className="text-white/60 font-montserrat">
@@ -91,7 +91,7 @@ export function News() {
                       <div className="text-[#00E5BE] font-montserrat text-sm mb-2">
                         {article.date}
                       </div>
-                      <h3 className="text-white font-conthrax text-xl mb-2 group-hover:text-[#00E5BE] transition-colors">
+                      <h3 className="text-white text-xl mb-2 group-hover:text-[#00E5BE] transition-colors">
                         {article.title}
                       </h3>
                       <p className="text-white/60 font-montserrat text-sm">

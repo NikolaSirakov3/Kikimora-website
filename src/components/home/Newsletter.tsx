@@ -41,7 +41,7 @@ export function Newsletter() {
         <div className="max-w-[1400px] mx-auto flex items-start justify-between">
           {/* Left side navigation */}
           <div className="flex items-center gap-12">
-            <a href="/" className="text-white font-conthrax text-lg">
+            <a href="/" className="text-white   text-lg">
               Kikimora
             </a>
             <div className="flex gap-12">

@@ -22,7 +22,7 @@ export function InvestorTestimonials() {
         <div className="max-w-[1300px] w-full">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-white font-conthrax text-5xl mb-4">
+            <h2 className="text-white text-5xl mb-4">
               What our investors say
             </h2>
             <p className="text-white/60 font-montserrat text-lg">

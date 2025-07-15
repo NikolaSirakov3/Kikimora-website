@@ -49,9 +49,7 @@ export function ProductOverview() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl text-white font-conthrax mb-4">
-            Check out the product
-          </h2>
+          <h2 className="text-5xl text-white   mb-4">Check out the product</h2>
           <p className="text-white/60 text-lg font-montserrat max-w-3xl mx-auto">
             A platform designed to not only enhance the security and quality of
             your products but also to streamline your development processes

@@ -1,4 +1,3 @@
-
 interface BlogPostProps {
   image: string;
   date: string;
@@ -16,7 +15,7 @@ function BlogPost({ date, title, description, isLarge }: BlogPostProps) {
         </div>
         <div className="p-8">
           <p className="text-white/60 font-montserrat text-sm mb-2">{date}</p>
-          <h3 className="text-white font-conthrax mb-4 text-3xl">{title}</h3>
+          <h3 className="text-white   mb-4 text-3xl">{title}</h3>
           <p className="text-white/80 font-montserrat">{description}</p>
         </div>
       </div>
@@ -30,7 +29,7 @@ function BlogPost({ date, title, description, isLarge }: BlogPostProps) {
       </div>
       <div className="p-6">
         <p className="text-white/60 font-montserrat text-sm mb-2">{date}</p>
-        <h3 className="text-white font-conthrax mb-3 text-xl">{title}</h3>
+        <h3 className="text-white   mb-3 text-xl">{title}</h3>
         <p className="text-white/80 font-montserrat text-sm">{description}</p>
       </div>
     </div>
@@ -66,10 +65,10 @@ export function Blog() {
     <div className="bg-[#001E38] py-20">
       <div className="w-full px-[5%] flex flex-col items-center">
         <div className="max-w-[1400px] w-full">
-          <h2 className="text-5xl text-white font-conthrax text-center mb-4">
+          <h2 className="text-5xl text-white   text-center mb-4">
             Stay updated with the latest in
           </h2>
-          <h2 className="text-5xl text-white font-conthrax text-center mb-8">
+          <h2 className="text-5xl text-white   text-center mb-8">
             secure development
           </h2>
           <p className="text-white/80 text-lg font-montserrat text-center mb-12">

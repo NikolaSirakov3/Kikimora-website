@@ -1,4 +1,3 @@
-
 export function GetInTouch() {
   const today = new Date();
   const month = today.toLocaleString("default", { month: "short" });
@@ -31,7 +30,7 @@ export function GetInTouch() {
         <div className="absolute top-0 left-0 w-full h-32 bg-[#001E38] transform -skew-y-3 origin-left"></div>
         <div className="relative z-10 pt-20 pb-32">
           <div className="px-[5%] mx-auto max-w-[1400px]">
-            <h2 className="text-5xl text-white font-conthrax text-center mb-4">
+            <h2 className="text-5xl text-white   text-center mb-4">
               Get in touch today
             </h2>
             <p className="text-white/60 font-montserrat text-center mb-12 max-w-xl mx-auto">
