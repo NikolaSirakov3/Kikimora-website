@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FreeTrialModal } from "./ui/FreeTrialModal";
+import { ContactModal } from "./ui/ContactModal";
 import { ArrowSquareRight } from "@phosphor-icons/react";
 import colorAndBlackLogo from "../assets/colorAndBlack.png";
 
@@ -164,6 +165,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
 
   const handleDropdownToggle = (label: string) => {
@@ -321,8 +323,21 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
             </div>
           </div>
 
-          {/* Schedule Demo Button - Right Side */}
-          <div className="flex items-center">
+          {/* Right Side Buttons */}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setIsContactModalOpen(true)}
+              className="bg-[#29ABE2] hover:bg-[#1e9a8a] text-white font-bold px-6 py-2 rounded-full transition-colors duration-200 text-sm shadow-sm flex items-center justify-center"
+              style={{
+                fontFamily: "Montserrat, sans-serif",
+                lineHeight: "1.1",
+                minWidth: "120px",
+                minHeight: "unset",
+                height: "40px",
+              }}
+            >
+              Contact
+            </button>
             <button
               onClick={() =>
                 window.open("https://calendly.com/o-antonov", "_blank")
@@ -441,7 +456,13 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
               )}
             </div>
           ))}
-          <div className="pt-4 pb-3 border-t border-gray-200">
+          <div className="pt-4 pb-3 border-t border-gray-200 space-y-2">
+            <button
+              onClick={() => setIsContactModalOpen(true)}
+              className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-[#29ABE2] bg-transparent border-none outline-none focus:outline-none"
+            >
+              Contact
+            </button>
             <button
               onClick={() =>
                 window.open("https://calendly.com/o-antonov", "_blank")
@@ -458,6 +479,12 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
       <FreeTrialModal
         isOpen={isTrialModalOpen}
         onClose={() => setIsTrialModalOpen(false)}
+      />
+
+      {/* Contact Modal */}
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
       />
     </nav>
   );
