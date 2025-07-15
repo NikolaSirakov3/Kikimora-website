@@ -12,7 +12,7 @@ export function Navbar() {
         {/* Left side - Logo */}
         <div className="flex items-center gap-2">
           <Shield className="h-6 w-6 text-white" />
-          <span className="text-white text-xl font-conthrax">Kikimora</span>
+          <span className="text-white text-xl">Kikimora</span>
         </div>
 
         {/* Middle - Navigation Links */}
