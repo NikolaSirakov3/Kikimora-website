@@ -1,6 +1,7 @@
 import { MSSPHero } from "@/components/mssp/MSSPHero";
 import { MSSPBenefitsSection } from "@/components/mssp/MSSPBenefitsSection";
 import { MSSPQandASection } from "@/components/mssp/MSSPQandASection";
+import { MSSPBookCallSection } from "@/components/mssp/MSSPBookCallSection";
 
 export function MSSP() {
   return (
@@ -8,6 +9,7 @@ export function MSSP() {
       <MSSPHero />
       <MSSPBenefitsSection />
       <MSSPQandASection />
+      <MSSPBookCallSection />
     </div>
   );
 }
