@@ -9,4 +9,5 @@ export default defineConfig({
             '@': path.resolve(__dirname, './src'),
         },
     },
+    assetsInclude: ['**/*.lottie'], // Allow importing .lottie files as assets
 });

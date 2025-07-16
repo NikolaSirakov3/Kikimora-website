@@ -1,7 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Player from "lottie-react";
-import blueDotAnimation from "@/assets/BlinkingBlueDot.json";
-import socialNetworkAnimation from "@/assets/Social Network.json";
 
 function SMEHero() {
   return (
