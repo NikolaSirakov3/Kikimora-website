@@ -19,7 +19,7 @@ export function ContactSection() {
             dedicated expert, allowing leadership to focus on core operations
             rather than cybersecurity complexity.
           </p>
-          <div className="flex flex-col md:flex-row gap-8 md:gap-16 max-w-6xl px-4 mx-auto">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-16 max-w-6xl px-4 mx-auto my-20">
             <div className="flex-1">
               <h4 className="text-xl font-semibold mb-3 text-white">
                 Governance Features:

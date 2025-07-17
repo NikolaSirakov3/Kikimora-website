@@ -41,7 +41,7 @@ export function AddonGovernanceSection() {
               </div>
             </div>
             {/* Right Column: Governance Features */}
-            <div className="bg-white rounded-xl p-10 shadow-sm border border-[#e5e7eb] min-h-[320px] flex flex-col justify-center">
+            <div className="bg-white rounded-xl p-10 shadow-sm border border-[#e5e7eb] min-h-[320px] flex flex-col justify-center my-20">
               <h3 className="text-xl font-bold text-[#001324] mb-4 font-montserrat">
                 Governance Features:
               </h3>
