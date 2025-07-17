@@ -1,58 +1,177 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ScheduleDemoModal } from "@/components/ui/ScheduleDemoModal";
+import Lottie from "lottie-react";
 
 export function AddonGovernanceSection() {
   const [isScheduleDemoModalOpen, setIsScheduleDemoModalOpen] = useState(false);
+  const [auctionAnimation, setAuctionAnimation] = useState(null);
+
+  useEffect(() => {
+    const loadAnimation = async () => {
+      try {
+        // Load the lottie JSON file directly
+        const response = await fetch("/lottie/Auction.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const animationData = await response.json();
+        setAuctionAnimation(animationData);
+      } catch (error) {
+        console.error("Failed to load auction animation:", error);
+      }
+    };
+
+    loadAnimation();
+  }, []);
 
   return (
     <>
-      <section className="py-16 px-4 md:px-8 lg:px-16 bg-[#001324] border-t border-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Left Column: Governance Card + Schedule Demo */}
-            <div className="flex flex-col gap-8">
-              <div className="bg-white rounded-xl p-10 shadow-sm border border-[#e5e7eb] min-h-[320px] text-left">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#001324] mb-2 font-montserrat uppercase tracking-wide">
-                  Add-on: Governance
-                </h2>
-                <div className="text-[#31c9b7] font-bold mb-2">
-                  TAILORED PRICING
-                </div>
-                <p className="text-[#374151] text-base font-montserrat mb-4">
-                  Delegate the core components of managing your IT
-                  infrastructure to a dedicated expert, allowing leadership to
-                  focus on core operations rather than cybersecurity complexity.
-                </p>
-              </div>
-              <div className="bg-white rounded-xl p-10 shadow-sm border border-[#e5e7eb] flex flex-col items-center justify-center min-h-[180px] text-center">
-                <h3 className="text-xl font-bold text-[#001324] mb-2 font-montserrat">
-                  Schedule a Demo
-                </h3>
-                <p className="text-[#374151] text-base font-montserrat mb-4">
-                  See how our Governance add-on can transform your security
-                  operations.
-                </p>
-                <button
-                  className="mt-2 bg-[#31c9b7] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[#2bb3a3] transition-colors"
-                  onClick={() => setIsScheduleDemoModalOpen(true)}
-                >
-                  Book a Demo
-                </button>
-              </div>
-            </div>
-            {/* Right Column: Governance Features */}
-            <div className="bg-white rounded-xl p-10 shadow-sm border border-[#e5e7eb] min-h-[320px] flex flex-col justify-center my-20">
-              <h3 className="text-xl font-bold text-[#001324] mb-4 font-montserrat">
+      <section className="w-full flex flex-col items-center py-16 bg-white">
+        <div className="w-full max-w-7xl bg-gray-300 rounded-lg p-8">
+          <h2 className="text-3xl md:text-4xl text-black text-center mb-6">
+            Add-on: Governance
+          </h2>
+          <h3 className="text-2xl md:text-3xl text-[#31c9b7] text-center mb-3">
+            TAILORED PRICING
+          </h3>
+          <p className="text-center text-black max-w-3xl mb-6 px-4 mx-auto">
+            Delegate the core components of managing your IT infrastructure to a
+            dedicated expert, allowing leadership to focus on core operations
+            rather than cybersecurity complexity.
+          </p>
+          <div className="flex flex-col md:flex-row gap-8 md:gap-16 max-w-6xl ml-40 my-20">
+            <div className="flex-1">
+              <h4 className="text-xl font-semibold mb-3 text-black">
                 Governance Features:
-              </h3>
-              <ul className="list-disc pl-6 space-y-3 text-[#374151] text-base font-montserrat">
-                <li>Gap analysis and risk management</li>
-                <li>Security procedures and policy maintenance</li>
-                <li>Security strategy development</li>
-                <li>Business continuity/disaster recovery training</li>
-                <li>Operational-level involvement (approvals, audits)</li>
-                <li>Advisory on emerging technology</li>
+              </h4>
+              <ul className="space-y-2 text-black">
+                <li className="flex items-start">
+                  <svg
+                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Gap analysis and risk management
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Security procedures and policy maintenance
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Security strategy development
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Business continuity/disaster recovery training
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Operational-level involvement (approvals, audits)
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Advisory on emerging technology
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Development of internal security team
+                </li>
               </ul>
+            </div>
+            <div className="w-full md:w-2/5 mt-10 mr-20 flex flex-col items-center justify-center p-6 h-[180px]">
+              {auctionAnimation ? (
+                <Lottie
+                  animationData={auctionAnimation}
+                  loop={true}
+                  autoplay={true}
+                  style={{ width: "400%", height: "300%" }}
+                />
+              ) : (
+                <div className="flex items-center justify-center w-full h-full">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#31c9b7]"></div>
+                </div>
+              )}
             </div>
           </div>
         </div>

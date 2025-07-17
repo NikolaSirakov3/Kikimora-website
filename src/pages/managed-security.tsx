@@ -3,8 +3,8 @@ import { SecurityFeatures } from "@/components/managed-security/SecurityFeatures
 import { ROISection } from "@/components/managed-security/ROISection";
 import { AdvantagesSection } from "@/components/managed-security/AdvantagesSection";
 import { PricingSection } from "@/components/managed-security/PricingSection";
-import { ContactSection } from "@/components/managed-security/ContactSection";
 import { SecurityROISection } from "@/components/managed-security/SecurityROISection";
+import { AddonGovernanceSection } from "@/components/managed-security/AddonGovernanceSection";
 
 export default function ManagedSecurity() {
   return (
@@ -15,8 +15,7 @@ export default function ManagedSecurity() {
       <AdvantagesSection />
       <SecurityROISection />
       <PricingSection />
-      <ContactSection />
-      <ContactSection />
+      <AddonGovernanceSection />
     </main>
   );
 }
