@@ -27,7 +27,7 @@ export function AddonGovernanceSection() {
   return (
     <>
       <section className="w-full flex flex-col items-center py-16 bg-white">
-        <div className="w-full max-w-7xl bg-gray-300 rounded-lg p-8">
+        <div className="w-full max-w-7xl bg-gray-300 rounded-lg p-8 shadow-lg">
           <h2 className="text-3xl md:text-4xl text-black text-center mb-6">
             Add-on: Governance
           </h2>
