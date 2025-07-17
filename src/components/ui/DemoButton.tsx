@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Button } from "./button";
 import { ChevronRight } from "lucide-react";
+import { ScheduleDemoModal } from "./ScheduleDemoModal";
 
 interface DemoButtonProps {
   variant?: "default" | "outline";
@@ -16,19 +18,29 @@ export function DemoButton({
   showIcon = false,
   children = "Book Demo",
 }: DemoButtonProps) {
+  const [isScheduleDemoModalOpen, setIsScheduleDemoModalOpen] = useState(false);
+
   const handleClick = () => {
-    window.open("https://calendly.com/o-antonov", "_blank");
+    setIsScheduleDemoModalOpen(true);
   };
 
   return (
-    <Button
-      variant={variant}
-      size={size}
-      className={className}
-      onClick={handleClick}
-    >
-      {children}
-      {showIcon && <ChevronRight className="h-4 w-4" />}
-    </Button>
+    <>
+      <Button
+        variant={variant}
+        size={size}
+        className={className}
+        onClick={handleClick}
+      >
+        {children}
+        {showIcon && <ChevronRight className="h-4 w-4" />}
+      </Button>
+
+      {/* Schedule Demo Modal */}
+      <ScheduleDemoModal
+        isOpen={isScheduleDemoModalOpen}
+        onClose={() => setIsScheduleDemoModalOpen(false)}
+      />
+    </>
   );
 }
