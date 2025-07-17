@@ -11,7 +11,7 @@ import { EUFunding } from "@/components/shared/EUFunding";
 
 function SME() {
   return (
-    <main className="w-[99.2vw]">
+    <main className="w-[99.1vw]">
       <SMEHero />
       <SMEFrontsSection />
       <PlatformFeaturesSection />

@@ -11,7 +11,7 @@ import { ContactSection } from "../components/managed-security/ContactSection";
 
 export default function PricingInfo() {
   return (
-    <main className="w-[99.2vw] min-h-screen bg-[#001324]">
+    <main className="w-[99.1vw] min-h-screen bg-[#001324]">
       {/* <HeroSection />
       <PartnersSection />
       <PricingComponent />

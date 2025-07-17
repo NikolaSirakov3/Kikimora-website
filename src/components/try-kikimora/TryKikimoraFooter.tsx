@@ -2,7 +2,7 @@
 
 export default function TryKikimoraFooter() {
   return (
-    <footer className="w-[99.2vw] bg-[#2B0A3D] py-16 px-4 font-montserrat">
+    <footer className="w-[99.1vw] bg-[#2B0A3D] py-16 px-4 font-montserrat">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 md:gap-0">
         {/* Left: Logo and Description */}
         <div className="flex-1 min-w-[150px] flex flex-col items-start">

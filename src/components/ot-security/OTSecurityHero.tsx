@@ -7,7 +7,7 @@ export function OTSecurityHero() {
   return (
     <>
       <section
-        className="relative w-[99.2vw] min-h-[480px] flex items-center justify-center bg-[#001E38] overflow-hidden"
+        className="relative w-[99.1vw] min-h-[480px] flex items-center justify-center bg-[#001E38] overflow-hidden"
         style={{ minHeight: 480 }}
       >
         {/* Blurred blue overlay */}
