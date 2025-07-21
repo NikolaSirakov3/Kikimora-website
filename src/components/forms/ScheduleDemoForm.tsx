@@ -1,25 +1,25 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { Button } from "../ui/button";
 
-interface ContactFormProps {
+interface ScheduleDemoFormProps {
   formId?: string;
   className?: string;
 }
 
-export function ContactForm({
-  formId = "mblkjgzo",
+export function ScheduleDemoForm({
+  formId = "mblkjgzo", // Using the same form ID as ContactForm for now
   className = "",
-}: ContactFormProps) {
+}: ScheduleDemoFormProps) {
   const [state, handleSubmit] = useForm(formId);
 
   if (state.succeeded) {
     return (
       <div className="text-center py-8">
         <div className="text-green-600 text-lg font-semibold mb-2">
-          Thank you for your message!
+          Demo Request Submitted!
         </div>
         <p className="text-gray-600">
-          We'll get back to you as soon as possible.
+          We'll contact you shortly to schedule your personalized demo.
         </p>
       </div>
     );
@@ -53,14 +53,13 @@ export function ContactForm({
 
       <div>
         <label htmlFor="message" className={labelClasses}>
-          Message <span className="text-red-500">*</span>
+          Additional Information
         </label>
         <textarea
           id="message"
           name="message"
-          required
           className={`${inputClasses} min-h-[120px] resize-vertical`}
-          placeholder="Tell us about your inquiry..."
+          placeholder="Tell us about your security needs, preferred demo time, or any specific questions..."
         />
         <ValidationError
           prefix="Message"
@@ -76,10 +75,10 @@ export function ContactForm({
         className="w-full bg-[#29ABE2] hover:bg-[#1e9a8a] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-base shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
         style={{ fontFamily: "Montserrat, sans-serif" }}
       >
-        {state.submitting ? "Sending..." : "Send Message"}
+        {state.submitting ? "Submitting..." : "Schedule Demo"}
       </Button>
     </form>
   );
 }
 
-export default ContactForm;
+export default ScheduleDemoForm;

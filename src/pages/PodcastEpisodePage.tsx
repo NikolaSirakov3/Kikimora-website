@@ -19,7 +19,7 @@ export function PodcastEpisodePage() {
   };
 
   return (
-    <section className="w-[99.1vw] xl:w-[99.2vw] min-h-screen bg-[#001E38] pt-[80px] pb-12 px-0">
+    <section className="w-[99.1vw] xl:w-[99.1vw] min-h-screen bg-[#001E38] pt-[80px] pb-12 px-0">
       {/* Navigation Bar Offset with pt-[80px] */}
       <div className="flex flex-col items-center w-full mt-10">
         {/* Placeholder, Play Button, Waveform */}
