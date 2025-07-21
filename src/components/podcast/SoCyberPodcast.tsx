@@ -16,49 +16,47 @@ interface PodcastEpisode {
 
 const podcastEpisodes: PodcastEpisode[] = [
   {
-    id: 1,
-    title: "The Future of AI in Cybersecurity",
-    description:
-      "Exploring how artificial intelligence is revolutionizing threat detection and response in modern security operations.",
-    date: new Date("2024-03-15"),
-    image: "/podcast-ai.jpg",
-    duration: "45:30",
-  },
-  {
-    id: 2,
-    title: "Zero Trust Architecture Deep Dive",
-    description:
-      "A comprehensive discussion on implementing and maintaining zero trust security models in enterprise environments.",
-    date: new Date("2024-03-01"),
-    image: "/podcast-zero-trust.jpg",
-    duration: "52:15",
-  },
-  {
-    id: 3,
-    title: "Cloud Security Best Practices",
-    description:
-      "Expert insights on securing cloud infrastructure and preventing common cloud security vulnerabilities.",
-    date: new Date("2024-02-15"),
-    image: "/podcast-cloud.jpg",
-    duration: "48:45",
+    id: 5,
+    title: "White Hat Riddles Podcast Ep. 05",
+    description: "Watch on YouTube: Episode 5 of the White Hat Riddles Podcast.",
+    date: new Date("2024-06-01"), // Placeholder date
+    image: "/podcast-thumbs/SmartRisk.png",
+    duration: "1:12:35", // Placeholder duration
   },
   {
     id: 4,
-    title: "The Human Element in Security",
-    description:
-      "Understanding the role of human behavior in cybersecurity and strategies for building a security-first culture.",
-    date: new Date("2024-02-01"),
-    image: "/podcast-human.jpg",
-    duration: "50:20",
+    title: "White Hat Riddles Podcast Ep. 04",
+    description: "Watch on YouTube: Episode 4 of the White Hat Riddles Podcast.",
+    date: new Date("2024-05-01"), // Placeholder date
+    image: "/podcast-thumbs/Ransomware.png",
+    duration: "1:30:16", // Placeholder duration
   },
   {
-    id: 5,
-    title: "Emerging Threats in 2024",
+    id: 3,
+    title: "White Hat Riddles Podcast Ep. 03",
+    description: "Watch on YouTube: Episode 3 of the White Hat Riddles Podcast.",
+    date: new Date("2024-04-01"), // Placeholder date
+    image: "/podcast-thumbs/Personal Security.png",
+    duration: "1:07:40", // Placeholder duration
+  },
+  {
+    id: 2,
+    title: "Understanding Ransomware | White Hat Riddles Podcast Ep. 02",
     description:
-      "Analysis of the latest cybersecurity threats and trends that organizations need to watch out for.",
-    date: new Date("2024-01-15"),
-    image: "/podcast-threats.jpg",
-    duration: "47:10",
+      "SoCyber321 views3 months ago. 50 minutes. Watch on YouTube: https://youtu.be/Ch9BhBxgUp4",
+    date: new Date("2024-03-01"), // Placeholder date
+    image: "/podcast-thumbs/Hybrid Warfare.png",
+    duration: "50:41", // Placeholder duration
+  },
+  {
+    id: 1,
+    title:
+      "Conversational AI security with Kristian Kamber, Splx.ai | White Hat Riddles Podcast Ep. 01",
+    description:
+      "Welcome to White Hat Riddles, episode 1 - A podcast where we dive into essential cybersecurity knowledge, analyze current trends, and explore the innovations and investments pushing the industry forward. Watch on YouTube: https://youtu.be/eEqAtV5pjdE",
+    date: new Date("2024-02-01"), // Placeholder date
+    image: "/podcast-thumbs/AI Security.png",
+    duration: "52:29", // Placeholder duration
   },
 ];
 
@@ -155,11 +153,11 @@ export function SoCyberPodcast() {
                     className="w-[300px] bg-gradient-to-b from-[#002A4E] to-[#001E38] rounded-xl overflow-hidden transition-transform hover:scale-[1.01] h-full"
                   >
                     <div className="aspect-[16/9] relative">
-                      <div className="absolute inset-0 bg-gradient-to-b from-[#002A4E] to-[#001E38] flex items-center justify-center">
-                        <span className="text-white/20 font-montserrat">
-                          Podcast Thumbnail
-                        </span>
-                      </div>
+                      <img
+                        src={episode.image}
+                        alt={episode.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="p-4">
                       <div className="flex justify-between items-center mb-2">
