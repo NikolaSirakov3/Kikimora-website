@@ -1,4 +1,4 @@
-import  SMEHero  from "@/components/home/SMEHero";
+import SMEHero from "@/components/home/SMEHero";
 import { SMEFrontsSection } from "@/components/home/SMEFrontsSection";
 import { PlatformFeaturesSection } from "@/components/home/PlatformFeaturesSection";
 import { SMEWhyTraditionalSection } from "@/components/home/SMEWhyTraditionalSection";
