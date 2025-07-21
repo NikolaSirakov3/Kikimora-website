@@ -67,32 +67,46 @@ export function PricingSection() {
               <span>Up to 50 employees security training</span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>Firewall rule reviews</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                Firewall rule reviews
+              </span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>API documentation analysis</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                API documentation analysis
+              </span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>Dark net monitoring</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                Dark net monitoring
+              </span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>Penetration testing</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                Penetration testing
+              </span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>SAST/DAST testing</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                SAST/DAST testing
+              </span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>Phishing campaigns</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                Phishing campaigns
+              </span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>Secure code training</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                Secure code training
+              </span>
             </li>
           </ul>
           <button
@@ -172,20 +186,28 @@ export function PricingSection() {
               <span>API documentation analysis</span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>Dark net monitoring</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                Dark net monitoring
+              </span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>WiFi penetration testing</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                WiFi penetration testing
+              </span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>SAST/DAST testing</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                SAST/DAST testing
+              </span>
             </li>
             <li className="flex items-center gap-2 text-sm">
-              <span className="text-red-500">✗</span>
-              <span>Secure code training</span>
+              <span className="text-red-400 opacity-50">✗</span>
+              <span className="text-gray-400 opacity-50">
+                Secure code training
+              </span>
             </li>
           </ul>
           <button

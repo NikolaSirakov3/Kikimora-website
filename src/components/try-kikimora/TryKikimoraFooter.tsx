@@ -22,14 +22,6 @@ export default function TryKikimoraFooter() {
         </div>
         {/* Middle: Services */}
         <div className="flex-1 min-w-[200px] flex flex-col items-start ml-60">
-          <h3 className="text-white text-xl font-bold mb-4">Services</h3>
-          <ul className="text-white space-y-2 text-base">
-            <li>Discovery & Assessment</li>
-            <li>Attack Surface Management</li>
-            <li>Penetration Testing</li>
-            <li>Security Training</li>
-            <li>24/7 Monitoring</li>
-          </ul>
         </div>
         {/* Right: Contact */}
         <div className="flex-1 min-w-[200px] flex flex-col items-start">
@@ -37,7 +29,6 @@ export default function TryKikimoraFooter() {
           <ul className="text-white space-y-2 text-base">
             <li>Schedule a Demo</li>
             <li>Get Personalized Quote</li>
-            <li>24/7 Support Available</li>
           </ul>
         </div>
       </div>
