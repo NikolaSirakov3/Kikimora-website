@@ -1,5 +1,3 @@
-import React from "react";
-
 export function MSSPBookCallSection() {
   return (
     <section className="min-h-[40vh] bg-[#0f172a] flex items-center justify-center py-16">

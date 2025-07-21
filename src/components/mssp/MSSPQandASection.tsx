@@ -1,4 +1,3 @@
-import React from "react";
 import { RiQuestionLine } from "react-icons/ri";
 
 export function MSSPQandASection() {
