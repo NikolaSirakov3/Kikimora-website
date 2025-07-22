@@ -9,6 +9,7 @@ import { FintechConsultationSection } from "@/components/case-study/FintechConsu
 import { FintechStatisticsSection } from "@/components/case-study/FintechStatisticsSection";
 import { IntegratedSolutionSection } from "@/components/case-study/IntegratedSolutionSection";
 import { DigitalDefenseSection } from "@/components/case-study/DigitalDefenseSection";
+import { FintechPressureSection } from "@/components/case-study/FintechPressureSection";
 
 function Fintech() {
   return (
@@ -24,6 +25,7 @@ function Fintech() {
       <FintechStatisticsSection />
       <IntegratedSolutionSection />
       <DigitalDefenseSection />
+      <FintechPressureSection />
     </main>
   );
 }
