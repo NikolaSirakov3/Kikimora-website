@@ -1,286 +1,228 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
-import colorAndBlack from "../assets/colorAndBlack.png";
+import { useParams, useNavigate } from "react-router-dom";
+import { Play, Download, ChevronDown } from "lucide-react";
 
 export function PodcastEpisodePage() {
   const { id } = useParams<{ id: string }>();
-  const [openChapters, setOpenChapters] = useState<{ [key: string]: boolean }>({
-    chapter1: false,
-    chapter2: false,
-    chapter3: false,
-    chapter4: false,
-  });
+  const navigate = useNavigate();
+  const [isTranscriptOpen, setIsTranscriptOpen] = useState(true);
 
-  const toggleChapter = (chapterId: string) => {
-    setOpenChapters((prev) => ({
-      ...prev,
-      [chapterId]: !prev[chapterId],
-    }));
+  // Mock data for the episode
+  const episodeData = {
+    episodeNumber: id || "42",
+    title: "The Future of Artificial Intelligence with Dr. Evelyn Reed",
+    date: "2025-07-21",
+    duration: "58:32",
+    speaker: {
+      name: "Dr. Evelyn Reed",
+      role: "Lead AI Researcher at FutureScape Labs",
+      initials: "ER",
+    },
+    topics: ["AI", "Machine Learning", "Ethics"],
+    keyTakeaways: [
+      "Neural networks mimic the human brain to learn from data.",
+      "AI ethics focuses on fairness and eliminating bias in current algorithms.",
+      "Personalized medicine is a key frontier for AI application.",
+      "Human-centric design is crucial for augmenting human capabilities, not replacing them.",
+    ],
+    transcript: [
+      {
+        time: "00:00",
+        text: 'Welcome back to "Future Forward." Today, we have a very special guest, Dr. Evelyn Reed.',
+      },
+      {
+        time: "02:05",
+        text: "The core concept of a neural network is to mimic the human brain's structure, allowing it to learn from vast amounts of data.",
+      },
+      {
+        time: "05:50",
+        text: "When we talk about AI ethics, it's not just about preventing doomsday scenarios; it's about ensuring fairness and eliminating bias in algorithms that make decisions today.",
+      },
+      {
+        time: "14:52",
+        text: "One of the most exciting frontiers is personalized medicine, where AI can predict diseases based on genetic markers.",
+      },
+      {
+        time: "25:30",
+        text: "The key is to approach AI development with a human-centric perspective. It's a tool to augment our capabilities, not replace them entirely.",
+      },
+    ],
+    relatedEpisodes: [
+      {
+        id: "ep41",
+        number: "41",
+        title: "Sustainable Cities: A Blueprint for Urban Innovation",
+      },
+      {
+        id: "ep40",
+        number: "40",
+        title: "The Psychology of Creativity and Flow States",
+      },
+      {
+        id: "ep39",
+        number: "39",
+        title: "Decentralized Finance: Beyond the Hype",
+      },
+    ],
+  };
+
+  const handleRelatedEpisodeClick = (episodeId: string) => {
+    navigate(`/podcast/${episodeId}`);
   };
 
   return (
-    <section className="w-[99.1vw] xl:w-[99.1vw] min-h-screen bg-[#001E38] pt-[80px] pb-12 px-0">
-      {/* Navigation Bar Offset with pt-[80px] */}
-      <div className="flex flex-col items-center w-full mt-10">
-        {/* Placeholder, Play Button, Waveform */}
-        <div className="w-full max-w-[900px] mb-8 -ml-[15vw]">
-          {/* Podcast Image Placeholder */}
-          <div className="w-full aspect-[16/7] bg-[#1B2B3A] rounded-2xl mb-4 relative overflow-hidden max-w-[900px]">
-            <img
-              src={colorAndBlack}
-              alt="Podcast Placeholder"
-              className="object-cover w-full h-full rounded-2xl"
-              style={{ maxWidth: 900 }}
-            />
+    <div className="min-h-screen bg-slate-900 pt-20 w-[99.1vw]">
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        {/* Episode Header */}
+        <div className="mb-8 text-center">
+          <div className="text-sm text-gray-400 mb-2">
+            Episode {episodeData.episodeNumber}
           </div>
-          {/* Play Button and Waveform */}
-          <div className="w-full flex flex-col items-center">
-            <div className="w-full bg-[#6ED0FF] rounded-xl flex items-center px-6 py-4 mb-2">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            {episodeData.title}
+          </h1>
+          <div className="flex items-center justify-center gap-4 text-gray-400 text-sm">
+            <span>{episodeData.date}</span>
+            <span>•</span>
+            <span>{episodeData.duration}</span>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Main Content Area */}
+          <div className="flex-1">
+            {/* Interactive Waveform Player */}
+            <div className="bg-gray-800 rounded-lg p-6 mb-80">
+              <div className="h-6 bg-gray-700 rounded flex items-center justify-center mb-4">
+                <span className="text-gray-400 text-sm">
+                  Interactive Waveform Player
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <button className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors relative">
+                    <Play size={20} className="text-white ml-1 absolute" />
+                  </button>
+                  <span className="text-white text-sm">1x</span>
+                </div>
+                <button className="text-gray-400 hover:text-white transition-colors">
+                  <Download size={20} />
+                </button>
+              </div>
+            </div>
+
+            {/* Key Takeaways */}
+            <div className="mb-8">
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Key Takeaways (AI-Generated)
+              </h2>
+              <ul className="space-y-2">
+                {episodeData.keyTakeaways.map((takeaway, index) => (
+                  <li
+                    key={index}
+                    className="text-gray-300 flex items-start gap-3"
+                  >
+                    <span className="text-blue-400 mt-1">•</span>
+                    <span>{takeaway}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Full Interactive Transcript */}
+            <div className="mb-8">
               <button
-                className="flex items-center gap-2 bg-[#1B2B3A] text-[#00E5BE] font-montserrat text-base focus:outline-none px-6 py-2 rounded-lg shadow-md font-bold"
-                aria-label="Play podcast episode"
+                onClick={() => setIsTranscriptOpen(!isTranscriptOpen)}
+                className="flex items-center gap-2 text-xl font-semibold text-white mb-4 hover:text-gray-300 transition-colors"
               >
-                <svg width="28" height="28" fill="none" viewBox="0 0 32 32">
-                  <circle
-                    cx="16"
-                    cy="16"
-                    r="16"
-                    fill="#00E5BE"
-                    fillOpacity="0.2"
-                  />
-                  <polygon points="13,10 23,16 13,22" fill="#00E5BE" />
-                </svg>
+                Full Interactive Transcript
+                <ChevronDown
+                  size={20}
+                  className={`transition-transform ${isTranscriptOpen ? "rotate-180" : ""}`}
+                />
               </button>
-              {/* Waveform (vertical lines) */}
-              <div className="flex items-end gap-[2px] h-6 ml-8">
-                {[
-                  8, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 14, 20,
-                  12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18,
-                  10, 16, 8, 14, 20, 12, 18, 10, 16, 14, 20, 12, 18, 10, 16, 8,
-                  14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 8, 14, 20,
-                  12, 18, 10, 16, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10,
-                  16, 8, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 14,
-                  20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12,
-                  18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 14, 20, 12, 18, 10, 16,
-                  8, 14, 20, 12, 18, 10, 16, 8, 14, 20, 12, 18, 10, 16, 8, 14,
-                  20, 12, 18, 10, 16, 14, 20,
-                ].map((h, i) => (
+
+              {isTranscriptOpen && (
+                <div className="space-y-4">
+                  {episodeData.transcript.map((segment, index) => (
+                    <div key={index} className="flex gap-4">
+                      <span className="text-blue-400 font-mono text-sm min-w-[60px]">
+                        [{segment.time}]
+                      </span>
+                      <p className="text-gray-300 flex-1">{segment.text}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Right Sidebar */}
+          <div className="lg:w-180 space-y-6">
+            {/* Episode Thumbnail */}
+            <div className="bg-gray-800 rounded-lg h-[50vh] w-[50vh] flex items-center justify-center">
+              <span className="text-white text-2xl font-bold">
+                Ep {episodeData.episodeNumber}
+              </span>
+            </div>
+
+            {/* Speaker Information */}
+            <div className="bg-gray-800 rounded-lg p-4">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-semibold">
+                    {episodeData.speaker.initials}
+                  </span>
+                </div>
+                <div>
+                  <div className="text-white font-semibold">
+                    {episodeData.speaker.name}
+                  </div>
+                  <div className="text-gray-400 text-sm">
+                    {episodeData.speaker.role}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Topics */}
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-white font-semibold mb-3">Topics</h3>
+              <div className="flex flex-wrap gap-2">
+                {episodeData.topics.map((topic, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full hover:bg-blue-700 cursor-pointer transition-colors"
+                  >
+                    {topic}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* You Might Also Like */}
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-white font-semibold mb-4">
+                You Might Also Like
+              </h3>
+              <div className="space-y-3">
+                {episodeData.relatedEpisodes.map((episode) => (
                   <div
-                    key={i}
-                    className="w-[3px] rounded bg-[#1B2B3A]"
-                    style={{
-                      height: `${h}px`,
-                      opacity: 0.7 + 0.3 * (i % 2 ? 1 : 0),
-                    }}
-                  />
+                    key={episode.id}
+                    onClick={() => handleRelatedEpisodeClick(episode.id)}
+                    className="p-3 bg-gray-700 rounded-lg hover:bg-gray-600 cursor-pointer transition-colors"
+                  >
+                    <div className="text-blue-400 text-sm font-semibold">
+                      Ep {episode.number}
+                    </div>
+                    <div className="text-white text-sm">{episode.title}</div>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
-        {/* Main Content and Timestamps stacked below */}
-        <div className="flex flex-row items-start justify-between w-[1200px] gap-6">
-          {/* Left Column - Main Content */}
-          <div className="flex flex-col items-start w-[800px] gap-6">
-            {/* Title */}
-            <h1 className="text-white text-3xl mb-2 mt-2 tracking-wide text-left w-full">
-              WHITE HAT RIDDLES - Episode {id}
-            </h1>
-            {/* Description */}
-            <p className="text-white/90 font-montserrat text-base mb-4 w-full text-left">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don't look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn't anything embarrassing
-              hidden in the middle of text.
-            </p>
-            {/* Collapsible Chapter 1 */}
-            <div className="flex flex-col items-start w-full mb-2">
-              <div className="w-full">
-                <button
-                  className="flex items-center gap-2 text-[#fff]   text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
-                  onClick={() => toggleChapter("chapter1")}
-                  aria-expanded={openChapters.chapter1}
-                  aria-controls="chapter1-content"
-                >
-                  <svg
-                    className={`transition-transform duration-200 ${openChapters.chapter1 ? "rotate-90" : "rotate-0"}`}
-                    width="24"
-                    height="24"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 8L10 12L14 8"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  CHAPTER 1: RANSOMWARE
-                </button>
-                {openChapters.chapter1 && (
-                  <div
-                    id="chapter1-content"
-                    className="mt-3 text-white/80 font-montserrat text-base bg-transparent rounded-xl p-0"
-                  >
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form, by injected humour, or randomised words which don't
-                    look even slightly believable. If you are going to use a
-                    passage of Lorem Ipsum, you need to be sure there isn't
-                    anything embarrassing hidden in the middle of text.
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Collapsible Chapter 2 */}
-            <div className="flex flex-col items-start w-full mb-2">
-              <div className="w-full">
-                <button
-                  className="flex items-center gap-2 text-[#fff]   text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
-                  onClick={() => toggleChapter("chapter2")}
-                  aria-expanded={openChapters.chapter2}
-                  aria-controls="chapter2-content"
-                >
-                  <svg
-                    className={`transition-transform duration-200 ${openChapters.chapter2 ? "rotate-90" : "rotate-0"}`}
-                    width="24"
-                    height="24"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 8L10 12L14 8"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  CHAPTER 2: PHISHING ATTACKS
-                </button>
-                {openChapters.chapter2 && (
-                  <div
-                    id="chapter2-content"
-                    className="mt-3 text-white/80 font-montserrat text-base bg-transparent rounded-xl p-0"
-                  >
-                    Phishing attacks are becoming increasingly sophisticated.
-                    Learn about the latest techniques used by attackers and how
-                    to protect yourself and your organization from these
-                    threats. Understanding the psychology behind phishing is
-                    crucial for developing effective defense strategies.
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Collapsible Chapter 3 */}
-            <div className="flex flex-col items-start w-full mb-2">
-              <div className="w-full">
-                <button
-                  className="flex items-center gap-2 text-[#fff]   text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
-                  onClick={() => toggleChapter("chapter3")}
-                  aria-expanded={openChapters.chapter3}
-                  aria-controls="chapter3-content"
-                >
-                  <svg
-                    className={`transition-transform duration-200 ${openChapters.chapter3 ? "rotate-90" : "rotate-0"}`}
-                    width="24"
-                    height="24"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 8L10 12L14 8"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  CHAPTER 3: SOCIAL ENGINEERING
-                </button>
-                {openChapters.chapter3 && (
-                  <div
-                    id="chapter3-content"
-                    className="mt-3 text-white/80 font-montserrat text-base bg-transparent rounded-xl p-0"
-                  >
-                    Social engineering exploits human psychology to gain
-                    unauthorized access to systems and information. This chapter
-                    explores common social engineering tactics and provides
-                    practical advice on how to recognize and prevent these types
-                    of attacks.
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Collapsible Chapter 4 */}
-            <div className="flex flex-col items-start w-full mb-2">
-              <div className="w-full">
-                <button
-                  className="flex items-center gap-2 text-[#fff]   text-xl focus:outline-none pl-0 py-2 rounded w-full text-left bg-transparent"
-                  onClick={() => toggleChapter("chapter4")}
-                  aria-expanded={openChapters.chapter4}
-                  aria-controls="chapter4-content"
-                >
-                  <svg
-                    className={`transition-transform duration-200 ${openChapters.chapter4 ? "rotate-90" : "rotate-0"}`}
-                    width="24"
-                    height="24"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 8L10 12L14 8"
-                      stroke="#fff"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  CHAPTER 4: SECURITY BEST PRACTICES
-                </button>
-                {openChapters.chapter4 && (
-                  <div
-                    id="chapter4-content"
-                    className="mt-3 text-white/80 font-montserrat text-base bg-transparent rounded-xl p-0"
-                  >
-                    Implementing strong security practices is essential for
-                    protecting your digital assets. This chapter covers password
-                    management, two-factor authentication, regular updates, and
-                    other fundamental security measures that everyone should
-                    follow.
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Aside */}
-          <aside className="w-[350px] bg-[#6ED0FF] rounded-2xl p-6 mt-2">
-            <h4 className="text-[#001E38]   text-2xl mb-4 text-center">
-              Timestamps
-            </h4>
-            <p className="text-[#001E38]/90 font-montserrat text-base text-center">
-              These are sample sections of a podcast episode. You can use this
-              area to list timestamps, chapters, or key moments for the episode.
-              This helps users jump to the most interesting parts quickly and
-              improves accessibility for all listeners. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Integer nec odio. Praesent
-              libero. Sed cursus ante dapibus diam.
-            </p>
-          </aside>
-        </div>
       </div>
-    </section>
+    </div>
   );
 }

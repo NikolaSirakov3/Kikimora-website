@@ -1,6 +1,9 @@
 import { Play, ExternalLink } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export function PopularEpisodes() {
+  const navigate = useNavigate();
+
   const episodes = [
     {
       id: "ep41",
@@ -29,11 +32,11 @@ export function PopularEpisodes() {
   ];
 
   const handleViewDetails = (episodeId: string) => {
-    console.log("View Details clicked for episode:", episodeId);
+    navigate(`/podcast/${episodeId}`);
   };
 
   const handlePlay = (episodeId: string) => {
-    console.log("Play clicked for episode:", episodeId);
+    navigate(`/podcast/${episodeId}`);
   };
 
   return (
@@ -47,7 +50,8 @@ export function PopularEpisodes() {
           {episodes.map((episode) => (
             <div
               key={episode.id}
-              className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-colors"
+              className="bg-gray-800 rounded-lg overflow-hidden hover:bg-gray-750 transition-colors cursor-pointer"
+              onClick={() => handleViewDetails(episode.id)}
             >
               {/* Thumbnail Area */}
               <div className="h-60 bg-black flex items-center justify-center">
@@ -78,7 +82,10 @@ export function PopularEpisodes() {
                 {/* Controls */}
                 <div className="flex items-center justify-between">
                   <button
-                    onClick={() => handleViewDetails(episode.id)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleViewDetails(episode.id);
+                    }}
                     className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2"
                   >
                     <ExternalLink size={16} />
@@ -86,7 +93,10 @@ export function PopularEpisodes() {
                   </button>
 
                   <button
-                    onClick={() => handlePlay(episode.id)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handlePlay(episode.id);
+                    }}
                     className="w-10 h-10 bg-gray-600 hover:bg-gray-500 rounded-full flex items-center justify-center transition-colors"
                   >
                     <Play size={16} className="text-white ml-0.5" />
