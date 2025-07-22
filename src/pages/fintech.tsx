@@ -4,8 +4,10 @@ import { FintechIntroSection } from "@/components/case-study/FintechIntroSection
 import { SecurityEcosystemSection } from "@/components/case-study/SecurityEcosystemSection";
 import { StrategicPathwaySection } from "../components/case-study/StrategicPathwaySection";
 import { FeaturesCaseStudy } from "../components/case-study/FeaturesCaseStudy";
-import { FintechTestimonialSection } from "../components/case-study/FintechTestimonialSection";
-import { FintechConsultationSection } from "../components/case-study/FintechConsultationSection";
+import { FintechTestimonialSection } from "@/components/case-study/FintechTestimonialSection";
+import { FintechConsultationSection } from "@/components/case-study/FintechConsultationSection";
+import { FintechStatisticsSection } from "@/components/case-study/FintechStatisticsSection";
+import { IntegratedSolutionSection } from "@/components/case-study/IntegratedSolutionSection";
 
 function Fintech() {
   return (
@@ -18,6 +20,8 @@ function Fintech() {
       <FeaturesCaseStudy />
       <FintechTestimonialSection />
       <FintechConsultationSection />
+      <FintechStatisticsSection />
+      <IntegratedSolutionSection />
     </main>
   );
 }
