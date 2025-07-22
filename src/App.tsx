@@ -30,6 +30,7 @@ import { Healthcare } from "@/pages/healthcare";
 import { Fintech } from "@/pages/fintech";
 import { SME } from "@/pages/sme";
 import { PodcastEpisodePage } from "@/pages/PodcastEpisodePage";
+import { Podcasts } from "@/pages/podcasts";
 import { Careers } from "@/pages/careers";
 import RoleDetails from "@/pages/RoleDetails";
 import OTSecurityPage from "@/pages/ot-security";
@@ -80,6 +81,7 @@ function App() {
             <Route path="/developers" element={<Developers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/podcasts" element={<Podcasts />} />
             <Route path="/podcast/:id" element={<PodcastEpisodePage />} />
             <Route path="/docs" element={<div>Documentation Page</div>} />
             <Route path="/privacy" element={<div>Privacy Policy Page</div>} />
