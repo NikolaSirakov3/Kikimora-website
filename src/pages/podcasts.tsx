@@ -1,5 +1,6 @@
 import { PodcastHero } from "../components/podcast/PodcastHero";
-import { SoCyberPodcast } from "../components/podcast/SoCyberPodcast";
+import { PopularEpisodes } from "../components/podcast/PopularEpisodes";
+import { AllEpisodesSection } from "../components/podcast/AllEpisodesSection";
 
 function Podcasts() {
   const handleListenNow = () => {
@@ -18,7 +19,8 @@ function Podcasts() {
         onListenNow={handleListenNow}
         onSubscribe={handleSubscribe}
       />
-      <SoCyberPodcast />
+      <PopularEpisodes />
+      <AllEpisodesSection />
     </main>
   );
 }
