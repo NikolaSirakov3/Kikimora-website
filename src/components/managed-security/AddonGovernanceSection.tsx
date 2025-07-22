@@ -1,177 +1,240 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ScheduleDemoModal } from "@/components/ui/ScheduleDemoModal";
-import Lottie from "lottie-react";
 
 export function AddonGovernanceSection() {
   const [isScheduleDemoModalOpen, setIsScheduleDemoModalOpen] = useState(false);
-  const [auctionAnimation, setAuctionAnimation] = useState(null);
-
-  useEffect(() => {
-    const loadAnimation = async () => {
-      try {
-        // Load the lottie JSON file directly
-        const response = await fetch("/lottie/Auction.json");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const animationData = await response.json();
-        setAuctionAnimation(animationData);
-      } catch (error) {
-        console.error("Failed to load auction animation:", error);
-      }
-    };
-
-    loadAnimation();
-  }, []);
 
   return (
     <>
       <section className="w-full flex flex-col items-center py-16 bg-white">
-        <div className="w-full max-w-7xl bg-gray-300 rounded-lg p-8 shadow-lg">
-          <h2 className="text-3xl md:text-4xl text-black text-center mb-6">
-            Add-on: Governance
-          </h2>
-          <h3 className="text-2xl md:text-3xl text-[#31c9b7] text-center mb-3">
-            TAILORED PRICING
-          </h3>
-          <p className="text-center text-black max-w-3xl mb-6 px-4 mx-auto">
-            Delegate the core components of managing your IT infrastructure to a
-            dedicated expert, allowing leadership to focus on core operations
-            rather than cybersecurity complexity.
-          </p>
-          <div className="flex flex-col md:flex-row gap-8 md:gap-16 max-w-6xl ml-40 my-20">
+        <div
+          className="w-full max-w-7xl rounded-lg p-8 shadow-lg relative"
+          style={{
+            backgroundImage: "url('/eu-governance.jpeg')",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "#1e3a8a",
+          }}
+        >
+          {/* Content */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+            {/* Left Section */}
             <div className="flex-1">
-              <h4 className="text-xl font-semibold mb-3 text-black">
-                Governance Features:
-              </h4>
-              <ul className="space-y-2 text-black">
-                <li className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Gap analysis and risk management
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Security procedures and policy maintenance
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Security strategy development
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Business continuity/disaster recovery training
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Operational-level involvement (approvals, audits)
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Advisory on emerging technology
-                </li>
-                <li className="flex items-start">
-                  <svg
-                    className="w-5 h-5 text-[#31c9b7] mt-1 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Development of internal security team
-                </li>
-              </ul>
+              <div className="mt-20 ml-10">
+                <span className="inline-block px-3 py-1 bg-blue-400 text-white text-sm font-semibold rounded mb-4">
+                  ADD-ON
+                </span>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+                  Add a Strategic Security Partner: Our vCISO Governance Module
+                </h2>
+                <p className="text-white text-lg leading-relaxed mb-8">
+                  For organizations requiring executive-level security
+                  leadership, strategic guidance, and sophisticated risk
+                  management, our Governance module provides a dedicated Virtual
+                  CISO (vCISO) to align security with your business objectives.
+                </p>
+                <button
+                  onClick={() => setIsScheduleDemoModalOpen(true)}
+                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
+                >
+                  <div className="text-center">
+                    <div className="text-lg">
+                      Schedule a Governance Consultation
+                    </div>
+                    <div className="text-sm opacity-90">
+                      Discuss Your Strategic Needs
+                    </div>
+                  </div>
+                </button>
+              </div>
             </div>
-            <div className="w-full md:w-2/5 mt-10 mr-20 flex flex-col items-center justify-center p-6 h-[180px]">
-              {auctionAnimation ? (
-                <Lottie
-                  animationData={auctionAnimation}
-                  loop={true}
-                  autoplay={true}
-                  style={{ width: "400%", height: "300%" }}
-                />
-              ) : (
-                <div className="flex items-center justify-center w-full h-full">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#31c9b7]"></div>
-                </div>
-              )}
+
+            {/* Right Section - Card Format */}
+            <div className="flex-1">
+              <div className="bg-gray-900 rounded-lg p-6 border border-gray-700 mt-10">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                  Key Governance Benefits:
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-blue-400 mt-1 mr-3 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <span className="font-bold text-white">
+                        Strategic Roadmap Development:
+                      </span>
+                      <span className="text-white">
+                        {" "}
+                        Partner with an expert to develop and execute a
+                        long-term security strategy.
+                      </span>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-blue-400 mt-1 mr-3 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <span className="font-bold text-white">
+                        Proactive Risk Management:
+                      </span>
+                      <span className="text-white">
+                        {" "}
+                        Conduct gap analyses, manage risks, and ensure your
+                        security posture meets evolving threats.
+                      </span>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-blue-400 mt-1 mr-3 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <span className="font-bold text-white">
+                        Policy & Procedure Excellence:
+                      </span>
+                      <span className="text-white">
+                        {" "}
+                        Establish and maintain robust security policies and
+                        procedures for operational consistency and compliance.
+                      </span>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-blue-400 mt-1 mr-3 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <span className="font-bold text-white">
+                        Business Continuity & Disaster Recovery:
+                      </span>
+                      <span className="text-white">
+                        {" "}
+                        Develop and test plans to ensure your business can
+                        withstand and recover from significant incidents.
+                      </span>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-blue-400 mt-1 mr-3 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <span className="font-bold text-white">
+                        Executive-Level Reporting:
+                      </span>
+                      <span className="text-white">
+                        {" "}
+                        Get clear, concise updates for your board and leadership
+                        on security posture and risk.
+                      </span>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-blue-400 mt-1 mr-3 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <span className="font-bold text-white">
+                        Emerging Technology Advisory:
+                      </span>
+                      <span className="text-white">
+                        {" "}
+                        Receive expert guidance on integrating new security
+                        technologies and adapting to the latest threat
+                        landscape.
+                      </span>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="w-6 h-6 text-blue-400 mt-1 mr-3 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <span className="font-bold text-white">
+                        Internal Team Development:
+                      </span>
+                      <span className="text-white">
+                        {" "}
+                        Guidance on building and mentoring your internal
+                        security team.
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
