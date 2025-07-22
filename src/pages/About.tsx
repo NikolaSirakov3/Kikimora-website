@@ -4,6 +4,8 @@ import { StatsSection } from "../components/managed-security/StatsSection";
 import { AdvantagesSection } from "../components/managed-security/AdvantagesSection";
 import { RecentSecurityStatisticsSection } from "../components/managed-security/RecentSecurityStatisticsSection";
 import { InteractiveApproachSection } from "../components/managed-security/InteractiveApproachSection";
+import { WhyWeExistSection } from "../components/about/WhyWeExistSection";
+import { BeginSecurityJourneySection } from "../components/about/BeginSecurityJourneySection";
 import TryKikimoraFooter from "../components/try-kikimora/TryKikimoraFooter";
 
 export function About() {
@@ -15,6 +17,8 @@ export function About() {
       <AdvantagesSection />
       <RecentSecurityStatisticsSection />
       <InteractiveApproachSection />
+      <WhyWeExistSection />
+      <BeginSecurityJourneySection />
       <TryKikimoraFooter />
     </div>
   );
