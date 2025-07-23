@@ -10,6 +10,7 @@ import { SMEFinalCTASection } from "@/components/home/SMEFinalCTASection";
 import TryKikimoraFooter from "@/components/try-kikimora/TryKikimoraFooter";
 import { KikimoraAdvantageSection } from "@/components/home/KikimoraAdvantageSection";
 import { TwoPathsSection } from "@/components/home/TwoPathsSection";
+import { ComparisonChartSection } from "@/components/home/ComparisonChartSection";
 
 function SME() {
   return (
@@ -25,6 +26,7 @@ function SME() {
       <TrustedByEuropeSection />
       <SMEFinalCTASection />
       <TwoPathsSection />
+      <ComparisonChartSection />
       <TryKikimoraFooter />
     </main>
   );
