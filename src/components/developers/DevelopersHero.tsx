@@ -22,7 +22,7 @@ export function DevelopersHero() {
           <Button
             className="bg-[#2ca38f] text-white hover:bg-[#00E5BE]/90 rounded-lg px-6 py-3 font-montserrat font-semibold flex items-center gap-2"
             onClick={() =>
-              window.open("https://calendly.com/o-antonov", "_blank")
+              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
             }
           >
             Get Started
@@ -32,7 +32,7 @@ export function DevelopersHero() {
             variant="outline"
             className="border-[#00E5BE] text-[#3fa897] hover:bg-[#00E5BE]/10 rounded-lg px-6 py-3 font-montserrat font-semibold"
             onClick={() =>
-              window.open("https://calendly.com/o-antonov", "_blank")
+              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
             }
           >
             Book a Consultation

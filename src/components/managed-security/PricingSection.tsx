@@ -112,7 +112,7 @@ export function PricingSection() {
           <button
             className="mt-6 w-full bg-[#001324] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#0a2440] transition-colors"
             onClick={() =>
-              window.open("https://calendly.com/o-antonov", "_blank")
+              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
             }
           >
             Get Started
@@ -213,7 +213,7 @@ export function PricingSection() {
           <button
             className="mt-6 w-full bg-[#001324] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#0a2440] transition-colors"
             onClick={() =>
-              window.open("https://calendly.com/o-antonov", "_blank")
+              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
             }
           >
             Get Started
@@ -303,7 +303,7 @@ export function PricingSection() {
           <button
             className="mt-6 w-full bg-[#001324] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#0a2440] transition-colors"
             onClick={() =>
-              window.open("https://calendly.com/o-antonov", "_blank")
+              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
             }
           >
             Get Started

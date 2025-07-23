@@ -21,7 +21,7 @@ export function ConsultationForm() {
           <button
             className="px-8 py-4 bg-[#4169E1] text-white font-medium rounded-md hover:bg-[#3154b3] transition-colors"
             onClick={() =>
-              window.open("https://calendly.com/o-antonov", "_blank")
+              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
             }
           >
             Book
