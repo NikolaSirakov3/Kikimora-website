@@ -29,7 +29,7 @@ function FitForBusinessSection() {
         {FIT_OPTIONS.map(({ title, description }) => (
           <div
             key={title}
-            className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[320px] text-center transition hover:shadow-md"
+            className="bg-white rounded-xl p-10 flex flex-col items-center shadow-sm border border-[#e5e7eb] min-h-[220px] text-center transition hover:shadow-md"
             role="region"
             aria-label={title}
           >
