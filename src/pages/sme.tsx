@@ -7,7 +7,7 @@ import { SMEPlatformPartnershipSection } from "@/components/home/SMEPlatformPart
 import { FitForBusinessSection } from "@/components/home/FitForBusinessSection";
 import { TrustedByEuropeSection } from "@/components/home/TrustedByEuropeSection";
 import { SMEFinalCTASection } from "@/components/home/SMEFinalCTASection";
-import { EUFunding } from "@/components/shared/EUFunding";
+import TryKikimoraFooter from "@/components/try-kikimora/TryKikimoraFooter";
 
 function SME() {
   return (
@@ -21,7 +21,7 @@ function SME() {
       <SMEPlatformPartnershipSection />
       <TrustedByEuropeSection />
       <SMEFinalCTASection />
-      <EUFunding />
+      <TryKikimoraFooter />
     </main>
   );
 }
