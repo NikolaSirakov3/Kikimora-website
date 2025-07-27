@@ -21,6 +21,7 @@ import { EuropeanCybersecuritySection } from "@/components/home/EuropeanCybersec
 import { SMEAttackStatsSection } from "@/components/home/SMEAttackStatsSection";
 import { EUComplianceSection } from "@/components/home/EUComplianceSection";
 import { CybersecurityShortageSection } from "@/components/home/CybersecurityShortageSection";
+import { CybersecurityChallengesSection } from "@/components/home/CybersecurityChallengesSection";
 import { About } from "@/pages/About";
 import { ImageSwitcher } from "@/components/home/ImageSwitcher";
 import { MSSP } from "@/pages/MSSP";
@@ -82,6 +83,7 @@ function App() {
                   <SMEAttackStatsSection />
                   <EUComplianceSection />
                   <CybersecurityShortageSection />
+                  <CybersecurityChallengesSection />
                   <GetInTouch />
                   <Newsletter />
                 </>

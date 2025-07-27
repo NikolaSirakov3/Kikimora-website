@@ -28,6 +28,7 @@
     "@types/react-slick": "^0.23.13",
     "@types/styled-components": "^5.1.34",
     "antd": "^5.26.5",
+    "chart.js": "^4.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cors": "^2.8.5",
