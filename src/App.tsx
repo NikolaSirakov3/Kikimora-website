@@ -18,6 +18,7 @@ import { Blog } from "@/pages/Blog";
 import { BlogPost } from "@/pages/BlogPost";
 import { GetInTouch } from "@/components/home/GetInTouch";
 import { EuropeanCybersecuritySection } from "@/components/home/EuropeanCybersecuritySection";
+import { SMEAttackStatsSection } from "@/components/home/SMEAttackStatsSection";
 import { About } from "@/pages/About";
 import { ImageSwitcher } from "@/components/home/ImageSwitcher";
 import { MSSP } from "@/pages/MSSP";
@@ -76,6 +77,7 @@ function App() {
                   <SoCyberPodcast />
                   <ComparisonTableSection />
                   <EuropeanCybersecuritySection />
+                  <SMEAttackStatsSection />
                   <GetInTouch />
                   <Newsletter />
                 </>
