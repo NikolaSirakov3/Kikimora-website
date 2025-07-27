@@ -24,6 +24,7 @@ import TryKikimora from "@/pages/TryKikimora";
 import ManagedSecurity from "@/pages/managed-security";
 import { PlatformSection } from "./components/home/PlatformSection";
 import { SoCyberPodcast } from "@/components/podcast/SoCyberPodcast";
+import { ComparisonTableSection } from "@/components/home/ComparisonTableSection";
 import PricingInfo from "@/pages/pricing-info";
 import { Startup } from "@/pages/startup";
 import { Healthcare } from "@/pages/healthcare";
@@ -72,6 +73,7 @@ function App() {
                   <Testimonials />
                   <Blog />
                   <SoCyberPodcast />
+                  <ComparisonTableSection />
                   <GetInTouch />
                   <Newsletter />
                 </>
