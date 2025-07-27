@@ -1,6 +1,67 @@
 import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
+// --- TypeScript Interfaces ---
+interface Challenge {
+  id: string;
+  title: string;
+  content: {
+    nature: string;
+    impact: string[];
+    examples: Array<{
+      title: string;
+      text: string;
+    }>;
+    insight: {
+      title: string;
+      text: string;
+    };
+  };
+  visualization: {
+    type: "bar" | "line" | "doughnut";
+    title: string;
+    intro: string;
+    data: {
+      labels: string[];
+      datasets: Array<{
+        label: string;
+        data: number[];
+        backgroundColor?: string | string[];
+        borderColor?: string | string[];
+        borderWidth?: number;
+        fill?: boolean;
+        tension?: number;
+        hoverOffset?: number;
+      }>;
+    };
+    options: Record<string, unknown>;
+  };
+}
+
+interface ImpactMatrix {
+  sectors: string[];
+  challenges: string[];
+  data: string[][];
+}
+
+interface ChallengeTabsProps {
+  challenges: Challenge[];
+  activeChallengeId: string;
+  onTabClick: (id: string) => void;
+}
+
+interface ChallengeContentProps {
+  challenge: Challenge;
+}
+
+interface VisualizationPanelProps {
+  challenge: Challenge;
+}
+
+interface ImpactMatrixProps {
+  matrix: ImpactMatrix;
+}
+
 // --- Data Store ---
 // This object holds all the content for the report.
 const reportData = {
@@ -36,7 +97,7 @@ const reportData = {
         },
       },
       visualization: {
-        type: "bar",
+        type: "bar" as const,
         title: "Escalation of State-Sponsored Activity",
         intro:
           "Geopolitical tensions directly fuel cyberattacks. For example, Russian cyberattacks targeting Ukraine's critical energy sector surged dramatically, demonstrating a persistent and escalating campaign.",
@@ -56,14 +117,15 @@ const reportData = {
           scales: {
             y: {
               beginAtZero: true,
-              ticks: { callback: (value) => value + "%" },
+              ticks: { callback: (value: number) => value + "%" },
             },
           },
           plugins: {
             legend: { display: false },
             tooltip: {
               callbacks: {
-                label: (context) => `Relative Attack Volume: ${context.raw}%`,
+                label: (context: { raw: number }) =>
+                  `Relative Attack Volume: ${context.raw}%`,
               },
             },
           },
@@ -101,7 +163,7 @@ const reportData = {
         },
       },
       visualization: {
-        type: "line",
+        type: "line" as const,
         title: "Growth in Supply Chain Attacks",
         intro:
           "Software supply chain attacks are increasing. The monthly average of incidents has risen sharply, with global economic costs projected to more than double by 2031.",
@@ -122,7 +184,8 @@ const reportData = {
             legend: { display: false },
             tooltip: {
               callbacks: {
-                label: (context) => `Indexed Attack Volume: ${context.raw}`,
+                label: (context: { raw: number }) =>
+                  `Indexed Attack Volume: ${context.raw}`,
               },
             },
           },
@@ -160,7 +223,7 @@ const reportData = {
         },
       },
       visualization: {
-        type: "doughnut",
+        type: "doughnut" as const,
         title: "Energy Sector OT Monitoring Gap",
         intro:
           "A significant portion of Europe's energy sector lacks visibility into threats against their core operational systems, representing a critical security gap.",
@@ -179,7 +242,8 @@ const reportData = {
           plugins: {
             tooltip: {
               callbacks: {
-                label: (context) => `${context.label}: ${context.raw}%`,
+                label: (context: { raw: number; label: string }) =>
+                  `${context.label}: ${context.raw}%`,
               },
             },
           },
@@ -217,7 +281,7 @@ const reportData = {
         },
       },
       visualization: {
-        type: "bar",
+        type: "bar" as const,
         title: "AI vs. Human Phishing Effectiveness",
         intro:
           "An ongoing experiment shows AI-generated phishing campaigns are now significantly more effective at deceiving users than those crafted by elite security professionals.",
@@ -240,7 +304,8 @@ const reportData = {
             legend: { display: false },
             tooltip: {
               callbacks: {
-                label: (context) => `Relative Effectiveness: ${context.raw}`,
+                label: (context: { raw: number }) =>
+                  `Relative Effectiveness: ${context.raw}`,
               },
             },
           },
@@ -278,7 +343,7 @@ const reportData = {
         },
       },
       visualization: {
-        type: "doughnut",
+        type: "doughnut" as const,
         title: "Financial Firms' DORA Compliance Hurdles",
         intro:
           "A recent survey highlights the financial strain of new regulations, with many firms facing increased costs from vendors and struggling to secure their own implementation budgets.",
@@ -301,7 +366,8 @@ const reportData = {
           plugins: {
             tooltip: {
               callbacks: {
-                label: (context) => `${context.label}: ${context.raw}%`,
+                label: (context: { raw: number; label: string }) =>
+                  `${context.label}: ${context.raw}%`,
               },
             },
           },
@@ -339,7 +405,7 @@ const reportData = {
         },
       },
       visualization: {
-        type: "bar",
+        type: "bar" as const,
         title: "European Cybersecurity Workforce Gap",
         intro:
           "The gap between demand for and supply of cybersecurity professionals is large and growing, creating a foundational vulnerability for the entire European economy.",
@@ -360,7 +426,7 @@ const reportData = {
             legend: { display: false },
             tooltip: {
               callbacks: {
-                label: (context) =>
+                label: (context: { raw: number }) =>
                   `Estimated Shortage: ${new Intl.NumberFormat().format(context.raw)} professionals`,
               },
             },
@@ -411,7 +477,11 @@ const Header = () => (
   </header>
 );
 
-const ChallengeTabs = ({ challenges, activeChallengeId, onTabClick }) => (
+const ChallengeTabs: React.FC<ChallengeTabsProps> = ({
+  challenges,
+  activeChallengeId,
+  onTabClick,
+}) => (
   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-4 mb-8">
     {challenges.map((challenge) => (
       <button
@@ -425,7 +495,7 @@ const ChallengeTabs = ({ challenges, activeChallengeId, onTabClick }) => (
   </div>
 );
 
-const ChallengeContent = ({ challenge }) => (
+const ChallengeContent: React.FC<ChallengeContentProps> = ({ challenge }) => (
   <div className="animate-fadeIn">
     <h3 className="text-xl font-bold text-slate-800 mb-4">{challenge.title}</h3>
     <div className="space-y-6">
@@ -468,9 +538,11 @@ const ChallengeContent = ({ challenge }) => (
   </div>
 );
 
-const VisualizationPanel = ({ challenge }) => {
-  const chartContainer = useRef(null);
-  const chartInstance = useRef(null);
+const VisualizationPanel: React.FC<VisualizationPanelProps> = ({
+  challenge,
+}) => {
+  const chartContainer = useRef<HTMLCanvasElement>(null);
+  const chartInstance = useRef<Chart | null>(null);
 
   useEffect(() => {
     if (chartInstance.current) {
@@ -478,18 +550,20 @@ const VisualizationPanel = ({ challenge }) => {
     }
     if (chartContainer.current && challenge) {
       const ctx = chartContainer.current.getContext("2d");
-      chartInstance.current = new Chart(ctx, {
-        type: challenge.visualization.type,
-        data: challenge.visualization.data,
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          animation: {
-            duration: 500,
+      if (ctx) {
+        chartInstance.current = new Chart(ctx, {
+          type: challenge.visualization.type,
+          data: challenge.visualization.data,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: {
+              duration: 500,
+            },
+            ...challenge.visualization.options,
           },
-          ...challenge.visualization.options,
-        },
-      });
+        });
+      }
     }
     return () => {
       if (chartInstance.current) {
@@ -515,10 +589,10 @@ const VisualizationPanel = ({ challenge }) => {
   );
 };
 
-const ImpactMatrix = ({ matrix }) => {
-  const [selectedSectorIndex, setSelectedSectorIndex] = useState("all");
+const ImpactMatrix: React.FC<ImpactMatrixProps> = ({ matrix }) => {
+  const [selectedSectorIndex, setSelectedSectorIndex] = useState<string>("all");
 
-  const getImpactClass = (impact) => {
+  const getImpactClass = (impact: string) => {
     switch (impact.toLowerCase()) {
       case "high":
         return "bg-red-500 text-white";
@@ -532,7 +606,7 @@ const ImpactMatrix = ({ matrix }) => {
   };
 
   return (
-    <section className="mt-12 bg-white rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-200/50 relative z-20">
+    <section className="mt-12 bg-white rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-200/50 relative z-20 max-w-7xl mx-auto">
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-slate-900 mb-2">
           Interactive Impact Matrix
@@ -552,7 +626,7 @@ const ImpactMatrix = ({ matrix }) => {
         </label>
         <select
           id="sector-filter"
-          className="p-2 rounded-md border border-slate-300 focus:ring-2 focus:ring-sky-500"
+          className="p-2 bg-white rounded-md border border-slate-300"
           value={selectedSectorIndex}
           onChange={(e) => setSelectedSectorIndex(e.target.value)}
         >
@@ -574,7 +648,7 @@ const ImpactMatrix = ({ matrix }) => {
               {matrix.sectors.map((sector, index) => (
                 <th
                   key={index}
-                  className={`p-3 text-center font-bold text-slate-700 border-b-2 border-slate-200 transition-opacity duration-300 ${selectedSectorIndex !== "all" && selectedSectorIndex != index ? "opacity-20" : "opacity-100"}`}
+                  className={`p-3 text-center font-bold text-slate-700 border-b-2 border-slate-200 transition-opacity duration-300 ${selectedSectorIndex !== "all" && selectedSectorIndex != index.toString() ? "opacity-20" : "opacity-100"}`}
                 >
                   {sector}
                 </th>
@@ -590,7 +664,7 @@ const ImpactMatrix = ({ matrix }) => {
                 {matrix.data[rowIndex].map((impact, colIndex) => (
                   <td
                     key={colIndex}
-                    className={`p-3 text-center border-b border-slate-200 transition-opacity duration-300 ${selectedSectorIndex !== "all" && selectedSectorIndex != colIndex ? "opacity-20" : "opacity-100"}`}
+                    className={`p-3 text-center border-b border-slate-200 transition-opacity duration-300 ${selectedSectorIndex !== "all" && selectedSectorIndex != colIndex.toString() ? "opacity-20" : "opacity-100"}`}
                   >
                     <span
                       className={`px-3 py-1 text-sm font-bold rounded-full ${getImpactClass(impact)}`}
@@ -633,7 +707,7 @@ export function CybersecurityChallengesSection() {
       <div className="container mx-auto p-4 md:p-8 relative z-10">
         <Header />
         <main>
-          <section className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-200/50 relative z-20">
+          <section className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-200/50 relative z-20 max-w-7xl mx-auto">
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-slate-900 mb-2">
                 Challenge Dashboard
@@ -644,9 +718,8 @@ export function CybersecurityChallengesSection() {
                 impact, and the data behind the threat.
               </p>
             </div>
-
             <ChallengeTabs
-              challenges={reportData.challenges}
+              challenges={reportData.challenges as Challenge[]}
               activeChallengeId={activeChallengeId}
               onTabClick={setActiveChallengeId}
             />
