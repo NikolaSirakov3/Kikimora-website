@@ -11,82 +11,84 @@ export function ComparisonTableSection() {
         </div>
 
         <div className="overflow-x-auto relative z-20">
-          <table className="w-full border-collapse bg-white rounded-lg shadow-lg relative z-20">
-            <thead>
-              <tr className="bg-gray-50">
-                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b">
-                  Feature
-                </th>
-                <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b">
-                  Software Only
-                </th>
-                <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b">
-                  Managed Team Only
-                </th>
-                <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b bg-green-50">
-                  Our Combined Approach
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b">
-                <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                  24/7 Monitoring
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700">
-                  ✓ Automated
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700">
-                  ✓ Human oversight
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700 bg-green-50">
-                  ✓ Both automated + human
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                  Threat Context
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700">
-                  Limited
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700">
-                  ✓ Expert analysis
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700 bg-green-50">
-                  ✓ AI + expert interpretation
-                </td>
-              </tr>
-              <tr className="border-b">
-                <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                  Scalability
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700">
-                  ✓ Unlimited
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700">
-                  Limited by team size
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700 bg-green-50">
-                  ✓ Best of both
-                </td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                  Strategic Guidance
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700">
-                  None
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700">
-                  ✓ Available
-                </td>
-                <td className="px-6 py-4 text-center text-sm text-gray-700 bg-green-50">
-                  ✓ Built-in
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="border border-gray-200 rounded-lg bg-white shadow-lg relative z-20 overflow-hidden">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-gray-50">
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b">
+                    Feature
+                  </th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b">
+                    Software Only
+                  </th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b">
+                    Managed Team Only
+                  </th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b bg-green-50">
+                    Our Combined Approach
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b">
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                    24/7 Monitoring
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700">
+                    ✓ Automated
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700">
+                    ✓ Human oversight
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700 bg-green-50">
+                    ✓ Both automated + human
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                    Threat Context
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700">
+                    Limited
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700">
+                    ✓ Expert analysis
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700 bg-green-50">
+                    ✓ AI + expert interpretation
+                  </td>
+                </tr>
+                <tr className="border-b">
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                    Scalability
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700">
+                    ✓ Unlimited
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700">
+                    Limited by team size
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700 bg-green-50">
+                    ✓ Best of both
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                    Strategic Guidance
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700">
+                    None
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700">
+                    ✓ Available
+                  </td>
+                  <td className="px-6 py-4 text-center text-sm text-gray-700 bg-green-50">
+                    ✓ Built-in
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div className="mt-8 text-center">
