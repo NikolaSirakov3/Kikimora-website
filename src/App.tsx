@@ -17,6 +17,7 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { Blog } from "@/pages/Blog";
 import { BlogPost } from "@/pages/BlogPost";
 import { GetInTouch } from "@/components/home/GetInTouch";
+import { AnimatedTerminalSection } from "@/components/home/AnimatedTerminalSection";
 import { EuropeanCybersecuritySection } from "@/components/home/EuropeanCybersecuritySection";
 import { SMEAttackStatsSection } from "@/components/home/SMEAttackStatsSection";
 import { EUComplianceSection } from "@/components/home/EUComplianceSection";
@@ -84,6 +85,7 @@ function App() {
                   <EUComplianceSection />
                   <CybersecurityShortageSection />
                   <CybersecurityChallengesSection />
+                  <AnimatedTerminalSection />
                   <GetInTouch />
                   <Newsletter />
                 </>
