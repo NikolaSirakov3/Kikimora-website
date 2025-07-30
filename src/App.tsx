@@ -44,6 +44,8 @@ import OTSecurityPage from "@/pages/ot-security";
 import ContactPage from "@/pages/contact";
 import PressKitPage from "@/pages/press-kit";
 import SecurityBundle from "@/pages/security-bundle";
+import AgenticPage from "@/pages/agentic";
+import { Toaster } from "@/components/ui/toaster";
 
 // Add ScrollToTop component
 function ScrollToTop() {
@@ -114,9 +116,11 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/press-kit" element={<PressKitPage />} />
             <Route path="/security-bundle" element={<SecurityBundle />} />
+            <Route path="/agentic" element={<AgenticPage />} />
           </Routes>
         </main>
         <Footer />
+        <Toaster />
       </div>
     </Router>
   );
