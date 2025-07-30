@@ -1,6 +1,7 @@
 import HeroSection from "@/components/agentic/HeroSection";
 import SecurityAnalystSection from "@/components/agentic/SecurityAnalystSection";
 import SecurityProcessSection from "@/components/agentic/SecurityProcessSection";
+import { VulnerabilityManagementDemo } from "@/components/agentic/VulnerabilityManagementDemo";
 
 const AgenticPage = () => {
   return (
@@ -8,6 +9,7 @@ const AgenticPage = () => {
       <HeroSection />
       <SecurityAnalystSection />
       <SecurityProcessSection />
+      <VulnerabilityManagementDemo />
     </div>
   );
 };
