@@ -4,6 +4,7 @@ import SecurityProcessSection from "@/components/agentic/SecurityProcessSection"
 import { VulnerabilityManagementDemo } from "@/components/agentic/VulnerabilityManagementDemo";
 import { HeroVideoDialogDemoTopInBottomOut } from "@/components/agentic/HeroVideoDialogDemoTopInBottomOut";
 import PricingSection from "@/components/agentic/PricingSection";
+import FAQSection from "@/components/agentic/FAQSection";
 
 const AgenticPage = () => {
   return (
@@ -14,6 +15,7 @@ const AgenticPage = () => {
       <VulnerabilityManagementDemo />
       <HeroVideoDialogDemoTopInBottomOut />
       <PricingSection />
+      <FAQSection />
     </div>
   );
 };
