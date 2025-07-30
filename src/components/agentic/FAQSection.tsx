@@ -48,27 +48,29 @@ const FAQSection = () => {
           </p>
         </div>
 
-        <div className="rounded-xl shadow-lg overflow-hidden bg-white">
-          <Accordion type="single" collapsible className="w-full">
-            {faqData.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-white"
-              >
-                <AccordionTrigger className="text-left hover:no-underline px-6 py-4 text-lg font-medium text-foreground hover:text-primary transition-colors">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-muted-foreground leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full border border-gray-200 rounded-lg shadow-lg"
+        >
+          {faqData.map((faq, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="mx-6 border-b border-gray-200 last:border-b-0 [&[data-state=open]]:border-0 [&[data-state=open]]:bg-white [&[data-state=open]]:rounded-none"
+            >
+              <AccordionTrigger className="text-left text-gray-700 hover:text-blue-600 hover:no-underline px-0 py-4 text-lg font-medium transition-colors bg-white border-0 focus:border-0 focus:outline-none">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="px-0 pb-4 text-gray-600 leading-relaxed bg-white transition-all duration-2000 ease-in-out">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );
 };
 
-export default FAQSection; 
+export default FAQSection;
