@@ -67,7 +67,7 @@ function App() {
       <div className="min-h-screen flex flex-col overflow-x-hidden">
         <AnnouncementBar onVisibilityChange={setIsAnnouncementVisible} />
         <NewNavbar isAnnouncementVisible={isAnnouncementVisible} />
-        <main className="flex-grow overflow-x-hidden mt-[56px]">
+        <main className="flex-grow overflow-x-hidden mt-[26px]">
           <Routes>
             <Route
               path="/"

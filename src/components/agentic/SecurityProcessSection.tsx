@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, ChevronRight, Info, Loader } from "lucide-react";
 
@@ -90,7 +90,7 @@ const actionItems = [
 ];
 
 // Component for each line in the terminal
-const TerminalLine = ({ text, status, isLast }) => {
+const TerminalLine = ({ text, status, isLast }: { text: string; status: string; isLast: boolean }) => {
   const getIcon = () => {
     if (isLast)
       return <Loader size={16} className="animate-spin text-gray-400" />;
@@ -130,10 +130,10 @@ const TerminalLine = ({ text, status, isLast }) => {
 };
 
 // Main Terminal Display Component
-const AnimatedTerminal = ({ actionId, onAnimationComplete }) => {
-  const [lines, setLines] = useState([]);
+const AnimatedTerminal = ({ actionId, onAnimationComplete }: { actionId: string; onAnimationComplete: () => void }) => {
+  const [lines, setLines] = useState<Array<{ text: string; status: string }>>([]);
   const [isRunning, setIsRunning] = useState(false);
-  const data = actionsData[actionId];
+  const data = actionsData[actionId as keyof typeof actionsData];
 
   useEffect(() => {
     if (!data) {
@@ -209,7 +209,7 @@ const AnimatedTerminal = ({ actionId, onAnimationComplete }) => {
 export default function SecurityProcessSection() {
   const [selectedAction, setSelectedAction] = useState(actionItems[0].id);
 
-  const handleCardClick = (itemId) => {
+  const handleCardClick = (itemId: string) => {
     setSelectedAction(itemId);
   };
 

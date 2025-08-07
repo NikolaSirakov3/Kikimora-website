@@ -193,7 +193,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
 
   return (
     <nav
-      className={`bg-white fixed w-full z-40 transition-all duration-10 ${
+      className={`fixed w-full z-40 transition-all duration-10 ${
         isAnnouncementVisible ? "top-[35px]" : "top-0"
       }`}
       style={{ transition: "top 0.3s ease-in-out" }}
@@ -209,7 +209,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                 className="h-12 w-auto"
               />
               <span
-                className="text-gray-900 font-semibold text-xl"
+                className="text-blue-500 font-semibold text-xl"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
                 Kikimora
@@ -219,7 +219,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
 
           {/* Desktop Navigation - Center */}
           <div className="hidden md:flex items-center">
-            <div className="bg-[#1e293b] rounded-full px-4 py-2 flex items-center space-x-6">
+            <div className="bg-[#1e293b] rounded-full px-4 py-2 flex items-center space-x-6 border-2 border-slate-700">
               {navItems.map((item) => (
                 <div key={item.label} className="relative">
                   {item.dropdown ? (
