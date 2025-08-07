@@ -43,7 +43,7 @@ export const FreeAssessmentSection: FC = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-[#31c9b7] hover:bg-[#3EDDCA] text-white font-bold py-3 px-4 rounded-lg transition-colors"
+              className="w-full font-bold py-3 px-4 rounded-lg transition-colors"
             >
               Request My Free Assessment
             </button>

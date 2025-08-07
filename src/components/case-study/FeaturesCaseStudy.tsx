@@ -18,9 +18,11 @@ function FeaturesCaseStudy() {
             <div className="text-2xl font-extrabold text-[#31c9b7] mb-4 text-center">
               Free
             </div>
-            <button className="w-full bg-white border border-[#e5e7eb] rounded-lg py-3 font-semibold text-[#071C2C] hover:bg-[#f1f5f9] transition mb-2">
-              Get Started
-            </button>
+            <div className="flex flex-col gap-2">
+              <button className="w-full border border-[#e5e7eb] rounded-lg py-3 font-semibold text-[#071C2C] hover:bg-[#f1f5f9] transition mb-2">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
         {/* Card 2 */}
@@ -37,7 +39,7 @@ function FeaturesCaseStudy() {
             <div className="text-2xl font-extrabold text-[#31c9b7] mb-4 text-center">
               Based on Assets
             </div>
-            <button className="w-full bg-[#071C2C] text-white rounded-lg py-3 font-semibold hover:bg-[#0a1a2f] transition mb-2">
+            <button className="w-full rounded-lg py-3 font-semibold transition mb-2">
               Explore the Platform
             </button>
           </div>
@@ -56,7 +58,7 @@ function FeaturesCaseStudy() {
             <div className="text-2xl font-extrabold text-[#31c9b7] mb-4 text-center">
               Tiered Plans
             </div>
-            <button className="w-full bg-[#071C2C] text-white rounded-lg py-3 font-semibold hover:bg-[#0a1a2f] transition mb-2">
+            <button className="w-full rounded-lg py-3 font-semibold transition mb-2">
               Discover Managed Services
             </button>
           </div>

@@ -38,7 +38,7 @@ function HealthcareHeroSection() {
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center w-full">
           <button
-            className="bg-[#31c9b7] hover:bg-[#3EDDCA] text-white font-normal py-3 px-8 rounded-md shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2"
+            className="px-8 py-3 text-lg font-normal shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2"
             type="button"
           >
             Schedule Executive Briefing

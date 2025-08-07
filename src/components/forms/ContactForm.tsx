@@ -73,7 +73,7 @@ export function ContactForm({
       <Button
         type="submit"
         disabled={state.submitting}
-        className="w-full bg-[#29ABE2] hover:bg-[#1e9a8a] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-base shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-base shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
         style={{ fontFamily: "Montserrat, sans-serif" }}
       >
         {state.submitting ? "Sending..." : "Send Message"}

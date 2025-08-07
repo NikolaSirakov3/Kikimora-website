@@ -149,7 +149,7 @@ export function ProductOverview() {
           {/* CTA Button */}
           <div className="text-center mt-12">
             <Button
-              className="bg-[#00E5BE] text-[#001E38] hover:bg-[#00E5BE]/90 rounded-lg px-6 py-3 font-montserrat font-semibold flex items-center gap-2 mx-auto"
+              className="rounded-lg px-6 py-3 font-montserrat font-semibold flex items-center gap-2 mx-auto"
               onClick={() => setIsScheduleDemoModalOpen(true)}
             >
               Book Demo

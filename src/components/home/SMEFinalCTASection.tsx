@@ -23,7 +23,8 @@ function SMEFinalCTASection() {
         <div className="flex flex-col md:flex-row gap-4 justify-center w-full max-w-md">
           <Button
             variant="outline"
-            className="border-white text-[#31c9b7] hover:bg-white/10 hover:text-white font-bold px-8 py-4 text-lg w-full md:w-auto"
+            size="lg"
+            className="border-white text-[#31c9b7] hover:bg-white/10 hover:text-white font-bold w-full md:w-auto"
             onClick={() =>
               window.open("https://app.kikimora.io/register", "_blank")
             }
@@ -33,7 +34,8 @@ function SMEFinalCTASection() {
           </Button>
           <Button
             variant="outline"
-            className="border-white text-[#31c9b7] hover:bg-white/10 hover:text-white font-bold px-8 py-4 text-lg w-full md:w-auto"
+            size="lg"
+            className="border-white text-[#31c9b7] hover:bg-white/10 hover:text-white font-bold w-full md:w-auto"
             onClick={() => setIsScheduleDemoModalOpen(true)}
             aria-label="Book Demo"
           >

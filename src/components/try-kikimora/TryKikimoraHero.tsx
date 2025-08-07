@@ -33,7 +33,7 @@ export default function TryKikimoraHero() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
           impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis.
         </p>
-        <Button className="bg-[#23b098] hover:bg-[#1e9a8a] text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md">
+        <Button className="px-8 py-3 rounded-lg text-lg font-medium shadow-md">
           Get Started
         </Button>
       </div>

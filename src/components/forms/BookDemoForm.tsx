@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { ScheduleDemoModal } from "@/components/ui/ScheduleDemoModal";
 
 export function BookDemoForm() {
@@ -17,13 +18,13 @@ export function BookDemoForm() {
           </p>
         </div>
 
-        <button
+        <Button
           type="button"
-          className="w-full bg-teal-500 hover:bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-200"
+          className="w-full font-semibold py-3 px-6 rounded-lg transition duration-200"
           onClick={() => setIsScheduleDemoModalOpen(true)}
         >
           Book Demo
-        </button>
+        </Button>
       </div>
 
       {/* Schedule Demo Modal */}

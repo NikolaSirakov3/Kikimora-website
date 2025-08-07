@@ -24,7 +24,7 @@ export function PricingComponent() {
                   </span>
                 </div>
                 <Button
-                  className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-lg px-8 py-6 font-montserrat"
+                  className="rounded-lg px-8 py-6 font-montserrat"
                   onClick={() => setIsScheduleDemoModalOpen(true)}
                 >
                   Book Demo

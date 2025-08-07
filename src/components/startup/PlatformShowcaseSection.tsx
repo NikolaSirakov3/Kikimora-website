@@ -51,8 +51,8 @@ function PlatformShowcaseSection() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-4 justify-center mt-12">
-        <Button className="bg-[#31c9b7] text-white px-6 py-3 font-montserrat rounded-lg hover:bg-[#31c9b7]/90">
-          Start with Community Edition
+        <Button className="px-6 py-3 font-montserrat rounded-lg">
+          Learn More
         </Button>
         <Button
           variant="outline"

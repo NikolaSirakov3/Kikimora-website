@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { ScheduleDemoModal } from "@/components/ui/ScheduleDemoModal";
 
 export function MSSPHero() {
@@ -134,13 +135,13 @@ export function MSSPHero() {
                     />
                   </div>
 
-                  <button
+                  <Button
                     type="button"
-                    className="w-full bg-teal-400 text-white font-semibold px-6 rounded-md hover:bg-teal-500 transition-colors duration-200"
+                    className="w-full font-semibold px-6 rounded-md transition-colors duration-200"
                     onClick={() => setIsScheduleDemoModalOpen(true)}
                   >
                     Book Demo
-                  </button>
+                  </Button>
                 </form>
               </div>
             </div>

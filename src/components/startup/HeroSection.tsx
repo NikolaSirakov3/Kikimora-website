@@ -24,9 +24,7 @@ function StartupHeroSection() {
             worrying about threats and focus on growth.
           </p>
           <div className="mx-auto mt-10 flex max-w-sm justify-center gap-4">
-            <Button className="bg-[#31c9b7] px-8 py-3 text-lg font-bold text-white hover:bg-[#31c9b7]/90">
-              Start for Free &rarr;
-            </Button>
+            <Button className="px-8 py-3 text-lg font-bold">Get Started</Button>
             <Button
               variant="outline"
               className="border-white px-8 py-3 text-lg font-bold text-[#31c9b7] hover:bg-white hover:text-[#31c9b7]"

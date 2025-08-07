@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { FreeTrialModal } from "./ui/FreeTrialModal";
 import { ScheduleDemoModal } from "./ui/ScheduleDemoModal";
 import { ArrowSquareRight } from "@phosphor-icons/react";
@@ -325,9 +326,9 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
 
           {/* Right Side Buttons */}
           <div className="flex items-center gap-3">
-            <button
+            <Button
               onClick={() => setIsScheduleDemoModalOpen(true)}
-              className="bg-[#6366f1] hover:bg-[#4f46e5] text-white font-bold px-6 py-2 rounded-full transition-colors duration-200 text-sm shadow-sm flex items-center justify-center"
+              className="font-bold px-6 py-2 rounded-full transition-colors duration-200 text-sm shadow-sm flex items-center justify-center"
               style={{
                 fontFamily: "Montserrat, sans-serif",
                 lineHeight: "1.1",
@@ -336,8 +337,8 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                 height: "40px",
               }}
             >
-              Schedule Demo
-            </button>
+              Book Demo
+            </Button>
           </div>
 
           {/* Mobile menu button */}

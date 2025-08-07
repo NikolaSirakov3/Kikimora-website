@@ -56,8 +56,8 @@ export function GetInTouch() {
                   rows={6}
                   className="bg-transparent border border-white/20 rounded-lg px-4 py-3 text-white font-montserrat placeholder:text-white/40 focus:outline-none focus:border-[#00E5BE] resize-none"
                 />
-                <button className="bg-[#00E5BE] text-[#001E38] font-montserrat font-semibold rounded-lg px-6 py-3 w-fit hover:bg-[#00E5BE]/90 transition-colors">
-                  Send Question
+                <button className="font-montserrat font-semibold rounded-lg px-6 py-3 w-fit hover:bg-[#00E5BE]/90 transition-colors">
+                  Get Started
                 </button>
               </div>
 

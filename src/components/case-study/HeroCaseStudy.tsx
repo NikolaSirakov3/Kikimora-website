@@ -34,7 +34,7 @@ function HeroCaseStudy() {
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center w-full">
           <button
-            className="bg-[#31c9b7] hover:bg-[#2ab3a3] text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2"
+            className="px-8 py-3 text-lg font-bold shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2"
             type="button"
           >
             Request a Consultation

@@ -14,21 +14,8 @@ export function InvestmentCTA() {
                 placeholder="Enter your Email"
                 className="flex-1 bg-transparent border border-[#1E3D59] rounded-lg px-4 py-3 text-white placeholder:text-white/40 font-montserrat focus:outline-none focus:border-[#00E5BE]"
               />
-              <button className="bg-[#00E5BE] hover:bg-[#00E5BE]/90 text-[#001E38] font-montserrat px-6 py-3 rounded-lg flex items-center gap-2 transition-colors">
-                Sign Up
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
+              <button className="font-montserrat px-6 py-3 rounded-lg flex items-center gap-2 transition-colors">
+                Get Started
               </button>
             </div>
           </div>

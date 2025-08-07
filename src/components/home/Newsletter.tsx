@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Resend } from "resend";
+import { Button } from "@/components/ui/button";
 import { ScheduleDemoModal } from "@/components/ui/ScheduleDemoModal";
 
 const resend = new Resend("re_4yQzv6Uz_FKEzv4TbmCYo4tWXqejqA5F7");
@@ -92,12 +93,12 @@ export function Newsletter() {
               <span className="text-white/60 font-montserrat text-sm text-center max-w-[180px] whitespace-pre-line">
                 {"Request a demo to see\nthe full power of Kikimora"}
               </span>
-              <button
-                className="bg-[#00E5BE] text-[#001E38] font-montserrat text-sm font-semibold px-4 py-2 rounded-lg hover:bg-[#00E5BE]/90 whitespace-nowrap"
+              <Button
+                className="font-montserrat text-sm font-semibold hover:bg-[#00E5BE]/90 whitespace-nowrap"
                 onClick={() => setIsScheduleDemoModalOpen(true)}
               >
                 Book Demo
-              </button>
+              </Button>
             </div>
 
             {/* Right side newsletter */}

@@ -22,14 +22,13 @@ function SMEHero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
-            className="bg-[#31c9b7] text-white hover:bg-[#2bb3a3] px-8 py-4 rounded-lg font-montserrat text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-[#31c9b7]"
+            className="px-8 py-4 rounded-lg font-montserrat text-lg font-semibold"
             aria-label="View Features"
           >
             View Features
           </Button>
           <Button
-            variant="outline"
-            className="bg-white text-[#111827] border border-[#d1d5db] hover:bg-[#f3f4f6] px-8 py-4 rounded-lg font-montserrat text-lg font-semibold focus:outline-none focus:ring-2 focus:ring-[#31c9b7]"
+            className="px-8 py-4 rounded-lg font-montserrat text-lg font-semibold"
             aria-label="Book Demo"
             onClick={() => setIsScheduleDemoModalOpen(true)}
           >

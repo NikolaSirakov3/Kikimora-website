@@ -74,7 +74,7 @@ export function Navbar() {
 
           {/* Right side - Button */}
           <Button
-            className="bg-[#3EDDCA] text-black hover:bg-[#3EDDCA]/90 rounded-lg font-montserrat text-sm"
+            className="rounded-lg font-montserrat text-sm"
             onClick={() => setIsScheduleDemoModalOpen(true)}
           >
             Book Demo
