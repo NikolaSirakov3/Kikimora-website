@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   FaHeart,
   FaMusic,
@@ -71,19 +72,20 @@ export function PodcastHero({
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button
+              <Button
                 onClick={onListenNow}
-                className="bg-[#00E5BE] text-[#001E38] font-bold px-8 py-4 rounded-lg flex items-center gap-3 hover:bg-[#00E5BE]/90 transition-colors duration-200"
+                className="font-bold px-8 py-4 rounded-lg flex items-center gap-3 transition-colors duration-200"
               >
                 <FaPlay size={20} />
                 Listen Now
-              </button>
-              <button
+              </Button>
+              <Button
+                variant="outline"
                 onClick={onSubscribe}
-                className="bg-white/10 text-white font-bold px-8 py-4 rounded-lg border border-white/20 hover:bg-white/20 transition-colors duration-200"
+                className="font-bold px-8 py-4 rounded-lg transition-colors duration-200"
               >
                 Subscribe
-              </button>
+              </Button>
             </div>
           </div>
 

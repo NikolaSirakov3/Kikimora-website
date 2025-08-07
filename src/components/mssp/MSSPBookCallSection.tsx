@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export function MSSPBookCallSection() {
   return (
     <section className="min-h-[40vh] bg-[#0f172a] flex items-center justify-center py-16">
@@ -16,9 +18,9 @@ export function MSSPBookCallSection() {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <button className="bg-teal-400 hover:bg-teal-500 text-white font-semibold px-8 py-3 rounded-md transition-colors duration-200 text-lg">
+              <Button className="font-semibold px-8 py-3 rounded-md transition-colors duration-200 text-lg">
                 Book Call
-              </button>
+              </Button>
             </div>
           </div>
         </div>

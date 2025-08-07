@@ -75,7 +75,7 @@ export function CodeDemoSection() {
         <DemoButton
           variant="default"
           size="lg"
-          className="bg-[#30b2a3] text-white hover:bg-[#31c9b7] border-none shadow-md font-bold px-8 py-4 rounded-lg transition-colors"
+          className="border-none shadow-md font-bold px-8 py-4 rounded-lg transition-colors"
         >
           Get Started
         </DemoButton>

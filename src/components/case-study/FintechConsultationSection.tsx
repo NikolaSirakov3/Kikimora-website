@@ -13,7 +13,7 @@ function FintechConsultationSection() {
         a security and compliance roadmap tailored to your organization.
       </p>
       <Button
-        className="bg-white text-[#31c9b7] hover:bg-gray-100 font-semibold py-6 px-8 rounded-lg shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:ring-offset-2 text-base md:text-lg"
+        className="font-semibold py-6 px-8 rounded-lg shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:ring-offset-2 text-base md:text-lg"
         onClick={() => window.open("mailto:contact@kikimora.io", "_blank")}
       >
         Request a Consultation

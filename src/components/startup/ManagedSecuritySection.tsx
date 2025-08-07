@@ -66,12 +66,12 @@ function ManagedSecuritySection() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-4 justify-center">
-        <Button className="bg-green-600 text-white px-6 py-3 font-montserrat rounded-lg hover:bg-green-700">
+        <Button className="px-6 py-3 font-montserrat rounded-lg">
           Schedule a Consultation
         </Button>
         <Button
           variant="outline"
-          className="px-6 py-3 font-montserrat rounded-lg border border-green-600 text-green-600 hover:bg-green-50"
+          className="px-6 py-3 font-montserrat rounded-lg"
         >
           View Managed Security Plans
         </Button>

@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export function InvestmentCTA() {
   return (
     <div className="bg-[#001E38] w-full">
@@ -14,9 +16,9 @@ export function InvestmentCTA() {
                 placeholder="Enter your Email"
                 className="flex-1 bg-transparent border border-[#1E3D59] rounded-lg px-4 py-3 text-white placeholder:text-white/40 font-montserrat focus:outline-none focus:border-[#00E5BE]"
               />
-              <button className="font-montserrat px-6 py-3 rounded-lg flex items-center gap-2 transition-colors">
+              <Button className="font-montserrat px-6 py-3 rounded-lg flex items-center gap-2 transition-colors">
                 Get Started
-              </button>
+              </Button>
             </div>
           </div>
 

@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export function PricingSection() {
   return (
     <section className="w-full bg-white py-16 flex flex-col items-center">
@@ -109,14 +111,17 @@ export function PricingSection() {
               </span>
             </li>
           </ul>
-          <button
-            className="mt-6 w-full bg-[#001324] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#0a2440] transition-colors"
+          <Button
+            className="mt-6 w-full font-medium py-3 px-6 rounded-lg transition-colors"
             onClick={() =>
-              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
+              window.open(
+                "https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora",
+                "_blank"
+              )
             }
           >
             Get Started
-          </button>
+          </Button>
         </div>
 
         {/* Cyber Advanced */}
@@ -210,14 +215,17 @@ export function PricingSection() {
               </span>
             </li>
           </ul>
-          <button
-            className="mt-6 w-full bg-[#001324] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#0a2440] transition-colors"
+          <Button
+            className="mt-6 w-full font-medium py-3 px-6 rounded-lg transition-colors"
             onClick={() =>
-              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
+              window.open(
+                "https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora",
+                "_blank"
+              )
             }
           >
             Get Started
-          </button>
+          </Button>
         </div>
 
         {/* Cyber Elite */}
@@ -300,14 +308,17 @@ export function PricingSection() {
               <span>Up to 20 employees secure code training</span>
             </li>
           </ul>
-          <button
-            className="mt-6 w-full bg-[#001324] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#0a2440] transition-colors"
+          <Button
+            className="mt-6 w-full font-medium py-3 px-6 rounded-lg transition-colors"
             onClick={() =>
-              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
+              window.open(
+                "https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora",
+                "_blank"
+              )
             }
           >
             Get Started
-          </button>
+          </Button>
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export function Team() {
   return (
     <div className="bg-[#001E38] py-20 w-full">
@@ -13,12 +15,15 @@ export function Team() {
 
           {/* Action buttons */}
           <div className="flex gap-4 mb-12">
-            <button className="font-montserrat font-semibold px-6 py-3 rounded-lg hover:bg-[#00E5BE]/90 transition-colors">
+            <Button className="font-montserrat font-semibold px-6 py-3 rounded-lg">
               Join Our Team
-            </button>
-            <button className="font-montserrat font-semibold px-6 py-3 rounded-lg hover:bg-[#00E5BE]/10 transition-colors">
+            </Button>
+            <Button
+              variant="outline"
+              className="font-montserrat font-semibold px-6 py-3 rounded-lg"
+            >
               View Openings
-            </button>
+            </Button>
           </div>
 
           {/* Team image placeholder */}

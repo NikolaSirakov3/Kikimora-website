@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 function HeroCaseStudy() {
   return (
     <section className="relative w-screen min-h-[70vh] bg-[#071C2C] flex items-center justify-center overflow-hidden px-4 py-12">
@@ -33,18 +35,19 @@ function HeroCaseStudy() {
           with your business.
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center w-full">
-          <button
+          <Button
             className="px-8 py-3 text-lg font-bold shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2"
             type="button"
           >
             Request a Consultation
-          </button>
-          <button
-            className="bg-white/10 hover:bg-white/20 text-[#31c9b7] font-semibold py-3 px-8 rounded-lg border border-[#31c9b7] shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2"
+          </Button>
+          <Button
+            variant="outline"
+            className="font-semibold py-3 px-8 rounded-lg shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#31c9b7] focus:ring-offset-2"
             type="button"
           >
             View Platform Capabilities
-          </button>
+          </Button>
         </div>
       </div>
     </section>

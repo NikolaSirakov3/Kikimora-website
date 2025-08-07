@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 function FeaturesCaseStudy() {
   return (
     <section className="w-full bg-[#f8f9fa] py-16 px-4 flex flex-col items-center">
@@ -19,9 +21,9 @@ function FeaturesCaseStudy() {
               Free
             </div>
             <div className="flex flex-col gap-2">
-              <button className="w-full border border-[#e5e7eb] rounded-lg py-3 font-semibold text-[#071C2C] hover:bg-[#f1f5f9] transition mb-2">
+              <Button variant="outline" className="w-full font-semibold">
                 Learn More
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -39,9 +41,9 @@ function FeaturesCaseStudy() {
             <div className="text-2xl font-extrabold text-[#31c9b7] mb-4 text-center">
               Based on Assets
             </div>
-            <button className="w-full rounded-lg py-3 font-semibold transition mb-2">
+            <Button className="w-full font-semibold">
               Explore the Platform
-            </button>
+            </Button>
           </div>
         </div>
         {/* Card 3 */}
@@ -58,9 +60,9 @@ function FeaturesCaseStudy() {
             <div className="text-2xl font-extrabold text-[#31c9b7] mb-4 text-center">
               Tiered Plans
             </div>
-            <button className="w-full rounded-lg py-3 font-semibold transition mb-2">
+            <Button className="w-full font-semibold">
               Discover Managed Services
-            </button>
+            </Button>
           </div>
         </div>
       </div>

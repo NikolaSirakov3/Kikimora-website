@@ -20,9 +20,12 @@ export function DevelopersHero() {
         {/* CTA Buttons */}
         <div className="flex justify-center gap-4 mb-20">
           <Button
-            className="bg-[#2ca38f] text-white hover:bg-[#00E5BE]/90 rounded-lg px-6 py-3 font-montserrat font-semibold flex items-center gap-2"
+            className="rounded-lg px-6 py-3 font-montserrat font-semibold flex items-center gap-2"
             onClick={() =>
-              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
+              window.open(
+                "https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora",
+                "_blank"
+              )
             }
           >
             Get Started
@@ -30,9 +33,12 @@ export function DevelopersHero() {
           </Button>
           <Button
             variant="outline"
-            className="border-[#00E5BE] text-[#3fa897] hover:bg-[#00E5BE]/10 rounded-lg px-6 py-3 font-montserrat font-semibold"
+            className="rounded-lg px-6 py-3 font-montserrat font-semibold"
             onClick={() =>
-              window.open("https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora", "_blank")
+              window.open(
+                "https://meetings.hubspot.com/oleg-antonov/meeting-with-socyber-kikimora",
+                "_blank"
+              )
             }
           >
             Book a Consultation
