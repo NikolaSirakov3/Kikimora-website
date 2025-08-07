@@ -108,7 +108,7 @@ export function GetInTouch() {
                           key={i}
                           className={`py-1 rounded-full cursor-pointer ${
                             i + 1 === currentDay
-                              ? "bg-blue-500 text-white"
+                              ? "bg-primary text-white"
                               : "hover:bg-gray-100"
                           }`}
                         >
@@ -121,19 +121,19 @@ export function GetInTouch() {
                     <div className="space-y-2">
                       <div className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50">
                         <span>09:00 AM</span>
-                        <button className="text-blue-500 px-4 py-1 rounded-lg border border-blue-500">
+                        <button className="text-primary px-4 py-1 rounded-lg border border-primary">
                           Select
                         </button>
                       </div>
                       <div className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50">
                         <span>10:00 AM</span>
-                        <button className="text-blue-500 px-4 py-1 rounded-lg border border-blue-500">
+                        <button className="text-primary px-4 py-1 rounded-lg border border-primary">
                           Select
                         </button>
                       </div>
                       <div className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50">
                         <span>11:00 AM</span>
-                        <button className="text-blue-500 px-4 py-1 rounded-lg border border-blue-500">
+                        <button className="text-primary px-4 py-1 rounded-lg border border-primary">
                           Select
                         </button>
                       </div>

@@ -40,8 +40,8 @@ export function ImageSwitcher() {
                 className={`px-6 py-2 font-montserrat text-base focus:outline-none transition-colors duration-200
                   ${
                     selectedImage === option.id
-                      ? "bg-white text-blue-600 rounded-full shadow"
-                      : "bg-transparent text-gray-600 hover:text-blue-500"
+                      ? "bg-white text-primary rounded-full shadow"
+                      : "bg-transparent text-gray-600 hover:text-primary"
                   }
                 `}
                 style={{ border: "none", outline: "none" }}

@@ -36,7 +36,7 @@ export function AddonGovernanceSection() {
                 </p>
                 <button
                   onClick={() => setIsScheduleDemoModalOpen(true)}
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
+                  className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
                 >
                   <div className="text-center">
                     <div className="text-lg">

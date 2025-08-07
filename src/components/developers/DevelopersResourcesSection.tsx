@@ -20,7 +20,7 @@ function ResourceCard({ title, description, onClick }: ResourceCardProps) {
       </div>
       <Button
         variant="outline"
-        className="border-[#00E5BE] text-[#00E5BE] hover:bg-[#00E5BE]/10 font-montserrat font-semibold px-4 py-2 rounded-lg w-fit"
+        className="border-primary text-primary hover:bg-primary/10 font-montserrat font-semibold px-4 py-2 rounded-lg w-fit"
         onClick={onClick}
         aria-label={`Learn more about ${title}`}
       >

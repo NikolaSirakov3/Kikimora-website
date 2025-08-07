@@ -119,7 +119,8 @@ export function Careers() {
           Open Positions
         </h1>
         <p className="text-white text-center text-xl mt-10">
-        Join our team of cybersecurity experts and help build the future of managed security services.
+          Join our team of cybersecurity experts and help build the future of
+          managed security services.
         </p>
       </header>
       {/* Cards Section */}
@@ -151,7 +152,7 @@ export function Careers() {
               </p>
               <Link
                 to={`/careers/${role.slug}`}
-                className="bg-[#31c9b7] hover:bg-[#3EDDCA] text-white font-semibold px-6 py-3 rounded-full transition-colors text-base w-fit inline-block text-center"
+                className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-3 rounded-full transition-colors text-base w-fit inline-block text-center"
                 aria-label={`Learn more about the ${role.title} position`}
               >
                 Learn More

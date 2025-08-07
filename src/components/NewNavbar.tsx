@@ -209,7 +209,7 @@ const NewNavbar: React.FC<NewNavbarProps> = ({ isAnnouncementVisible }) => {
                 className="h-12 w-auto"
               />
               <span
-                className="text-blue-500 font-semibold text-xl"
+                className="text-primary font-semibold text-xl"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
                 Kikimora

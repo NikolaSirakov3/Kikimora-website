@@ -16,9 +16,7 @@ export function Partners() {
                     <div className="w-8 h-8 bg-[#002A4E]" />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-white text-2xl">
-                      SoCyber
-                    </span>
+                    <span className="text-white text-2xl">SoCyber</span>
                     <span className="text-white/60 font-montserrat text-sm">
                       makes you feel secure
                     </span>
@@ -31,7 +29,7 @@ export function Partners() {
                 </p>
 
                 {/* Button */}
-                <button className="bg-[#00E5BE] text-[#001E38] font-montserrat font-semibold px-6 py-3 rounded-lg hover:bg-[#00E5BE]/90 transition-colors w-fit flex items-center gap-2">
+                <button className="bg-primary text-white font-montserrat font-semibold px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors w-fit flex items-center gap-2">
                   Learn More
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

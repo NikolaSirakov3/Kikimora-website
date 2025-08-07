@@ -32,7 +32,7 @@ function CoPilotSection() {
           </p>
           <Button
             variant="ghost"
-            className="text-[#31c9b7] font-semibold flex items-center gap-2 mt-auto"
+            className="text-primary font-semibold flex items-center gap-2 mt-auto"
           >
             <span>Learn More</span>
             <ArrowRight className="h-5 w-5" />
@@ -60,7 +60,7 @@ function CoPilotSection() {
           </p>
           <Button
             variant="ghost"
-            className="text-green-600 font-semibold flex items-center gap-2 mt-auto"
+            className="text-primary font-semibold flex items-center gap-2 mt-auto"
           >
             <span>Learn More</span>
             <ArrowRight className="h-5 w-5" />

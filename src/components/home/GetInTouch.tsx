@@ -119,7 +119,7 @@ export function GetInTouch() {
                               isSelected
                                 ? "bg-[#00E5BE] text-[#001E38]"
                                 : isToday
-                                  ? "bg-blue-500 text-white"
+                                  ? "bg-primary text-white"
                                   : "hover:bg-gray-100"
                             }`}
                           >

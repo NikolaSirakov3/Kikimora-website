@@ -1,5 +1,3 @@
-
-
 interface AnimatedLineDotProps {
   animate?: boolean;
 }
@@ -23,9 +21,9 @@ export function AnimatedLineDot({ animate }: AnimatedLineDotProps) {
         {/* Dot: appears instantly with the line */}
         {animate && (
           <>
-            <div className="w-4 h-4 bg-blue-500 rounded-full" />
+            <div className="w-4 h-4 bg-primary rounded-full" />
             <div
-              className="absolute inset-0 w-4 h-4 bg-blue-500 rounded-full"
+              className="absolute inset-0 w-4 h-4 bg-primary rounded-full"
               style={{
                 position: "absolute",
                 top: 0,

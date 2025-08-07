@@ -97,7 +97,7 @@ const PricingSection = () => {
               className={`relative transition-all duration-300 hover:shadow-lg ${plan.popular ? "ring-2 ring-blue-500 shadow-lg scale-105" : "hover:scale-105"}`}
             >
               {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white">
+                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white">
                   Most Popular
                 </Badge>
               )}
@@ -136,8 +136,8 @@ const PricingSection = () => {
                   variant={plan.popular ? "default" : "outline"}
                   className={`w-full focus-visible:ring-0 focus-visible:ring-offset-0 focus:ring-0 focus:ring-offset-0 focus:border-0 active:ring-0 active:border-0 ${
                     plan.popular
-                      ? "bg-blue-600 hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-700 text-white border-0 shadow-none"
-                      : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white focus:border-blue-600 active:bg-blue-600 active:text-white active:border-blue-600 shadow-none"
+                      ? "bg-primary hover:bg-primary/90 focus:bg-primary/90 active:bg-primary/90 text-white border-0 shadow-none"
+                      : "border-primary text-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white focus:border-primary active:bg-primary active:text-white active:border-primary shadow-none"
                   }`}
                 >
                   {plan.cta}

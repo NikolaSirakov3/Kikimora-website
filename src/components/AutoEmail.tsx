@@ -51,7 +51,7 @@ export function AutoEmail() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50"
+          className="w-full px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 disabled:opacity-50"
         >
           {status === "loading" ? "Sending..." : "Send Request"}
         </button>

@@ -100,7 +100,7 @@ export function PodcastEpisodePage() {
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <button className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors relative">
+                  <button className="w-12 h-12 bg-primary hover:bg-primary/90 rounded-full flex items-center justify-center transition-colors relative">
                     <Play size={20} className="text-white ml-1 absolute" />
                   </button>
                   <span className="text-white text-sm">1x</span>
@@ -192,7 +192,7 @@ export function PodcastEpisodePage() {
                 {episodeData.topics.map((topic, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full hover:bg-blue-700 cursor-pointer transition-colors"
+                    className="px-3 py-1 bg-primary text-white text-sm rounded-full hover:bg-primary/90 cursor-pointer transition-colors"
                   >
                     {topic}
                   </span>
