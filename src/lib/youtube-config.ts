@@ -14,6 +14,11 @@ export const YOUTUBE_CONFIG = {
   // Default settings
   DEFAULT_MAX_RESULTS: 10,
   DEFAULT_ORDER: "date" as const, // 'date', 'rating', 'relevance', 'title', 'videoCount', 'viewCount'
+  // Filter settings
+  FILTER_SHORTS: true, // Filter out videos under 5 minutes
+  MIN_VIDEO_DURATION: 300, // Minimum duration in seconds (5 minutes = 300 seconds)
+  FILTER_OLD_VIDEOS: true, // Filter out videos published before 2025
+  MIN_PUBLISH_YEAR: 2025, // Minimum publish year
 };
 
 // Helper function to get channel ID from channel URL

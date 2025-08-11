@@ -163,11 +163,35 @@ SEARCH_QUERIES: {
 }
 ```
 
+### Filter Settings
+
+You can customize the filtering behavior:
+
+```typescript
+// Filter settings
+FILTER_SHORTS: true, // Filter out videos under 5 minutes
+MIN_VIDEO_DURATION: 300, // Minimum duration in seconds (5 minutes = 300 seconds)
+FILTER_OLD_VIDEOS: true, // Filter out videos published before 2025
+MIN_PUBLISH_YEAR: 2025, // Minimum publish year
+```
+
+To disable filtering:
+
+- Set `FILTER_SHORTS: false` to include short videos
+- Set `FILTER_OLD_VIDEOS: false` to include older videos
+
 ### API Limits
 
 - **Default max results**: 10 videos
 - **Maximum allowed**: 50 videos per request
 - **Rate limit**: 10,000 units per day (free tier)
+
+### Filtering Options
+
+- **Shorts Filtering**: Automatically filters out videos under 5 minutes
+- **Date Filtering**: Automatically filters out videos published before 2025
+- **Sorting**: Episodes are sorted by publish date (newest first)
+- **Configurable**: You can adjust the minimum video duration and publish year in the config file
 
 ## Security Notes
 
