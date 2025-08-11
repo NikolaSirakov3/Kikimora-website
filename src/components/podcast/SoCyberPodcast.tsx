@@ -9,7 +9,7 @@ import { useYouTubePodcasts } from "../../hooks/use-youtube-podcasts";
 // Fallback episodes in case YouTube API fails
 const fallbackEpisodes = [
   {
-    id: "5",
+    id: "ByEgZ9ST1tA", // Example YouTube video ID for episode 5
     title: "White Hat Riddles Podcast Ep. 05",
     description:
       "Watch on YouTube: Episode 5 of the White Hat Riddles Podcast.",
@@ -21,7 +21,7 @@ const fallbackEpisodes = [
     duration: "1:12:35",
   },
   {
-    id: "4",
+    id: "dQw4w9WgXcQ", // Example YouTube video ID for episode 4
     title: "White Hat Riddles Podcast Ep. 04",
     description:
       "Watch on YouTube: Episode 4 of the White Hat Riddles Podcast.",
@@ -37,7 +37,7 @@ const fallbackEpisodes = [
     duration: "1:30:16",
   },
   {
-    id: "3",
+    id: "jNQXAC9IVRw", // Example YouTube video ID for episode 3
     title: "White Hat Riddles Podcast Ep. 03",
     description:
       "Watch on YouTube: Episode 3 of the White Hat Riddles Podcast.",
@@ -57,7 +57,7 @@ const fallbackEpisodes = [
     duration: "1:07:40",
   },
   {
-    id: "2",
+    id: "Ch9BhBxgUp4", // Real YouTube video ID from the description
     title: "Understanding Ransomware | White Hat Riddles Podcast Ep. 02",
     description:
       "SoCyber321 views3 months ago. 50 minutes. Watch on YouTube: https://youtu.be/Ch9BhBxgUp4",
@@ -77,7 +77,7 @@ const fallbackEpisodes = [
     duration: "50:41",
   },
   {
-    id: "1",
+    id: "eEqAtV5pjdE", // Real YouTube video ID from the description
     title:
       "Conversational AI security with Kristian Kamber, Splx.ai | White Hat Riddles Podcast Ep. 01",
     description:

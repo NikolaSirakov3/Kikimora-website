@@ -329,4 +329,48 @@ export class YouTubeApiService {
       throw error;
     }
   }
+
+  static async getVideoDetails(videoId: string): Promise<YouTubeVideo | null> {
+    try {
+      console.log(`🎯 Fetching video details for ID: ${videoId}`);
+
+      const response = await fetch(
+        `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${videoId}&key=${YOUTUBE_API_KEY}`
+      );
+
+      if (!response.ok) {
+        throw new Error(
+          `Failed to fetch video details: ${response.statusText}`
+        );
+      }
+
+      const data = await response.json();
+
+      if (!data.items || data.items.length === 0) {
+        console.log(`❌ No video found with ID: ${videoId}`);
+        return null;
+      }
+
+      const video = data.items[0];
+      const duration = video.contentDetails?.duration
+        ? this.formatDuration(video.contentDetails.duration)
+        : undefined;
+
+      const videoData: YouTubeVideo = {
+        id: video.id,
+        title: video.snippet.title,
+        description: video.snippet.description,
+        publishedAt: video.snippet.publishedAt,
+        thumbnails: video.snippet.thumbnails,
+        duration,
+        viewCount: video.statistics?.viewCount,
+      };
+
+      console.log(`✅ Successfully fetched video: "${videoData.title}"`);
+      return videoData;
+    } catch (error) {
+      console.error("Error fetching video details:", error);
+      throw error;
+    }
+  }
 }
