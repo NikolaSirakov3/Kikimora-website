@@ -9,11 +9,10 @@ import { useYouTubePodcasts } from "../../hooks/use-youtube-podcasts";
 // Fallback episodes in case YouTube API fails
 const fallbackEpisodes = [
   {
-    id: "ByEgZ9ST1tA", // Example YouTube video ID for episode 5
-    title: "White Hat Riddles Podcast Ep. 05",
-    description:
-      "Watch on YouTube: Episode 5 of the White Hat Riddles Podcast.",
-    publishedAt: "2024-06-01T00:00:00Z",
+    id: "episode7",
+    title: "Starting a career in 2025 | Whitehat Riddles Episode 7",
+    description: "Watch on YouTube: Episode 7 of the White Hat Riddles Podcast.",
+    publishedAt: "2025-08-05T00:00:00Z",
     thumbnails: {
       medium: { url: "/podcast-thumbs/SmartRisk.png", width: 320, height: 180 },
       high: { url: "/podcast-thumbs/SmartRisk.png", width: 480, height: 360 },
@@ -21,74 +20,67 @@ const fallbackEpisodes = [
     duration: "1:12:35",
   },
   {
-    id: "dQw4w9WgXcQ", // Example YouTube video ID for episode 4
-    title: "White Hat Riddles Podcast Ep. 04",
-    description:
-      "Watch on YouTube: Episode 4 of the White Hat Riddles Podcast.",
-    publishedAt: "2024-05-01T00:00:00Z",
+    id: "episode6",
+    title: "First Steps in Cybersecurity Strategy | White Hat Riddles Episode 6",
+    description: "Watch on YouTube: Episode 6 of the White Hat Riddles Podcast.",
+    publishedAt: "2025-07-18T00:00:00Z",
     thumbnails: {
-      medium: {
-        url: "/podcast-thumbs/Ransomware.png",
-        width: 320,
-        height: 180,
-      },
-      high: { url: "/podcast-thumbs/Ransomware.png", width: 480, height: 360 },
+      medium: { url: "/podcast-thumbs/Personal Security.png", width: 320, height: 180 },
+      high: { url: "/podcast-thumbs/Personal Security.png", width: 480, height: 360 },
     },
-    duration: "1:30:16",
+    duration: "1:12:35",
   },
   {
-    id: "jNQXAC9IVRw", // Example YouTube video ID for episode 3
-    title: "White Hat Riddles Podcast Ep. 03",
-    description:
-      "Watch on YouTube: Episode 3 of the White Hat Riddles Podcast.",
-    publishedAt: "2024-04-01T00:00:00Z",
+    id: "episode5",
+    title: "Smart Risk | White Hat Riddles Podcast Ep. 05",
+    description: "Watch on YouTube: Episode 5 of the White Hat Riddles Podcast.",
+    publishedAt: "2025-06-24T00:00:00Z",
     thumbnails: {
-      medium: {
-        url: "/podcast-thumbs/Personal Security.png",
-        width: 320,
-        height: 180,
-      },
-      high: {
-        url: "/podcast-thumbs/Personal Security.png",
-        width: 480,
-        height: 360,
-      },
+      medium: { url: "/podcast-thumbs/SmartRisk.png", width: 320, height: 180 },
+      high: { url: "/podcast-thumbs/SmartRisk.png", width: 480, height: 360 },
     },
-    duration: "1:07:40",
+    duration: "1:12:35",
   },
   {
-    id: "Ch9BhBxgUp4", // Real YouTube video ID from the description
+    id: "episode4",
+    title: "Hybrid Warfare | White Hat Riddles Podcast Ep. 04",
+    description: "Watch on YouTube: Episode 4 of the White Hat Riddles Podcast.",
+    publishedAt: "2025-05-27T00:00:00Z",
+    thumbnails: {
+      medium: { url: "/podcast-thumbs/Hybrid Warfare.png", width: 320, height: 180 },
+      high: { url: "/podcast-thumbs/Hybrid Warfare.png", width: 480, height: 360 },
+    },
+    duration: "1:38:17",
+  },
+  {
+    id: "episode3",
+    title: "Personal Security | White Hat Riddles Podcast Ep. 03",
+    description: "Watch on YouTube: Episode 3 of the White Hat Riddles Podcast.",
+    publishedAt: "2025-04-24T00:00:00Z",
+    thumbnails: {
+      medium: { url: "/podcast-thumbs/Personal Security.png", width: 320, height: 180 },
+      high: { url: "/podcast-thumbs/Personal Security.png", width: 480, height: 360 },
+    },
+    duration: "1:10:07",
+  },
+  {
+    id: "episode2",
     title: "Understanding Ransomware | White Hat Riddles Podcast Ep. 02",
-    description:
-      "SoCyber321 views3 months ago. 50 minutes. Watch on YouTube: https://youtu.be/Ch9BhBxgUp4",
-    publishedAt: "2024-03-01T00:00:00Z",
+    description: "Watch on YouTube: Episode 2 of the White Hat Riddles Podcast.",
+    publishedAt: "2025-04-15T00:00:00Z",
     thumbnails: {
-      medium: {
-        url: "/podcast-thumbs/Hybrid Warfare.png",
-        width: 320,
-        height: 180,
-      },
-      high: {
-        url: "/podcast-thumbs/Hybrid Warfare.png",
-        width: 480,
-        height: 360,
-      },
+      medium: { url: "/podcast-thumbs/Ransomware.png", width: 320, height: 180 },
+      high: { url: "/podcast-thumbs/Ransomware.png", width: 480, height: 360 },
     },
     duration: "50:41",
   },
   {
-    id: "eEqAtV5pjdE", // Real YouTube video ID from the description
-    title:
-      "Conversational AI security with Kristian Kamber, Splx.ai | White Hat Riddles Podcast Ep. 01",
-    description:
-      "Welcome to White Hat Riddles, episode 1 - A podcast where we dive into essential cybersecurity knowledge, analyze current trends, and explore the innovations and investments pushing the industry forward. Watch on YouTube: https://youtu.be/eEqAtV5pjdE",
-    publishedAt: "2024-02-01T00:00:00Z",
+    id: "episode1",
+    title: "Conversational AI security with Kristian Kamber, Splx.ai | White Hat Riddles Podcast Ep. 01",
+    description: "Welcome to White Hat Riddles, episode 1 - A podcast where we dive into essential cybersecurity knowledge, analyze current trends, and explore the innovations and investments pushing the industry forward.",
+    publishedAt: "2025-03-05T00:00:00Z",
     thumbnails: {
-      medium: {
-        url: "/podcast-thumbs/AI Security.png",
-        width: 320,
-        height: 180,
-      },
+      medium: { url: "/podcast-thumbs/AI Security.png", width: 320, height: 180 },
       high: { url: "/podcast-thumbs/AI Security.png", width: 480, height: 360 },
     },
     duration: "52:29",
@@ -99,7 +91,6 @@ export function SoCyberPodcast() {
   // Use YouTube API to fetch podcast episodes from your channel
   const { episodes, loading, error } = useYouTubePodcasts({
     channelId: "UCfW3aw7jTQwqepbcE3etsTw", // Your actual channel ID
-    maxResults: 10,
     autoFetch: true,
   });
 

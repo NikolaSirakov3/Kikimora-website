@@ -18,7 +18,7 @@ interface UseYouTubePodcastsReturn {
 export function useYouTubePodcasts({
   channelId,
   searchQuery,
-  maxResults = 10,
+  maxResults,
   autoFetch = true,
 }: UseYouTubePodcastsOptions = {}): UseYouTubePodcastsReturn {
   const [episodes, setEpisodes] = useState<YouTubeVideo[]>([]);
@@ -38,12 +38,9 @@ export function useYouTubePodcasts({
       let videos: YouTubeVideo[];
 
       if (channelId) {
-        videos = await YouTubeApiService.getChannelVideos(
-          channelId,
-          maxResults
-        );
+        videos = await YouTubeApiService.getChannelVideos(channelId);
       } else if (searchQuery) {
-        videos = await YouTubeApiService.searchVideos(searchQuery, maxResults);
+        videos = await YouTubeApiService.searchVideos(searchQuery);
       } else {
         throw new Error("No channel ID or search query provided");
       }

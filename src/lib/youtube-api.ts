@@ -78,8 +78,7 @@ export class YouTubeApiService {
   }
 
   static async getChannelVideos(
-    channelId: string,
-    maxResults: number = 10
+    channelId: string
   ): Promise<YouTubeVideo[]> {
     try {
       console.log(
@@ -105,24 +104,30 @@ export class YouTubeApiService {
       const uploadsPlaylistId =
         channelData.items[0].contentDetails.relatedPlaylists.uploads;
 
-      // Get more videos initially to filter out shorts
-      const initialMaxResults = Math.max(maxResults * 3, 30); // Get more videos to filter
+      // Get maximum allowed videos per request (50 is YouTube API limit)
+      const maxPerRequest = 50;
 
       // Then, get the videos from the uploads playlist
-      const playlistResponse = await fetch(
-        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=${initialMaxResults}&key=${YOUTUBE_API_KEY}`
-      );
-
-      if (!playlistResponse.ok) {
-        throw new Error(
-          `Failed to fetch playlist: ${playlistResponse.statusText}`
+      // Fetch all videos using pagination
+      let allPlaylistItems = [];
+      let nextPageToken = undefined;
+      
+      do {
+        const playlistResponse = await fetch(
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=${maxPerRequest}${nextPageToken ? `&pageToken=${nextPageToken}` : ''}&key=${YOUTUBE_API_KEY}`
         );
-      }
 
-      const playlistData: YouTubeApiResponse = await playlistResponse.json();
+        if (!playlistResponse.ok) {
+          throw new Error(`Failed to fetch playlist: ${playlistResponse.statusText}`);
+        }
+
+        const playlistData = await playlistResponse.json();
+        allPlaylistItems.push(...playlistData.items);
+        nextPageToken = playlistData.nextPageToken;
+      } while (nextPageToken);
 
       // Get video details including duration and view count
-      const videoIds = playlistData.items
+      const videoIds = allPlaylistItems
         .map((item) => item.snippet.resourceId.videoId)
         .join(",");
 
@@ -140,7 +145,7 @@ export class YouTubeApiService {
         await videoDetailsResponse.json();
 
       // Combine playlist data with video details and filter out shorts
-      const allVideos: YouTubeVideo[] = playlistData.items.map(
+      const allVideos: YouTubeVideo[] = allPlaylistItems.map(
         (item, index) => {
           const videoDetail = videoDetailsData.items[index];
           const duration = videoDetail?.contentDetails?.duration
@@ -158,6 +163,27 @@ export class YouTubeApiService {
           };
         }
       );
+
+      // Log all videos before filtering
+      console.log('📼 All videos before filtering:', allVideos.map(v => ({
+        title: v.title,
+        date: new Date(v.publishedAt).toLocaleDateString(),
+        duration: v.duration,
+        url: `https://www.youtube.com/watch?v=${v.id}`
+      })));
+      console.log(`Total videos found: ${allVideos.length}`);
+
+      // Filter videos with "Episode" or "Ep." in title
+      const episodeVideos = allVideos.filter(video => 
+        video.title.includes('Episode') || video.title.includes('Ep.')
+      );
+      console.log('🎙️ Videos with "Episode" or "Ep." in title:', episodeVideos.map(v => ({
+        title: v.title,
+        date: new Date(v.publishedAt).toLocaleDateString(),
+        duration: v.duration,
+        url: `https://www.youtube.com/watch?v=${v.id}`
+      })));
+      console.log(`Total episode videos: ${episodeVideos.length}`);
 
       // Filter out YouTube Shorts and sort by publish date
       let filteredVideos = allVideos;
