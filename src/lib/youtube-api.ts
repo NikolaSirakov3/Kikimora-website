@@ -21,6 +21,14 @@ export interface YouTubeVideo {
   };
   duration?: string;
   viewCount?: string;
+  tags?: string[];
+  categoryId?: string;
+  defaultLanguage?: string;
+  defaultAudioLanguage?: string;
+  topics?: string[];
+  keyTakeaways?: string[];
+  hasCaptions?: boolean;
+  captionLanguages?: string[];
 }
 
 export interface YouTubeApiResponse {
@@ -356,6 +364,14 @@ export class YouTubeApiService {
         ? this.formatDuration(video.contentDetails.duration)
         : undefined;
 
+      // Extract topics and key takeaways from description
+      const { topics, keyTakeaways } = this.extractContentFromDescription(
+        video.snippet.description
+      );
+
+      // Check for captions
+      const captionInfo = await this.getCaptionInfo(videoId);
+
       const videoData: YouTubeVideo = {
         id: video.id,
         title: video.snippet.title,
@@ -364,6 +380,14 @@ export class YouTubeApiService {
         thumbnails: video.snippet.thumbnails,
         duration,
         viewCount: video.statistics?.viewCount,
+        tags: video.snippet.tags || [],
+        categoryId: video.snippet.categoryId,
+        defaultLanguage: video.snippet.defaultLanguage,
+        defaultAudioLanguage: video.snippet.defaultAudioLanguage,
+        topics,
+        keyTakeaways,
+        hasCaptions: captionInfo.hasCaptions,
+        captionLanguages: captionInfo.languages,
       };
 
       console.log(`✅ Successfully fetched video: "${videoData.title}"`);
@@ -372,5 +396,151 @@ export class YouTubeApiService {
       console.error("Error fetching video details:", error);
       throw error;
     }
+  }
+
+  private static async getCaptionInfo(
+    videoId: string
+  ): Promise<{ hasCaptions: boolean; languages: string[] }> {
+    try {
+      const response = await fetch(
+        `https://www.googleapis.com/youtube/v3/captions?part=snippet&videoId=${videoId}&key=${YOUTUBE_API_KEY}`
+      );
+
+      if (!response.ok) {
+        // If captions endpoint fails, assume no captions
+        return { hasCaptions: false, languages: [] };
+      }
+
+      const data = await response.json();
+      const hasCaptions = data.items && data.items.length > 0;
+      const languages = hasCaptions
+        ? data.items.map((item: any) => item.snippet.language).filter(Boolean)
+        : [];
+
+      return { hasCaptions, languages };
+    } catch (error) {
+      console.log("Could not fetch caption info:", error);
+      return { hasCaptions: false, languages: [] };
+    }
+  }
+
+  private static extractContentFromDescription(description: string): {
+    topics: string[];
+    keyTakeaways: string[];
+  } {
+    const topics: string[] = [];
+    const keyTakeaways: string[] = [];
+
+    // Extract topics from common patterns in podcast descriptions
+    const topicPatterns = [
+      /topics?[:\s]+([^.\n]+)/gi,
+      /discuss(?:ing|ed)?[:\s]+([^.\n]+)/gi,
+      /cover(?:ing|ed)?[:\s]+([^.\n]+)/gi,
+      /focus(?:ing|ed)?[:\s]+([^.\n]+)/gi,
+      /about[:\s]+([^.\n]+)/gi,
+      /explor(?:ing|ed)?[:\s]+([^.\n]+)/gi,
+      /dive\s+(?:into|deep)[:\s]+([^.\n]+)/gi,
+    ];
+
+    // Extract key takeaways from common patterns
+    const takeawayPatterns = [
+      /key\s+(?:takeaways?|points?|insights?)[:\s]+([^.\n]+)/gi,
+      /main\s+(?:points?|takeaways?)[:\s]+([^.\n]+)/gi,
+      /learn(?:ing)?[:\s]+([^.\n]+)/gi,
+      /understand(?:ing)?[:\s]+([^.\n]+)/gi,
+      /discuss(?:ing|ed)?[:\s]+([^.\n]+)/gi,
+    ];
+
+    // Extract topics
+    topicPatterns.forEach((pattern) => {
+      const matches = description.matchAll(pattern);
+      for (const match of matches) {
+        if (match[1]) {
+          const topic = match[1].trim();
+          if (topic && !topics.includes(topic)) {
+            topics.push(topic);
+          }
+        }
+      }
+    });
+
+    // Extract key takeaways
+    takeawayPatterns.forEach((pattern) => {
+      const matches = description.matchAll(pattern);
+      for (const match of matches) {
+        if (match[1]) {
+          const takeaway = match[1].trim();
+          if (takeaway && !keyTakeaways.includes(takeaway)) {
+            keyTakeaways.push(takeaway);
+          }
+        }
+      }
+    });
+
+    // If no specific topics found, try to extract from title and description
+    if (topics.length === 0) {
+      const commonTopics = [
+        "Cybersecurity",
+        "AI Security",
+        "Ransomware",
+        "Data Protection",
+        "Network Security",
+        "Cloud Security",
+        "Incident Response",
+        "Threat Intelligence",
+        "Security Awareness",
+        "Compliance",
+        "Risk Management",
+        "Penetration Testing",
+        "Vulnerability Management",
+        "Conversational AI",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Hybrid Warfare",
+        "Personal Security",
+        "Digital Privacy",
+        "Online Safety",
+        "Smart Risk Management",
+        "Business Protection",
+      ];
+
+      const descriptionLower = description.toLowerCase();
+
+      commonTopics.forEach((topic) => {
+        if (descriptionLower.includes(topic.toLowerCase())) {
+          if (!topics.includes(topic)) {
+            topics.push(topic);
+          }
+        }
+      });
+
+      // If still no topics, try to extract from the first few sentences
+      if (topics.length === 0) {
+        const sentences = description.split(/[.!?]+/).slice(0, 2);
+        sentences.forEach((sentence) => {
+          const cleanSentence = sentence.trim();
+          if (cleanSentence.length > 10 && cleanSentence.length < 100) {
+            topics.push(cleanSentence);
+          }
+        });
+      }
+    }
+
+    // If no key takeaways found, generate some from the description
+    if (keyTakeaways.length === 0) {
+      const sentences = description
+        .split(/[.!?]+/)
+        .filter((s) => s.trim().length > 20);
+      const relevantSentences = sentences.slice(0, 3); // Take first 3 relevant sentences
+
+      relevantSentences.forEach((sentence) => {
+        const cleanSentence = sentence.trim();
+        if (cleanSentence && !keyTakeaways.includes(cleanSentence)) {
+          keyTakeaways.push(cleanSentence);
+        }
+      });
+    }
+
+    return { topics, keyTakeaways };
   }
 }
